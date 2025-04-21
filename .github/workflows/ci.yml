@@ -24,8 +24,6 @@ jobs:
       - name: Generate menu.json
         run: npm run build:menu
 
-      - name: Generate posts.json
-        run: npm run build:posts
 
       # 5. Build the site
       - name: Build
