@@ -1,0 +1,16 @@
+/* Scoped styles for Menu.jsx */
+.categoryPill {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid #FFD60033;
+  background: #fff8ee;
+  color: #222;
+  transition: all 0.15s;
+}
+.categoryPillActive {
+  background: #B71C1C;
+  color: #fff;
+  box-shadow: 0 2px 8px #B71C1C22;
+  transform: scale(1.05);
+}

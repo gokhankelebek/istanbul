@@ -1,0 +1,41 @@
+{
+  "name": "istanbul-mediterranean-doner",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "csv-parse": "^5.6.0",
+    "framer-motion": "^11.0.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.8",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.5.1",
+    "react-scripts": "^5.0.1",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:menu": "node scripts/build-menu.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

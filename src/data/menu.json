@@ -1,0 +1,661 @@
+[
+  {
+    "slug": "baklava",
+    "name": "Baklava",
+    "price": 5.95,
+    "token": "EDVE3SXXVOOASZ5S5UL24L5X",
+    "desc": "Layered phyllo dough, generously drizzled with honey and filled with finely chopped pistachios, creating a sweet and crunchy dessert.",
+    "categories": [
+      "DESSERT",
+      "NEW ITEM"
+    ],
+    "img": "/menu/Desserts/baklava.png"
+  },
+  {
+    "slug": "beef_n_lamb_doner_rice_bowl",
+    "name": "Beef&Lamb Dõner (Shawarma) Rice Bowl",
+    "price": 20.95,
+    "token": "GUVSM7IMOCIHVC2M2A76ZIAM",
+    "desc": "Tender slices of beef and lamb doner shawarma served over a bed of fluffy rice, accompanied by a medley of fresh vegetables and drizzled with a savory sauce.",
+    "categories": [
+      "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
+      "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
+    ],
+    "img": "/menu/Rice Bowl/Mixed-Doner-Rice-Bowl.png"
+  },
+  {
+    "slug": "beef_and_lamb_french_fries_bowl",
+    "name": "Beef&Lamb Döner (Shawarma) French Fries Bowl",
+    "price": 20.95,
+    "token": "E3X6ZVXIG5N523DU2ZYR55ZT",
+    "desc": "A generous mix of Beef&Lamb Döner atop crispy fries, sprinkled with feta cheese. Customize with lettuce, tomatoes, onion, pickles, red cabbage or all veggies.",
+    "categories": [
+      "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)",
+      "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)"
+    ],
+    "img": "/menu/Fries Bowl/Mixed-Doner-French-Fries-Bowl.png"
+  },
+  {
+    "slug": "beef_and_lamb_doner_wrap",
+    "name": "Beef&Lamb Döner (Shawarma) Lavash Wrap",
+    "price": 15.95,
+    "token": "MGXKIJJ6M3IKA5SDAAIERYRR",
+    "desc": "Enjoy our Beef& Lamb Doner Wrap, filled with fresh lettuce, tomatoes, onion with parsley mix, pickles, and succulent Beef Doner (Gyro/Shawarma). Choose from our range of signature sauces: House, White Tzatziki, Red Chili, Tahini. A mouthwatering Mediterranean experience in every bite.",
+    "categories": [
+      "LAVASH WRAPS > LAVASH WRAPS",
+      "LAVASH WRAPS"
+    ],
+    "img": "/menu/Wrap/Mixed-Doner-Lavash-Wrap.png"
+  },
+  {
+    "slug": "beef_and_lamb_doner_pita",
+    "name": "Beef&Lamb Döner (Shawarma) Pita",
+    "price": 15.95,
+    "token": "Y42DAPTIIY6VAZLYDQCRWQFF",
+    "desc": "Tender slices of seasoned beef and lamb döner shawarma, served in a warm pita, with fresh vegetables and a drizzle of tangy yogurt sauce.",
+    "categories": [
+      "PITA",
+      "PITA SANDWICHES"
+    ],
+    "img": "/menu/Pita/Mixed-Doner-Pita.png"
+  },
+  {
+    "slug": "beefandlamb-doner-(shawarma)-salad-bowl",
+    "name": "Beef&Lamb Döner (Shawarma) Salad Bowl",
+    "price": 20.95,
+    "token": "G2DSFAIKCGP4XPUYBJQPMXHA",
+    "desc": "Experience the perfect blend of flavors with our Beef & Lamb Döner (Shawarma) Salad Bowl. Crafted with the finest beef and lamb shawarma doner, this salad is a testament to fresh ingredients and a healthy dining choice. Elevate your taste buds with this nutritious and satisfying meal option today.",
+    "categories": [
+      "SALAD BOWLS"
+    ],
+    "img": "/menu/Salad Bowl/Mixed-Doner-Salad-Bowl.png"
+  },
+  {
+    "slug": "beefandlamb-doner-(shawarma)-turkish-pita",
+    "name": "Beef&Lamb Döner (Shawarma) Turkish Pita",
+    "price": 16.68,
+    "token": "7PAYSNFWJBKGZSNEEL6TCMLE",
+    "desc": "Experience our Halal Beef & Lamb Turkish Pita: Marinated for 3 days, thinly sliced & cooked on a vertical rotisserie. Served with fresh veggies & homemade sauces in our signature, freshly baked Turkish Pita. A must-try masterpiece!",
+    "categories": [
+      "TURKISH PITA (OKT4G6W4W4TM3CULMIE2Z342)",
+      "TURKISH PITA (QOZWUEBYZ2KZA6Z4AHWDXN4T)"
+    ],
+    "img": "/menu/Turkish Pita/Beef&Lamb-Döner (Shawarma-Turkish-Pita.png"
+  },
+  {
+    "slug": "chicken_doner_french_fries_bowl",
+    "name": "Chicken Döner (Shawarma) French Fries Bowl",
+    "price": 20.95,
+    "token": "RPOVT4LLUDTD7RTOEN34H4WE",
+    "desc": "Tender halal chicken döner shawarma served on a bed of crispy french fries, complemented by fresh veggies and drizzled with a savory sauce.",
+    "categories": [
+      "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)",
+      "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)"
+    ],
+    "img": "/menu/Fries Bowl/Chicken-Döner-Shawarma)-French-Fries-Bowl.png"
+  },
+  {
+    "slug": "chicken-doner-wrap",
+    "name": "Chicken Döner (Shawarma) Lavash Wrap",
+    "price": 15.95,
+    "token": "KIDOYWV4ZNTNWHZ6KG6UQHNT",
+    "desc": "Indulge in our original homemade Chicken Doner Wrap, crafted with care and filled with a delightful combination of fresh lettuce, tomatoes, onion with parsley mix, pickles, and succulent Chicken Doner (Shawarma). Customize your wrap with your choice of our tantalizing sauces: House, White Tzatziki, Red Chili or Tahini. Experience a burst of authentic Mediterranean flavors in every bite with our Chicken Doner Wrap.",
+    "categories": [
+      "LAVASH WRAPS > LAVASH WRAPS",
+      "LAVASH WRAPS"
+    ],
+    "img": "/menu/Wrap/Chicken-Döner-(Shawarma)-Lavash-Wrap.png"
+  },
+  {
+    "slug": "chicken_pita_doner",
+    "name": "Chicken Döner (Shawarma) Pita",
+    "price": 15.95,
+    "token": "GZ2IUNHY3JWBYRDN3RG6KFEE",
+    "desc": "Indulge in our savory Chicken Doner (Shawarma) Pita, featuring soft pita bread. Stuffed with fresh lettuce, tomatoes, onion with parsley mix, pickles, and succulent Chicken Doner (Gyro), it's a flavor-packed delight. Customize your pita with a choice of our signature sauces: House, White Tzatziki, Red Chili, Tahini. Experience the taste of the Mediterranean in every bite with Istanbul Mediterranean's Chicken Doner Pita.",
+    "categories": [
+      "PITA",
+      "PITA SANDWICHES"
+    ],
+    "img": "/menu/Pita/Chicken-Döner-(Shawarma)-Pita.png"
+  },
+  {
+    "slug": "chicken_doner_rice_bowl",
+    "name": "Chicken Döner (Shawarma) Rice Bowl",
+    "price": 20.95,
+    "token": "RVFIFKFGKP3LDM2VA6BCMPSR",
+    "desc": "Savor our Chicken Doner Rice Bowl. Fresh shaved Chicken Doner (Shawarma) served over seasoned rice with lettuce, tomatoes, onion with parsley mix, pickles. Customize with House, White Tzatziki, Red Chili or Tahini. A delicious Mediterranean experience in a bowl",
+    "categories": [
+      "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
+      "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
+    ],
+    "img": "/menu/Rice Bowl/Chicken-Döner-(Shawarma)-Rice-Bowl.png"
+  },
+  {
+    "slug": "chicken-doner-(shawarma)-salad-bowl",
+    "name": "Chicken Döner (Shawarma) Salad Bowl",
+    "price": 20.95,
+    "token": "ZBRNBQ2SC234MGRRTAIYOZLI",
+    "desc": "Experience the perfect blend of flavors with our Chicken Döner (Shawarma) Salad Bowl. Indulge in succulent marinated chicken shawarma paired with fresh and crisp salad ingredients for a truly satisfying and healthy meal option. Elevate your lunch or dinner routine with this delicious and nutritious choice today!",
+    "categories": [
+      "SALAD BOWLS"
+    ],
+    "img": "/menu/Salad Bowl/Chicken-Döner-(Shawarma)-Salad-Bowl.png"
+  },
+  {
+    "slug": "chicken-doner-(shawarma)-turkish-pita",
+    "name": "Chicken Döner (Shawarma) Turkish Pita",
+    "price": 16.68,
+    "token": "CW62476JLTZIMZS5RRSDKTFS",
+    "desc": "Indulge in the tantalizing flavors of our Chicken Döner (Shawarma) Turkish Pita. Made with succulent chicken shawarma in a fresh Turkish pita bread, this dish is a culinary delight that will transport your taste buds to the streets of Turkey. Experience the perfect blend of savory spices and tender meat in every bite. Elevate your dining experience with our authentic Chicken Döner (Shawarma) Turkish Pita today!",
+    "categories": [
+      "TURKISH PITA (OKT4G6W4W4TM3CULMIE2Z342)",
+      "TURKISH PITA (QOZWUEBYZ2KZA6Z4AHWDXN4T)"
+    ],
+    "img": "/menu/Turkish Pita/Chicken-Döner (Shawarma)-Turkish-Pita.png"
+  },
+  {
+    "slug": "chikofte-pita-sandwich",
+    "name": "Chikofte Pita Sandwich",
+    "price": 15.95,
+    "token": "VW5NJRIRRRNNFVYSV4FWOXFE",
+    "desc": "",
+    "categories": [
+      "PITA"
+    ],
+    "img": "/menu/Pita/Chikofte-Pita.png"
+  },
+  {
+    "slug": "chikofte-salad-bowl",
+    "name": "Chikofte Salad Bowl",
+    "price": 20.95,
+    "token": "JAAEVU7BAN25NJSGPMRHAGYE",
+    "desc": "",
+    "categories": [
+      ""
+    ],
+    "img": "/menu/chikofte-salad-bowl.jpg"
+  },
+  {
+    "slug": "chikofte-salad-bowl",
+    "name": "Chikofte Salad Bowl",
+    "price": 20.95,
+    "token": "MG2XS2YT3TQVBT2R24DW3KYP",
+    "desc": "",
+    "categories": [
+      ""
+    ],
+    "img": "/menu/chikofte-salad-bowl.jpg"
+  },
+  {
+    "slug": "chikofte-side",
+    "name": "Chikofte Side",
+    "price": 5.95,
+    "token": "DGBHOC3ZFIIY6DZVFAGMUAOU",
+    "desc": "",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)"
+    ],
+    "img": "/menu/Sides/Side-Chikofte.png"
+  },
+  {
+    "slug": "chikofte-wrap",
+    "name": "Chikofte Wrap",
+    "price": 15.95,
+    "token": "WS2R3QPGJK3Y2FFJWFVCXDGV",
+    "desc": "",
+    "categories": [
+      "LAVASH WRAPS > LAVASH WRAPS"
+    ],
+    "img": "/menu/Wrap/Chikofte-Lavash-Wrap.png"
+  },
+  {
+    "slug": "coke",
+    "name": "Coke",
+    "price": 3.45,
+    "token": "EKFXEST6VKBGX3K5PKGDEXGJ",
+    "desc": "",
+    "categories": [
+      "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
+      "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
+    ],
+    "img": "/menu/Drinks/Coke.png"
+  },
+  {
+    "slug": "coke-zero",
+    "name": "Coke Zero",
+    "price": 3.45,
+    "token": "47TV3RRL4IJNSMVTDAOH5NWM",
+    "desc": "",
+    "categories": [
+      "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
+      "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
+    ],
+    "img": "/menu/Drinks/Coke-Zero.png"
+  },
+  {
+    "slug": "diet-coke",
+    "name": "Diet Coke",
+    "price": 3.45,
+    "token": "UD6QYSWH7SVZTNVVCQXDLNQE",
+    "desc": "",
+    "categories": [
+      "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
+      "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
+    ],
+    "img": "/menu/Drinks/Diet Coke.png"
+  },
+  {
+    "slug": "dr-pepper",
+    "name": "Dr Pepper",
+    "price": 3.45,
+    "token": "YFJIG6C6RJ3L772JSLF7O7XO",
+    "desc": "",
+    "categories": [
+      "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
+      "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
+    ],
+    "img": "/menu/Drinks/Dr-Pepper.png"
+  },
+  {
+    "slug": "extra-pita",
+    "name": "Extra Pita",
+    "price": 1,
+    "token": "S7UQR5ZLALBXLKOCT7LFP4NZ",
+    "desc": "Soft and warm pita bread with a fluffy texture, perfect for dipping into your favorite spreads and sauces.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Extra-Pita.png"
+  },
+  {
+    "slug": "falafel-french-fries-bowl",
+    "name": "Falafel French Fries Bowl",
+    "price": 20.95,
+    "token": "37LPEXDI2OECKDNCW4OYPNMD",
+    "desc": "Delight in our Falafel French Fries Bowl, a vegetarian delight that combines crispy falafel with golden fries for a satisfying meal. Topped with fresh lettuce, juicy tomatoes, tangy pickles, and your choice of sauces.",
+    "categories": [
+      "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)",
+      "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)"
+    ],
+    "img": "/menu/Fries Bowl/Falafel-French-Fries-Bowl.png"
+  },
+  {
+    "slug": "falafel-wrap",
+    "name": "Falafel Lavash Wrap",
+    "price": 15.95,
+    "token": "5BFE7OK6XHIROWU42A52HXUV",
+    "desc": "Enjoy our savory Falafel Lavash Wrap with homemade falafel wrapped in soft lavash bread. Filled with fresh lettuce, juicy tomatoes, onion with parsley mix, and tangy pickles. Customize with House, White Tzatziki, Red Chili Garlic, or Tahini sauce. Wholesome Mediterranean goodness awaits at Istanbul Mediterranean",
+    "categories": [
+      "LAVASH WRAPS > LAVASH WRAPS",
+      "LAVASH WRAPS"
+    ],
+    "img": "/menu/Wrap/Falafel-Lavash-Wrap.png"
+  },
+  {
+    "slug": "falafel-pita",
+    "name": "Falafel Pita",
+    "price": 15.95,
+    "token": "UAHSD5EU333JPHCZ4RY465YL",
+    "desc": "Enjoy our flavorful Falafel Pita Sandwich, filled with fresh lettuce, tomatoes, onion with parsley mix, tangy pickles, and homemade falafel. Served with your choice of sauce. A delightful vegetarian option at Istanbul Mediterranean.",
+    "categories": [
+      "PITA",
+      "PITA SANDWICHES"
+    ],
+    "img": "/menu/Pita/Falafel-Pita.png"
+  },
+  {
+    "slug": "falafel-rice-bowl",
+    "name": "Falafel Rice Bowl",
+    "price": 20.95,
+    "token": "YI4PDYLNRSRWERTECBFKHXHZ",
+    "desc": "Experience our delightful Falafel Rice Bowl with homemade falafel over seasoned rice. Topped with crisp lettuce, juicy tomatoes, onion with parsley mix, and tangy pickles, it offers a burst of flavors. Customize with House, White Tzatziki, Red Chili Garlic, or Tahini sauce. Wholesome Mediterranean goodness awaits at Istanbul Mediterranean.",
+    "categories": [
+      "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
+      "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
+    ],
+    "img": "/menu/Rice Bowl/Falafel-Rice-Bowl.png"
+  },
+  {
+    "slug": "falafel-salad-bowl",
+    "name": "Falafel Salad Bowl",
+    "price": 20.95,
+    "token": "LFH2UFFJDZVGKV5BHGRLEWQZ",
+    "desc": "Indulge in the freshness and flavor of our Falafel Salad Bowl. This vegan delight combines crisp, homemade falafel with a colorful array of garden-fresh salad ingredients. Elevate your lunch or dinner routine with this nutritious and satisfying option. Order our Falafel Salad Bowl today and treat yourself to a wholesome dining experience.",
+    "categories": [
+      "SALAD BOWLS"
+    ],
+    "img": "/menu/Salad Bowl/Falafel-Salad-Bowl.png"
+  },
+  {
+    "slug": "falafel-side-(4-pieces)",
+    "name": "Falafel Side (4 Pieces)",
+    "price": 5.95,
+    "token": "ZQM6IYHQJMVL6OTWPUASDN2P",
+    "desc": "Four pieces of golden, crispy falafel, made from a blend of chickpeas, fresh herbs, and aromatic spices, perfect for a flavorful and satisfying side dish.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Falafel-Side.png"
+  },
+  {
+    "slug": "falafel-turkish-pita",
+    "name": "Falafel Turkish Pita",
+    "price": 16.68,
+    "token": "ZBD2WWBHGWEGQNXLJ3X25SBR",
+    "desc": "Experience the authentic Turkish flavors with our Falafel Turkish Pita. Each bite offers a delightful crunch of crispy falafel nestled in fresh pita bread, creating a harmonious blend of textures and tastes. Elevate your dining experience with this traditional Turkish delight today.",
+    "categories": [
+      "TURKISH PITA (OKT4G6W4W4TM3CULMIE2Z342)",
+      "TURKISH PITA (QOZWUEBYZ2KZA6Z4AHWDXN4T)"
+    ],
+    "img": "/menu/Turkish Pita/Falafel-Turkish-Pita.png"
+  },
+  {
+    "slug": "french-fries",
+    "name": "French Fries",
+    "price": 5.95,
+    "token": "MESICWUZQ7RXSH2JGGSAQ742",
+    "desc": "Golden, crispy crinkle-cut fries with a perfect crunch in each bite, offering a delightful texture and savory taste.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/French-Fries.png"
+  },
+  {
+    "slug": "hummus",
+    "name": "Hummus",
+    "price": 5.95,
+    "token": "UCDXUU6YVGX7JV6YAIL6NUEV",
+    "desc": "Creamy hummus topped with a rich sun-dried tomato paste, served with warm, fluffy pita bread.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Hummus.png"
+  },
+  {
+    "slug": "ice-cream",
+    "name": "Ice cream",
+    "price": 7.95,
+    "token": "ZVSJBSQLH6L25ZTP7OGKX5UP",
+    "desc": "",
+    "categories": [
+      ""
+    ],
+    "img": "/menu/Desserts/Ice-Cream.png"
+  },
+  {
+    "slug": "mix-doner-french-fries-bowl",
+    "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) French Fries Bowl",
+    "price": 21.95,
+    "token": "7LU4YADBJ2JQEDQANGHYAKY7",
+    "desc": "Experience our Mix Doner French Fries Bowl, featuring fresh shaved Beef & Chicken Doner (Shawarma) served over seasoned French fries. Topped with crisp lettuce, juicy tomatoes, onion with parsley mix, and tangy pickles. Customize with your choice of sauce.",
+    "categories": [
+      "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)",
+      "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)"
+    ],
+    "img": "/menu/Fries Bowl/Mixed-Doner-French-Fries-Bowl.png"
+  },
+  {
+    "slug": "mix-doner-wrap",
+    "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Lavash Wrap",
+    "price": 16.95,
+    "token": "HNBSFUY2S6YSRTYR4YUFH43R",
+    "desc": "Indulge in our Mix Doner Wrap, featuring our original homemade lavash wrap filled with a delightful combination of lettuce, tomatoes, onion with parsley mix, pickles, and succulent Beef&Lamb and Chicken Doner (Shawarma). Customize your wrap with your choice of our signature sauces: House, White Tzatziki, Red Chili Garlic or Tahini.",
+    "categories": [
+      "LAVASH WRAPS",
+      "LAVASH WRAPS > LAVASH WRAPS"
+    ],
+    "img": "/menu/Wrap/Mixed-Doner-Lavash-Wrap.png"
+  },
+  {
+    "slug": "mix-doner-pita",
+    "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Pita",
+    "price": 16.95,
+    "token": "G56TAQSMOMCBATOXZD3IFNJ6",
+    "desc": "Indulge in our Mix Doner Pita, featuring a pita bread filled with a delightful combination of lettuce, tomatoes, onion with parsley mix, pickles, and succulent Mix Doner (Shawarma). Customize your pita with a choice of our signature sauces: House, White Tzatziki, Red Chili Garlic or Tahini.",
+    "categories": [
+      "PITA SANDWICHES",
+      "PITA"
+    ],
+    "img": "/menu/Pita/Mixed-Doner-Pita.png"
+  },
+  {
+    "slug": "mix-doner-rice-bowl",
+    "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Rice Bowl",
+    "price": 21.95,
+    "token": "LFOVFYWDRHQNUQBEKATH7NRC",
+    "desc": "Enjoy our delightful Mix Doner Rice Bowl, featuring fresh shaved Beef&Lamb and Chicken Doner (Shawarma) served over seasoned rice. Topped with crisp lettuce, juicy tomatoes, onion with parsley mix, and tangy pickles. Customize your bowl with a choice of signature sauces: House, White Tzatziki, Red Chili Garlic or Tahini .",
+    "categories": [
+      "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
+      "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
+    ],
+    "img": "/menu/Rice Bowl/Mixed-Doner-Rice-Bowl.png"
+  },
+  {
+    "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-salad-bowl",
+    "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Salad Bowl",
+    "price": 21.95,
+    "token": "FM2O5UHH64IBA6UO72XZKXZV",
+    "desc": "Experience the perfect fusion of flavors with our Mixed Döner Salad Bowl. Indulge in the harmonious blend of succulent beef and lamb döner shawarma, combined with tender chicken shawarma, all atop a fresh and vibrant salad. Elevate your mealtime with this protein-packed, satisfying dish that will tantalize your taste buds!",
+    "categories": [
+      "SALAD BOWLS"
+    ],
+    "img": "/menu/Salad Bowl/Mixed-Doner-Salad-Bowl.png"
+  },
+  {
+    "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-turkish-pita",
+    "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Turkish Pita",
+    "price": 17.68,
+    "token": "UKBUCMATO3QD4A7HQID3H7YY",
+    "desc": "Experience the savory explosion of flavors with our Mixed Döner Turkish Pita. This authentic Turkish cuisine offers the perfect blend of succulent beef&lamb and chicken, in a fresh Turkish pita. Indulge in the delicious taste of tradition with every bite of our carefully crafted Mixed Döner Turkish Pita.",
+    "categories": [
+      "TURKISH PITA (OKT4G6W4W4TM3CULMIE2Z342)",
+      "TURKISH PITA (QOZWUEBYZ2KZA6Z4AHWDXN4T)"
+    ],
+    "img": "/menu/Turkish Pita/Mixed-Döner-(Beef&Lamb and-Chicken-Shawarma) Turkish-Pita.png"
+  },
+  {
+    "slug": "moda-dubai-chocolate-bar-(100gr.)",
+    "name": "Moda Dubai Chocolate Bar (100gr.)",
+    "price": 11.95,
+    "token": "EZGAOJAKLVKYYV5DL5I2V33K",
+    "desc": "Dubai chocolate is a viral confectionery featuring a rich milk chocolate exterior and a filling of pistachio cream and kataifi (shredded phyllo dough). It's known for It's contrasting textures and flavors,  offering a sweet, nutty and crispy experience.",
+    "categories": [
+      "NEW ITEM"
+    ],
+    "img": "/menu/Desserts/Moda-Dubai-Chocolate-Bar.png"
+  },
+  {
+    "slug": "mozzarella-sticks-(5-pieces)",
+    "name": "Mozzarella Sticks (5 Pieces)",
+    "price": 5.95,
+    "token": "ORGCD6HS4WRX2B6DNSWLW3LX",
+    "desc": "Five pieces of gooey mozzarella cheese wrapped in a golden, crispy coating, served with a side of tangy marinara sauce.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Mozzarella-Sticks.png"
+  },
+  {
+    "slug": "onion-rings",
+    "name": "Onion Rings",
+    "price": 5.95,
+    "token": "BQGHMY5CZ3MRFEFMVAU723LK",
+    "desc": "Crispy golden-brown onion rings with a savory batter, fried to perfection.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Onion-Rings.png"
+  },
+  {
+    "slug": "pita",
+    "name": "Pita",
+    "price": 13.95,
+    "token": "YWUPKUASHTRDLQK7BV5LYKMN",
+    "desc": "Soft and warm fluffy pita bread, perfect for pairing with your favorite dips or fillings.",
+    "categories": [
+      ""
+    ],
+    "img": "/menu/Pita/Pita.png"
+  },
+  {
+    "slug": "rice-pudding",
+    "name": "Rice Pudding",
+    "price": 5.95,
+    "token": "ETRF3TJTPLTJEZSYKTS5FJPL",
+    "desc": "Rich and creamy rice pudding ,topped with a sprinkle of aromatic cinnamon.",
+    "categories": [
+      "DESSERT"
+    ],
+    "img": "/menu/Desserts/Rice-Pudding.png"
+  },
+  {
+    "slug": "side-beefandlamb-doner-(shawarma)",
+    "name": "Side Beef&Lamb Döner (Shawarma)",
+    "price": 10,
+    "token": "KKEOFWQEN52SYYNT6SBZ27DV",
+    "desc": "Succulent slices of beef and lamb are expertly seasoned and slow-cooked to perfection, served as a side dish to complement any meal.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Side-Beef&Lamb-Döner-(Shawarma).png"
+  },
+  {
+    "slug": "side-chicken-doner-(shawarma)",
+    "name": "Side Chicken Döner (Shawarma)",
+    "price": 10,
+    "token": "WLUJCUERIPYMG2N6FGR2PN3U",
+    "desc": "Tender seasoned chicken shawarma, served as a side portion.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Side-Chicken-Döner-(Shawarma).png"
+  },
+  {
+    "slug": "side-mixed-(beefandlamb-and-chicken)-doner-(shawarma)",
+    "name": "Side Mixed (Beef&Lamb and Chicken) Döner (Shawarma)",
+    "price": 10,
+    "token": "2IBXN7H477U5X5SAB5LMZFRK",
+    "desc": "A generous mix of seasoned beef, lamb, and chicken, cooked to perfection on a vertical rotisserie. Served with a flavorful blend of spices.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Side-Mixed-(Beef&Lamb-and-Chicken) Döner-(Shawarma).png"
+  },
+  {
+    "slug": "side-rice",
+    "name": "Side Rice",
+    "price": 5,
+    "token": "L5QFD35EG2CDAR4MLBVYPC2O",
+    "desc": "Perfectly cooked rice with a fluffy texture and a fragrant aroma, enhanced by a subtle buttery flavor.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Side-Rice.png"
+  },
+  {
+    "slug": "side-sauce",
+    "name": "Side Sauce",
+    "price": 1,
+    "token": "ZVIHIMHZ2CSKF5E5EEEI223P",
+    "desc": "Our side sauce selection includes creamy tzasiki with yogurt and cucumber, spicy red chili garlic, our signature house blend, and nutty tahini.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Side-Sauce.png"
+  },
+
+  {
+    "slug": "sprite",
+    "name": "Sprite",
+    "price": 3.45,
+    "token": "OW7IG2BMZMZVZDFNHGWIAI7S",
+    "desc": "",
+    "categories": [
+      "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
+      "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
+    ],
+    "img": "/menu/Drinks/Sprite.png"
+  },
+  {
+    "slug": "stuffed-grape-leaves-(4-pieces)",
+    "name": "Stuffed Grape Leaves (4 Pieces)",
+    "price": 5.95,
+    "token": "KYOE5YB2XRQTVFFUANPOEUZI",
+    "desc": "Tender grape leaves stuffed with a flavorful mixture of rice and fresh herbs, offering a delicate balance of savory and aromatic notes. Served in a portion of four pieces.",
+    "categories": [
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
+    ],
+    "img": "/menu/Sides/Stuffed-Grape-Leaves.png"
+  },
+
+  {
+    "slug": "tzatziki-dip",
+    "name": "Tzatziki Dip",
+    "price": 6.95,
+    "token": "OCPUX74OKRRT4GYWADLMLSI3",
+    "desc": "A refreshing blend of finely grated cucumber, minced garlic, and creamy Greek yogurt, perfect for dipping or spreading on your favorite dishes.",
+    "categories": [
+      "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)",
+      "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)"
+    ],
+    "img": "/menu/Sides/Tzatziki-Dip.png"
+  },
+  {
+    "slug": "veggie-bowl",
+    "name": "Veggie Bowl",
+    "price": 9.95,
+    "token": "A75V5DYLVIG2FEZDEOUZYXFA",
+    "desc": "Savor the freshness in our veggie bowl, an inviting mix of crisp vegetables and tangy dressing, combining health with flavor",
+    "categories": [
+      "SALAD BOWLS"
+    ],
+    "img": "/menu/Salad Bowl/Veggie-Bowl.png"
+  },
+  {
+    "slug": "veggie-sandwich",
+    "name": "Veggie Sandwich",
+    "price": 7.95,
+    "token": "YCLXVO27T6OCUGIPNRBCBC2Q",
+    "desc": "",
+    "categories": [
+      ""
+    ],
+    "img": "/menu/veggie-sandwich.jpg"
+  },
+  {
+    "slug": "water",
+    "name": "Water",
+    "price": 2.95,
+    "token": "7E6MJHC2O6YXBF3K23O4XGG6",
+    "desc": "",
+    "categories": [
+      "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)",
+      "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)"
+    ],
+    "img": "/menu/Drinks/Water.png"
+  },
+  {
+    "slug": "yogurt-drink-(ayran)",
+    "name": "Yogurt Drink (Ayran)",
+    "price": 4.95,
+    "token": "UXGCZY35APINHMXXTBDWZB5V",
+    "desc": "A refreshing Turkish yogurt drink made from creamy, tangy yogurt, blended with water and a pinch of salt for a smooth, cooling beverage.",
+    "categories": [
+      "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
+      "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
+    ],
+    "img": "/menu/Drinks/Yogurt-Drink-(Ayran).png"
+  }
+]

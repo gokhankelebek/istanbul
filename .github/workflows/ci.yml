@@ -1,0 +1,41 @@
+name: CI / Build & Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Check out your repo
+      - uses: actions/checkout@v3
+
+      # 2. Set up Node.js
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+
+      # 3. Install dependencies
+      - run: npm ci
+
+      # 4. Sync menu and blog data
+      - name: Generate menu.json
+        run: npm run build:menu
+
+      - name: Generate posts.json
+        run: npm run build:posts
+
+      # 5. Build the site
+      - name: Build
+        run: npm run build
+
+      # 6. (Optional) Deploy to GitHub Pages
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./build
+
+      # 7. (Or skip Deploy here if you’re on Vercel – Vercel will pick up the build output automatically)
