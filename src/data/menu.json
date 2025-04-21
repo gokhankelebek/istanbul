@@ -92,7 +92,7 @@
       "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)",
       "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)"
     ],
-    "img": "/menu/Fries Bowl/Chicken-Döner-Shawarma)-French-Fries-Bowl.png"
+    "img": "/menu/Fries Bowl/Chicken-Doner-Shawarma-French-Fries-Bowl.png"
   },
   {
     "slug": "chicken-doner-wrap",
@@ -104,7 +104,7 @@
       "LAVASH WRAPS > LAVASH WRAPS",
       "LAVASH WRAPS"
     ],
-    "img": "/menu/Wrap/Chicken-Döner-(Shawarma)-Lavash-Wrap.png"
+    "img": "/menu/Wrap/Chicken-Doner-Shawarma-Lavash-Wrap.png"
   },
   {
     "slug": "chicken_pita_doner",
@@ -116,7 +116,7 @@
       "PITA",
       "PITA SANDWICHES"
     ],
-    "img": "/menu/Pita/Chicken-Döner-(Shawarma)-Pita.png"
+    "img": "/menu/Pita/Chicken-Doner-Shawarma-Pita.png"
   },
   {
     "slug": "chicken_doner_rice_bowl",
@@ -128,7 +128,7 @@
       "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
       "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
     ],
-    "img": "/menu/Rice Bowl/Chicken-Döner-(Shawarma)-Rice-Bowl.png"
+    "img": "/menu/Rice Bowl/Chicken-Doner-Shawarma-Rice-Bowl.png"
   },
   {
     "slug": "chicken-doner-(shawarma)-salad-bowl",
@@ -139,7 +139,7 @@
     "categories": [
       "SALAD BOWLS"
     ],
-    "img": "/menu/Salad Bowl/Chicken-Döner-(Shawarma)-Salad-Bowl.png"
+    "img": "/menu/Salad Bowl/Chicken-Doner-Shawarma-Salad-Bowl.png"
   },
   {
     "slug": "chicken-doner-(shawarma)-turkish-pita",
