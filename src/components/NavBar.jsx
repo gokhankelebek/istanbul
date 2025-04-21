@@ -78,7 +78,7 @@ export default function NavBar() {
             )
           )}
           <a
-            href="https://istanbulinvegas.square.site/"
+            href="https://orderdoner.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-4 px-4 py-2 rounded bg-istanbulRed text-white font-bold shadow hover:bg-istanbulRed/90 transition-colors"
@@ -137,7 +137,7 @@ export default function NavBar() {
                 )
               )}
               <a
-                href="https://istanbulinvegas.square.site/"
+                href="https://orderdoner.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block mt-2 px-3 py-2 rounded bg-istanbulRed text-white font-bold shadow hover:bg-red-700"
