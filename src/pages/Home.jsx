@@ -14,8 +14,10 @@ const highlights = menu.filter(i => [
   'mix-doner-pita',
   'falafel-rice-bowl',
   'hummus',
-  'baklava',
 ].includes(i.slug));
+// Add baklava to the end
+const baklava = menu.find(i => i.slug === 'baklava');
+if (baklava) highlights.push(baklava);
 
 export default function Home() {
   // Demo testimonials
