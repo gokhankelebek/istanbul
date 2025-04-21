@@ -230,7 +230,7 @@
       "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
       "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
     ],
-    "img": "/menu/Drinks/Coke-Zero.png"
+    "img": "/menu/Drinks/coke-zero.png"
   },
   {
     "slug": "diet-coke",
@@ -254,7 +254,7 @@
       "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
       "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
     ],
-    "img": "/menu/Drinks/Dr-Pepper.png"
+    "img": "/menu/Drinks/Dr-pepper.png"
   },
   {
     "slug": "extra-pita",
