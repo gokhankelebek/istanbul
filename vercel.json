@@ -1,22 +1,5 @@
 {
-  "redirects": [
-    { "source": "/experience", "destination": "/about", "permanent": true },
-    { "source": "/gallery", "destination": "/menu", "permanent": true },
-    { "source": "/menu2", "destination": "/menu", "permanent": true },
-    { "source": "/blog/welcome", "destination": "/blog/our-story", "permanent": true },
-    { "source": "/blog-posts/what-is-falafel-what-is-it-made-from-which-cuisine", "destination": "/blog-posts/what-is-falafel-what-is-it-made-from-which-cuisine", "permanent": true },
-    { "source": "/blog-posts/halal-what-does-it-mean", "destination": "/blog-posts/halal-what-does-it-mean", "permanent": true },
-    { "source": "/blog-posts/baklava-unwrapped", "destination": "/blog-posts/baklava-unwrapped", "permanent": true },
-    { "source": "/blog-posts/what-makes-real-baklava-a-guide-to-its-essential-components", "destination": "/blog-posts/what-makes-real-baklava-a-guide-to-its-essential-components", "permanent": true },
-    { "source": "/", "destination": "/", "permanent": true },
-    { "source": "/blog-posts/shawarma-vs-doner-kebab", "destination": "/blog-posts/shawarma-vs-doner-kebab", "permanent": true },
-    { "source": "/blog-posts/the-ultimate-guide-to-savoring-the-perfect-gyro", "destination": "/blog-posts/the-ultimate-guide-to-savoring-the-perfect-gyro", "permanent": true },
-    { "source": "/shawarma", "destination": "/shawarma", "permanent": true },
-    { "source": "/menu", "destination": "/menu", "permanent": true },
-    { "source": "/near-me/doner-kebab-las-vegas", "destination": "/near-me/doner-kebab-las-vegas", "permanent": true },
-    { "source": "/blog-posts/explore-the-mediterranean-cuisine", "destination": "/blog-posts/explore-the-mediterranean-cuisine", "permanent": true },
-    { "source": "/turkish-food", "destination": "/turkish-food", "permanent": true },
-    { "source": "/near-me/halal-food", "destination": "/near-me/halal-food", "permanent": true },
-    { "source": "/:path*", "destination": "/", "permanent": true }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
