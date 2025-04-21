@@ -26,7 +26,7 @@ export default function Header() {
           <Link to="/menu" className="relative px-2 py-1 font-medium transition-colors duration-200 hover:text-istanbulRed-light after:block after:h-0.5 after:bg-offwhite after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left">Menu</Link>
           <Link to="/blog" className="relative px-2 py-1 font-medium transition-colors duration-200 hover:text-istanbulRed-light after:block after:h-0.5 after:bg-offwhite after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left">Blog</Link>
           <Link to="/contact" className="relative px-2 py-1 font-medium transition-colors duration-200 hover:text-istanbulRed-light after:block after:h-0.5 after:bg-offwhite after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left">Contact</Link>
-          <a href="https://istanbulinvegas.square.site/s/order" target="_blank" rel="noopener noreferrer" className="btn btn-primary px-5 py-2 rounded shadow transition-transform duration-150 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-istanbulRed-light">Order Online</a>
+          <a href="https://orderdoner.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary px-5 py-2 rounded shadow transition-transform duration-150 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-istanbulRed-light">Order Online</a>
         </div>
         {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center">
@@ -42,7 +42,7 @@ export default function Header() {
           <Link to="/menu" className="font-medium text-lg hover:text-istanbulRed-light" onClick={()=>setMenuOpen(false)}>Menu</Link>
           <Link to="/blog" className="font-medium text-lg hover:text-istanbulRed-light" onClick={()=>setMenuOpen(false)}>Blog</Link>
           <Link to="/contact" className="font-medium text-lg hover:text-istanbulRed-light" onClick={()=>setMenuOpen(false)}>Contact</Link>
-          <a href="https://istanbulinvegas.square.site/s/order" target="_blank" rel="noopener noreferrer" className="btn btn-primary px-5 py-2 rounded shadow" onClick={()=>setMenuOpen(false)}>Order Online</a>
+          <a href="https://orderdoner.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary px-5 py-2 rounded shadow" onClick={()=>setMenuOpen(false)}>Order Online</a>
         </div>
       )}
     </header>
