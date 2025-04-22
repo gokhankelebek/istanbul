@@ -21,7 +21,7 @@
       "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
       "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
     ],
-    "img": "/menu/Rice Bowl/Mixed-Doner-Rice-Bowl.png"
+    "img": "/menu/Rice Bowl/Beef&Lamb-Dõner-(Shawarma)-Rice-Bowl.png"
   },
   {
     "slug": "beef_and_lamb_french_fries_bowl",
@@ -33,7 +33,7 @@
       "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)",
       "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)"
     ],
-    "img": "/menu/Fries Bowl/Mixed-Doner-French-Fries-Bowl.png"
+    "img": "/menu/Fries Bowl/Beef&Lamb-Döner-(Shawarma)-French-Fries-Bowl.png"
   },
   {
     "slug": "beef_and_lamb_doner_wrap",
@@ -45,7 +45,7 @@
       "LAVASH WRAPS > LAVASH WRAPS",
       "LAVASH WRAPS"
     ],
-    "img": "/menu/Wrap/Mixed-Doner-Lavash-Wrap.png"
+    "img": "/menu/Wrap/Beef&Lamb-Doner-Shawarma-Lavash-Wrap.png"
   },
   {
     "slug": "beef_and_lamb_doner_pita",
@@ -57,7 +57,7 @@
       "PITA",
       "PITA SANDWICHES"
     ],
-    "img": "/menu/Pita/Mixed-Doner-Pita.png"
+    "img": "/menu/Pita/Beef&Lamb-Döner-(Shawarma)-Pita.png"
   },
   {
     "slug": "beefandlamb-doner-(shawarma)-salad-bowl",
@@ -68,7 +68,7 @@
     "categories": [
       "SALAD BOWLS"
     ],
-    "img": "/menu/Salad Bowl/Mixed-Doner-Salad-Bowl.png"
+    "img": "/menu/Salad Bowl/Beef&Lamb -Döner-(Shawarma)-Salad-Bowl.png"
   },
   {
     "slug": "beefandlamb-doner-(shawarma)-turkish-pita",
@@ -396,7 +396,7 @@
       "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)",
       "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)"
     ],
-    "img": "/menu/Fries Bowl/Mixed-Doner-French-Fries-Bowl.png"
+    "img": "/menu/Fries Bowl/Beef&Lamb-Döner-(Shawarma)-French-Fries-Bowl.png"
   },
   {
     "slug": "mix-doner-wrap",
@@ -408,7 +408,7 @@
       "LAVASH WRAPS",
       "LAVASH WRAPS > LAVASH WRAPS"
     ],
-    "img": "/menu/Wrap/Mixed-Doner-Lavash-Wrap.png"
+    "img": "/menu/Wrap/Beef&Lamb-Doner-Shawarma-Lavash-Wrap.png"
   },
   {
     "slug": "mix-doner-pita",
@@ -420,7 +420,7 @@
       "PITA SANDWICHES",
       "PITA"
     ],
-    "img": "/menu/Pita/Mixed-Doner-Pita.png"
+    "img": "/menu/Pita/Beef&Lamb-Döner-(Shawarma)-Pita.png"
   },
   {
     "slug": "mix-doner-rice-bowl",
@@ -432,7 +432,7 @@
       "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
       "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
     ],
-    "img": "/menu/Rice Bowl/Mixed-Doner-Rice-Bowl.png"
+    "img": "/menu/Rice Bowl/Beef&Lamb-Dõner-(Shawarma)-Rice-Bowl.png"
   },
   {
     "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-salad-bowl",
@@ -443,7 +443,7 @@
     "categories": [
       "SALAD BOWLS"
     ],
-    "img": "/menu/Salad Bowl/Mixed-Doner-Salad-Bowl.png"
+    "img": "/menu/Salad Bowl/Beef&Lamb -Döner-(Shawarma)-Salad-Bowl.png"
   },
   {
     "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-turkish-pita",
