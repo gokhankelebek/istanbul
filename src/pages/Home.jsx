@@ -69,7 +69,21 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center bg-charcoal mb-12 overflow-hidden" style={{background:'#1F1F1F'}}>
-        <img id="hero-bg" src="/hero_chef_wide.jpg" srcSet="/hero_chef_wide.jpg 2x" alt="Chef preparing doner" className="absolute inset-0 w-full h-full object-cover animate-fadein" style={{zIndex:0, objectPosition: 'center top'}} loading="lazy" onError={e => e.target.style.display='none'} />
+        <picture>
+          <source srcSet="/hero_chef_wide.webp" type="image/webp" />
+          <img
+            id="hero-bg"
+            src="/hero_chef_wide.jpg"
+            srcSet="/hero_chef_wide.jpg 2x"
+            alt="Chef preparing doner"
+            className="absolute inset-0 w-full h-full object-cover animate-fadein"
+            style={{zIndex:0, objectPosition: 'center top'}}
+            loading="lazy"
+            width={1920} // replace with actual width if different
+            height={800} // replace with actual height if different
+            onError={e => e.target.style.display='none'}
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-charcoal/40 to-transparent" style={{zIndex:1}} />
         <div className="relative z-10 text-center text-offwhite space-y-6 animate-fadein-slow">
           <h1 className="font-poppins font-extrabold text-4xl md:text-6xl animate-text-pop">Wraps That Roll, <span className="text-istanbulRed">Flavors That Rock.</span></h1>
