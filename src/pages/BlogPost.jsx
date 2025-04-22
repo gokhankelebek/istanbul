@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import toc from '@/utils/generateToc'; // hypothetical TOC generator
+import toc from '../utils/generateToc'; // hypothetical TOC generator
 import postsData from '../data/blogPosts.json';
 
 export default function BlogPost() {
