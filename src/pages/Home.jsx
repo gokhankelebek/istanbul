@@ -73,7 +73,7 @@ export default function Home() {
           <source srcSet="/hero_chef_wide.webp" type="image/webp" />
           <img
             id="hero-bg"
-            src="/hero_chef_wide.jpg"
+            src="/hero_chef_wide.webp"
             srcSet="/hero_chef_wide.jpg 2x"
             alt="Chef preparing doner"
             className="absolute inset-0 w-full h-full object-cover animate-fadein"
@@ -125,7 +125,7 @@ export default function Home() {
         <h2 className="text-3xl font-extrabold mb-10 text-primary tracking-tight">Why Choose Us?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
           <div className="flex flex-col items-center p-6 rounded-2xl shadow bg-white border border-saffron/10 hover:shadow-xl transition-shadow group">
-            <img src="/doner.png" alt="Authentic Turkish Doner" className="w-16 h-16 mb-3 object-contain group-hover:scale-110 transition-transform" />
+            <img src="/menu/doner.webp" alt="Authentic Turkish Doner" className="w-16 h-16 mb-3 object-contain group-hover:scale-110 transition-transform" />
             <span className="font-bold text-lg mb-1">Authentic Turkish Doner</span>
             <span className="text-herb text-sm">Juicy, flavorful, and carved fresh daily—just like Istanbul.</span>
           </div>

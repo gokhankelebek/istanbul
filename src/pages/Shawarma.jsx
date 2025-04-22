@@ -68,7 +68,7 @@ export default function Shawarma() {
           {/* Comparison Section */}
           <div className="my-12 flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1 flex flex-col items-center">
-              <img src="/menu/Fries Bowl/Beef&Lamb-Döner-(Shawarma)-French-Fries-Bowl.png" alt="Shawarma" className="w-full max-w-xs rounded-xl shadow-lg mb-4" />
+              <img src="/menu/fries-bowl/beefandlamb-doner-shawarma-french-fries-bowl.webp" alt="Shawarma" className="w-full max-w-xs rounded-xl shadow-lg mb-4" />
               <div className="text-lg font-semibold text-primary">Shawarma</div>
             </div>
             <div className="flex-1 flex flex-col items-center">
@@ -182,7 +182,7 @@ export default function Shawarma() {
               <div className="text-charcoal mb-4">Explore our menu and order your favorite shawarma or doner kebab today!</div>
               <a href="/menu" className="inline-block px-8 py-4 rounded bg-istanbulRed text-white font-bold shadow-lg hover:bg-red-700 transition-colors text-lg md:text-xl">See Full Menu</a>
             </div>
-            <img src="/menu/Fries Bowl/Beef&Lamb-Döner-(Shawarma)-French-Fries-Bowl.png" alt="Shawarma Menu Preview" className="w-48 h-48 object-cover rounded-lg shadow-lg border-4 border-istanbulRed/30" />
+            <img src="/menu/fries-bowl/beefandlamb-doner-shawarma-french-fries-bowl.webp" alt="Shawarma Menu Preview" className="w-48 h-48 object-cover rounded-lg shadow-lg border-4 border-istanbulRed/30" />
           </div>
 
           <h3 className="text-xl font-semibold text-primary mb-2">Experience Authentic Mediterranean Cuisine in Las Vegas</h3>

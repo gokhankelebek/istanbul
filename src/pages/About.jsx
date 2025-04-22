@@ -64,7 +64,7 @@ export default function About() {
       <section className="py-16 bg-gradient-to-br from-white via-offwhite to-saffron/10 text-center">
         <h2 className="text-2xl font-bold mb-6 text-primary">Meet the Chef</h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-4xl mx-auto">
-          <img src="/chef_avatar2.png" alt="Chef Portrait" className="w-36 h-36 rounded-full object-cover shadow-lg mb-6 md:mb-0 border-4 border-saffron/40" onError={e => e.target.style.display='none'} />
+          <img src="/menu/chef_avatar2.webp" alt="Chef Portrait" className="w-36 h-36 rounded-full object-cover shadow-lg mb-6 md:mb-0 border-4 border-saffron/40" onError={e => e.target.style.display='none'} />
           <div className="flex-1 text-lg text-charcoal">
             <p className="mb-4">Chef Ahmet brings decades of culinary experience from Istanbul’s vibrant food scene to Las Vegas. His passion for Turkish cuisine and commitment to quality shine through in every dish.</p>
             <div className="bg-white p-4 rounded-xl shadow border-l-4 border-herb/70 max-w-xl mx-auto">
