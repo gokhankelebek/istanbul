@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import FooterAwareOrderOnlineButton from "./FooterAwareOrderOnlineButton";
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import Blog from './pages/Blog';
+import BlogPosts from './pages/BlogPosts';
 import NavBar from './components/NavBar';
 import Experience from './pages/Experience';
 import BlogPost from './pages/BlogPost';
@@ -52,8 +52,6 @@ const categorizedMenu = {
   ],
   "Salad Bowls": [
     { name: "Beef&Lamb Döner (Shawarma) Salad Bowl", slug: "beefandlamb-doner-(shawarma)-salad-bowl", img: "/menu/Salad Bowl/Beef&Lamb-Döner-(Shawarma)-Salad-Bowl.png", price: "$20.95", url: "https://orderdoner.com/#BVBECEXIUUB7HE2S7NSD8Q6O" },
-    { name: "Chicken Döner (Shawarma) Salad Bowl", slug: "chicken-doner-(shawarma)-salad-bowl", img: "/menu/Salad Bowl/Chicken-Döner-(Shawarma)-Salad-Bowl.png", price: "$20.95", url: "https://orderdoner.com/#BVBECEXIUUB7HE2S7NSD8Q6O" },
-    { name: "Mixed Döner (Beef&Lamb and Chicken Shawarma) Salad Bowl", slug: "mixed-doner-(beefandlamb-and-chicken-shawarma)-salad-bowl", img: "/menu/Salad Bowl/Mixed-Döner-(Beef&Lamb-and-Chicken-Shawarma)-Salad-Bowl.png", price: "$21.95", url: "https://orderdoner.com/#BVBECEXIUUB7HE2S7NSD8Q6O" },
     { name: "Falafel Salad Bowl", slug: "falafel-salad-bowl", img: "/menu/Salad Bowl/Falafel-Salad-Bowl.png", price: "$20.95", url: "https://orderdoner.com/#BVBECEXIUUB7HE2S7NSD8Q6O" },
     { name: "Veggie Bowl", slug: "veggie-bowl", img: "/menu/Salad Bowl/Veggie-Bowl.png", price: "$9.95", url: "https://orderdoner.com/#BVBECEXIUUB7HE2S7NSD8Q6O" },
   ],
@@ -138,8 +136,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/:slug" element={<MenuItem />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/blog-posts" element={<BlogPosts />} />
+        <Route path="/blog-posts/:slug" element={<BlogPost />} />
         <Route path="/halal" element={<Halal />} />
         <Route path="/faq" element={<FAQIndex />} />
         <Route path="/faq/:slug" element={<FAQSlug />} />
