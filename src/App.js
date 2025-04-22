@@ -8,6 +8,8 @@ import { useEffect } from 'react';
 import BlogPosts from './pages/BlogPosts';
 import NavBar from './components/NavBar';
 import Experience from './pages/Experience';
+import MediterraneanRestaurant from './pages/MediterraneanRestaurant';
+import NearMeHalalFood from './pages/NearMeHalalFood';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import MenuItem from './pages/MenuItem';
@@ -143,8 +145,10 @@ export default function App() {
         <Route path="/faq/:slug" element={<FAQSlug />} />
         <Route path="/about" element={<MarkdownPage />} />
         <Route path="/catering" element={<MarkdownPage />} />
-        <Route path="/experience" element={<MarkdownPage />} />
+        <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/mediterranean-restaurant" element={<MediterraneanRestaurant />} />
+        <Route path="/near-me/halal-food" element={<NearMeHalalFood />} />
       </Routes>
       {/* Footer */}
       <footer className="bg-charcoal text-offwhite py-8 mt-8 text-center">
