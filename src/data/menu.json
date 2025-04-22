@@ -9,7 +9,7 @@
       "DESSERT",
       "NEW ITEM"
     ],
-    "img": "/menu/Desserts/baklava.png"
+    "img": "/menu/desserts/baklava.png"
   },
   {
     "slug": "beef_n_lamb_doner_rice_bowl",
@@ -21,7 +21,7 @@
       "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
       "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
     ],
-    "img": "/menu/Rice Bowl/Beef&Lamb-Dõner-(Shawarma)-Rice-Bowl.png"
+    "img": "/menu/rice-bowl/beefandlamb-doner-shawarma-rice-bowl.png"
   },
   {
     "slug": "beef_and_lamb_french_fries_bowl",
@@ -33,7 +33,7 @@
       "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)",
       "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)"
     ],
-    "img": "/menu/Fries Bowl/Beef&Lamb-Döner-(Shawarma)-French-Fries-Bowl.png"
+    "img": "/menu/fries-bowl/beefandlamb-doner-shawarma-french-fries-bowl.png"
   },
   {
     "slug": "beef_and_lamb_doner_wrap",
@@ -45,7 +45,7 @@
       "LAVASH WRAPS > LAVASH WRAPS",
       "LAVASH WRAPS"
     ],
-    "img": "/menu/Wrap/Beef&Lamb-Doner-Shawarma-Lavash-Wrap.png"
+    "img": "/menu/wrap/beefandlamb-doner-shawarma-lavash-wrap.png"
   },
   {
     "slug": "beef_and_lamb_doner_pita",
@@ -57,7 +57,7 @@
       "PITA",
       "PITA SANDWICHES"
     ],
-    "img": "/menu/Pita/Beef&Lamb-Döner-(Shawarma)-Pita.png"
+    "img": "/menu/pita/beefandlamb-doner-shawarma-pita.png"
   },
   {
     "slug": "beefandlamb-doner-(shawarma)-salad-bowl",
@@ -68,7 +68,7 @@
     "categories": [
       "SALAD BOWLS"
     ],
-    "img": "/menu/Salad Bowl/Beef&Lamb -Döner-(Shawarma)-Salad-Bowl.png"
+    "img": "/menu/salad-bowl/beefandlamb-doner-shawarma-salad-bowl.png"
   },
   {
     "slug": "beefandlamb-doner-(shawarma)-turkish-pita",
@@ -80,7 +80,7 @@
       "TURKISH PITA (OKT4G6W4W4TM3CULMIE2Z342)",
       "TURKISH PITA (QOZWUEBYZ2KZA6Z4AHWDXN4T)"
     ],
-    "img": "/menu/Turkish Pita/Beef&Lamb-Doner-Shawarma-Turkish-Pita.png"
+    "img": "/menu/turkish-pita/beefandlamb-doner-shawarma-turkish-pita.png"
   },
   {
     "slug": "chicken_doner_french_fries_bowl",
@@ -92,7 +92,7 @@
       "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)",
       "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)"
     ],
-    "img": "/menu/Fries Bowl/Chicken-Doner-Shawarma-French-Fries-Bowl.png"
+    "img": "/menu/fries-bowl/chicken-doner-shawarma-french-fries-bowl.png"
   },
   {
     "slug": "chicken-doner-wrap",
@@ -104,7 +104,7 @@
       "LAVASH WRAPS > LAVASH WRAPS",
       "LAVASH WRAPS"
     ],
-    "img": "/menu/Wrap/Chicken-Doner-Shawarma-Lavash-Wrap.png"
+    "img": "/menu/wrap/chicken-doner-shawarma-lavash-wrap.png"
   },
   {
     "slug": "chicken_pita_doner",
@@ -116,7 +116,7 @@
       "PITA",
       "PITA SANDWICHES"
     ],
-    "img": "/menu/Pita/Chicken-Doner-Shawarma-Pita.png"
+    "img": "/menu/pita/chicken-doner-shawarma-pita.png"
   },
   {
     "slug": "chicken_doner_rice_bowl",
@@ -128,7 +128,7 @@
       "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
       "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
     ],
-    "img": "/menu/Rice Bowl/Chicken-Doner-Shawarma-Rice-Bowl.png"
+    "img": "/menu/rice-bowl/chicken-doner-shawarma-rice-bowl.png"
   },
   {
     "slug": "chicken-doner-(shawarma)-salad-bowl",
@@ -139,7 +139,7 @@
     "categories": [
       "SALAD BOWLS"
     ],
-    "img": "/menu/Salad Bowl/Chicken-Doner-Shawarma-Salad-Bowl.png"
+    "img": "/menu/salad-bowl/chicken-doner-shawarma-salad-bowl.png"
   },
   {
     "slug": "chicken-doner-(shawarma)-turkish-pita",
@@ -151,7 +151,7 @@
       "TURKISH PITA (OKT4G6W4W4TM3CULMIE2Z342)",
       "TURKISH PITA (QOZWUEBYZ2KZA6Z4AHWDXN4T)"
     ],
-    "img": "/menu/Turkish Pita/Chicken-Doner-Shawarma-Turkish-Pita.png"
+    "img": "/menu/turkish-pita/chicken-doner-shawarma-turkish-pita.png"
   },
   {
     "slug": "chikofte-pita-sandwich",
@@ -162,7 +162,7 @@
     "categories": [
       "PITA"
     ],
-    "img": "/menu/Pita/Chikofte-Pita.png"
+    "img": "/menu/pita/chikofte-pita-sandwich.png"
   },
   {
     "slug": "chikofte-salad-bowl",
@@ -173,7 +173,7 @@
     "categories": [
       ""
     ],
-    "img": "/menu/Salad Bowl/Chikofte-Salad-Bowl.png"
+    "img": "/menu/salad-bowl/chikofte-salad-bowl.png"
   },
   {
     "slug": "chikofte-salad-bowl",
@@ -184,7 +184,7 @@
     "categories": [
       ""
     ],
-    "img": "/menu/Salad Bowl/Chikofte-Salad-Bowl.png"
+    "img": "/menu/salad-bowl/chikofte-salad-bowl.png"
   },
   {
     "slug": "chikofte-side",
@@ -195,7 +195,7 @@
     "categories": [
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)"
     ],
-    "img": "/menu/Sides/Side-Chikofte.png"
+    "img": "/menu/sides/chikofte-side.png"
   },
   {
     "slug": "chikofte-wrap",
@@ -206,7 +206,7 @@
     "categories": [
       "LAVASH WRAPS > LAVASH WRAPS"
     ],
-    "img": "/menu/Wrap/Chikofte-Lavash-Wrap.png"
+    "img": "/menu/wrap/chikofte-wrap.png"
   },
   {
     "slug": "coke",
@@ -218,7 +218,7 @@
       "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
       "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
     ],
-    "img": "/menu/Drinks/Coke.png"
+    "img": "/menu/drinks/coke.png"
   },
   {
     "slug": "coke-zero",
@@ -230,7 +230,7 @@
       "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
       "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
     ],
-    "img": "/menu/Drinks/coke-zero.png"
+    "img": "/menu/drinks/coke-zero.png"
   },
   {
     "slug": "diet-coke",
@@ -242,7 +242,7 @@
       "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
       "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
     ],
-    "img": "/menu/Drinks/Diet Coke.png"
+    "img": "/menu/drinks/diet-coke.png"
   },
   {
     "slug": "dr-pepper",
@@ -254,7 +254,7 @@
       "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
       "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
     ],
-    "img": "/menu/Drinks/Dr-pepper.png"
+    "img": "/menu/drinks/dr-pepper.png"
   },
   {
     "slug": "extra-pita",
@@ -266,7 +266,7 @@
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
       "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
     ],
-    "img": "/menu/Sides/Extra-Pita.png"
+    "img": "/menu/sides/extra-pita.png"
   },
   {
     "slug": "falafel-french-fries-bowl",
@@ -278,7 +278,7 @@
       "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)",
       "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)"
     ],
-    "img": "/menu/Fries Bowl/Falafel-French-Fries-Bowl.png"
+    "img": "/menu/fries-bowl/falafel-french-fries-bowl.png"
   },
   {
     "slug": "falafel-wrap",
@@ -290,7 +290,7 @@
       "LAVASH WRAPS > LAVASH WRAPS",
       "LAVASH WRAPS"
     ],
-    "img": "/menu/Wrap/Falafel-Lavash-Wrap.png"
+    "img": "/menu/wrap/falafel-lavash-wrap.png"
   },
   {
     "slug": "falafel-pita",
@@ -302,7 +302,7 @@
       "PITA",
       "PITA SANDWICHES"
     ],
-    "img": "/menu/Pita/Falafel-Pita.png"
+    "img": "/menu/pita/falafel-pita.png"
   },
   {
     "slug": "falafel-rice-bowl",
@@ -314,7 +314,7 @@
       "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
       "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
     ],
-    "img": "/menu/Rice Bowl/Falafel-Rice-Bowl.png"
+    "img": "/menu/rice-bowl/falafel-rice-bowl.png"
   },
   {
     "slug": "falafel-salad-bowl",
@@ -325,7 +325,7 @@
     "categories": [
       "SALAD BOWLS"
     ],
-    "img": "/menu/Salad Bowl/Falafel-Salad-Bowl.png"
+    "img": "/menu/salad-bowl/falafel-salad-bowl.png"
   },
   {
     "slug": "falafel-side-(4-pieces)",
@@ -349,7 +349,7 @@
       "TURKISH PITA (OKT4G6W4W4TM3CULMIE2Z342)",
       "TURKISH PITA (QOZWUEBYZ2KZA6Z4AHWDXN4T)"
     ],
-    "img": "/menu/Turkish Pita/Falafel-Turkish-Pita.png"
+    "img": "/menu/turkish-pita/falafel-turkish-pita.png"
   },
   {
     "slug": "french-fries",
@@ -373,7 +373,7 @@
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
       "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
     ],
-    "img": "/menu/Sides/Hummus.png"
+    "img": "/menu/sides/hummus.png"
   },
   {
     "slug": "ice-cream",
@@ -396,7 +396,7 @@
       "FRENCH FRIES BOWLS (RKHD4AFXLHUKNRYMFBDSGHUV)",
       "FRENCH FRIES BOWLS (PV5BD5JPZB2DOC5YJMKA72HA)"
     ],
-    "img": "/menu/Fries Bowl/Beef&Lamb-Döner-(Shawarma)-French-Fries-Bowl.png"
+    "img": "/menu/fries-bowl/beefandlamb-doner-shawarma-french-fries-bowl.png"
   },
   {
     "slug": "mix-doner-wrap",
@@ -408,7 +408,7 @@
       "LAVASH WRAPS",
       "LAVASH WRAPS > LAVASH WRAPS"
     ],
-    "img": "/menu/Wrap/Beef&Lamb-Doner-Shawarma-Lavash-Wrap.png"
+    "img": "/menu/wrap/beefandlamb-doner-shawarma-lavash-wrap.png"
   },
   {
     "slug": "mix-doner-pita",
@@ -420,7 +420,7 @@
       "PITA SANDWICHES",
       "PITA"
     ],
-    "img": "/menu/Pita/Beef&Lamb-Döner-(Shawarma)-Pita.png"
+    "img": "/menu/pita/beefandlamb-doner-shawarma-pita.png"
   },
   {
     "slug": "mix-doner-rice-bowl",
@@ -432,7 +432,7 @@
       "RICE BOWLS (DAC5A7Y2QHF3CRRAJ3IYZKUQ)",
       "RICE BOWLS (IDO6JTCI633SZK6UIZRWWMFQ)"
     ],
-    "img": "/menu/Rice Bowl/Beef&Lamb-Dõner-(Shawarma)-Rice-Bowl.png"
+    "img": "/menu/rice-bowl/beefandlamb-doner-shawarma-rice-bowl.png"
   },
   {
     "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-salad-bowl",
@@ -443,7 +443,7 @@
     "categories": [
       "SALAD BOWLS"
     ],
-    "img": "/menu/Salad Bowl/Beef&Lamb -Döner-(Shawarma)-Salad-Bowl.png"
+    "img": "/menu/salad-bowl/beefandlamb-doner-shawarma-salad-bowl.png"
   },
   {
     "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-turkish-pita",
@@ -455,7 +455,7 @@
       "TURKISH PITA (OKT4G6W4W4TM3CULMIE2Z342)",
       "TURKISH PITA (QOZWUEBYZ2KZA6Z4AHWDXN4T)"
     ],
-    "img": "/menu/Turkish Pita/Mixed-Doner-Beef&Lamb-and-Chicken-Shawarma-Turkish-Pita.png"
+    "img": "/menu/turkish-pita/mixed-doner-beefandlamb-and-chicken-shawarma-turkish-pita.png"
   },
   {
     "slug": "moda-dubai-chocolate-bar-(100gr.)",
@@ -512,7 +512,7 @@
     "categories": [
       "DESSERT"
     ],
-    "img": "/menu/Desserts/Rice-Pudding.png"
+    "img": "/menu/desserts/rice-pudding.png"
   },
   {
     "slug": "side-beefandlamb-doner-(shawarma)",
@@ -524,7 +524,7 @@
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
       "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
     ],
-    "img": "/menu/Sides/Side-Beef&Lamb-Doner-Shawarma.png"
+    "img": "/menu/sides/side-beefandlamb-doner-shawarma.png"
   },
   {
     "slug": "side-chicken-doner-(shawarma)",
@@ -536,7 +536,7 @@
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
       "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
     ],
-    "img": "/menu/Sides/Side-Chicken-Doner-Shawarma.png"
+    "img": "/menu/sides/side-chicken-doner-shawarma.png"
   },
   {
     "slug": "side-mixed-(beefandlamb-and-chicken)-doner-(shawarma)",
@@ -548,7 +548,7 @@
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
       "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
     ],
-    "img": "/menu/Sides/Side-Mixed-Beef&Lamb-and-Chicken-Doner-Shawarma.png"
+    "img": "/menu/sides/side-mixed-beefandlamb-and-chicken-doner-shawarma.png"
   },
   {
     "slug": "side-rice",
@@ -560,7 +560,7 @@
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
       "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
     ],
-    "img": "/menu/Sides/Side-Rice.png"
+    "img": "/menu/sides/side-rice.png"
   },
   {
     "slug": "side-sauce",
@@ -572,7 +572,7 @@
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
       "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
     ],
-    "img": "/menu/Sides/Side-Sauce.png"
+    "img": "/menu/sides/side-sauce.png"
   },
 
   {
@@ -585,7 +585,7 @@
       "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
       "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
     ],
-    "img": "/menu/Drinks/Sprite.png"
+    "img": "/menu/drinks/sprite.png"
   },
   {
     "slug": "stuffed-grape-leaves-(4-pieces)",
@@ -597,7 +597,7 @@
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)",
       "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)"
     ],
-    "img": "/menu/Sides/Stuffed-Grape-Leaves.png"
+    "img": "/menu/sides/stuffed-grape-leaves.png"
   },
 
   {
@@ -610,7 +610,7 @@
       "SIDES (OFR7KEXQE2HAP57I3LVT5DUZ)",
       "SIDES (P4UDVM47WMBWY7UAJDOH7BI5)"
     ],
-    "img": "/menu/Sides/Tzatziki-Dip.png"
+    "img": "/menu/sides/tzatziki-dip.png"
   },
   {
     "slug": "veggie-bowl",
@@ -644,7 +644,7 @@
       "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)",
       "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)"
     ],
-    "img": "/menu/Drinks/Water.png"
+    "img": "/menu/drinks/water.png"
   },
   {
     "slug": "yogurt-drink-(ayran)",
@@ -656,6 +656,6 @@
       "DRINKS (2I7RGOAKS7B3EZAWQDGIRNHS)",
       "DRINKS (DYZ37LY5IHGWCOYR4M7Y6JEQ)"
     ],
-    "img": "/menu/Drinks/Yogurt-Drink-(Ayran).png"
+    "img": "/menu/drinks/yogurt-drink-ayran.png"
   }
 ]
