@@ -38,7 +38,7 @@ function groupByCategoryStrict(items) {
   items.forEach(item => {
     if (item.categories && item.categories.length > 0) {
       // Normalize categories by stripping parentheses and trimming
-      const normalizedCategories = item.categories.map(cat => cat.replace(/\s*\(.*?\)/g, '').replace(/>.*$/, '').trim().toUpperCase());
+      const normalizedCategories = item.categories.map(cat => cat.replace(/-/g, ' ').replace(/\s*\(.*?\)/g, '').replace(/>.*$/, '').trim().toUpperCase());
       for (const cat of CATEGORY_ORDER) {
         if (normalizedCategories.some(nc => nc === cat)) {
           if (!grouped[cat]) grouped[cat] = [];
