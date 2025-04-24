@@ -37,12 +37,12 @@ export default function Blog() {
               <div className="flex-1 flex flex-col p-8">
                 <span className="uppercase text-xs text-istanbulRed font-bold mb-2 tracking-widest">Featured</span>
                 <h2 className="text-3xl font-bold mb-2 text-primary group-hover:text-istanbulRed transition-colors">
-                  <Link to={`/blog/${getFeaturedAndRest(blogPosts).featured.slug}`}>{getFeaturedAndRest(blogPosts).featured.title}</Link>
+                  <Link to={`/blog-posts/${getFeaturedAndRest(blogPosts).featured.slug}`}>{getFeaturedAndRest(blogPosts).featured.title}</Link>
                 </h2>
                 <p className="text-xs text-herb mb-3">{getFeaturedAndRest(blogPosts).featured.date}</p>
                 <p className="text-charcoal mb-4 flex-1">{getFeaturedAndRest(blogPosts).featured.excerpt}</p>
                 <div className="mt-auto">
-                  <Link to={`/blog/${getFeaturedAndRest(blogPosts).featured.slug}`} className="inline-block px-5 py-2 rounded bg-primary text-offwhite font-semibold shadow hover:bg-istanbulRed hover:text-offwhite transition-colors duration-150">Read More</Link>
+                  <Link to={`/blog-posts/${getFeaturedAndRest(blogPosts).featured.slug}`} className="inline-block px-5 py-2 rounded bg-primary text-offwhite font-semibold shadow hover:bg-istanbulRed hover:text-offwhite transition-colors duration-150">Read More</Link>
                 </div>
               </div>
             </div>
@@ -71,12 +71,12 @@ export default function Blog() {
       </div>
       <div className="flex-1 flex flex-col p-6">
         <h2 className="text-xl font-bold mb-2 text-primary group-hover:text-istanbulRed transition-colors">
-          <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+          <Link to={`/blog-posts/${post.slug}`}>{post.title}</Link>
         </h2>
         <p className="text-xs text-herb mb-3">{post.date}</p>
         <p className="text-charcoal mb-4 flex-1">{post.excerpt}</p>
         <div className="mt-auto">
-          <Link to={`/blog/${post.slug}`} className="inline-block px-4 py-2 rounded bg-istanbulRed text-white font-semibold shadow hover:bg-primary hover:text-offwhite transition-colors duration-150">Read More</Link>
+          <Link to={`/blog-posts/${post.slug}`} className="inline-block px-4 py-2 rounded bg-istanbulRed text-white font-semibold shadow hover:bg-primary hover:text-offwhite transition-colors duration-150">Read More</Link>
         </div>
       </div>
     </div>

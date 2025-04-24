@@ -1,8 +1,8 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Helmet } from 'react-helmet';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import toc from '../utils/generateToc'; // hypothetical TOC generator
 import postsData from '../data/blogPosts.json';
 
 export default function BlogPost() {
@@ -10,8 +10,13 @@ export default function BlogPost() {
   const post = postsData.find(p => p.slug === slug);
   if (!post) return <p>Post not found</p>;
 
-  // Generate table of contents from HTML
-  const tableOfContents = toc(post.contentHtml);
+  // Fallbacks
+  const coverSrc = post.cover || post.image || '/default-cover.jpg';
+  const author = post.author || 'Istanbul Mediterranean';
+  const readingTime = post.readingTime || Math.ceil((post.content || '').split(' ').length / 200) || 1;
+
+  // Only generate TOC if contentHtml exists
+  const tableOfContents = post.contentHtml ? (typeof toc === 'function' ? toc(post.contentHtml) : []) : [];
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
@@ -20,7 +25,7 @@ export default function BlogPost() {
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={post.cover} />
+        <meta property="og:image" content={coverSrc} />
       </Helmet>
 
       {/* Hero Section */}
@@ -31,7 +36,7 @@ export default function BlogPost() {
         transition={{ duration: 0.6 }}
       >
         <img
-          src={post.cover}
+          src={coverSrc}
           alt={post.title}
           className="w-full h-full object-cover"
         />
@@ -43,50 +48,32 @@ export default function BlogPost() {
       </motion.div>
 
       {/* Meta & TOC Grid */}
-      <div className="md:grid md:grid-cols-4 md:gap-8 mb-12">
-        {/* Post Meta */}
-        <div className="mb-8 md:mb-0">
-          <p className="text-sm text-charcoal">{post.date} • {post.readingTime} min read</p>
-          <p className="mt-2 text-sm text-charcoal">By {post.author}</p>
-          {/* Social Share Buttons */}
-          <div className="mt-4 flex space-x-3">
-            {['twitter','facebook','linkedin'].map(platform => (
-              <a
-                key={platform}
-                href={`https://share.${platform}.com?url=${window.location.href}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-charcoal hover:text-primary"
-              >
-                {platform.charAt(0).toUpperCase() + platform.slice(1)}
-              </a>
-            ))}
-          </div>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
+        <div className="text-sm text-charcoal">
+          {post.date} • {readingTime} min read • by {author}
         </div>
-
-        {/* Table of Contents */}
-        <nav className="hidden md:block col-span-3 sticky top-24">
-          <h2 className="font-semibold text-primary mb-2">On This Page</h2>
-          <ul className="space-y-2 text-charcoal">
-            {tableOfContents.map(item => (
-              <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  className="hover:text-primary"
-                >
-                  {item.text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {/* TOC placeholder or actual TOC if contentHtml exists */}
+        {post.contentHtml && tableOfContents.length > 0 && (
+          <nav className="hidden md:block">
+            <h2 className="font-semibold text-primary mb-2">On This Page</h2>
+            <ul className="space-y-2 text-charcoal">
+              {tableOfContents.map(item => (
+                <li key={item.id}>
+                  <a href={`#${item.id}`} className="hover:text-primary">{item.text}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
       </div>
 
       {/* Content */}
-      <div
-        className="prose prose-lg prose-primary max-w-none"
-        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-      />
+      <div className="prose prose-lg prose-primary max-w-none">
+        {post.contentHtml
+          ? <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+          : <ReactMarkdown>{post.content}</ReactMarkdown>
+        }
+      </div>
 
       {/* Related Posts */}
       <section className="mt-16">
@@ -95,7 +82,7 @@ export default function BlogPost() {
           {postsData.filter(p => p.slug !== slug).slice(0, 2).map(p => (
             <Link key={p.slug} to={`/blog-posts/${p.slug}`} className="group block">
               <img
-                src={p.cover}
+                src={p.cover || p.image}
                 alt={p.title}
                 className="w-full h-48 object-cover rounded-lg mb-4 transition-transform group-hover:scale-105"
               />
