@@ -126,8 +126,23 @@ export default function App() {
   }, []);
   return (
     <>
+      {/* Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJLK8BB"
+                height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe>
+      </noscript>
+      {/* End Google Tag Manager (noscript) */}
       <Helmet>
         <title>Best Doner in Vegas | Istanbul Mediterranean</title>
+        {/* Google Tag Manager */}
+        <script>
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-NJLK8BB');`}
+        </script>
+        {/* End Google Tag Manager */}
         <meta name="description" content="Authentic Turkish doner wraps, plates, and more. Family recipe, Istanbul roots—crafted fresh in Las Vegas." />
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="canonical" href="https://www.istanbullv.com/" />
@@ -159,6 +174,7 @@ export default function App() {
               <li><a href="/experience" className="hover:text-saffron">Our Story</a></li>
               <li><a href="/halal" className="hover:text-saffron">Halal Commitment</a></li>
               <li><a href="/mediterranean-food-las-vegas" className="hover:text-saffron">Mediterranean Cuisine</a></li>
+              <li><a href="/mediterranean-restaurant" className="hover:text-yellow-400 font-semibold">Mediterranean Restaurant</a></li>
               <li><a href="/faq/what-is-halal" className="hover:text-saffron">What is Halal? (FAQ)</a></li>
             </ul>
           </div>

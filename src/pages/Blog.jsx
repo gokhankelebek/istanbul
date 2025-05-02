@@ -1,6 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import blogPosts from '../data/blogPosts.json';
+import { blogPosts } from '../data/blogPosts';
 import menu from '../data/menu.json';
 
 function getFeaturedAndRest(posts) {
