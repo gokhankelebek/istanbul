@@ -7,7 +7,7 @@ export default function ShawarmaVsDonerKebab() {
     <>
       <Helmet>
         <title>Shawarma vs Doner Kebab | Istanbul Mediterranean Restaurant Las Vegas</title>
-        <meta name="description" content="Explore the difference between shawarma and doner kebab at Istanbul Mediterranean Grill in Las Vegas. Enjoy authentic, halal-certified Mediterranean cuisine and the best doner on the Strip. Order online or visit us today!" />
+        <meta name="description" content="Explore the difference between shawarma and doner kebab at Istanbul Mediterranean in Las Vegas. Enjoy authentic, halal-certified Mediterranean cuisine and the best doner on the Strip. Order online or visit us today!" />
         <link rel="canonical" href="https://www.istanbullv.com/shawarma-vs-doner-kebab" />
         {/* FAQPage Schema for SEO */}
         <script type="application/ld+json">{`
@@ -27,14 +27,14 @@ export default function ShawarmaVsDonerKebab() {
                 "name": "Where can I find the best doner kebab in Las Vegas?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Istanbul Mediterranean Grill on the Las Vegas Strip offers authentic Turkish doner kebab, halal-certified and made fresh daily."}
+                  "text": "Istanbul Mediterranean on the Las Vegas Strip offers authentic Turkish doner kebab, halal-certified and made fresh daily."}
               },
               {
                 "@type": "Question",
                 "name": "Is your shawarma halal?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, all shawarma and doner kebab at Istanbul Mediterranean Grill are halal-certified."}
+                  "text": "Yes, all shawarma and doner kebab at Istanbul Mediterranean are halal-certified."}
               }
             ]
           }

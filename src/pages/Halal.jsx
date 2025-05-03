@@ -7,7 +7,7 @@ export default function Halal() {
     <>
       <Helmet>
         <title>Istanbul Mediterranean Halal Restaurant Las Vegas | 100% Halal Meat Certificate</title>
-        <meta name="description" content="Istanbul Mediterranean Grill is the top halal restaurant on the Las Vegas Strip. 100% halal-certified meats, authentic Mediterranean cuisine, and the best Turkish food in Las Vegas. Order online or visit us today!" />
+        <meta name="description" content="Istanbul Mediterranean is the top halal restaurant on the Las Vegas Strip. 100% halal-certified meats, authentic Mediterranean cuisine, and the best Turkish food in Las Vegas. Order online or visit us today!" />
         <link rel="canonical" href="https://www.istanbullv.com/halal" />
       </Helmet>
     {/* Hero Banner */}

@@ -6,7 +6,7 @@ export default function WhatMakesRealBaklava() {
     <>
       <Helmet>
         <title>What Makes Real Baklava? | Istanbul Mediterranean Restaurant Las Vegas</title>
-        <meta name="description" content="Discover the secret to authentic baklava at Istanbul Mediterranean Grill in Las Vegas. Enjoy halal-certified Mediterranean desserts and the best baklava on the Strip. Order online or visit us today!" />
+        <meta name="description" content="Discover the secret to authentic baklava at Istanbul Mediterranean in Las Vegas. Enjoy halal-certified Mediterranean desserts and the best baklava on the Strip. Order online or visit us today!" />
         <link rel="canonical" href="https://www.istanbullv.com/what-makes-real-baklava" />
         {/* FAQPage Schema for SEO */}
         <script type="application/ld+json">{`
@@ -27,7 +27,7 @@ export default function WhatMakesRealBaklava() {
                 "name": "Is your baklava halal?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, all desserts at Istanbul Mediterranean Grill, including our baklava, are halal-certified."
+                  "text": "Yes, all desserts at Istanbul Mediterranean, including our baklava, are halal-certified."
                 }
               },
               {
@@ -35,7 +35,7 @@ export default function WhatMakesRealBaklava() {
                 "name": "Where can I get authentic baklava in Las Vegas?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Visit Istanbul Mediterranean Grill, 3615 S Las Vegas Blvd #101, Las Vegas, NV 89109, for the best halal baklava in town. Order online or dine in!"
+                  "text": "Visit Istanbul Mediterranean, 3615 S Las Vegas Blvd #101, Las Vegas, NV 89109, for the best halal baklava in town. Order online or dine in!"
                 }
               }
             ]

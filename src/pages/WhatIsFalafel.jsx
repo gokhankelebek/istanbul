@@ -7,7 +7,7 @@ export default function WhatIsFalafel() {
     <>
       <Helmet>
         <title>What is Falafel? | Istanbul Mediterranean Restaurant Las Vegas</title>
-        <meta name="description" content="Discover what makes falafel special at Istanbul Mediterranean Grill in Las Vegas. Enjoy authentic, halal-certified Mediterranean cuisine and the best falafel on the Strip. Order online or visit us today!" />
+        <meta name="description" content="Discover what makes falafel special at Istanbul Mediterranean in Las Vegas. Enjoy authentic, halal-certified Mediterranean cuisine and the best falafel on the Strip. Order online or visit us today!" />
         <link rel="canonical" href="https://www.istanbullv.com/what-is-falafel" />
         {/* FAQPage Schema for SEO */}
         <script type="application/ld+json">{`
@@ -28,7 +28,7 @@ export default function WhatIsFalafel() {
                 "name": "Is your falafel halal?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, all menu items at Istanbul Mediterranean Grill in Las Vegas, including our falafel, are halal-certified."
+                  "text": "Yes, all menu items at Istanbul Mediterranean in Las Vegas, including our falafel, are halal-certified."
                 }
               },
               {
@@ -36,7 +36,7 @@ export default function WhatIsFalafel() {
                 "name": "Where can I order falafel in Las Vegas?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You can order the best falafel at Istanbul Mediterranean Grill, 3615 S Las Vegas Blvd #101, Las Vegas, NV 89109. Order online or visit us on the Strip!"
+                  "text": "You can order the best falafel at Istanbul Mediterranean, 3615 S Las Vegas Blvd #101, Las Vegas, NV 89109. Order online or visit us on the Strip!"
                 }
               }
             ]
