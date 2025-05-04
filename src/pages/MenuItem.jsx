@@ -15,7 +15,7 @@ export default function MenuItem() {
     );
   }
   // SEO Meta Tags
-  const itemTitle = `${item.name} | Istanbul Mediterranean`;
+  const itemTitle = `${item.name} | Istanbul Mediterranean Halal`;
   const itemDesc = item.desc || item.description || 'Order authentic Mediterranean food in Las Vegas.';
   const itemImg = item.img || item.image || '/default-cover.jpg';
   const canonicalUrl = typeof window !== 'undefined' ? window.location.href : '';

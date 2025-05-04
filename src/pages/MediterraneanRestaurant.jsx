@@ -5,7 +5,7 @@ export default function MediterraneanRestaurant() {
   return (
     <>
       <Helmet>
-        <title>Mediterranean Restaurant Las Vegas | Istanbul Mediterranean</title>
+        <title>Mediterranean Restaurant Las Vegas | Istanbul Mediterranean Halal</title>
         <meta name="description" content="Discover authentic Mediterranean cuisine at Istanbul Mediterranean in Las Vegas. Enjoy doner, wraps, pita, and more in a family-owned restaurant with halal options." />
         <meta property="og:title" content="Mediterranean Restaurant Las Vegas | Istanbul Mediterranean" />
         <meta property="og:description" content="Discover authentic Mediterranean cuisine at Istanbul Mediterranean in Las Vegas. Enjoy doner, wraps, pita, and more in a family-owned restaurant with halal options." />

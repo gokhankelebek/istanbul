@@ -19,7 +19,12 @@ const highlights = menu.filter(i => [
 const baklava = menu.find(i => i.slug === 'baklava');
 if (baklava) highlights.push(baklava);
 
+import { Helmet } from 'react-helmet';
+
 export default function Home() {
+  // SEO Meta
+  // (Place at the top of the returned JSX)
+
   // Demo testimonials
   const testimonials = [
     {

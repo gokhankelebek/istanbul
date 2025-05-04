@@ -134,7 +134,7 @@ export default function App() {
       </noscript>
       {/* End Google Tag Manager (noscript) */}
       <Helmet>
-        <title>Best Doner in Vegas | Istanbul Mediterranean</title>
+        <title>Best Doner in Vegas | Istanbul Mediterranean Halal</title>
         {/* Google Tag Manager */}
         <script>
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

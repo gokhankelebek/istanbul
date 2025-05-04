@@ -5,7 +5,7 @@ export default function NearMeHalalFood() {
   return (
     <div className="container mx-auto px-4 py-10 max-w-3xl">
       <Helmet>
-        <title>Halal Food Near Me Las Vegas | Istanbul Mediterranean</title>
+        <title>Halal Food Near Me Las Vegas | Istanbul Mediterranean Halal</title>
         <meta name="description" content="Looking for halal food near you in Las Vegas? Istanbul Mediterranean offers a wide range of halal-certified dishes including doner, wraps, and more. Come taste the best!" />
         <link rel="canonical" href="https://www.istanbullv.com/near-me/halal-food" />
       </Helmet>

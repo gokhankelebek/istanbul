@@ -42,7 +42,7 @@ export default function MarkdownPage() {
   return (
     <>
       <Helmet>
-        <title>{meta.title} | Istanbul Mediterranean</title>
+        <title>{meta.title} | Istanbul Mediterranean Halal</title>
         <meta name="description" content={meta.description} />
         <link rel="canonical" href={`https://www.istanbullv.com/${slug}`} />
       </Helmet>
