@@ -20,6 +20,7 @@ import MarkdownPage from './pages/MarkdownPage';
 import FAQIndex from './pages/FAQ/index';
 import FAQSlug from './pages/FAQ/[slug]';
 import Delivery from './pages/Delivery';
+import TurkishFood from './pages/TurkishFood';
 import "./index.css";
 
 const categorizedMenu = {
@@ -166,6 +167,7 @@ export default function App() {
         <Route path="/mediterranean-restaurant" element={<MediterraneanRestaurant />} />
         <Route path="/near-me/halal-food" element={<NearMeHalalFood />} />
         <Route path="/delivery" element={<Delivery />} />
+        <Route path="/turkish-food" element={<TurkishFood />} />
       </Routes>
       {/* Footer */}
       <footer className="bg-charcoal text-offwhite py-8 mt-8 text-center">

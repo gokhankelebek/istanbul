@@ -18,6 +18,7 @@ export default function Footer() {
           <Link to="/blog" className="hover:text-istanbulRed transition">Blog</Link>
           <Link to="/contact" className="hover:text-istanbulRed transition">Contact</Link>
           <Link to="/mediterranean-restaurant" className="hover:text-yellow-400 transition font-semibold">Mediterranean Restaurant</Link>
+<Link to="/turkish-food" className="hover:text-yellow-400 transition font-semibold">Turkish Food</Link>
           <a href="https://orderdoner.com" target="_blank" rel="noopener noreferrer" className="ml-2 px-4 py-2 rounded bg-istanbulRed text-white font-semibold shadow hover:bg-primary hover:text-offwhite transition-colors duration-150">Order Online</a>
         </div>
       </div>

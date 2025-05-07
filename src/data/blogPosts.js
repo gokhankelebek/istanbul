@@ -4,7 +4,7 @@ export const blogPosts = [
     title: 'Shawarma vs. Doner Kebab: Unraveling the Threads of Tradition',
     date: '2025-04-23',
     excerpt: 'Dive into the savory world of Shawarma and Doner Kebab as we explore their origins, cultural significance, and how these iconic dishes differ across regions. Join us on a culinary journey that celebrates the rich heritage and delicious diversity of Mediterranean and Middle Eastern cuisine.',
-    image: '/assets/images/shawarma-vs-doner.avif', // Shawarma vs Doner Kebab
+    image: '/shawarma-vs-doner.avif', // Shawarma vs Doner Kebab
     content: `## Introduction: The Culinary Crossroads of Shawarma and Doner Kebab
 
 At the crossroads of culinary tradition and cultural heritage lies a question often pondered but rarely dissected with the depth it deserves: "Is Shawarma Turkish?" This inquiry not only touches on the gastronomic delights cherished around the globe but also delves into the rich tapestry of history that shapes our dining experiences today. Shawarma and its Turkish counterpart, Doner Kebab, stand as pillars of Middle Eastern and Turkish cuisines respectively, each telling a story of spice-laden journeys, communal gatherings, and the seamless blend of cultures across centuries. As we embark on this flavorful exploration, we'll uncover the roots and routes that have led these dishes to become beloved by millions, transcending borders and becoming integral to the identity of regions far beyond their origins.
@@ -28,7 +28,7 @@ Istanbul Mediterranean in Las Vegas is a must-visit spot for those looking to ex
     title: 'Best Baklava on the Las Vegas Strip | Halal Pistachio Delight',
     date: '2025-04-23',
     excerpt: 'Discover why our halal pistachio baklava—golden, flaky & sweet—is the Strip’s top dessert. Open till 5 AM. Order or visit Istanbul Mediterranean today!',
-    image: '/assets/images/baklava.webp', // Baklava
+    image: '/menu/desserts/baklava.webp', // Baklava
     content: `## Taste the Ottoman Legacy in Every Bite
 
 Our **pistachio baklava** revives a centuries-old Ottoman tradition. Flaky phyllo, rich clarified butter, and premium pistachios baked to golden perfection—then drenched in honey-scented syrup.
@@ -84,7 +84,7 @@ Open daily until 5 AM at **3615 S Las Vegas Blvd #101**.
     title: 'Order Doner: Mediterranean Street Food Delivered to Your Door in Las Vegas',
     date: '2024-04-01',
     excerpt: 'Now delivering Las Vegas’s #1 Mediterranean street food: halal doner, shawarma & falafel—fresh, fast, and right to your door. Order online at orderdoner.com!',
-    image: '/assets/images/mixed-doner-rice-bowl.webp', // Doner Rice Bowl
+    image: '/menu/rice-bowls/mixed-doner-rice-bowl.webp', // Doner Rice Bowl
     content: `## Your Favorite Mediterranean Street Food—Now in Las Vegas!
 
 Craving authentic doner, shawarma, or falafel? **Istanbul Mediterranean** brings the best of Turkish street eats straight to your doorstep—hot, fresh, and halal. Whether it’s lunch, dinner, or a late-night snack, we’ve got you covered.
@@ -115,7 +115,7 @@ From the Strip to Summerlin, order via https://orderdoner.com and track your dri
     title: 'Halal: What It Really Means for Your Food',
     date: '2024-03-15',
     excerpt: 'Halal isn’t just a label—it’s a promise of purity, ethics, and quality. Discover what makes food truly halal and why it matters beyond the plate.',
-    image: '/assets/images/beefandlamb-doner-shawarma-salad-bowl.webp', // Doner Shawarma Salad Bowl
+    image: '/menu/salad-bowls/beefandlamb-doner-shawarma-salad-bowl.webp', // Doner Shawarma Salad Bowl
     content: `## Halal Defined
 
 **Halal** (حلال) means “permissible” in Arabic. In food, it ensures every ingredient, process, and practice aligns with Islamic law:
@@ -164,7 +164,7 @@ Yes—the principles focus on permissible handling. Vegans simply avoid animal p
     title: 'Greek Gyro: Your Top 7 Questions Answered',
     date: '2024-03-01',
     excerpt: 'From cooking techniques to health perks, get the inside scoop on the classic Greek gyro—thin-sliced meat, fresh pita, and creamy tzatziki in every bite.',
-    image: '/assets/images/beefandlamb-doner-shawarma-pita.webp', // Doner Shawarma Pita
+    image: '/menu/pita-sandwiches/beefandlamb-doner-shawarma-pita.webp', // Doner Shawarma Pita
     content: `## 1. What Is a Greek Gyro?
 
 A Greek gyro (pronounced **YEER-oh**) is street-food perfection: layers of seasoned meat slow-roasted on a vertical spit, shaved thin, then wrapped in warm pita with veggies and tzatziki.
