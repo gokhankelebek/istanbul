@@ -1,5 +1,53 @@
 export const blogPosts = [
   {
+    slug: 'what-is-falafel-what-is-it-made-from-which-cuisine',
+    title: 'What is Falafel? Ingredients, Origins, and Why the World Loves It',
+    date: '2025-05-08',
+    excerpt: "Learn everything about falafel: what it's made from, where it comes from, regional variations, and why it's a vegan favorite worldwide.",
+    image: '/menu/pita-sandwiches/falafel-pita.webp',
+    content: `# What is Falafel? Ingredients, Origins, and Why the World Loves It
+
+Crispy, golden, and packed with flavor—falafel has conquered the world, one pita at a time.
+
+## Falafel: The Legendary Street Food
+Falafel is a deep-fried ball or patty made from ground chickpeas, fava beans, or a combination of both. Seasoned generously with garlic, cumin, coriander, parsley, and cilantro, falafel achieves a crispy exterior and a fluffy, herbaceous interior.
+
+## Where Did Falafel Originate?
+Most historians trace falafel back to Egypt. It likely began with Coptic Christians preparing fava bean fritters (called "ta'ameya") as a meat substitute during Lent. From Egypt, falafel migrated northward through the Levant, where chickpeas became the dominant ingredient in countries like Lebanon, Syria, and Palestine. Today, falafel is a national dish in many countries—and a global symbol of Middle Eastern cuisine.
+
+## What is Falafel Made From?
+- Chickpeas (garbanzo beans) or fava beans (broad beans)
+- Fresh herbs: parsley, cilantro, sometimes mint
+- Spices: cumin, coriander, salt, black pepper
+- Garlic and onion
+- Baking powder (for fluffiness)
+- Flour or chickpea flour (optional, for binding)
+
+The beans are soaked (not cooked), then ground with herbs and spices into a coarse paste. Small balls or patties are formed and deep-fried until golden and crispy.
+
+## Regional Variations of Falafel
+- **Egypt:** Fava bean-based ta'ameya, often greener and softer inside.
+- **Lebanon, Syria, Palestine:** Chickpea-based falafel, denser and spicier.
+- **Israel:** Popular street food, typically served stuffed inside pita with salads, tahini, and amba (mango sauce).
+
+## Falafel in Modern Food Culture
+Falafel has become a favorite among vegans and vegetarians worldwide thanks to its plant-based protein and bold flavor. It's a menu staple in food trucks, upscale restaurants, and fast-casual eateries from New York to Berlin to Sydney. Variations now include baked falafel (instead of fried) and colorful beet or spinach versions.
+
+## Is Falafel Healthy?
+Falafel is naturally high in protein, fiber, and complex carbohydrates. However, since it's traditionally deep-fried, it can be calorie-rich. Baked falafel is a lighter alternative. As part of a balanced meal with fresh vegetables and tahini sauce, falafel can definitely be a healthy, satisfying option.
+
+## Frequently Asked Questions
+**What is falafel made of?**  
+Falafel is made from ground chickpeas or fava beans, blended with fresh herbs and spices, then deep-fried until golden brown.
+
+**Where did falafel originate?**  
+Falafel likely originated in Egypt among Coptic Christians and later spread throughout the Middle East.
+
+**Is falafel healthy?**  
+Falafel provides plant-based protein and fiber but can be calorie-dense when fried. Baking or air-frying is a lighter option.
+`
+  },
+  {
     slug: 'baklava-unwrapped',
     title: "Baklava Unwrapped: The Ultimate Guide to the World's Sweetest Masterpiece",
     date: '2025-05-07',
