@@ -1,5 +1,53 @@
 export const blogPosts = [
   {
+    slug: 'baklava-unwrapped',
+    title: "Baklava Unwrapped: The Ultimate Guide to the World's Sweetest Masterpiece",
+    date: '2025-05-07',
+    excerpt: 'Discover the rich history, secrets, and varieties of baklava. Learn why this ancient dessert remains a global icon.',
+    image: '/menu/desserts/baklava.webp',
+    content: `# Baklava Unwrapped: The Ultimate Guide to the World's Sweetest Masterpiece
+
+A crisp, golden, syrup-drenched journey through history, culture, and irresistible flavor.
+
+## A Bite Through Time: The Origins of Baklava
+Baklava's roots wind through the opulent courts of the Ottoman Empire. Although layered pastries existed in Assyrian and Byzantine kitchens, it was in Istanbul’s Topkapı Palace that baklava was perfected into the art form we know today. Over centuries, the dessert migrated across the Middle East, Greece, North Africa, and eventually the world.
+
+## How Baklava Is Made
+1. **Phyllo Preparation:** Paper-thin layers of unleavened dough are hand-rolled or machine-rolled.
+2. **Nut Filling:** Traditionally crushed pistachios or walnuts, often blended with cinnamon or cardamom.
+3. **Layering:** Dozens of sheets are stacked with melted butter brushed between each one.
+4. **Cutting:** Sliced into diamond or square shapes before baking to ensure crispness.
+5. **Baking:** Baked slowly at a moderate temperature until golden brown.
+6. **Soaking:** Drenched in a syrup of sugar, water, lemon, and sometimes rosewater or orange blossom water.
+
+## Turkish Baklava vs Greek Baklava
+Both cuisines cherish baklava, but Turkish baklava typically uses pistachios, clarified butter, and a lighter syrup. Greek baklava often leans on walnuts, heavier honey syrups, and spices like cloves and cinnamon.
+
+## Secrets of Exceptional Baklava
+- Ultra-thin phyllo (the thinner, the more delicate the final texture)
+- High-quality butter, preferably clarified to remove milk solids
+- Fresh pistachios or walnuts, never stale
+- A perfectly balanced syrup: not too thick, not too thin
+- Resting the baklava after soaking so flavors meld deeply
+
+## Baklava Around the World
+In Lebanon and Syria, baklava often incorporates cashews and rosewater. In Algeria and Morocco, it mingles with North African pastries like makrout. Across Europe and America, artisanal baklava shops now celebrate both tradition and innovation, offering versions like chocolate-dipped baklava or vegan nut-free variations.
+
+## Is Baklava Healthy?
+Baklava is calorie-dense due to butter, syrup, and nuts. However, it also contains heart-healthy unsaturated fats from pistachios and walnuts. Treat baklava as a luxurious indulgence—enjoyed occasionally and savored fully.
+
+## Frequently Asked Questions
+**Where did baklava originate?**  
+Baklava traces its origins to the Ottoman Empire, with earlier influences from Middle Eastern and Central Asian cuisines.
+
+**What makes Turkish baklava special?**  
+Turkish baklava is famous for its ultra-thin phyllo layers, clarified butter, pistachio or walnut fillings, and lighter syrup compared to other versions.
+
+**Is baklava healthy?**  
+Baklava is rich in calories and sugar but contains healthy fats from nuts. It should be enjoyed in moderation.
+`
+  },
+  {
     slug: 'shawarma-vs-doner-kebab',
     title: 'Shawarma vs. Doner Kebab: Unraveling the Threads of Tradition',
     date: '2025-04-23',

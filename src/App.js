@@ -21,6 +21,7 @@ import FAQIndex from './pages/FAQ/index';
 import FAQSlug from './pages/FAQ/[slug]';
 import Delivery from './pages/Delivery';
 import TurkishFood from './pages/TurkishFood';
+import ShawarmaPage from './pages/Shawarma';
 import "./index.css";
 
 const categorizedMenu = {
@@ -167,6 +168,7 @@ export default function App() {
         <Route path="/mediterranean-restaurant" element={<MediterraneanRestaurant />} />
         <Route path="/near-me/halal-food" element={<NearMeHalalFood />} />
         <Route path="/delivery" element={<Delivery />} />
+        <Route path="/shawarma" element={<ShawarmaPage />} />
         <Route path="/turkish-food" element={<TurkishFood />} />
       </Routes>
       {/* Footer */}

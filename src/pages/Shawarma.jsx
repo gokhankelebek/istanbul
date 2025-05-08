@@ -1,199 +1,177 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
-export default function Shawarma() {
+export default function ShawarmaPage() {
   return (
-    <>
+    <div className="px-6 py-12 max-w-5xl mx-auto space-y-14">
       <Helmet>
-        <title>Shawarma vs. Doner Kebab: Unraveling the Threads of Tradition | Istanbul Mediterranean Restaurant Las Vegas</title>
-        <meta name="description" content="Dive into the savory world of Shawarma and Doner Kebab as we explore their origins, cultural significance, and how these iconic dishes differ across regions. Join us on a culinary journey that celebrates the rich heritage and delicious diversity of Mediterranean and Middle Eastern cuisine." />
-        <link rel="canonical" href="https://www.istanbullv.com/shawarma" />
-      </Helmet>
-      {/* Hero Section */}
-      <div className="relative min-h-[400px] md:min-h-[500px] flex items-center justify-center bg-gradient-to-b from-black/60 to-offwhite/80">
-        <img 
-          src="/menu/Fries Bowl/Beef&Lamb-Döner-(Shawarma)-French-Fries-Bowl.png" 
-          alt="Shawarma Hero" 
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-70" 
-          style={{zIndex: 0}}
+        <title>Shawarma: Authentic Middle Eastern Street Food</title>
+        <meta
+          name="description"
+          content="Discover everything about shawarma: origins, preparation, variations, and health facts. Learn why shawarma is loved worldwide."
         />
-        <div className="relative z-10 text-center px-4 py-12">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-4">Shawarma vs. Doner Kebab</h1>
-          <div className="text-lg md:text-2xl text-white font-medium mb-6 max-w-2xl mx-auto drop-shadow">Unraveling the Threads of Tradition</div>
-          <a href="/menu" className="inline-block px-8 py-4 rounded bg-istanbulRed text-white font-bold shadow-lg hover:bg-red-700 transition-colors text-lg md:text-xl">Order Shawarma Now</a>
-        </div>
-      </div>
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is shawarma and where does it come from?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Shawarma is a Middle Eastern street food of spiced, thinly sliced meat cooked on a rotating vertical spit. It originated in the Ottoman Empire (modern Turkey) in the 19th century."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What ingredients and sauces are typically used in shawarma?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Authentic shawarma uses meat marinated in spices like cumin, coriander, paprika, turmeric, and garlic, often with lemon and olive oil, served in pita or flatbread with tahini, pickles, tomatoes, onions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I make shawarma at home?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Marinate thinly sliced meat in spices, lemon, and oil. Grill, bake, or use a rotisserie until cooked, then slice thinly. Serve wrapped in flatbread with tahini, yogurt sauce, and fresh vegetables."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is shawarma different from a gyro or döner kebab?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Shawarma is seasoned with Middle Eastern spices and served with tahini sauces. Gyros use Greek herbs and tzatziki. Döner kebab is the Turkish original with traditional seasonings."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is shawarma a healthy choice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Shawarma can be a healthy, protein-rich meal if made with lean meats, fresh vegetables, and light sauces. Watch for calorie-dense extras like fries or heavy garlic sauces."
+                }
+              }
+            ]
+          }
+        `}</script>
+      </Helmet>
 
-      {/* Main Content */}
-      <div className="bg-offwhite min-h-screen py-16 px-4">
-  <div className="max-w-2xl mx-auto">
-    <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-6">Shawarma: The Sizzling Soul of the Mediterranean</h1>
-    <p className="text-lg text-charcoal mb-4">
-      Picture a vertical spit, slowly turning, layers of marinated meat sizzling and caramelizing as savory aromas fill the air. This is shawarma—a dish that has conquered hearts from Istanbul to Los Angeles. At Istanbul Mediterranean, our shawarma is a tribute to tradition, flavor, and the joy of sharing good food.
-    </p>
-    <h2 className="text-2xl font-bold text-saffron mb-2">A Storied Past</h2>
-    <p className="text-charcoal mb-4">
-      Shawarma’s roots stretch back centuries, evolving from the Turkish doner kebab and spreading throughout the Middle East and beyond. Each region has added its own twist, but the essence remains: expertly seasoned meat, slow-roasted to juicy perfection.
-    </p>
-    <h2 className="text-2xl font-bold text-saffron mb-2">Crafted with Passion</h2>
-    <ul className="list-disc ml-6 text-charcoal mb-6">
-      <li>Marinated for hours in a secret blend of Mediterranean spices</li>
-      <li>Roasted on a vertical spit for maximum tenderness and flavor</li>
-      <li>Hand-carved to order, ensuring every bite is fresh and juicy</li>
-      <li>Served in warm pita or lavash with crisp veggies and signature sauces</li>
-    </ul>
-    <h2 className="text-2xl font-bold text-saffron mb-2">Why Ours is Special</h2>
-    <ul className="list-disc ml-6 text-charcoal mb-6">
-      <li>Authentic recipes passed down through generations</li>
-      <li>Halal-certified meats and the freshest ingredients</li>
-      <li>Balanced, bold flavors that keep you coming back</li>
-      <li>A true taste of Istanbul, right here in Las Vegas</li>
-    </ul>
-    <p className="text-lg text-saffron font-semibold mb-6">Ready to experience shawarma at its best? Visit Istanbul Mediterranean Grill or order online for a flavor adventure!</p>
-    <div className="mt-8 text-center">
-      <a href="/menu" className="inline-block px-6 py-3 bg-istanbulRed text-white rounded-full font-bold shadow hover:bg-primary transition-colors">See Our Full Menu</a>
+      {/* Page Title */}
+      <header className="text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Shawarma: Authentic Middle Eastern Street Food</h1>
+        <p className="text-lg md:text-xl text-gray-600">
+          Everything you need to know about one of the world's most beloved street foods.
+        </p>
+      </header>
+
+      {/* What is Shawarma */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold">What Is Shawarma?</h2>
+        <p>
+          Shawarma is thinly sliced, spiced meat—lamb, beef, or chicken—cooked slowly on a vertical rotisserie. 
+          The meat self-bastes in its own juices, resulting in tender, flavorful slices served in flatbreads 
+          with tahini, garlic sauce, and pickled vegetables.
+        </p>
+      </section>
+
+      {/* History */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold">Origins and History</h2>
+        <p>
+          Shawarma evolved from the Turkish <em>döner kebab</em> in the Ottoman Empire during the 19th century. 
+          As the method spread to the Levant, it adapted into what we now call shawarma—meaning "turning" in Turkish.
+          By the 20th century, Lebanese immigrants popularized it globally, influencing dishes like Mexico's <em>tacos al pastor</em>.
+        </p>
+      </section>
+
+      {/* How It's Made */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold">How Shawarma Is Made</h2>
+        <ol className="list-decimal list-inside space-y-3">
+          <li>Marinate thin slices of meat with spices (cumin, coriander, paprika, turmeric, garlic) plus olive oil and lemon juice.</li>
+          <li>Stack the meat tightly onto a vertical spit and slow-roast.</li>
+          <li>Shave off tender slices as the meat cooks, and serve immediately in wraps or plates with sides.</li>
+        </ol>
+      </section>
+
+      {/* Variations */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold">Popular Shawarma Variations</h2>
+        <ul className="list-disc list-inside space-y-3">
+          <li><strong>Chicken Shawarma:</strong> Yogurt-lemon marinated for extra tenderness.</li>
+          <li><strong>Beef/Lamb Shawarma:</strong> Traditional with rich spice blends.</li>
+          <li><strong>Turkey Shawarma:</strong> Especially popular in Israel for kosher dining.</li>
+          <li><strong>Veggie Shawarma:</strong> Using grilled vegetables or falafel for plant-based versions.</li>
+        </ul>
+      </section>
+
+      {/* Global Adaptations */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold">Shawarma Around the World</h2>
+        <p>
+          From Lebanon and Jordan to Germany and Mexico, shawarma has adapted into countless regional favorites.
+          Variations include <em>tacos al pastor</em> in Mexico and lamb döner in Europe—each inspired by the same rotating-spit method.
+        </p>
+      </section>
+
+      {/* Shawarma vs Gyro vs Döner */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold">Shawarma vs. Gyro vs. Döner</h2>
+        <p>
+          Though similar in preparation, shawarma (Middle Eastern) is seasoned with bold spices, gyros (Greek) are made 
+          with Mediterranean herbs and tzatziki, and döner kebab (Turkish) features a more subtle flavor profile.
+        </p>
+      </section>
+
+      {/* Health */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold">Is Shawarma Healthy?</h2>
+        <p>
+          Shawarma can be a protein-rich, satisfying meal when paired with fresh vegetables and light sauces.
+          A typical chicken shawarma wrap contains about 230 calories and 32g of protein. Watch portion sizes 
+          and sides for the healthiest experience.
+        </p>
+      </section>
+
+      {/* FAQ */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-center">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold cursor-pointer">What is shawarma and where does it come from?</summary>
+            <p className="mt-2">
+              Shawarma originated in the Ottoman Empire and refers to spiced meat cooked on a rotating spit, 
+              a culinary tradition that evolved into today's Middle Eastern favorite.
+            </p>
+          </details>
+
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold cursor-pointer">What ingredients are typically used in shawarma?</summary>
+            <p className="mt-2">
+              Typical shawarma includes cumin, paprika, turmeric, garlic, and lemon-marinated meats like lamb, beef, or chicken, 
+              wrapped with tahini or garlic sauces, pickles, and salads.
+            </p>
+          </details>
+
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold cursor-pointer">How do I make shawarma at home?</summary>
+            <p className="mt-2">
+              Marinate sliced meat in Middle Eastern spices and roast or grill. Serve thinly sliced meat in pita with toppings.
+            </p>
+          </details>
+
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold cursor-pointer">Is shawarma healthy?</summary>
+            <p className="mt-2">
+              Yes, especially when made with lean meats, fresh vegetables, and lighter sauces. 
+              It’s a great source of protein with moderate fat.
+            </p>
+          </details>
+        </div>
+      </section>
     </div>
-  </div>
-        <div className="max-w-4xl mx-auto">
-          {/* Introduction */}
-          {/* Culinary Tips & Date */}
-          <div className="flex items-center justify-between mb-6">
-            <div className="text-xs text-herb">Culinary tips</div>
-            <div className="text-sm text-charcoal">Feb 6, 2024</div>
-          </div>
-
-          <h2 className="text-3xl font-bold text-primary mb-4">Different types of street food cooked on a vertical rotisserie</h2>
-          <p className="text-lg text-charcoal mb-8">Dive into the savory world of Shawarma and Doner Kebab as we explore their origins, cultural significance, and how these iconic dishes differ across regions. Join us on a culinary journey that celebrates the rich heritage and delicious diversity of Mediterranean and Middle Eastern cuisine.</p>
-
-          {/* Comparison Section */}
-          <div className="my-12 flex flex-col md:flex-row gap-8 items-center">
-            <div className="flex-1 flex flex-col items-center">
-              <img src="/menu/fries-bowl/beefandlamb-doner-shawarma-french-fries-bowl.webp" alt="Shawarma" className="w-full max-w-xs rounded-xl shadow-lg mb-4" />
-              <div className="text-lg font-semibold text-primary">Shawarma</div>
-            </div>
-            <div className="flex-1 flex flex-col items-center">
-              <img src="/menu/Pita/Mixed-Doner-Pita.png" alt="Doner Kebab" className="w-full max-w-xs rounded-xl shadow-lg mb-4" />
-              <div className="text-lg font-semibold text-saffron">Doner Kebab</div>
-            </div>
-          </div>
-          <div className="overflow-x-auto mb-12">
-            <table className="min-w-full text-left border border-gray-200 rounded-lg shadow-sm bg-white">
-              <thead className="bg-istanbulRed text-white">
-                <tr>
-                  <th className="py-2 px-4">Feature</th>
-                  <th className="py-2 px-4">Shawarma</th>
-                  <th className="py-2 px-4">Doner Kebab</th>
-                </tr>
-              </thead>
-              <tbody className="text-charcoal">
-                <tr>
-                  <td className="py-2 px-4 font-semibold">Origin</td>
-                  <td className="py-2 px-4">Middle East</td>
-                  <td className="py-2 px-4">Turkey</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="py-2 px-4 font-semibold">Meat</td>
-                  <td className="py-2 px-4">Lamb, chicken, beef (marinated)</td>
-                  <td className="py-2 px-4">Lamb, beef, chicken (often less marinated)</td>
-                </tr>
-                <tr>
-                  <td className="py-2 px-4 font-semibold">Spices</td>
-                  <td className="py-2 px-4">Rich blend: cumin, coriander, turmeric, cinnamon, cardamom</td>
-                  <td className="py-2 px-4">Simple: salt, pepper, oregano, sumac</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="py-2 px-4 font-semibold">Serving Style</td>
-                  <td className="py-2 px-4">Wrap, pita, with tahini/veggies</td>
-                  <td className="py-2 px-4">Bread, rice, with pickles/yogurt</td>
-                </tr>
-                <tr>
-                  <td className="py-2 px-4 font-semibold">Sauces</td>
-                  <td className="py-2 px-4">Tahini, garlic, amba</td>
-                  <td className="py-2 px-4">Yogurt, tomato, sumac onions</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          {/* How It's Made Section */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-primary mb-6">How It's Made: Shawarma & Doner Kebab</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow flex flex-col items-center">
-                <img src="/menu/Wrap/Beef&Lamb-Döner-(Shawarma-Lavash-Wrap.png" alt="Shawarma Prep" className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-istanbulRed/30" />
-                <h4 className="text-lg font-semibold mb-2 text-primary">Shawarma</h4>
-                <ol className="list-decimal ml-6 text-charcoal text-base">
-                  <li>Marinate meat in a blend of Middle Eastern spices.</li>
-                  <li>Stack marinated slices on a vertical spit.</li>
-                  <li>Slowly roast, shaving off thin slices as it cooks.</li>
-                  <li>Serve in pita/wrap with veggies and tahini.</li>
-                </ol>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow flex flex-col items-center">
-                <img src="/menu/Pita/Mixed-Doner-Pita.png" alt="Doner Prep" className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-saffron/30" />
-                <h4 className="text-lg font-semibold mb-2 text-saffron">Doner Kebab</h4>
-                <ol className="list-decimal ml-6 text-charcoal text-base">
-                  <li>Season meat with salt, pepper, and Turkish herbs.</li>
-                  <li>Stack on vertical rotisserie (doner).</li>
-                  <li>Roast and slice thinly for serving.</li>
-                  <li>Serve on bread/rice with pickles and yogurt sauce.</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-
-          {/* Testimonials Section */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-primary mb-6">What Our Guests Say</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-4 rounded-xl shadow">
-                <div className="text-lg font-semibold text-istanbulRed mb-1">"Best Shawarma in Vegas!"</div>
-                <div className="text-charcoal text-base mb-2">"The flavors are authentic and the meat is always juicy. Highly recommend the shawarma wrap!"</div>
-                <div className="text-xs text-right text-herb">- Sarah M.</div>
-              </div>
-              <div className="bg-white p-4 rounded-xl shadow">
-                <div className="text-lg font-semibold text-saffron mb-1">"Doner Kebab Perfection"</div>
-                <div className="text-charcoal text-base mb-2">"Reminds me of my travels in Istanbul. The doner is spot on!"</div>
-                <div className="text-xs text-right text-herb">- Ahmed K.</div>
-              </div>
-              <div className="bg-white p-4 rounded-xl shadow">
-                <div className="text-lg font-semibold text-primary mb-1">"A Must-Try Experience"</div>
-                <div className="text-charcoal text-base mb-2">"The atmosphere and food are both amazing. I always bring friends here!"</div>
-                <div className="text-xs text-right text-herb">- Lisa R.</div>
-              </div>
-              <div className="bg-white p-4 rounded-xl shadow">
-                <div className="text-lg font-semibold text-istanbulRed mb-1">"Delicious and Authentic"</div>
-                <div className="text-charcoal text-base mb-2">"You can taste the tradition in every bite. The best Mediterranean spot in town!"</div>
-                <div className="text-xs text-right text-herb">- Omar F.</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Experience Section */}
-          <div className="mb-12">
-            <h3 className="text-xl font-semibold text-primary mb-2">Experience Authentic Mediterranean Cuisine in Las Vegas</h3>
-            <p className="mb-4">Istanbul Mediterranean Restaurant in Las Vegas is a must-visit spot for those looking to experience the flavors of authentic Mediterranean cuisine. The restaurant offers a unique culinary journey with fresh ingredients and traditional Turkish and Mediterranean dishes. Known for its popular items like doner kebab and shawarma, Istanbul Mediterranean Restaurant has become one of the city's favorite dining destinations. With a diverse menu that includes appetizers, meat and chicken dishes, and vegetarian options, the restaurant caters to all tastes. Its warm and inviting atmosphere makes it a top choice for anyone seeking a memorable meal in Las Vegas.</p>
-          </div>
-
-          {/* Menu Preview CTA */}
-          <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-8 bg-istanbulRed/10 p-8 rounded-xl shadow">
-            <div>
-              <div className="text-2xl font-bold text-istanbulRed mb-2">Ready to Taste the Tradition?</div>
-              <div className="text-charcoal mb-4">Explore our menu and order your favorite shawarma or doner kebab today!</div>
-              <a href="/menu" className="inline-block px-8 py-4 rounded bg-istanbulRed text-white font-bold shadow-lg hover:bg-red-700 transition-colors text-lg md:text-xl">See Full Menu</a>
-            </div>
-            <img src="/menu/fries-bowl/beefandlamb-doner-shawarma-french-fries-bowl.webp" alt="Shawarma Menu Preview" className="w-48 h-48 object-cover rounded-lg shadow-lg border-4 border-istanbulRed/30" />
-          </div>
-
-          <h3 className="text-xl font-semibold text-primary mb-2">Experience Authentic Mediterranean Cuisine in Las Vegas</h3>
-          <p className="mb-4">Istanbul Mediterranean Restaurant in Las Vegas is a must-visit spot for those looking to experience the flavors of authentic Mediterranean cuisine. The restaurant offers a unique culinary journey with fresh ingredients and traditional Turkish and Mediterranean dishes. Known for its popular items like doner kebab and shawarma, Istanbul Mediterranean Restaurant has become one of the city's favorite dining destinations. With a diverse menu that includes appetizers, meat and chicken dishes, and vegetarian options, the restaurant caters to all tastes. Its warm and inviting atmosphere makes it a top choice for anyone seeking a memorable meal in Las Vegas.</p>
-
-          <div className="mt-8">
-            <a href="/menu" className="inline-block px-6 py-3 rounded bg-istanbulRed text-white font-bold shadow hover:bg-red-700 transition-colors text-lg">Click here to visit Istanbul Mediterranean Restaurant now and find out more!</a>
-          </div>
-        </div>
-      </div>
-    </>
   );
 }
-
