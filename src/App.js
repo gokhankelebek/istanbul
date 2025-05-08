@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Helmet } from "react-helmet";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import FooterAwareOrderOnlineButton from "./FooterAwareOrderOnlineButton";
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -172,27 +173,7 @@ export default function App() {
         <Route path="/turkish-food" element={<TurkishFood />} />
       </Routes>
       {/* Footer */}
-      <footer className="bg-charcoal text-offwhite py-8 mt-8 text-center">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div>
-            <div className="font-bold text-lg mb-2">Explore</div>
-            <ul className="space-y-1">
-              <li><a href="/experience" className="hover:text-saffron">Our Story</a></li>
-              <li><a href="/halal" className="hover:text-saffron">Halal Commitment</a></li>
-              <li><a href="/mediterranean-food-las-vegas" className="hover:text-saffron">Mediterranean Cuisine</a></li>
-              <li><a href="/mediterranean-restaurant" className="hover:text-yellow-400 font-semibold">Mediterranean Restaurant</a></li>
-              <li><a href="/faq/what-is-halal" className="hover:text-saffron">What is Halal? (FAQ)</a></li>
-            </ul>
-          </div>
-          <div className="text-sm mt-4 md:mt-0">
-            <div className="font-bold mb-1">Visit Us</div>
-            <div>3615 S Las Vegas Blvd #101<br/>Las Vegas, NV 89109</div>
-            <div className="mt-1">Open: 10:00 am - 5:00 am daily</div>
-            <a href="tel:+17259008844" className="block mt-1 text-saffron underline">(725) 900-8844</a>
-          </div>
-          <div className="text-xs mt-6 md:mt-0">Istanbul Mediterranean &copy; {new Date().getFullYear()}<br/>All rights reserved.</div>
-        </div>
-      </footer>
+      <Footer />
       {/* Sticky Order Online CTA - Only show on mobile (hamburger menu) and hide when footer is visible */}
       <FooterAwareOrderOnlineButton />
     </>
