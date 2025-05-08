@@ -1,5 +1,11 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import { FaCheckCircle, FaClock, FaHeart, FaUsers, FaTrophy } from 'react-icons/fa';
+
+<Helmet>
+  <title>About Istanbul Mediterranean | Our Story</title>
+  <meta name="description" content="Learn about Istanbul Mediterranean—our story, mission, and commitment to serving the best Turkish and Mediterranean cuisine in Las Vegas." />
+</Helmet>
 
 export default function About() {
   return (

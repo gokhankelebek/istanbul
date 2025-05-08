@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 
 export default function Experience() {
   return (
     <div className="bg-offwhite min-h-screen py-16 px-4">
+      <Helmet>
+        <title>Find Istanbul Mediterranean in Las Vegas | Directions & Hours</title>
+        <meta name="description" content="Find Istanbul Mediterranean on the Las Vegas Strip. Get directions, hours, and parking info for your next Mediterranean meal." />
+      </Helmet>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-6">The Istanbul Mediterranean Experience</h1>
         <p className="text-lg text-charcoal mb-4">Immerse yourself in a dining adventure where each bite transports you to the vibrant streets of Turkey. Our dishes, crafted with the freshest ingredients and traditional spices, promise an authentic taste that will tantalize your senses and leave you craving more.</p>

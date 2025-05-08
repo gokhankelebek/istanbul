@@ -14,6 +14,10 @@
           </ul>
         </footer>
       </article>
+      <Helmet>
+        <title>Best Shawarma Wraps in Las Vegas | Istanbul Mediterranean</title>
+        <meta name="description" content="Savor the best shawarma wraps on the Las Vegas Strip at Istanbul Mediterranean. Fresh, authentic, and open late for your cravings!" />
+      </Helmet>
     </>
   );
 }
