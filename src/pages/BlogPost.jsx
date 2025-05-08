@@ -8,6 +8,35 @@ import { Helmet } from 'react-helmet';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { blogPosts } from '../data/blogPosts';
+import RelatedLinks from '../components/RelatedLinks';
+
+function getRelatedLinks(currentSlug) {
+  // Define some curated related links for each main post
+  const relatedMap = {
+    'baklava-unwrapped': [
+      { to: '/shawarma', title: 'Shawarma: Everything You Need to Know', description: 'Dive into the history and flavors of shawarma.' },
+      { to: '/turkish-food', title: 'Turkish Food: A Mediterranean Treasure', description: 'Explore the staples of Turkish culinary heritage.' },
+      { to: '/blog-posts/what-is-falafel-what-is-it-made-from-which-cuisine', title: 'Falafel: Origins and Ingredients', description: 'Discover why falafel is a global vegan favorite.' },
+    ],
+    'what-is-falafel-what-is-it-made-from-which-cuisine': [
+      { to: '/shawarma', title: 'Shawarma: Everything You Need to Know', description: 'Dive into the history and flavors of shawarma.' },
+      { to: '/blog-posts/baklava-unwrapped', title: 'Baklava: The Sweetest Legacy', description: 'Uncover the rich history of baklava from empire to table.' },
+      { to: '/turkish-food', title: 'Turkish Food: A Mediterranean Treasure', description: 'Explore the staples of Turkish culinary heritage.' },
+    ],
+    'shawarma-vs-doner-kebab': [
+      { to: '/blog-posts/baklava-unwrapped', title: 'Baklava: The Sweetest Legacy', description: 'Uncover the rich history of baklava from empire to table.' },
+      { to: '/turkish-food', title: 'Turkish Food: A Mediterranean Treasure', description: 'Explore the staples of Turkish culinary heritage.' },
+      { to: '/blog-posts/what-is-falafel-what-is-it-made-from-which-cuisine', title: 'Falafel: Origins and Ingredients', description: 'Discover why falafel is a global vegan favorite.' },
+    ],
+    // Default fallback:
+    'default': [
+      { to: '/shawarma', title: 'Shawarma: Everything You Need to Know', description: 'Dive into the history and flavors of shawarma.' },
+      { to: '/blog-posts/baklava-unwrapped', title: 'Baklava: The Sweetest Legacy', description: 'Uncover the rich history of baklava from empire to table.' },
+      { to: '/turkish-food', title: 'Turkish Food: A Mediterranean Treasure', description: 'Explore the staples of Turkish culinary heritage.' },
+    ]
+  };
+  return relatedMap[currentSlug] || relatedMap['default'];
+}
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -138,27 +167,10 @@ export default function BlogPost() {
         )}
       </div>
 
-      {/* Related Posts */}
-      <section className="mt-16">
-        <h2 className="text-2xl font-bold text-primary mb-6">Related Posts</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {blogPosts.filter(p => p.slug !== slug).slice(0, 2).map(p => (
-            <Link key={p.slug} to={`/blog-posts/${p.slug}`} className="group block focus:outline-none focus:ring-2 focus:ring-istanbulRed rounded-lg">
-              <div className="overflow-hidden rounded-lg shadow-lg transition-transform group-hover:scale-105 group-focus:scale-105 bg-white">
-                <img
-                  src={p.cover || p.image}
-                  alt={p.title}
-                  className="w-full h-48 object-cover mb-4 group-hover:opacity-90 group-focus:opacity-90"
-                  loading="lazy"
-                />
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold group-hover:text-primary group-focus:text-primary transition-colors">{p.title}</h3>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {/* Related Links */}
+      <RelatedLinks
+        links={getRelatedLinks(slug)}
+      />
 
       {/* Back to Blog */}
       <div className="mt-12 text-center">
