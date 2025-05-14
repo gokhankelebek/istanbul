@@ -1,13 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { ORDER_LINKS } from "../lib/orderLinks";
+
+const AD_LANDING_REGEX = /^(\/yelp|\/google|\/facebook|\/instagram|\/tiktok|\/tripadvisor)(\/|$)/;
 
 export default function FooterAwareOrderOnlineButton() {
   const [show, setShow] = useState(true);
   const footerRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
-    const footer = document.querySelector("footer");
-    if (!footer) return;
-
+    // If on an ad landing page, never show the sticky button
+    if (AD_LANDING_REGEX.test(location.pathname)) {
+      setShow(false);
+      return;
+    }
+    footerRef.current = document.querySelector("footer");
+    if (!footerRef.current) return;
     const observer = new window.IntersectionObserver(
       ([entry]) => {
         setShow(!entry.isIntersecting);
@@ -17,15 +26,18 @@ export default function FooterAwareOrderOnlineButton() {
         threshold: 0.01,
       }
     );
-    observer.observe(footer);
+    observer.observe(footerRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
 
+  // Hide on all ad landing pages (/yelp, /google, /facebook, /instagram, /tiktok, /tripadvisor)
+  if (AD_LANDING_REGEX.test(location.pathname)) return null;
+  const href = ORDER_LINKS.default;
   // Only show on mobile (hamburger menu)
   return show ? (
     <div className="fixed bottom-0 left-0 w-full z-50 flex justify-center md:hidden rounded-xl">
       <a
-        href="https://orderdoner.com"
+        href={href}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Order Online Sticky CTA"
@@ -37,3 +49,4 @@ export default function FooterAwareOrderOnlineButton() {
     </div>
   ) : null;
 }
+

@@ -130,9 +130,9 @@ export default function Home() {
         <h2 className="text-3xl font-extrabold mb-10 text-primary tracking-tight">Why Choose Us?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
           <div className="flex flex-col items-center p-6 rounded-2xl shadow bg-white border border-saffron/10 hover:shadow-xl transition-shadow group">
-            <img src="/menu/doner.webp" alt="Authentic Turkish Doner" className="w-16 h-16 mb-3 object-contain group-hover:scale-110 transition-transform" />
-            <span className="font-bold text-lg mb-1">Authentic Turkish Doner</span>
-            <span className="text-herb text-sm">Juicy, flavorful, and carved fresh daily—just like Istanbul.</span>
+            <img src="/doner-icon.png" alt="Doner Kebab Icon" className="w-14 h-14 mb-3 object-contain group-hover:scale-110 transition-transform" />
+            <span className="font-bold text-base mb-2 text-center">Authentic Turkish Doner</span>
+            <span className="text-herb text-sm text-center max-w-[180px] mx-auto leading-snug">Juicy, flavorful, and carved fresh daily—just like Istanbul.</span>
           </div>
           <div className="flex flex-col items-center p-6 rounded-2xl shadow bg-white border border-saffron/10 hover:shadow-xl transition-shadow group">
             <img src="/halal-vegan.png" alt="Halal & Vegan Options" className="w-16 h-16 mb-3 object-contain group-hover:scale-110 transition-transform" />

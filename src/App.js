@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FooterAwareOrderOnlineButton from "./FooterAwareOrderOnlineButton";
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import YelpLandingPage from './pages/yelp';
+import GoogleLanding from './pages/GoogleLanding';
 import { useEffect } from 'react';
 import BlogPosts from './pages/BlogPosts';
 import NavBar from './components/NavBar';
@@ -155,6 +157,8 @@ export default function App() {
       <ScrollRestoration />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/yelp" element={<YelpLandingPage />} />
+        <Route path="/google" element={<GoogleLanding />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/:slug" element={<MenuItem />} />
         <Route path="/blog-posts" element={<BlogPosts />} />
@@ -174,8 +178,7 @@ export default function App() {
       </Routes>
       {/* Footer */}
       <Footer />
-      {/* Sticky Order Online CTA - Only show on mobile (hamburger menu) and hide when footer is visible */}
-      <FooterAwareOrderOnlineButton />
+
     </>
   );
 }
