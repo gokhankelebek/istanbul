@@ -81,7 +81,7 @@ export default function BlogPost() {
             "author": {"@type": "Person", "name": "${author}"},
             "publisher": {"@type": "Organization", "name": "Istanbul Mediterranean", "logo": {"@type": "ImageObject", "url": "https://istanbullv.com/logo.png"}},
             "datePublished": "${post.date}",
-            "description": "${post.excerpt}"
+            "description": "${post.excerpt}"$${post.slug === 'history-and-variations-of-gyros' ? ',\n            "mainEntity": {\n              "@type": "Restaurant",\n              "name": "Istanbul Mediterranean Halal",\n              "servesCuisine": "Mediterranean",\n              "address": {\n                "@type": "PostalAddress",\n                "streetAddress": "3645 S Las Vegas Blvd, Grand Bazaar Shops, Las Vegas, NV 89109",\n                "addressLocality": "Las Vegas",\n                "addressRegion": "NV",\n                "postalCode": "89109",\n                "addressCountry": "US"\n              },\n              "sameAs": [\n                "https://istanbullv.com",\n                "https://www.instagram.com/istanbulmediterraneanlv/",\n                "https://www.facebook.com/istanbulmediterraneanlv/"\n              ]\n            }' : ''}
           }
         `}</script>
       </Helmet>
@@ -95,7 +95,7 @@ export default function BlogPost() {
       >
         <img
           src={coverSrc}
-          alt={post.title}
+          alt={post.slug === 'history-and-variations-of-gyros' ? 'Authentic halal gyros in Las Vegas at Istanbul Mediterranean Halal' : post.title}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -128,42 +128,48 @@ export default function BlogPost() {
       </div>
 
       {/* Content */}
-      <div className="prose prose-lg prose-primary max-w-none dark:prose-invert">
+      <div className="prose prose-lg max-w-none text-charcoal" style={{color:'#222'}}>
+  <style>{`
+    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+      color: #222 !important;
+      font-weight: bold !important;
+    }
+    .prose strong {
+      color: #222 !important;
+      font-weight: bold !important;
+    }
+    .prose table, .prose th, .prose td {
+      color: #222 !important;
+      border-color: #bbb !important;
+    }
+    .prose em {
+      color: #444 !important;
+    }
+    .prose {
+      --tw-prose-headings: #222 !important;
+      --tw-prose-bold: #222 !important;
+      --tw-prose-body: #222 !important;
+      --tw-prose-links: #b91c1c !important;
+    }
+  `}</style>
         {post.contentHtml ? (
           <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
         ) : (
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw]}
-            components={{
-              h1: ({node, ...props}) => <h1 className="mt-12 mb-4 text-4xl font-extrabold text-primary" {...props} />,
-              h2: ({node, ...props}) => <h2 className="mt-10 mb-3 text-3xl font-bold text-istanbulRed" {...props} />,
-              h3: ({node, ...props}) => <h3 className="mt-8 mb-2 text-2xl font-semibold text-herb" {...props} />,
-              table: ({node, ...props}) => <table className="w-full my-6 border-collapse border border-herb/30 rounded-lg overflow-x-auto text-sm" {...props} />,
-              th: ({node, ...props}) => <th className="bg-herb/10 px-3 py-2 border border-herb/20 font-semibold" {...props} />,
-              td: ({node, ...props}) => <td className="px-3 py-2 border border-herb/10" {...props} />,
-              blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-istanbulRed pl-4 italic text-herb bg-offwhite/50 my-6 py-2" {...props} />,
-              code({node, inline, className, children, ...props}) {
-                return !inline ? (
-                  <SyntaxHighlighter
-                    style={materialLight}
-                    language={className?.replace('language-', '')}
-                    PreTag="div"
-                    className="rounded-lg my-4"
-                    {...props}
-                  >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
-                ) : (
-                  <code className="bg-herb/10 rounded px-1 py-0.5 text-sm" {...props}>{children}</code>
-                );
-              },
-              img: ({node, ...props}) => <img className="rounded-lg shadow my-6 mx-auto max-h-80" loading="lazy" alt={props.alt || ''} {...props} />,
-              a: ({node, ...props}) => <a className="text-istanbulRed underline hover:text-primary" rel="noopener noreferrer" target="_blank" {...props} />,
-              details: ({node, ...props}) => <details className="bg-herb/5 rounded-lg my-4 p-4 border border-herb/20" {...props} />,
-              summary: ({node, ...props}) => <summary className="font-semibold cursor-pointer text-primary" {...props} />,
-            }}
+            components={{}}
           >
             {post.content}
           </ReactMarkdown>
+        )}
+
+        {/* Subtle internal link for gyros post only */}
+        {post.slug === 'history-and-variations-of-gyros' && (
+          <div className="my-8 p-4 rounded-lg bg-herb/10 border-l-4 border-istanbulRed">
+            <span className="block mb-1 font-semibold text-istanbulRed">Want to learn more about Mediterranean desserts?</span>
+            <a href="https://www.istanbullv.com/blog-posts/baklava-unwrapped" className="text-primary underline hover:text-istanbulRed font-medium" rel="noopener noreferrer" target="_blank">Read our Baklava Origins article →</a>
+          </div>
         )}
       </div>
 

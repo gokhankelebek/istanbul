@@ -1,5 +1,387 @@
 export const blogPosts = [
   {
+    slug: 'shawarma-vs-doner-kebab',
+    title: 'Shawarma vs. Doner Kebab: What’s the Difference?',
+    date: '2025-04-28',
+    excerpt: 'Explore the key differences between shawarma and doner kebab, from their origins to how they’re served today.',
+    image: '/gyros.png',
+    content: `# Shawarma vs. Doner Kebab: What’s the Real Difference?
+
+**Published: April 28, 2025 | 3 min read**  
+By Istanbul Mediterranean, Las Vegas
+
+🍢 **Two Iconic Dishes. One Shared Legacy.**  
+When it comes to street food royalty, Shawarma and Doner Kebab reign supreme. Often confused—and understandably so—these two culinary giants are rooted in the rich traditions of the Ottoman Empire, but over centuries, they’ve taken on identities all their own.
+
+At Istanbul Mediterranean, one of Las Vegas’ top destinations for authentic Mediterranean cuisine, we serve both dishes with pride. But what truly sets them apart?
+
+---
+
+## 🥙 Shawarma: Middle Eastern Soul in Every Bite
+Shawarma is the beating heart of Middle Eastern street food. Tender cuts of spiced meat—usually lamb, chicken, or beef—are slow-roasted on a vertical spit, then thinly shaved into pillowy pita bread or lafa wraps.
+
+**What makes shawarma sing?**
+- **Seasonings:** Think cumin, paprika, turmeric, cinnamon, and garlic—a bold, aromatic spice blend.
+- **Toppings:** Pickled turnips, fresh cucumbers, onions, tomatoes, and creamy garlic sauce or tahini.
+- **Style:** Wrapped and portable, perfect for lunch on the go or a late-night snack.
+
+Each bite is an explosion of smoky, tangy, and herby flavors, crafted to satisfy and invigorate.
+
+---
+
+## 🍖 Doner Kebab: Turkish Tradition on a Plate
+Now cross into Anatolia, and you’ll meet shawarma’s cousin: the Doner Kebab.
+
+Born in Turkey, the doner is a culinary masterpiece with a heartier, more savory profile. Like shawarma, it’s cooked on a vertical spit—but here’s where the differences unfold:
+
+- **Cuts:** Often made from beef, lamb, or chicken, the meat is marinated simply to let the natural flavors shine.
+- **Thickness:** Slices are usually thicker and juicier, often pan-crisped before serving.
+- **Presentation:** Served in lavash or flatbread, or plated with rice, grilled vegetables, and fresh Mediterranean salad.
+
+The result? A comforting, filling dish that reflects centuries of Turkish heritage and meticulous technique.
+
+---
+
+## 🔥 Shawarma vs. Doner Kebab: Quick Comparison
+
+| Feature         | Shawarma                            | Doner Kebab                            |
+|-----------------|-------------------------------------|----------------------------------------|
+| **Origin**      | Middle East (Ottoman influence)     | Turkey (Ottoman origin)                |
+| **Meat Cuts**   | Thin, often more spiced             | Thicker, savory and juicy              |
+| **Bread**       | Pita, lafa                          | Lavash, Turkish flatbread              |
+| **Serving Style**| Wrapped with veggies/sauces         | Plated or wrapped with rice/salad      |
+| **Flavors**     | Spiced, tangy, aromatic             | Mildly seasoned, rich and meaty        |
+| **Accompaniments**| Garlic sauce, tahini, pickles      | Yogurt sauce, sumac onions, grilled peppers |
+
+---
+
+## 🌍 A Culinary Journey Through Culture
+What makes these dishes more than just meals? They’re edible stories—recipes passed from generation to generation, crossing borders and weaving through centuries. Whether you prefer the spiced boldness of shawarma or the comforting depth of doner kebab, you're tasting a piece of history and heritage with every bite.
+
+---
+
+## 🍽️ Why Istanbul Mediterranean is Las Vegas’ Hidden Gem
+Located in the heart of Las Vegas, Istanbul Mediterranean is more than a restaurant—it’s a gateway to the Mediterranean table.
+
+✅ Authentic Doner Kebab sliced fresh  
+✅ Shawarma wraps packed with flavor  
+✅ A full menu featuring vegetarian options, fresh mezze, and sizzling grill plates  
+✅ Warm, inviting atmosphere with generous portions and hospitality you can taste
+
+We don’t just serve food—we serve experiences, shaped by tradition and shared with love.
+
+---
+
+## 📍 Visit Us or Order Online
+Craving the flavors of the Mediterranean and Middle East? Whether you're a Las Vegas local or just passing through, Istanbul Mediterranean is your go-to destination.
+
+👉 [Order Now at orderdoner.com](https://orderdoner.com)  
+📍 [Find Us on Google Maps](https://goo.gl/maps/your-location)
+
+---
+
+## 💬 Final Bite
+So, shawarma or doner kebab? The only real answer is: both. And the best place to try them side by side? Istanbul Mediterranean, where every dish is a celebration of culture, community, and culinary passion.
+
+<!--
+🧿 Meta Description (SEO):
+What’s the difference between Shawarma and Doner Kebab? Discover how these iconic street foods differ in flavor, origin, and style at Istanbul Mediterranean in Las Vegas.
+
+🗝️ Suggested Keywords:
+shawarma vs doner kebab, differences between shawarma and doner, Mediterranean food Las Vegas, best Turkish food Las Vegas, shawarma restaurant near me, doner kebab wrap, shawarma pita vs doner flatbread, Istanbul Mediterranean menu
+-->
+`,
+  },
+  {
+    slug: 'best-halal-baklava-las-vegas-strip',
+    title: 'Best Baklava on the Las Vegas Strip | Halal Pistachio Delight',
+    date: '2025-04-23',
+    excerpt: 'Discover why our halal pistachio baklava—golden, flaky & sweet—is the Strip’s top dessert. Open till 5 AM. Order or visit Istanbul Mediterranean today!',
+    image: '/menu/desserts/baklava.webp',
+    content: `## Taste the Ottoman Legacy in Every Bite
+
+Our **pistachio baklava** revives a centuries-old Ottoman tradition. Flaky phyllo, rich clarified butter, and premium pistachios baked to golden perfection—then drenched in honey-scented syrup.
+
+---
+
+## Why Our Baklava Is Famous
+
+- **Authentic Recipe:** Inspired by Topkapı Palace, perfected by our family.  
+- **Premium Ingredients:** Halal butter & strictly sourced nuts.  
+- **Daily Fresh:** Baked every morning for maximum crunch.
+
+> _"Each bite is a taste of Istanbul—right here in Las Vegas."_
+
+---
+
+## Vegas-Wide Baklava Craze
+
+- **40.8 million visitors in 2024:** Demand for baklava has never been higher!  
+- **Halal Market:** $669 B global industry, growing 9 % annually.  
+- **Media Buzz:** From fine-dining menus to late-night cravings.
+
+---
+
+## Pistachio vs. Walnut: Which Wins?
+
+| Feature    | Pistachio                | Walnut             |
+|------------|--------------------------|--------------------|
+| Flavor     | Earthy, sweet, green     | Deep, nutty, robust|
+| Color      | Vibrant green            | Golden brown       |
+| Popularity | #1 in Turkey             | Common in Greece   |
+
+---
+
+## Frequently Asked Questions
+
+**Q: Is your baklava 100 % halal?**  
+A: Yes—all ingredients and preparation meet halal standards.
+
+**Q: How many calories per slice?**  
+A: Approximately 306 calories per 3-oz slice.
+
+---
+
+## Visit or Order Online
+
+Open daily until 5 AM at **3615 S Las Vegas Blvd #101**.
+
+👉 [Order for Pickup](https://istanbulv.com/pickup) or call **725-900-8844** for catering.`,
+  },
+  {
+    slug: 'mediterranean-delivery-food-las-vegas',
+    title: 'Order Doner: Mediterranean Street Food Delivered to Your Door in Las Vegas',
+    date: '2024-04-01',
+    excerpt: 'Now delivering Las Vegas’s #1 Mediterranean street food: halal doner, shawarma & falafel—fresh, fast, and right to your door. Order online at orderdoner.com!',
+    image: '/menu/rice-bowls/mixed-doner-rice-bowl.webp',
+    content: `## Your Favorite Mediterranean Street Food—Now in Las Vegas!
+
+Craving authentic doner, shawarma, or falafel? **Istanbul Mediterranean** brings the best of Turkish street eats straight to your doorstep—hot, fresh, and halal. Whether it’s lunch, dinner, or a late-night snack, we’ve got you covered.
+
+### 📝 Why We Lead in Las Vegas Delivery
+
+- **Authentic Flavor:** Slow-roasted, halal-certified meats sliced fresh to order.  
+- **Veg-Friendly:** Crispy falafel, creamy hummus & stuffed grape leaves.
+
+> **Pro Tip:** Add extra tzatziki for a cool, tangy finish!
+
+### 🚀 Delivery Across Las Vegas
+
+From the Strip to Summerlin, order via https://orderdoner.com and track your driver live. No apps, no hidden fees—just pure flavor.
+
+### ✅ Why Choose Istanbul Mediterranean?
+
+- **Daily Fresh:** Ingredients prepped every morning.  
+- **100 % Halal:** Certified, trustable.  
+- **Lightning-Fast:** Under 30 min on average.
+
+## Ready to Order?
+
+👉 [Order Now at orderdoner.com](https://orderdoner.com)`,
+  },
+  {
+    slug: 'halal-what-does-it-mean',
+    title: 'Halal: What It Really Means for Your Food',
+    date: '2024-03-15',
+    excerpt: 'Halal isn’t just a label—it’s a promise of purity, ethics, and quality. Discover what makes food truly halal and why it matters beyond the plate.',
+    image: '/menu/salad-bowls/beefandlamb-doner-shawarma-salad-bowl.webp',
+    content: `## Halal Defined
+
+**Halal** (حلال) means “permissible” in Arabic. In food, it ensures every ingredient, process, and practice aligns with Islamic law:
+
+- **No pork or by-products**  
+- **No alcohol**  
+- **Humane, ritual slaughter** of animals  
+
+> **Beyond Food:** Halal covers finance, behavior, and lifestyle—but today, we focus on your plate.
+
+## What Counts as Halal?
+
+1. **Meats:** Only animals slaughtered via ẖalāl ḥayyin (“swift cut to the throat”), with a blessing.  
+2. **Seafood, Fruits & Veggies:** Generally halal unless cross-contaminated.  
+3. **Packaged Goods:** Look for recognized certification logos.  
+
+## Why Halal Matters
+
+- **Ethical Sourcing:** Animal welfare & clean processing.  
+- **Health & Hygiene:** Strict controls reduce contamination risks.  
+- **Global Trust:** A $669 B halal market means widely available, reliable options.  
+
+## Halal Certification
+
+A halal certificate means a trusted authority has audited:
+
+- Ingredient lists  
+- Production line cleanliness  
+- Staff training & records  
+
+## FAQ: Halal vs. Haram
+
+**Is seafood always halal?**  
+Yes—most schools consider all fish & shellfish halal if untainted.
+
+**What about alcohol in cooking?**  
+Even trace amounts render food non-halal. Marinades & sauces must be alcohol-free.
+
+**Can vegans eat halal foods?**  
+Yes—the principles focus on permissible handling. Vegans simply avoid animal products entirely.
+
+👉 [See our full halal menu](https://istanbulv.com/menu)`,
+  },
+  {
+    slug: 'greek-gyro-answering-top-7-questions',
+    title: 'Greek Gyro: Your Top 7 Questions Answered',
+    date: '2024-03-01',
+    excerpt: 'From cooking techniques to health perks, get the inside scoop on the classic Greek gyro—thin-sliced meat, fresh pita, and creamy tzatziki in every bite.',
+    image: '/menu/pita-sandwiches/beefandlamb-doner-shawarma-pita.webp',
+    content: `## 1. What Is a Greek Gyro?
+
+A Greek gyro (pronounced **YEER-oh**) is street-food perfection: layers of seasoned meat slow-roasted on a vertical spit, shaved thin, then wrapped in warm pita with veggies and tzatziki.
+
+## 2. How Is Gyro Meat Cooked?
+
+- **Vertical Rotisserie:** Meat stacks rotate before a heat source.  
+- **Crisp Edges, Juicy Core:** Fat drips away, outer layers caramelize, then sliced.
+
+## 3. Key Ingredients
+
+- **Meat:** Lamb, beef, or chicken—seasoned with oregano, thyme & garlic.  
+- **Pita:** Soft, pillowy, lightly toasted.  
+- **Veggies:** Onions & tomatoes for crunch & freshness.  
+- **Tzatziki:** Yogurt, cucumber, garlic & dill for a tangy finish.
+
+## 4. Is It Healthy?
+
+- **Lean Cooking:** Excess fat drains off.  
+- **Protein-Rich:** Lamb & beef provide iron & zinc.  
+- **Probiotic Boost:** Tzatziki’s yogurt base adds gut-friendly cultures.
+
+## 5. DIY Gyro Tips
+
+1. **Home Rotisserie Hack:** Bake vertically on a rack at 350°F.  
+2. **Marinate:** 12 h in yogurt, lemon & spices.  
+3. **Sauce:** Grate cucumber, squeeze water, mix with Greek yogurt.
+
+## 6. Popular Variations
+
+- **Pita Fries Inside:** Classic American twist.  
+- **Falafel Gyro:** Veg-forward & vegan-friendly.
+
+## 7. Where to Try the Best
+
+Istanbul Mediterranean’s gyro is **hand-cut**, layered, and served fresh.  
+👉 Order at: https://orderdoner.com`,
+  },
+  {
+    slug: 'history-and-variations-of-gyros',
+    title: 'Gyros: Greek Origins, Global Variations, and the Secrets of a High-Quality Gyro',
+    author: 'Istanbul Mediterranean Halal',
+    date: '2025-05-22',
+    image: '/gyros.png',
+    excerpt:
+      'Take a deep dive into the history of gyros, explore regional twists from Greece to America, and learn exactly what separates an authentic, high-quality gyro—real meat, fresh veggies, and house-made sauces—from the rest.',
+    content: `<!--
+  Meta Description (for \`<head>\` tag, not visible on page):
+  Learn the Greek origins of gyros, their global variations, and how to recognize a truly authentic gyro—real meat, fresh vegetables, and homemade sauces—from Istanbul to Las Vegas.
+-->
+
+# Gyros: Greek Origins, Global Variations, and the Secrets of a High-Quality Gyro
+
+Gyros are one of the world’s great street foods—**succulent, herb-marinated meat roasted on a vertical rotisserie and tucked into warm pita with tomato, onion, and cool tzatziki**. If you’ve ever followed the smoky aroma of slowly turning meat through a city street market, you already know their universal appeal.
+
+This article covers five things every gyro lover (or soon-to-be lover) should know:
+
+1. **The surprising history** of gyros—from ancient spit-roasting to modern street stalls.  
+2. **Regional variations** you’ll encounter—from Greek pork gyros to Turkish döner and Middle-Eastern shawarma.  
+3. **The American gyro boom** and how it evolved in U.S. cities.  
+4. **What makes a high-quality gyro** (hint: whole cuts, not processed cones).  
+5. **How to find—and savor—an authentic gyro** wherever you are.
+
+> **Quick takeaway:** A real gyro isn’t just a sandwich; it’s a portable piece of Mediterranean culinary heritage. Knowing its story helps you taste the difference.
+
+---
+
+## 1 | Origins of the Gyro: From Ancient Fires to Greek Streets
+
+Humans have cooked skewered meat over fire since antiquity, but the **vertical rotisserie**—a slowly turning spit that lets meat self-baste in its own juices—emerged in the 19th-century Ottoman Empire. There it was called *döner kebab* (“turning kebab”). Greek refugees returning from Asia Minor after World War I adopted the method, stacking marinated meats—traditionally pork, but also lamb or chicken—on a spit and shaving off crisp edges as it cooked. They called it **γύρος** (*gyros*, literally “turn”).
+
+By the 1950s, gyro stands dotted Athens and Thessaloniki. A classic Greek order came wrapped in **pita**, topped with tomato, onion, tzatziki—and often a few French fries for crunch. The combination of juicy, seasoned meat, creamy sauce, and warm bread was cheap, filling, and irresistibly flavorful. Travelers spread the word, and the gyro began its world tour.
+
+---
+
+## 2 | Gyro Cousins and Regional Variations
+
+| Region / Name         | Typical Meats        | Signature Sauces & Toppings                                                              |
+|-----------------------|----------------------|------------------------------------------------------------------------------------------|
+| **Greece – Gyro**     | Pork (in Greece), lamb, chicken  | Tzatziki, tomato, onion, (sometimes fries)                                  |
+| **Turkey – Döner**    | Lamb, beef           | Fresh veggies, tomatoes, pickles                                                          |
+| **Middle East – Shawarma** | Lamb, beef, chicken | Toum (garlic sauce) or tahini, pickled turnips, cucumbers                                |
+| **Mexico – Tacos al Pastor** | Marinated pork      | Pineapple, cilantro, salsa—an adaptation by Lebanese immigrants to Mexico                |
+| **U.S./Canada – Gyro**| Lamb–beef blend      | Lettuce joins tomato & onion; yogurt-based tzatziki or cucumber sauce                    |
+
+All share the same DNA: seasoned meat “turning” on a spit. Local ingredients and dietary rules shape the toppings—pork is common in Greece, while lamb, beef, or chicken are used in halal regions, and pineapple gives Mexico’s al pastor its twist.
+
+---
+
+## 3 | How Gyros Conquered America
+
+Greek immigrants introduced gyros to U.S. diners in the 1960s—most famously in Chicago and New York. Demand quickly outpaced the hand-stacking labor, so entrepreneurs created **factory-pressed meat cones** (ground lamb-and-beef seasoned with Mediterranean spices, frozen and shipped nationwide). Within a decade, gyros were on street carts, college campuses, and mall food courts coast to coast.
+
+While the pre-made cone made gyros widely accessible, it also blurred the line between **authentic, whole-cut gyros** and convenience-driven “gyro loaf.” Today, a new wave of Mediterranean restaurants is returning to tradition—hand-marinating real muscle cuts, layering them on spits, and carving to order.
+
+---
+
+## 4 | What Separates a High-Quality Gyro from the Rest?
+
+### Real, Marinated Whole Cuts
+Authentic gyros start with **slices of lamb, beef, chicken, or (in Greece) pork**—never ground fillers. Meat is marinated overnight in garlic, oregano, rosemary, and citrus, then stacked on the spit so each layer drips flavor onto the next.
+
+### Fresh Vegetables, Not Wilted “Salad Bar” Extras
+Juicy tomato wedges, crisp onion, maybe a handful of fries—added seconds before serving so they stay bright and crunchy.
+
+### House-Made Sauce
+Traditional Greek **tzatziki** (thick yogurt, grated cucumber, fresh garlic, dill, olive oil) is whipped daily. Bottled cuc-mayo or watery yogurt misses the mark.
+
+### Soft, Warm Pita
+Greek pita is pocket-less, lightly oiled, and flashed on the grill for flexibility and charring.
+
+### Generous Portions & Balanced Assembly
+A proper gyro spills over with meat—yet each bite still gets sauce and veg. Skimpy fillings or uneven assembly signal shortcuts.
+
+> **Chef’s tip:** When you spot a cone of clearly layered meat with caramelized edges, that’s your sign you’re about to taste the real deal.
+
+---
+
+## 5 | Tasting an Authentic Gyro in the U.S.
+
+Craving the hand-stacked experience? Seek out **family-run Mediterranean spots** that advertise real, marinated cuts and make sauces in-house. If you’re in Las Vegas, drop by **[Istanbul Mediterranean Halal Restaurant](/)**—where we:
+
+* Hand-marinate whole muscle meats (never processed cones).  
+* Shave generous portions straight from the rotisserie.  
+* Pile on fresh veggies and **“bomb” house-made sauces**.  
+* Serve halal-certified dishes in hearty Las Vegas-sized portions.
+
+(*Visiting another city? Check for the telltale signs above, or ask if the meat is “hand-stacked.”*)
+
+
+## Frequently Asked Questions
+
+### **What meat is in a traditional gyro?**  
+In Greece, pork is most common (though lamb and chicken are also popular). In many U.S. restaurants you’ll see a lamb-and-beef blend; halal spots use beef, lamb, or chicken.
+
+### **Is gyro meat healthy?**  
+Gyro meat is high in protein and—if it’s whole cuts, trimmed of excess fat—can be part of a balanced diet. Pair it with fresh vegetables and yogurt-based sauce for a nutrient-dense meal.
+
+### **Where can I find halal gyros in Las Vegas?**  
+Check out Istanbul Mediterranean Halal Restaurant (just off the Strip). All meats are halal-certified, marinated in-house, and sliced fresh to order.
+
+
+## Conclusion: Follow the Aroma, Taste the Heritage
+
+From Ottoman-era spits to modern American streets, the gyro has stayed true to one principle: **slow-roasted, well-seasoned meat carved fresh and wrapped in warm bread**. Next time you see that vertical rotisserie turning, treat yourself—just make sure it’s the authentic kind, stacked by hand with real meat and topped with fresh veggies and homemade sauce. *Kali orexi!* (Greek for “good appetite.”)
+`,
+  },
+  {
     slug: 'top-5-halal-food-las-vegas',
     title: 'Top 5 Halal Food Spots in Las Vegas',
     date: '2025-05-20',
