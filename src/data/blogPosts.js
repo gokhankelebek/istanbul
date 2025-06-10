@@ -4,7 +4,7 @@ export const blogPosts = [
     title: 'Shawarma vs. Doner Kebab: What’s the Difference?',
     date: '2025-04-28',
     excerpt: 'Explore the key differences between shawarma and doner kebab, from their origins to how they’re served today.',
-    image: '/gyros.png',
+    image: '/shawarma-vs-doner.png',
     content: `# Shawarma vs. Doner Kebab: What’s the Real Difference?
 
 **Published: April 28, 2025 | 3 min read**  
