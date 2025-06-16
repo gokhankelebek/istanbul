@@ -1,5 +1,84 @@
 export const blogPosts = [
   {
+    slug: 'what-is-falafel-what-is-it-made-from-which-cuisine',
+    title: 'Istanbul Mediterranean Las Vegas: What Customers Say About the Falafel & More',
+    date: '2025-06-15',
+    excerpt: 'Istanbul Mediterranean Restaurant (Las Vegas) has become a must-stop for anyone craving halal Mediterranean fare on the Strip – especially if you’re a falafel fan. In fact, it’s ranked the #1 Turkish restaurant in Las Vegas on TripAdvisor and boasts hundreds of glowing reviews. This blog post dives deep into customer feedback from Google, Yelp, TripAdvisor and more, highlighting what makes Istanbul Mediterranean’s falafel and overall experience stand out. We’ll hear from tourists and locals – including vegans and avid foodies – on the crispy goodness of the falafel, the fast friendly service (even at 2 AM!), the value for money, and the vibrant yet casual ambiance.',
+    image: '/falafel.png',
+    content: `
+# Istanbul Mediterranean Las Vegas: What Customers Say About the Falafel & More
+
+**Istanbul Mediterranean Restaurant (Las Vegas)** has become a must-stop for anyone craving halal Mediterranean fare on the Strip – especially if you’re a falafel fan. In fact, it’s **ranked the #1 Turkish restaurant in Las Vegas on TripAdvisor** and boasts hundreds of glowing reviews. This blog post dives deep into customer feedback from Google, Yelp, TripAdvisor and more, highlighting what makes Istanbul Mediterranean’s **falafel** and overall experience stand out. We’ll hear from tourists and locals – including vegans and avid foodies – on the crispy goodness of the falafel, the fast friendly service (even at 2 AM!), the value for money, and the vibrant yet casual ambiance.
+
+Whether you’re a Vegas local looking for your next lunch spot or a traveler hunting for late-night eats, read on to discover why **Istanbul Mediterranean** has earned a reputation for delicious food and great falafel in Sin City.
+
+## Falafel Feedback: Crispy, Tasty – and a Fan Favorite
+
+Falafel is a highlight at Istanbul Mediterranean, frequently mentioned in customer reviews. The restaurant itself touts the **Veggie Falafel Wrap** as a “crispy-outside, herb-packed falafel with tahini and fresh salad,” calling it a “fan favorite on Yelp”. Many diners agree that the falafel hits the mark. One Google reviewer declared the food "*hands down, the best halal food in downtown Las Vegas*" with "*great options like ... falafel,*" noting that "*everything tasted fresh and authentic*". Another Yelp user said their group ordered a wrap, a falafel, and a rice plate, and “*all was devoured within minutes!*” – suggesting the falafel was just as irresistible as the other dishes.
+
+Importantly, Istanbul Mediterranean’s falafel isn’t just for vegetarians. Meat-eaters and plant-based diners alike appreciate it. As one Yelp review put it: "*You can order meat centric or go full vegan; this place has something for everyone*." Vegans specifically love having a hearty falafel option on the Strip. The menu clearly labels the falafel as vegan-friendly, and several reviewers mention how inclusive the offerings are. For those on a plant-based diet, the **falafel sandwich is a must-try** – it’s filling, flavorful, and entirely meat-free.
+
+That said, not **every** reviewer fell in love with the falafel. There are a few mixed opinions sprinkled among the praise. One Yelp commenter found the falafel underwhelming, writing that "*the falafel lacked flavor*," and that the surprise "*winner was the onion rings*," concluding it was decent to try but they "*weren’t sure they’d go back*". Similarly, a TripAdvisor reviewer from 2020 felt the white sauce and fries were bland. These critiques are rare compared to the overwhelmingly positive feedback, but they show that taste is subjective. On the whole, most customers rave that the falafel is **crispy on the outside, soft on the inside,** and well-seasoned – a satisfying bite whether you’re vegan or not. The ability to get a fresh, hot falafel late at night on the Vegas Strip is, for many, a game-changer.
+
+## Beyond Falafel: Flavorful Food and Generous Portions
+
+While falafel draws in the veg-oriented crowd, Istanbul Mediterranean’s **meaty specialties** earn just as much love in reviews. Customers frequently praise the **doner kebabs, gyros, and shawarma** for their authentic taste. “*Full of meat, veggies, and... very nice tasting sauces*,” one TripAdvisor review said of the beef & lamb doner shawarma. Diners describe the meats as juicy, tender, and **bursting with flavor** from traditional Turkish spices. One satisfied guest wrote that the beef & lamb wrap was "*probably my favorite gyro I’ve ever had*" – high praise in a city with no shortage of gyro spots. Others highlight the chicken pita and rice bowls, calling them “*flavorful and satisfying*” with fresh ingredients and delicious seasoning.
+
+Portions at Istanbul Mediterranean are consistently described as **generous**. Many folks were pleasantly surprised at how much food they got, especially given the restaurant’s prime location. "*The portions are generous*," noted one 5-star Google review, which also called the gyros "*a deal in comparison to other food places on the strip*". Indeed, compared to typical Strip prices, Istanbul Mediterranean offers great bang for your buck. Several reviewers mention that the **prices are reasonable for Vegas**, and you “*won’t leave hungry*.” Even the sides – from hummus to fries – come in ample servings. One Las Vegas local was so impressed with the value and flavor that they returned on multiple days of their trip to try different menu items.
+
+Another aspect that stands out is consistency. Repeat visitors (including some self-proclaimed foodies) report that whether it’s lunch or 3 AM, the food quality remains high. Everything is made fresh to order, which contributes to the tastiness. "*So fresh and so tasty!!!*" raved one Yelp reviewer. That freshness especially makes a difference with falafel and fried items – no one wants a stale falafel ball or soggy fries, and at Istanbul Mediterranean you’ll likely get them hot and crisp. If you crave variety, the menu has you covered: you can get your falafel or meats in a pita, wrap, on rice, salad, or even on **fries (the Falafel Fries Bowl)**. As one enthusiastic foodie wrote, "*a glorious pile of meat and salty hot fries... 10/10, no notes*" when describing the doner meat fries bowl. In other words, there’s a flavor combination for every craving.
+
+## Fast, Friendly Service (Even at 2 AM)
+
+Another common theme in reviews is the **speed and friendliness** of the service. Despite often having long lines, the staff handles the rush with efficiency and a smile. Numerous customers were impressed by how quickly their orders were taken and prepared. "*Quick order*" and pleasant service were highlighted by one Yelp user who noted the workers remained **very pleasant** even with many people waiting. Several Google reviews echo this, saying the counter staff was "*friendly and fast*".
+
+One patron humorously dubbed the team "*the Usain Bolt of food court service*," describing how the folks at Istanbul Mediterranean "*deliver with Olympic efficiency*". That’s high praise for a walk-up window operation. Tourists who are in a hurry to get back to sightseeing (or gambling!) appreciate that they can grab their food swiftly. Even late at night when hungry club-goers flock in, reviewers say the staff keeps things moving at a brisk pace. "*Gold medal, 10/10*" for service, as the same witty reviewer put it.
+
+Equally important, people feel **welcomed** and well-treated. There are mentions of staff patiently answering questions about the menu for first-timers. The owner is often on hand and is very engaged – some reviews mention the owner verifying orders or thanking customers. Little touches, like a staffer helping to wrap up leftovers in foil and a to-go box without being asked, made a lasting impression on one guest. For a quick-bite establishment, Istanbul Mediterranean’s hospitality exceeds expectations. It’s clear from the comments that the team cares about customer satisfaction. Friendly service can make even a 10-minute wait in line feel worth it.
+
+## Ambiance and Atmosphere: Quick-Bite Stall with a Lively Vibe
+
+Located at the Grand Bazaar Shops in front of Horseshoe (formerly Bally’s), Istanbul Mediterranean is not a sit-down restaurant – it’s essentially a **walk-up counter** with a few nearby tables. As such, the ambiance is casual and very “street food” in style. Many reviews actually embrace this, noting the fun of grabbing a tasty bite in a lively outdoor setting. One Yelp reviewer called it an "*unassuming food court gem*," remarking that while "*the seating is limited,* the vibe is unapologetically 'grab it and go'". In other words, don’t come expecting white tablecloths or quiet conversation – this spot is all about quick, delicious eats on the move.
+
+Several customers do point out the **limited seating** as a minor drawback. There are only a handful of patio tables shared with other nearby vendors. During peak times or late night, finding a seat can be challenging. "*Seating is survival of the fastest*," one foodie joked, advising diners to "*channel your inner gazelle*" to snag a table before someone else does. If you can’t find a seat, no worries – many people simply take their food to-go (the **hotel room picnic** is a common strategy). As one reviewer recommended, "*plan where you’ll eat your meal*" if you grab it to go. The lack of indoor space is a trade-off for being right on the Strip, but most agree the food is **worth standing in line and even eating standing up** if necessary.
+
+Despite being a no-frills setup, the stall does have some charm. Reviewers enjoyed the energetic atmosphere of the open-air market around it. A few noted upbeat Mediterranean music playing in the background, which added a pleasant touch while waiting. The location is convenient and easy to find – "*if you’ve walked the Strip, you most likely passed by and missed out on a great Turkish meal*," one person noted regretfully. Indeed, the constant line of people (often zigzagging in front of the counter) indicates something good is cooking. Many say the **buzz and aroma** will draw you in. And for being essentially street food, the area is kept clean and the service organized. In summary, the ambiance is busy and bustling – perfect for a quick lunch or a late-night snack, but probably not where you’d host a quiet romantic dinner. 🌯
+
+## Late-Night Hero: Open Till 5 AM
+
+One of Istanbul Mediterranean’s *biggest* differentiators – and a point of almost every review – is that it stays **open until 5:00 AM**. In Las Vegas, the city that never sleeps, this is a major advantage. Tourists coming out of casinos or clubs in the wee hours have discovered Istanbul Mediterranean as a savior for midnight munchies. "*We got in late at night and this was one of the few halal places open after midnight... All was devoured within minutes!*" wrote one happy customer. The extended hours make it a go-to for many people who might otherwise have to settle for fast food. Instead, they can get a hot falafel wrap or a hearty gyro bowl at 2 or 3 AM.
+
+Several reviewers explicitly mention events like **EDC weekend or post-clubbing hunger** leading them here. One patron shared, "*I was in Vegas for 3 days... The good part is they close at 5am. So I had one more sandwich after clubbing late night*". Another said they stumbled on it after midnight and it instantly became a favorite. Knowing you can count on a tasty, freshly-made meal no matter the hour gives this spot a loyal following among night owls. Even local Vegas residents have noted they appreciate having a reliable late-night halal option on the Strip (most local Mediterranean spots are closed much earlier).
+
+Do be prepared: because it’s open so late, **the line after midnight can be long**, especially on weekends. As one review observed, "*long lineups in the evening but worth the wait*". The staff manages late-night crowds efficiently, but you might wait 15–20 minutes if it’s busy. The consensus, though, is that the food is absolutely **worth waiting for** – a fill-up that tastes way better than the average fast-food burger. For Muslims or vegetarians, having a halal and veggie-friendly eatery open at 4 AM is particularly appreciated (no more settling for french fries only). Istanbul Mediterranean has smartly positioned itself as the Strip’s ultimate late-night falafel and shawarma stop.
+
+## Tourist Hotspot or Local Secret? It’s Both!
+
+Situated on Las Vegas Boulevard, Istanbul Mediterranean naturally attracts a lot of tourists. Visitors from around the world have tried it and left impressed. "*Top notch halal food in Vegas!*" wrote one out-of-towner, who labeled it a *“must when you are on the Strip.”* They loved that even the kids enjoyed the food. Tourists often mention stumbling upon the busy stall or seeking it out due to the high online ratings. Many TripAdvisor contributors (typically travelers) have given it 4 and 5 stars, helping push it into the upper ranks of Vegas eateries. It’s currently **rated 4.0 out of 5 on TripAdvisor** with close to 100 reviews, and holds an even higher **4.3/5 score on Google from over 2,700 reviews** – extremely solid for a quick-bite establishment.
+
+But it’s not only the tourists singing praises. Istanbul Mediterranean has won over locals as well. Despite its touristy location, Vegas residents recognize the quality and value. The restaurant is described as a “*popular spot for both locals and tourists*” in Vegas. Locals, who have plenty of off-Strip options, still make the trip because it’s that good. Some mention that when friends come to town, they **bring them here for a casual meal** that won’t break the bank. One early TripAdvisor review even called it "*one of the best kept secrets in the valley*" for halal eats. Word of mouth (and mouthwatering Instagram posts) have made Istanbul Mediterranean a cross-over hit: equally beloved by hard-to-impress local foodies and excited Vegas visitors.
+
+Several reviewers noted that they *“had to write a review”* after eating here – a sign that the food made a real impact. With over **900 Yelp reviews and counting**, it has a strong community of fans. The consistent themes (delicious food, fast service, good value, late-night convenience) show that the restaurant delivers on what it promises. It’s also telling that people from many backgrounds enjoy it: college students taking advantage of a rumored 25% student discount, Muslim travelers happy to find halal food on the Strip, health-conscious eaters glad for a fresh option, and late-night partygoers needing a 4 AM falafel fix.
+
+## Conclusion: Why Istanbul Mediterranean’s Falafel and More Stand Out
+
+After sifting through a wide range of reviews and testimonials, a clear picture emerges: **Istanbul Mediterranean Restaurant** in Las Vegas hits the sweet spot for a quick, tasty, and affordable Mediterranean meal – and its falafel earns high marks from many patrons. The kitchen turns out falafels that are crispy, not greasy, with an herby, authentic flavor (a true treat for vegans and carnivores alike). The falafel, alongside their juicy doner kebabs and gyros, is frequently cited as a **fan favorite**, contributing to the restaurant’s strong reputation online.
+
+Beyond the food itself, customers love the **fast and friendly service**, even during the craziest rush hours. Whether it’s noon lunch or 4 AM after a night out, the staff keeps things moving with a smile – earning comparisons to Olympic sprinters for their speed and efficiency. The no-frills sidewalk setting actually adds to the experience for many; it feels like discovering a hidden gem in the middle of the Strip’s bustle. As one reviewer aptly put it, Istanbul Mediterranean is an "*unassuming gem*" that’s **“highly recommended”** for anyone seeking a flavorful bite in Vegas.
+
+To recap the common themes from real customers: **expect a line, but a quick-moving one**; expect limited seating, but a fun street-food vibe; expect very generous portions at fair prices; and most of all, expect **delicious Mediterranean flavors** – from that famous falafel to the shawarma, sauces, and sides – that will leave you satisfied. It’s this combination of great food, welcoming service, and convenience that makes Istanbul Mediterranean stand out in a city full of dining options.
+
+So next time you’re in Las Vegas and craving something different from the usual burger or buffet, consider following the crowd to Istanbul Mediterranean. Grab a falafel wrap or a doner bowl, enjoy the lively atmosphere of the Strip, and taste why so many people are calling this place a **falafel heaven in Vegas**. As the reviews show, Istanbul Mediterranean lives up to the hype – one crispy falafel and flavorful gyro at a time. Bon appétit (or rather, afiyet olsun)!
+
+**Sources:**
+
+* Real customer reviews on Google Maps and Google Business
+* Yelp reviews and ratings (via Yelp and aggregate sites)
+* TripAdvisor traveler reviews & ratings for Istanbul Mediterranean
+* Official Istanbul Mediterranean website and blog (menu highlights and accolades)
+`,
+  },
+  {
     slug: 'shawarma-vs-doner-kebab',
     title: 'Shawarma vs. Doner Kebab: What’s the Difference?',
     date: '2025-04-28',
@@ -178,55 +257,6 @@ From the Strip to Summerlin, order via https://orderdoner.com and track your dri
 ## Ready to Order?
 
 👉 [Order Now at orderdoner.com](https://orderdoner.com)`,
-  },
-  {
-    slug: 'halal-what-does-it-mean',
-    title: 'Halal: What It Really Means for Your Food',
-    date: '2024-03-15',
-    excerpt: 'Halal isn’t just a label—it’s a promise of purity, ethics, and quality. Discover what makes food truly halal and why it matters beyond the plate.',
-    image: '/menu/salad-bowls/beefandlamb-doner-shawarma-salad-bowl.webp',
-    content: `## Halal Defined
-
-**Halal** (حلال) means “permissible” in Arabic. In food, it ensures every ingredient, process, and practice aligns with Islamic law:
-
-- **No pork or by-products**  
-- **No alcohol**  
-- **Humane, ritual slaughter** of animals  
-
-> **Beyond Food:** Halal covers finance, behavior, and lifestyle—but today, we focus on your plate.
-
-## What Counts as Halal?
-
-1. **Meats:** Only animals slaughtered via ẖalāl ḥayyin (“swift cut to the throat”), with a blessing.  
-2. **Seafood, Fruits & Veggies:** Generally halal unless cross-contaminated.  
-3. **Packaged Goods:** Look for recognized certification logos.  
-
-## Why Halal Matters
-
-- **Ethical Sourcing:** Animal welfare & clean processing.  
-- **Health & Hygiene:** Strict controls reduce contamination risks.  
-- **Global Trust:** A $669 B halal market means widely available, reliable options.  
-
-## Halal Certification
-
-A halal certificate means a trusted authority has audited:
-
-- Ingredient lists  
-- Production line cleanliness  
-- Staff training & records  
-
-## FAQ: Halal vs. Haram
-
-**Is seafood always halal?**  
-Yes—most schools consider all fish & shellfish halal if untainted.
-
-**What about alcohol in cooking?**  
-Even trace amounts render food non-halal. Marinades & sauces must be alcohol-free.
-
-**Can vegans eat halal foods?**  
-Yes—the principles focus on permissible handling. Vegans simply avoid animal products entirely.
-
-👉 [See our full halal menu](https://istanbulv.com/menu)`,
   },
   {
     slug: 'greek-gyro-answering-top-7-questions',

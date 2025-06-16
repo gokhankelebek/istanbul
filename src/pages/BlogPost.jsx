@@ -72,18 +72,20 @@ export default function BlogPost() {
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:image" content={coverSrc} />
         <link rel="canonical" href={`https://istanbullv.com/blog-posts/${post.slug}`} />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "${post.title}",
-            "image": "${coverSrc}",
-            "author": {"@type": "Person", "name": "${author}"},
-            "publisher": {"@type": "Organization", "name": "Istanbul Mediterranean", "logo": {"@type": "ImageObject", "url": "https://istanbullv.com/logo.png"}},
-            "datePublished": "${post.date}",
-            "description": "${post.excerpt}"$${post.slug === 'history-and-variations-of-gyros' ? ',\n            "mainEntity": {\n              "@type": "Restaurant",\n              "name": "Istanbul Mediterranean Halal",\n              "servesCuisine": "Mediterranean",\n              "address": {\n                "@type": "PostalAddress",\n                "streetAddress": "3645 S Las Vegas Blvd, Grand Bazaar Shops, Las Vegas, NV 89109",\n                "addressLocality": "Las Vegas",\n                "addressRegion": "NV",\n                "postalCode": "89109",\n                "addressCountry": "US"\n              },\n              "sameAs": [\n                "https://istanbullv.com",\n                "https://www.instagram.com/istanbulmediterraneanlv/",\n                "https://www.facebook.com/istanbulmediterraneanlv/"\n              ]\n            }' : ''}
-          }
-        `}</script>
+        <script type="application/ld+json">{JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: post.title,
+            image: coverSrc,
+            author: { '@type': 'Person', name: author },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Istanbul Mediterranean',
+              logo: { '@type': 'ImageObject', url: 'https://istanbullv.com/logo.png' }
+            },
+            datePublished: post.date,
+            description: post.excerpt
+          })}</script>
       </Helmet>
 
       {/* Hero Section */}
