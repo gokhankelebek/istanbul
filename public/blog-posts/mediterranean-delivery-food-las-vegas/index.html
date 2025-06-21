@@ -1,67 +1,16 @@
-const fs = require('fs').promises;
-const path = require('path');
-const matter = require('gray-matter');
-
-const BLOG_DIR = 'content/blog';
-const OUTPUT_DIR = 'public/blog-posts';
-
-async function generateStaticPages() {
-  try {
-    // Ensure output directory exists
-    await fs.mkdir(OUTPUT_DIR, { recursive: true });
-
-    const files = await fs.readdir(BLOG_DIR);
-    
-    for (const file of files) {
-      if (!file.endsWith('.md')) continue;
-      
-      const filePath = path.join(BLOG_DIR, file);
-      const md = await fs.readFile(filePath, 'utf8');
-      const { data, content } = matter(md);
-      
-      const slug = data.slug || path.basename(file, '.md');
-      
-      // Generate static HTML
-      const html = generateBlogPostHTML({
-        title: data.title || 'Untitled',
-        excerpt: data.excerpt || '',
-        content: content,
-        cover: data.cover || '',
-        date: data.date || new Date().toISOString().split('T')[0],
-        slug: slug
-      });
-      
-      // Create directory for the slug
-      const postDir = path.join(OUTPUT_DIR, slug);
-      await fs.mkdir(postDir, { recursive: true });
-      
-      // Write index.html
-      await fs.writeFile(path.join(postDir, 'index.html'), html);
-      
-      console.log(`✓ Generated static page for: ${slug}`);
-    }
-    
-    console.log(`\n✅ Generated ${files.filter(f => f.endsWith('.md')).length} static blog pages`);
-  } catch (error) {
-    console.error('Error generating static pages:', error);
-    process.exit(1);
-  }
-}
-
-function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${title} | Istanbul Mediterranean Blog</title>
-  <meta name="description" content="${excerpt}">
-  <meta property="og:title" content="${title}">
-  <meta property="og:description" content="${excerpt}">
+  <title>Order Doner: Mediterranean Street Food Delivered to Your Door in Las Vegas | Istanbul Mediterranean Blog</title>
+  <meta name="description" content="Now delivering Las Vegas’s #1 Mediterranean street food: halal doner, shawarma & falafel—fresh, fast, and right to your door. Order online at orderdoner.com!">
+  <meta property="og:title" content="Order Doner: Mediterranean Street Food Delivered to Your Door in Las Vegas">
+  <meta property="og:description" content="Now delivering Las Vegas’s #1 Mediterranean street food: halal doner, shawarma & falafel—fresh, fast, and right to your door. Order online at orderdoner.com!">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://www.istanbullv.com${cover}">
-  <meta property="og:url" content="https://www.istanbullv.com/blog-posts/${slug}">
-  <link rel="canonical" href="https://www.istanbullv.com/blog-posts/${slug}">
+  <meta property="og:image" content="https://www.istanbullv.com/menu/rice-bowls/mixed-doner-rice-bowl.webp">
+  <meta property="og:url" content="https://www.istanbullv.com/blog-posts/mediterranean-delivery-food-las-vegas">
+  <link rel="canonical" href="https://www.istanbullv.com/blog-posts/mediterranean-delivery-food-las-vegas">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -76,10 +25,10 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "${title}",
-    "description": "${excerpt}",
-    "image": "https://www.istanbullv.com${cover}",
-    "datePublished": "${date}",
+    "headline": "Order Doner: Mediterranean Street Food Delivered to Your Door in Las Vegas",
+    "description": "Now delivering Las Vegas’s #1 Mediterranean street food: halal doner, shawarma & falafel—fresh, fast, and right to your door. Order online at orderdoner.com!",
+    "image": "https://www.istanbullv.com/menu/rice-bowls/mixed-doner-rice-bowl.webp",
+    "datePublished": "2024-04-01",
     "author": {
       "@type": "Organization",
       "name": "Istanbul Mediterranean Team"
@@ -124,14 +73,14 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
   <main class="max-w-4xl mx-auto px-4 py-12">
     <!-- Hero Image -->
     <div class="mb-8">
-      <img src="${cover}" alt="${title}" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+      <img src="/menu/rice-bowls/mixed-doner-rice-bowl.webp" alt="Order Doner: Mediterranean Street Food Delivered to Your Door in Las Vegas" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
     </div>
     
     <!-- Article Header -->
     <header class="mb-8 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">${title}</h1>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Order Doner: Mediterranean Street Food Delivered to Your Door in Las Vegas</h1>
       <div class="flex items-center justify-center text-gray-600 text-sm space-x-4">
-        <time datetime="${date}">${new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        <time datetime="2024-04-01">April 1, 2024</time>
         <span>•</span>
         <span>3 min read</span>
         <span>•</span>
@@ -141,7 +90,31 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
 
     <!-- Article Content -->
     <article class="prose prose-lg max-w-none">
-      ${content}
+      
+## Your Favorite Mediterranean Street Food—Now in Las Vegas!
+
+Craving authentic doner, shawarma, or falafel? **Istanbul Mediterranean** brings the best of Turkish street eats straight to your doorstep—hot, fresh, and halal. Whether it’s lunch, dinner, or a late-night snack, we’ve got you covered.
+
+### 📝 Why We Lead in Las Vegas Delivery
+
+- **Authentic Flavor:** Slow-roasted, halal-certified meats sliced fresh to order.  
+- **Veg-Friendly:** Crispy falafel, creamy hummus & stuffed grape leaves.
+
+> **Pro Tip:** Add extra tzatziki for a cool, tangy finish!
+
+### 🚀 Delivery Across Las Vegas
+
+From the Strip to Summerlin, order via https://orderdoner.com and track your driver live. No apps, no hidden fees—just pure flavor.
+
+### ✅ Why Choose Istanbul Mediterranean?
+
+- **Daily Fresh:** Ingredients prepped every morning.  
+- **100 % Halal:** Certified, trustable.  
+- **Lightning-Fast:** Under 30 min on average.
+
+## Ready to Order?
+
+👉 [Order Now at orderdoner.com](https://orderdoner.com)
     </article>
 
     <!-- Call to Action -->
@@ -213,7 +186,7 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
 
     <!-- Bottom Bar -->
     <div class="border-t border-gray-700 mt-12 pt-6 text-center text-xs text-gray-500">
-      ${new Date().getFullYear()} Istanbul Mediterranean. All rights reserved.
+      2025 Istanbul Mediterranean. All rights reserved.
     </div>
   </footer>
 
@@ -229,7 +202,4 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
     });
   </script>
 </body>
-</html>`;
-}
-
-generateStaticPages();
+</html>

@@ -1,67 +1,16 @@
-const fs = require('fs').promises;
-const path = require('path');
-const matter = require('gray-matter');
-
-const BLOG_DIR = 'content/blog';
-const OUTPUT_DIR = 'public/blog-posts';
-
-async function generateStaticPages() {
-  try {
-    // Ensure output directory exists
-    await fs.mkdir(OUTPUT_DIR, { recursive: true });
-
-    const files = await fs.readdir(BLOG_DIR);
-    
-    for (const file of files) {
-      if (!file.endsWith('.md')) continue;
-      
-      const filePath = path.join(BLOG_DIR, file);
-      const md = await fs.readFile(filePath, 'utf8');
-      const { data, content } = matter(md);
-      
-      const slug = data.slug || path.basename(file, '.md');
-      
-      // Generate static HTML
-      const html = generateBlogPostHTML({
-        title: data.title || 'Untitled',
-        excerpt: data.excerpt || '',
-        content: content,
-        cover: data.cover || '',
-        date: data.date || new Date().toISOString().split('T')[0],
-        slug: slug
-      });
-      
-      // Create directory for the slug
-      const postDir = path.join(OUTPUT_DIR, slug);
-      await fs.mkdir(postDir, { recursive: true });
-      
-      // Write index.html
-      await fs.writeFile(path.join(postDir, 'index.html'), html);
-      
-      console.log(`✓ Generated static page for: ${slug}`);
-    }
-    
-    console.log(`\n✅ Generated ${files.filter(f => f.endsWith('.md')).length} static blog pages`);
-  } catch (error) {
-    console.error('Error generating static pages:', error);
-    process.exit(1);
-  }
-}
-
-function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${title} | Istanbul Mediterranean Blog</title>
-  <meta name="description" content="${excerpt}">
-  <meta property="og:title" content="${title}">
-  <meta property="og:description" content="${excerpt}">
+  <title>Best Baklava on the Las Vegas Strip | Halal Pistachio Delight | Istanbul Mediterranean Blog</title>
+  <meta name="description" content="Discover why our halal pistachio baklava—golden, flaky & sweet—is the Strip’s top dessert. Open till 5 AM. Order or visit Istanbul Mediterranean today!">
+  <meta property="og:title" content="Best Baklava on the Las Vegas Strip | Halal Pistachio Delight">
+  <meta property="og:description" content="Discover why our halal pistachio baklava—golden, flaky & sweet—is the Strip’s top dessert. Open till 5 AM. Order or visit Istanbul Mediterranean today!">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://www.istanbullv.com${cover}">
-  <meta property="og:url" content="https://www.istanbullv.com/blog-posts/${slug}">
-  <link rel="canonical" href="https://www.istanbullv.com/blog-posts/${slug}">
+  <meta property="og:image" content="https://www.istanbullv.com/menu/desserts/baklava.webp">
+  <meta property="og:url" content="https://www.istanbullv.com/blog-posts/best-halal-baklava-las-vegas-strip">
+  <link rel="canonical" href="https://www.istanbullv.com/blog-posts/best-halal-baklava-las-vegas-strip">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -76,10 +25,10 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "${title}",
-    "description": "${excerpt}",
-    "image": "https://www.istanbullv.com${cover}",
-    "datePublished": "${date}",
+    "headline": "Best Baklava on the Las Vegas Strip | Halal Pistachio Delight",
+    "description": "Discover why our halal pistachio baklava—golden, flaky & sweet—is the Strip’s top dessert. Open till 5 AM. Order or visit Istanbul Mediterranean today!",
+    "image": "https://www.istanbullv.com/menu/desserts/baklava.webp",
+    "datePublished": "2025-04-23",
     "author": {
       "@type": "Organization",
       "name": "Istanbul Mediterranean Team"
@@ -124,14 +73,14 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
   <main class="max-w-4xl mx-auto px-4 py-12">
     <!-- Hero Image -->
     <div class="mb-8">
-      <img src="${cover}" alt="${title}" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+      <img src="/menu/desserts/baklava.webp" alt="Best Baklava on the Las Vegas Strip | Halal Pistachio Delight" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
     </div>
     
     <!-- Article Header -->
     <header class="mb-8 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">${title}</h1>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Best Baklava on the Las Vegas Strip | Halal Pistachio Delight</h1>
       <div class="flex items-center justify-center text-gray-600 text-sm space-x-4">
-        <time datetime="${date}">${new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        <time datetime="2025-04-23">April 23, 2025</time>
         <span>•</span>
         <span>3 min read</span>
         <span>•</span>
@@ -141,7 +90,56 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
 
     <!-- Article Content -->
     <article class="prose prose-lg max-w-none">
-      ${content}
+      
+## Taste the Ottoman Legacy in Every Bite
+
+Our **pistachio baklava** revives a centuries-old Ottoman tradition. Flaky phyllo, rich clarified butter, and premium pistachios baked to golden perfection—then drenched in honey-scented syrup.
+
+---
+
+## Why Our Baklava Is Famous
+
+- **Authentic Recipe:** Inspired by Topkapı Palace, perfected by our family.  
+- **Premium Ingredients:** Halal butter & strictly sourced nuts.  
+- **Daily Fresh:** Baked every morning for maximum crunch.
+
+> _"Each bite is a taste of Istanbul—right here in Las Vegas."_
+
+---
+
+## Vegas-Wide Baklava Craze
+
+- **40.8 million visitors in 2024:** Demand for baklava has never been higher!  
+- **Halal Market:** $669 B global industry, growing 9 % annually.  
+- **Media Buzz:** From fine-dining menus to late-night cravings.
+
+---
+
+## Pistachio vs. Walnut: Which Wins?
+
+| Feature    | Pistachio                | Walnut             |
+|------------|--------------------------|--------------------|
+| Flavor     | Earthy, sweet, green     | Deep, nutty, robust|
+| Color      | Vibrant green            | Golden brown       |
+| Popularity | #1 in Turkey             | Common in Greece   |
+
+---
+
+## Frequently Asked Questions
+
+**Q: Is your baklava 100 % halal?**  
+A: Yes—all ingredients and preparation meet halal standards.
+
+**Q: How many calories per slice?**  
+A: Approximately 306 calories per 3-oz slice.
+
+---
+
+## Visit or Order Online
+
+Open daily until 5 AM at **3615 S Las Vegas Blvd #101**.
+
+👉 [Order for Pickup](https://orderdoner.com) or call **725-900-8844** for catering.
     </article>
 
     <!-- Call to Action -->
@@ -213,7 +211,7 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
 
     <!-- Bottom Bar -->
     <div class="border-t border-gray-700 mt-12 pt-6 text-center text-xs text-gray-500">
-      ${new Date().getFullYear()} Istanbul Mediterranean. All rights reserved.
+      2025 Istanbul Mediterranean. All rights reserved.
     </div>
   </footer>
 
@@ -229,7 +227,4 @@ function generateBlogPostHTML({ title, excerpt, content, cover, date, slug }) {
     });
   </script>
 </body>
-</html>`;
-}
-
-generateStaticPages();
+</html>
