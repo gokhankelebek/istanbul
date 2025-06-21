@@ -1,17 +1,51 @@
 [
   {
-    "slug": "mediterranean-delivery-food-las-vegas",
-    "title": "Mediterranean Delivery Food in Las Vegas",
-    "date": "2024-01-10",
-    "excerpt": "Discover the best Mediterranean delivery options in Las Vegas, including Turkish döner, shawarma, and more.",
-    "contentMarkdown": "## Mediterranean Delivery Food in Las Vegas\nLas Vegas offers a variety of Mediterranean food options for delivery. Try our signature döner, shawarma, and more!"
+    "slug": "explore-the-mediterranean-cuisine",
+    "title": "Explore the Mediterranean Cuisine",
+    "date": "2024-01-25",
+    "excerpt": "Journey through the diverse and healthy world of Mediterranean cuisine, discovering the flavors, traditions, and health benefits of this beloved culinary style.",
+    "cover": "/istanbul-hero.png"
+  },
+  {
+    "slug": "what-is-falafel-what-is-it-made-from-which-cuisine",
+    "title": "What is Falafel? What is it Made From? Which Cuisine?",
+    "date": "2024-01-20",
+    "excerpt": "Discover the origins, ingredients, and cultural significance of falafel, the beloved Middle Eastern dish that's conquered the world.",
+    "cover": "/falafel.png"
+  },
+  {
+    "slug": "what-makes-real-baklava-a-guide-to-its-essential-components",
+    "title": "What Makes Real Baklava: A Guide to Its Essential Components",
+    "date": "2024-01-18",
+    "excerpt": "Learn what distinguishes authentic baklava from imitations, exploring the essential ingredients and techniques that create this masterpiece.",
+    "cover": "/baklava.jpg"
+  },
+  {
+    "slug": "the-ultimate-guide-to-savoring-the-perfect-gyro",
+    "title": "The Ultimate Guide to Savoring the Perfect Gyro",
+    "date": "2024-01-15",
+    "excerpt": "Discover the secrets to enjoying an authentic gyro experience, from traditional preparation to perfect accompaniments.",
+    "cover": "/gyros.png"
+  },
+  {
+    "slug": "baklava-unwrapped",
+    "title": "Baklava Unwrapped",
+    "date": "2024-01-12",
+    "excerpt": "Dive deep into the layers of history, technique, and flavor that make baklava one of the world's most beloved desserts.",
+    "cover": "/baklava.jpg"
+  },
+  {
+    "slug": "shawarma-vs-doner-kebab",
+    "title": "Shawarma vs Döner Kebab",
+    "date": "2024-01-08",
+    "excerpt": "Discover the differences and similarities between shawarma and döner kebab, two beloved Middle Eastern dishes that often get confused.",
+    "cover": "/shawarma-vs-doner.jpg"
   },
   {
     "slug": "halal-what-does-it-mean",
     "title": "Halal: What Does It Mean?",
     "date": "2024-01-05",
-    "excerpt": "A quick guide to what halal means for Mediterranean cuisine lovers.",
-    "contentMarkdown": "## Halal: What Does It Mean?\nHalal means permissible in Arabic. In Mediterranean cuisine, it refers to food prepared according to Islamic law."
+    "excerpt": "A comprehensive guide to understanding halal food, its significance, and what it means for Mediterranean and Middle Eastern cuisine.",
+    "cover": "/halal-vegan.png"
   }
-  // ... (add more posts as needed, matching your real blog)
 ]

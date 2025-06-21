@@ -29,8 +29,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:menu": "node scripts/build-menu.js"
+    "build": "npm run build:posts && npm run build:static && react-scripts build",
+    "build:menu": "node scripts/build-menu.js",
+    "build:posts": "node scripts/build-posts.js",
+    "build:static": "node scripts/generate-static-pages.js"
   },
   "browserslist": {
     "production": [

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
@@ -7,7 +7,7 @@ import { materialLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Helmet } from 'react-helmet';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { blogPosts } from '../data/blogPosts';
+import postsData from '../data/posts.json';
 import RelatedLinks from '../components/RelatedLinks';
 
 function getRelatedLinks(currentSlug) {
@@ -40,16 +40,72 @@ function getRelatedLinks(currentSlug) {
 
 export default function BlogPost() {
   const { slug } = useParams();
-  const post = blogPosts.find(p => p.slug === slug);
-  if (!post) return <p>Post not found</p>;
+  const [post, setPost] = useState(null);
+  const [content, setContent] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const postMeta = postsData.find(p => p.slug === slug);
+    if (!postMeta) {
+      setLoading(false);
+      return;
+    }
+
+    setPost(postMeta);
+
+    // Load markdown content
+    fetch(`/content/blog/${slug}.md`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Post not found');
+        }
+        return response.text();
+      })
+      .then(markdownContent => {
+        // Extract content after frontmatter
+        const contentMatch = markdownContent.match(/^---\s*\n.*?\n---\s*\n(.*)/s);
+        const extractedContent = contentMatch ? contentMatch[1] : markdownContent;
+        setContent(extractedContent);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error loading post:', error);
+        setLoading(false);
+      });
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading post...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!post) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
+          <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+          <Link to="/blog-posts" className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors">
+            Back to Blog
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   // Fallbacks
   const coverSrc = post.cover || post.image || '/default-cover.jpg';
   const author = post.author || 'Istanbul Mediterranean';
-  const readingTime = post.readingTime || Math.ceil((post.content || '').split(' ').length / 200) || 1;
+  const readingTime = post.readingTime || Math.ceil(content.split(' ').length / 200) || 1;
 
   // Only generate TOC if contentHtml exists
-  const tableOfContents = post.contentHtml ? (typeof toc === 'function' ? toc(post.contentHtml) : []) : [];
+  const tableOfContents = [];
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
@@ -115,7 +171,7 @@ export default function BlogPost() {
           <span className="inline-flex items-center gap-1"><svg className="w-4 h-4 inline-block text-herb" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4" /><path d="M5.5 21a7.5 7.5 0 0 1 13 0" /></svg>by {author}</span>
         </div>
         {/* TOC placeholder or actual TOC if contentHtml exists */}
-        {post.contentHtml && tableOfContents.length > 0 && (
+        {tableOfContents.length > 0 && (
           <nav className="hidden md:block">
             <h2 className="font-semibold text-primary mb-2">On This Page</h2>
             <ul className="space-y-2 text-charcoal">
@@ -154,17 +210,13 @@ export default function BlogPost() {
       --tw-prose-links: #b91c1c !important;
     }
   `}</style>
-        {post.contentHtml ? (
-          <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
-        ) : (
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw]}
-            components={{}}
-          >
-            {post.content}
-          </ReactMarkdown>
-        )}
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeRaw]}
+          components={{}}
+        >
+          {content}
+        </ReactMarkdown>
 
         {/* Subtle internal link for gyros post only */}
         {post.slug === 'history-and-variations-of-gyros' && (
