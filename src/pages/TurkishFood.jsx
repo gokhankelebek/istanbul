@@ -1,14 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import RelatedPages from '../components/RelatedPages';
 
 export default function TurkishFood() {
   return (
     <>
       <Helmet>
-        <title>Turkish Food in Las Vegas | Istanbul Mediterranean Halal</title>
+        <title>Authentic Turkish Food in Las Vegas | Best Döner Kebab | Istanbul Mediterranean</title>
         <meta
           name="description"
-          content="Craving real Turkish food in Las Vegas? From succulent döner kebab to flaky baklava, Istanbul Mediterranean Halal serves the Strip’s top-rated, 100 % halal Turkish cuisine until 5 AM every day."
+          content="Discover authentic Turkish food in Las Vegas at Istanbul Mediterranean. From succulent döner kebab to flaky baklava, we serve the Strip's top-rated, 100% halal Turkish cuisine until 5 AM daily. #1 on TripAdvisor!"
         />
         <script type="application/ld+json">{`
           {
@@ -160,7 +161,22 @@ export default function TurkishFood() {
               the side.
             </p>
           </details>
+          <details className="p-4 border rounded-xl">
+            <summary className="font-semibold cursor-pointer">What makes Turkish cuisine different from other Mediterranean food?</summary>
+            <p className="mt-2">
+              Turkish cuisine uniquely blends Middle Eastern, Central Asian, and Balkan influences. It features distinctive cooking methods like vertical rotisserie (döner), specialized bread types like pide, and a greater emphasis on yogurt-based sauces and meat preparations compared to other Mediterranean cuisines.
+            </p>
+          </details>
+          <details className="p-4 border rounded-xl">
+            <summary className="font-semibold cursor-pointer">What are the most popular Turkish dishes?</summary>
+            <p className="mt-2">
+              Beyond döner kebab, Turkish cuisine is known for dishes like iskender kebab (thinly sliced meat over bread with tomato sauce and yogurt), manti (Turkish dumplings), pide (boat-shaped flatbread with toppings), lahmacun (thin meat-topped flatbread), and a variety of mezze including hummus, baba ganoush, and dolma (stuffed vegetables).
+            </p>
+          </details>
         </article>
+        
+        {/* Related Pages Section */}
+        <RelatedPages currentPage="TurkishFood" />
       </section>
     </>
   );

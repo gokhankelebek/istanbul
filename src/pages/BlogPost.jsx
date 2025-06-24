@@ -108,10 +108,10 @@ export default function BlogPost() {
   const tableOfContents = [];
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-6 sticky top-4 z-30">
-        <Link to="/blog-posts" className="inline-flex items-center text-primary hover:text-istanbulRed font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-istanbulRed rounded-lg px-2 py-1 bg-white/80 shadow-md">
-          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+    <article className="max-w-3xl mx-auto px-2 md:px-6 py-8 md:py-14 bg-white/80 rounded-3xl shadow-xl border border-herb/10 relative z-10">
+      <div className="mb-8 flex justify-between items-center sticky top-4 z-30">
+        <Link to="/blog-posts" className="inline-flex items-center text-primary hover:text-istanbulRed font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-istanbulRed rounded-lg px-3 py-2 bg-white/90 shadow hover:shadow-lg">
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
           Back to Blog
         </Link>
       </div>
@@ -146,29 +146,43 @@ export default function BlogPost() {
 
       {/* Hero Section */}
       <motion.div
-        className="relative h-72 md:h-96 rounded-xl overflow-hidden mb-8"
+        className="relative h-72 md:h-[32rem] rounded-3xl overflow-hidden mb-10 shadow-2xl group"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.7 }}
+        whileHover={{ scale: 1.015 }}
       >
         <img
           src={coverSrc}
-          alt={post.slug === 'history-and-variations-of-gyros' ? 'Authentic halal gyros in Las Vegas at Istanbul Mediterranean Halal' : post.title}
-          className="w-full h-full object-cover"
+          alt={post.title}
+          className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white text-center px-4">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-0 flex flex-col justify-end pb-10 px-6 md:px-16">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-2 animate-fade-in">
             {post.title}
           </h1>
+          <p className="text-lg md:text-2xl text-white/90 font-medium drop-shadow mb-2 animate-fade-in delay-200">
+            {post.excerpt}
+          </p>
         </div>
       </motion.div>
 
       {/* Meta & TOC Grid */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
-        <div className="flex items-center gap-4 text-sm text-charcoal flex-wrap">
-          <span className="inline-flex items-center gap-1"><svg className="w-4 h-4 inline-block text-herb" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>{post.date}</span>
-          <span className="inline-flex items-center gap-1"><svg className="w-4 h-4 inline-block text-herb" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></svg>{readingTime} min read</span>
-          <span className="inline-flex items-center gap-1"><svg className="w-4 h-4 inline-block text-herb" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4" /><path d="M5.5 21a7.5 7.5 0 0 1 13 0" /></svg>by {author}</span>
+        <div className="flex flex-wrap gap-3 mb-8">
+          <span className="inline-flex items-center gap-2 bg-herb/10 text-herb font-semibold px-4 py-2 rounded-full text-xs shadow-sm">
+            <svg className="w-4 h-4 text-herb" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+            {post.date}
+          </span>
+          <span className="inline-flex items-center gap-2 bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-xs shadow-sm">
+            <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></svg>
+            {readingTime} min read
+          </span>
+          <span className="inline-flex items-center gap-2 bg-istanbulRed/10 text-istanbulRed font-semibold px-4 py-2 rounded-full text-xs shadow-sm">
+            <svg className="w-4 h-4 text-istanbulRed" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" /><path d="M5.5 21a7.5 7.5 0 0 1 13 0" /></svg>
+            by {author}
+          </span>
         </div>
         {/* TOC placeholder or actual TOC if contentHtml exists */}
         {tableOfContents.length > 0 && (
@@ -186,30 +200,46 @@ export default function BlogPost() {
       </div>
 
       {/* Content */}
-      <div className="prose prose-lg max-w-none text-charcoal" style={{color:'#222'}}>
-  <style>{`
-    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-      color: #222 !important;
-      font-weight: bold !important;
-    }
-    .prose strong {
-      color: #222 !important;
-      font-weight: bold !important;
-    }
-    .prose table, .prose th, .prose td {
-      color: #222 !important;
-      border-color: #bbb !important;
-    }
-    .prose em {
-      color: #444 !important;
-    }
-    .prose {
-      --tw-prose-headings: #222 !important;
-      --tw-prose-bold: #222 !important;
-      --tw-prose-body: #222 !important;
-      --tw-prose-links: #b91c1c !important;
-    }
-  `}</style>
+      <div className="prose prose-lg max-w-none text-charcoal font-sans" style={{color:'#222'}}>
+        <style>{`
+          .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+            color: #222 !important;
+            font-weight: bold !important;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
+            letter-spacing: -0.01em;
+          }
+          .prose strong {
+            color: #222 !important;
+            font-weight: bold !important;
+          }
+          .prose table, .prose th, .prose td {
+            color: #222 !important;
+            border-color: #bbb !important;
+          }
+          .prose em {
+            color: #444 !important;
+          }
+          .prose {
+            --tw-prose-headings: #222 !important;
+            --tw-prose-bold: #222 !important;
+            --tw-prose-body: #222 !important;
+            --tw-prose-links: #b91c1c !important;
+            font-size: 1.18rem;
+            line-height: 1.8;
+            letter-spacing: 0.01em;
+          }
+          .prose a {
+            color: #b91c1c !important;
+            font-weight: 600;
+            border-bottom: 1.5px solid #b91c1c22;
+            transition: color 0.2s, border-color 0.2s;
+          }
+          .prose a:hover {
+            color: #222 !important;
+            border-color: #b91c1c;
+            background: #fff8f8;
+          }
+        `}</style>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
