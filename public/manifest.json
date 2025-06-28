@@ -1,0 +1,69 @@
+{
+  "short_name": "Istanbul Med",
+  "name": "Istanbul Mediterranean Restaurant",
+  "description": "Authentic Turkish food & halal restaurant on the Las Vegas Strip. Serving fresh döner kebab, shawarma & baklava until 5 AM.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#E31837",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "categories": ["food", "restaurant", "turkish", "halal"],
+  "screenshots": [
+    {
+      "src": "screenshots/home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Istanbul Mediterranean Restaurant Homepage"
+    },
+    {
+      "src": "screenshots/menu.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Our Menu"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://www.istanbullv.com"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "View Menu",
+      "short_name": "Menu",
+      "description": "View our full menu",
+      "url": "/menu",
+      "icons": [{ "src": "icons/menu.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Order Online",
+      "short_name": "Order",
+      "description": "Order food for delivery or pickup",
+      "url": "/delivery",
+      "icons": [{ "src": "icons/order.png", "sizes": "192x192" }]
+    }
+  ]
+}

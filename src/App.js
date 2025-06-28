@@ -4,6 +4,10 @@ import { Helmet } from "react-helmet";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FooterAwareOrderOnlineButton from "./FooterAwareOrderOnlineButton";
+import EnhancedSEODashboard from "./components/EnhancedSEODashboard";
+import HreflangTags from "./components/HreflangTags";
+import LanguageSwitcher from "./components/LanguageSwitcher";
+import SchemaMarkupTester from "./components/SchemaMarkupTester";
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import YelpLandingPage from './pages/yelp';
 import GoogleLanding from './pages/GoogleLanding';
@@ -153,7 +157,14 @@ export default function App() {
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="canonical" href="https://www.istanbullv.com/" />
       </Helmet>
-      <NavBar />
+      {/* Add hreflang tags for international SEO */}
+      <HreflangTags />
+      <NavBar>
+        {/* Add language switcher in the NavBar */}
+        <div className="ml-4">
+          <LanguageSwitcher />
+        </div>
+      </NavBar>
       <ScrollRestoration />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -178,6 +189,12 @@ export default function App() {
       </Routes>
       {/* Footer */}
       <Footer />
+      
+      {/* Enhanced SEO Dashboard - only visible in development mode or for admin users */}
+      <EnhancedSEODashboard />
+      
+      {/* Schema Markup Tester - only visible in development mode */}
+      <SchemaMarkupTester />
 
     </>
   );

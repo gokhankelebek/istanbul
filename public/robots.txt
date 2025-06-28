@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+
+# Allow all bots to access all content
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemaps
 Sitemap: https://www.istanbullv.com/sitemap.xml

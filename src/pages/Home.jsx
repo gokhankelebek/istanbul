@@ -20,6 +20,12 @@ const baklava = menu.find(i => i.slug === 'baklava');
 if (baklava) highlights.push(baklava);
 
 import { Helmet } from 'react-helmet';
+import SEOHead from '../components/SEOHead';
+import ResourceHints from '../components/ResourceHints';
+import StructuredDataManager from '../components/StructuredDataManager';
+import Breadcrumbs from '../components/Breadcrumbs';
+import SocialShare from '../components/SocialShare';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function Home() {
   // SEO Meta
@@ -70,8 +76,107 @@ export default function Home() {
       rating: 5
     }
   ];
+  // Define structured data for the home page
+  const restaurantData = {
+    name: "Istanbul Mediterranean",
+    image: "https://www.istanbullv.com/hero_chef_wide.webp",
+    url: "https://www.istanbullv.com",
+    telephone: "+17259008844",
+    address: {
+      streetAddress: "3615 S Las Vegas Blvd #101",
+      addressLocality: "Las Vegas",
+      addressRegion: "NV",
+      postalCode: "89109",
+      addressCountry: "US"
+    },
+    geo: {
+      latitude: 36.1230858,
+      longitude: -115.1724256
+    },
+    openingHours: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "10:00",
+        closes: "05:00"
+      }
+    ],
+    servesCuisine: ["Turkish", "Mediterranean", "Middle Eastern", "Halal"],
+    priceRange: "$$",
+    menu: "https://www.istanbullv.com/menu",
+    acceptsReservations: "True",
+    aggregateRating: {
+      ratingValue: "4.8",
+      reviewCount: "896"
+    },
+    reviews: [
+      {
+        author: { name: "Sarah L." },
+        datePublished: "2023-12-15",
+        reviewRating: { ratingValue: "5" },
+        reviewBody: "Absolutely the best doner in Vegas! The meat was juicy and flavorful. Will be back!"
+      },
+      {
+        author: { name: "Mike D." },
+        datePublished: "2023-11-20",
+        reviewRating: { ratingValue: "5" },
+        reviewBody: "Open late, super convenient after a night out. The Turkish bread is amazing."
+      },
+      {
+        author: { name: "Jessica P." },
+        datePublished: "2024-01-05",
+        reviewRating: { ratingValue: "5" },
+        reviewBody: "Falafel wrap was fresh and delicious. Friendly staff and fast service."
+      }
+    ]
+  };
+
+  // FAQ data for structured data
+  const faqData = {
+    questions: [
+      {
+        question: "What are your opening hours?",
+        answer: "We are open daily from 10:00 AM to 5:00 AM, serving fresh Turkish food late into the night."
+      },
+      {
+        question: "Is all your food halal?",
+        answer: "Yes, all our meat is 100% halal certified. We take pride in serving authentic halal Turkish cuisine."
+      },
+      {
+        question: "Do you offer vegetarian options?",
+        answer: "Absolutely! We have a variety of vegetarian and vegan options including falafel, hummus, stuffed grape leaves, and more."
+      },
+      {
+        question: "Where are you located on the Las Vegas Strip?",
+        answer: "We are located at 3615 S Las Vegas Blvd #101, Las Vegas, NV 89109, conveniently situated on the Strip."
+      },
+      {
+        question: "Do you offer delivery?",
+        answer: "Yes, we offer delivery through our website and major delivery platforms like Uber Eats, DoorDash, and Grubhub."
+      }
+    ]
+  };
+
+  // Aggregate all schema types for the home page
+  const aggregateSchemaData = [
+    { type: 'restaurant', data: restaurantData },
+    { type: 'localBusiness', data: restaurantData },
+    { type: 'faq', data: faqData },
+    { type: 'website', data: { name: "Istanbul Mediterranean Restaurant", url: "https://www.istanbullv.com" } }
+  ];
+
   return (
     <>
+      <ResourceHints />
+      <SEOHead 
+        title="Istanbul Mediterranean | Best Turkish Food & Halal Restaurant Las Vegas Strip"
+        description="Authentic Turkish food & halal restaurant on the Las Vegas Strip. Serving fresh döner kebab, shawarma & baklava until 5 AM. #1 rated on TripAdvisor. Order online!"
+        keywords="turkish food las vegas, halal restaurant las vegas strip, doner kebab, shawarma, baklava, mediterranean food, late night food las vegas"
+        canonicalUrl="https://www.istanbullv.com/"
+        ogType="website"
+        ogImage="https://www.istanbullv.com/social-banner.jpg"
+      />
+      <StructuredDataManager type="aggregate" data={aggregateSchemaData} />
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center bg-charcoal mb-12 overflow-hidden" style={{background:'#1F1F1F'}}>
         <picture>
@@ -121,8 +226,18 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <div className="flex justify-center mt-8">
+      <div className="flex flex-col items-center mt-8 space-y-4">
         <Link to="/menu" className="btn btn-primary text-lg px-8 py-3">View Full Menu</Link>
+        <div className="mt-4">
+          <SocialShare 
+            url="https://www.istanbullv.com" 
+            title="Best Turkish Food in Las Vegas - Istanbul Mediterranean" 
+            description="Authentic Turkish doner, shawarma, and more. Family recipe, Istanbul roots—crafted fresh in Las Vegas."
+            hashtags="turkishfood,lasvegas,halal,doner"
+            image="/hero_chef_wide.webp"
+            showCounts
+          />
+        </div>
       </div>
 
       {/* Why Choose Us Section */}
@@ -188,12 +303,19 @@ export default function Home() {
           <div className="overflow-x-auto flex gap-6 snap-x pb-4 scrollbar-hide">
             {testimonials.map((t,i)=>(
               <div key={i} className="bg-white rounded-3xl p-6 shadow-xl text-charcoal min-w-[320px] max-w-xs flex flex-col items-center snap-center border border-saffron/10 hover:shadow-2xl transition-shadow duration-200">
-                <img src={t.avatar} alt={t.name} className="w-16 h-16 rounded-full object-cover border-2 border-saffron mb-2" onError={e => e.target.style.display='none'} />
+                <OptimizedImage 
+                  src={t.avatar} 
+                  alt={t.name} 
+                  className="w-16 h-16 rounded-full object-cover border-2 border-saffron mb-2" 
+                  width={64}
+                  height={64}
+                  onError={e => e.target.style.display='none'}
+                />
                 <div className="flex gap-1 mb-2 justify-center">
                   {[...Array(t.rating)].map((_,idx)=>(<span key={idx} className="text-saffron text-xl">★</span>))}
                   {[...Array(5-t.rating)].map((_,idx)=>(<span key={idx} className="text-gray-300 text-xl">★</span>))}
                 </div>
-                <div className="italic mb-2 text-lg">“{t.text}”</div>
+                <div className="italic mb-2 text-lg">"{t.text}"</div>
                 <div className="font-semibold text-primary flex items-center gap-2">
                   {t.name}
                   {t.source === 'Yelp' && <FaYelp className="text-yelpRed text-lg" title="Yelp" />}

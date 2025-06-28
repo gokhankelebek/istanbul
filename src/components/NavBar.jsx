@@ -10,7 +10,7 @@ const navLinks = [
   { name: 'Contact', path: '/contact' },
 ];
 
-export default function NavBar() {
+export default function NavBar({ children }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const specialtiesRef = useRef(null);
@@ -78,14 +78,11 @@ export default function NavBar() {
               </div>
             )
           )}
-          <a
-            href="https://orderdoner.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 px-4 py-2 rounded bg-istanbulRed text-white font-bold shadow hover:bg-istanbulRed/90 transition-colors"
-          >
+          <Link to="/order" className="bg-istanbulRed hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors">
             Order Online
-          </a>
+          </Link>
+          {/* Render children (for LanguageSwitcher) */}
+          {children}
         </div>
         <div className="md:hidden flex items-center">
           <button onClick={() => setMobileOpen(!mobileOpen)} className="focus:outline-none">

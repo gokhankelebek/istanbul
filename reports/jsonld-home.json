@@ -1,0 +1,23 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Istanbul Mediterranean Doner",
+    "image": "/doner-og.jpg",
+    "servesCuisine": "Turkish, Mediterranean",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Doner St",
+      "addressLocality": "Las Vegas",
+      "addressRegion": "NV",
+      "postalCode": "89109"
+    },
+    "url": "https://www.istanbullv.com",
+    "telephone": "+1-702-555-1234",
+    "priceRange": "$",
+    "sameAs": [
+      "https://www.instagram.com/istanbulmedlv",
+      "https://www.facebook.com/istanbulmedlv"
+    ]
+  }
+]

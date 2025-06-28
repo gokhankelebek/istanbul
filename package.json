@@ -5,10 +5,12 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "buffer": "^6.0.3",
+    "chalk": "^5.4.1",
     "csv-parse": "^5.6.0",
     "framer-motion": "^11.0.0",
     "gray-matter": "^4.0.3",
     "marked": "^15.0.8",
+    "puppeteer": "^24.11.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
@@ -19,20 +21,27 @@
     "react-syntax-highlighter": "^15.6.1",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
-    "sharp": "^0.34.1",
-    "slugify": "^1.6.6"
+    "slugify": "^1.6.6",
+    "web-vitals": "^5.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
+    "sharp": "^0.34.2",
+    "source-map-explorer": "^2.5.3",
     "tailwindcss": "^3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run build:posts && npm run build:static && react-scripts build",
+    "build": "npm run build:posts && npm run build:static && npm run build:sitemap && npm run optimize:images && npm run optimize:performance && react-scripts build",
     "build:menu": "node scripts/build-menu.js",
     "build:posts": "node scripts/build-posts.js",
-    "build:static": "node scripts/generate-static-pages.js"
+    "build:static": "node scripts/generate-static-pages.js",
+    "build:sitemap": "node scripts/generate-sitemap.js",
+    "optimize:images": "node scripts/optimize-images-seo.js",
+    "optimize:performance": "node scripts/optimize-performance.js",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "seo:report": "node scripts/generate-seo-report.js"
   },
   "browserslist": {
     "production": [
