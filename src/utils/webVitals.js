@@ -1,4 +1,4 @@
-import { getCLS, getFID, getLCP, getFCP, getTTFB } from 'web-vitals';
+import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals';
 
 /**
  * Web Vitals reporting utility
@@ -12,7 +12,7 @@ import { getCLS, getFID, getLCP, getFCP, getTTFB } from 'web-vitals';
 const reportWebVitals = (onPerfEntry) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     // Largest Contentful Paint
-    getLCP(metric => {
+    onLCP(metric => {
       const vitalsData = {
         name: 'LCP',
         value: metric.value,
@@ -25,8 +25,8 @@ const reportWebVitals = (onPerfEntry) => {
       onPerfEntry(vitalsData);
     });
     
-    // First Input Delay
-    getFID(metric => {
+    // Input Delay (INP replaces FID in newer versions)
+    onINP(metric => {
       const vitalsData = {
         name: 'FID',
         value: metric.value,
@@ -40,7 +40,7 @@ const reportWebVitals = (onPerfEntry) => {
     });
     
     // Cumulative Layout Shift
-    getCLS(metric => {
+    onCLS(metric => {
       const vitalsData = {
         name: 'CLS',
         value: metric.value,
@@ -54,7 +54,7 @@ const reportWebVitals = (onPerfEntry) => {
     });
     
     // First Contentful Paint
-    getFCP(metric => {
+    onFCP(metric => {
       const vitalsData = {
         name: 'FCP',
         value: metric.value,
@@ -68,7 +68,7 @@ const reportWebVitals = (onPerfEntry) => {
     });
     
     // Time to First Byte
-    getTTFB(metric => {
+    onTTFB(metric => {
       const vitalsData = {
         name: 'TTFB',
         value: metric.value,

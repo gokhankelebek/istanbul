@@ -461,32 +461,42 @@ const validateOrganizationSchema = (schema, result) => {
  * @returns {Promise<Array>} - Array of validation results
  */
 export const validateCurrentPageSchemas = async () => {
-  // Find all script tags with type="application/ld+json"
-  const scripts = document.querySelectorAll('script[type="application/ld+json"]');
-  const results = [];
+  try {
+    // Find all script tags with type="application/ld+json"
+    const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+    const results = [];
+    
+    // Get current pathname for route-specific validation
+    const pathname = window.location.pathname;
 
-  // Validate each schema
-  scripts.forEach((script) => {
-    try {
-      const schema = JSON.parse(script.textContent);
-      const result = validateSchema(schema);
-      results.push({
-        schema,
-        result
-      });
-    } catch (error) {
-      results.push({
-        schema: null,
-        result: {
-          valid: false,
-          errors: [`Failed to parse schema: ${error.message}`],
-          warnings: []
-        }
-      });
+    // Parse and validate each script
+    for (const script of scripts) {
+      try {
+        const schema = JSON.parse(script.textContent);
+        const result = validateSchema(schema, pathname);
+        results.push({
+          schema,
+          result
+        });
+      } catch (error) {
+        results.push({
+          schema: null,
+          result: {
+            valid: false,
+            errors: [`Parse error: ${error.message}`],
+            warnings: [],
+            info: [],
+            schemaType: null
+          }
+        });
+      }
     }
-  });
-
-  return results;
+    
+    return results;
+  } catch (error) {
+    console.error('Error validating schemas:', error);
+    return [];
+  }
 };
 
 /**
@@ -686,48 +696,7 @@ const validateServiceSchema = (schema, result) => {
   }
 };
 
-/**
- * Updates the validateCurrentPageSchemas function to include pathname
- * @returns {Promise<Array>} - Array of validation results
- */
-const validateCurrentPageSchemas = async () => {
-  try {
-    // Extract all JSON-LD scripts from the page
-    const scripts = document.querySelectorAll('script[type="application/ld+json"]');
-    const results = [];
-    
-    // Get current pathname
-    const pathname = window.location.pathname;
-    
-    // Parse and validate each script
-    for (const script of scripts) {
-      try {
-        const schema = JSON.parse(script.textContent);
-        const result = validateSchema(schema, pathname);
-        results.push({
-          schema,
-          result
-        });
-      } catch (error) {
-        results.push({
-          schema: null,
-          result: {
-            valid: false,
-            errors: [`Parse error: ${error.message}`],
-            warnings: [],
-            info: [],
-            schemaType: null
-          }
-        });
-      }
-    }
-    
-    return results;
-  } catch (error) {
-    console.error('Error validating schemas:', error);
-    return [];
-  }
-};
+// This comment replaces the duplicate function that was causing lint errors
 
 export default {
   validateSchema,
