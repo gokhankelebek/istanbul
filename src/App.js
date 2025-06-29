@@ -167,6 +167,7 @@ export default function App() {
       </NavBar>
       <ScrollRestoration />
       <Routes>
+        {/* English Routes (Default) */}
         <Route path="/" element={<Home />} />
         <Route path="/yelp" element={<YelpLandingPage />} />
         <Route path="/google" element={<GoogleLanding />} />
@@ -186,6 +187,63 @@ export default function App() {
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/shawarma" element={<ShawarmaPage />} />
         <Route path="/turkish-food" element={<TurkishFood />} />
+        
+        {/* Turkish Routes */}
+        <Route path="/tr" element={<Home />} />
+        <Route path="/tr/menu" element={<Menu />} />
+        <Route path="/tr/menu/:slug" element={<MenuItem />} />
+        <Route path="/tr/blog-posts" element={<BlogPosts />} />
+        <Route path="/tr/blog-posts/:slug" element={<BlogPost />} />
+        <Route path="/tr/helal" element={<Halal />} />
+        <Route path="/tr/sss" element={<FAQIndex />} />
+        <Route path="/tr/sss/:slug" element={<FAQSlug />} />
+        <Route path="/tr/hakkimizda" element={<MarkdownPage />} />
+        <Route path="/tr/catering" element={<MarkdownPage />} />
+        <Route path="/tr/deneyim" element={<Experience />} />
+        <Route path="/tr/iletisim" element={<Contact />} />
+        <Route path="/tr/akdeniz-restoran" element={<MediterraneanRestaurant />} />
+        <Route path="/tr/yakinimda/helal-yemek" element={<NearMeHalalFood />} />
+        <Route path="/tr/teslimat" element={<Delivery />} />
+        <Route path="/tr/savarma" element={<ShawarmaPage />} />
+        <Route path="/tr/turk-yemekleri" element={<TurkishFood />} />
+        
+        {/* Arabic Routes */}
+        <Route path="/ar" element={<Home />} />
+        <Route path="/ar/menu" element={<Menu />} />
+        <Route path="/ar/menu/:slug" element={<MenuItem />} />
+        <Route path="/ar/blog-posts" element={<BlogPosts />} />
+        <Route path="/ar/blog-posts/:slug" element={<BlogPost />} />
+        <Route path="/ar/حلال" element={<Halal />} />
+        <Route path="/ar/الأسئلة-الشائعة" element={<FAQIndex />} />
+        <Route path="/ar/الأسئلة-الشائعة/:slug" element={<FAQSlug />} />
+        <Route path="/ar/عن-المطعم" element={<MarkdownPage />} />
+        <Route path="/ar/تموين" element={<MarkdownPage />} />
+        <Route path="/ar/تجربة" element={<Experience />} />
+        <Route path="/ar/اتصل-بنا" element={<Contact />} />
+        <Route path="/ar/مطعم-متوسطي" element={<MediterraneanRestaurant />} />
+        <Route path="/ar/بالقرب-مني/طعام-حلال" element={<NearMeHalalFood />} />
+        <Route path="/ar/توصيل" element={<Delivery />} />
+        <Route path="/ar/شاورما" element={<ShawarmaPage />} />
+        <Route path="/ar/الطعام-التركي" element={<TurkishFood />} />
+        
+        {/* Spanish Routes */}
+        <Route path="/es" element={<Home />} />
+        <Route path="/es/menu" element={<Menu />} />
+        <Route path="/es/menu/:slug" element={<MenuItem />} />
+        <Route path="/es/blog-posts" element={<BlogPosts />} />
+        <Route path="/es/blog-posts/:slug" element={<BlogPost />} />
+        <Route path="/es/halal" element={<Halal />} />
+        <Route path="/es/preguntas-frecuentes" element={<FAQIndex />} />
+        <Route path="/es/preguntas-frecuentes/:slug" element={<FAQSlug />} />
+        <Route path="/es/sobre-nosotros" element={<MarkdownPage />} />
+        <Route path="/es/catering" element={<MarkdownPage />} />
+        <Route path="/es/experiencia" element={<Experience />} />
+        <Route path="/es/contacto" element={<Contact />} />
+        <Route path="/es/restaurante-mediterraneo" element={<MediterraneanRestaurant />} />
+        <Route path="/es/cerca-de-mi/comida-halal" element={<NearMeHalalFood />} />
+        <Route path="/es/entrega" element={<Delivery />} />
+        <Route path="/es/shawarma" element={<ShawarmaPage />} />
+        <Route path="/es/comida-turca" element={<TurkishFood />} />
       </Routes>
       {/* Footer */}
       <Footer />

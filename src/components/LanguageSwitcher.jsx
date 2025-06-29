@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { generateLanguageSwitcher, getCurrentLanguage } from '../utils/hreflangManager';
+import { useLanguage } from '../contexts/LanguageContext';
 
 /**
  * LanguageSwitcher Component
@@ -16,10 +17,11 @@ const LanguageSwitcher = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const { language, setLanguage } = useLanguage();
   
   // Get language options
   const languageOptions = generateLanguageSwitcher(location.pathname);
-  const currentLangCode = getCurrentLanguage(location.pathname);
+  const currentLangCode = language;
   const currentLanguage = languageOptions.find(lang => lang.code === currentLangCode) || languageOptions[0];
   
   // Close dropdown when clicking outside
@@ -40,7 +42,14 @@ const LanguageSwitcher = () => {
   const handleLanguageChange = (url) => {
     // Extract path from URL
     const urlObj = new URL(url);
-    navigate(urlObj.pathname);
+    const newPath = urlObj.pathname;
+    const newLangCode = getCurrentLanguage(newPath);
+    
+    // Update language in context
+    setLanguage(newLangCode);
+    
+    // Navigate to the new path
+    navigate(newPath);
     setIsOpen(false);
   };
   

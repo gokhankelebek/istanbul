@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import menu from '../data/menu.json';
 import MenuCard from '../components/MenuCard';
+import TranslatedHero from '../components/TranslatedHero';
 
 // Placeholder for navigation enhancement
 // import NavBar from '../components/NavBar';
@@ -177,34 +178,8 @@ export default function Home() {
         ogImage="https://www.istanbullv.com/social-banner.jpg"
       />
       <StructuredDataManager type="aggregate" data={aggregateSchemaData} />
-      {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center bg-charcoal mb-12 overflow-hidden" style={{background:'#1F1F1F'}}>
-        <picture>
-          <source srcSet="/hero_chef_wide.webp" type="image/webp" />
-          <img
-            id="hero-bg"
-            src="/hero_chef_wide.webp"
-            srcSet="/hero_chef_wide.jpg 2x"
-            alt="Chef preparing doner"
-            className="absolute inset-0 w-full h-full object-cover animate-fadein"
-            style={{zIndex:0, objectPosition: 'center top'}}
-            loading="lazy"
-            width={1920} // replace with actual width if different
-            height={800} // replace with actual height if different
-            onError={e => e.target.style.display='none'}
-          />
-        </picture>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-charcoal/40 to-transparent" style={{zIndex:1}} />
-        <div className="relative z-10 text-center text-offwhite space-y-6 animate-fadein-slow">
-          <h1 className="font-poppins font-extrabold text-4xl md:text-6xl animate-text-pop">Wraps That Roll, <span className="text-istanbulRed">Flavors That Rock.</span></h1>
-          <p className="text-lg md:text-2xl">Authentic Turkish doner crafted fresh in Las Vegas.</p>
-          <div className="flex gap-4 justify-center">
-            <a href="https://orderdoner.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary" aria-label="Order Online">Order Online</a>
-            <Link to="/menu" className="btn btn-secondary" aria-label="See Menu">See Menu</Link>
-          </div>
-        </div>
-        <img src="/scooter.png" alt="Delivery scooter" className="hidden md:block absolute right-8 bottom-8 w-32 animate-float" style={{zIndex:2}} loading="lazy" onError={e => e.target.style.display='none'} />
-      </section>
+      {/* Translated Hero Section */}
+      <TranslatedHero />
 
       {/* Halal Commitment Badge */}
       <div className="flex flex-col items-center mb-6">
