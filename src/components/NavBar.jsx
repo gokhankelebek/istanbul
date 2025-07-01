@@ -6,7 +6,6 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Menu', path: '/menu' },
   { name: 'Blog', path: '/blog-posts' },
-  { name: 'Near Caesars Palace', path: '/blog-posts/best-mediterranean-food-near-caesars-palace-las-vegas' },
   { name: 'Delivery', path: '/delivery' },
   { name: 'Contact', path: '/contact' },
 ];

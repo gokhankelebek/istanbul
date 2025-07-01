@@ -34,17 +34,7 @@ export default function Home() {
   // ...existing code...
   // (caesarsLink is defined above)
 
-  // Featured Caesars Palace callout
-  const caesarsLink = (
-    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-5 my-6 rounded-lg shadow flex flex-col md:flex-row items-center gap-4">
-      <img src="/caesars-palace-hero.jpg" alt="Caesars Palace Mediterranean Food" className="w-28 h-20 object-cover rounded-md shadow-md" />
-      <div>
-        <h2 className="text-xl font-bold text-istanbulRed mb-1">Best Mediterranean Food Near Caesars Palace</h2>
-        <p className="mb-2 text-gray-700">Staying near Caesars? Discover why Istanbul Mediterranean is the #1 spot for authentic, halal Mediterranean cuisine—just a 5-minute walk away!</p>
-        <Link to="/blog-posts/best-mediterranean-food-near-caesars-palace-las-vegas" className="inline-block bg-istanbulRed text-white px-4 py-2 rounded hover:bg-red-700 font-semibold transition">See Guide</Link>
-      </div>
-    </div>
-  );
+
   // Get translation function and current language
   const t = useTranslation();
   const { language } = useLanguage();
@@ -190,8 +180,6 @@ export default function Home() {
     <>
       {/* Hero section and main intro */}
       <TranslatedHero />
-      {/* Featured Caesars Palace callout */}
-      {caesarsLink}
 
       <ResourceHints />
       <SEOHead 
