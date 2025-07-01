@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getCurrentLanguage } from '../utils/hreflangManager';
+import { getCurrentLanguage, SUPPORTED_LANGUAGES } from '../utils/hreflangManager';
 
 // Create the language context
 const LanguageContext = createContext();
@@ -18,13 +18,22 @@ const LanguageContext = createContext();
  */
 export const LanguageProvider = ({ children }) => {
   const location = useLocation();
-  const [language, setLanguage] = useState('en-us');
+  const [language, setLanguage] = useState(() => {
+    // Initialize with the current path's language
+    return getCurrentLanguage(window.location.pathname);
+  });
   
   // Update language when location changes
   useEffect(() => {
     const currentLang = getCurrentLanguage(location.pathname);
     setLanguage(currentLang);
   }, [location.pathname]);
+  
+  // Debug log
+  useEffect(() => {
+    console.log('Current language:', language);
+    console.log('Current path:', location.pathname);
+  }, [language, location.pathname]);
   
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>

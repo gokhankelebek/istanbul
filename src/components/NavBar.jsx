@@ -6,6 +6,7 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Menu', path: '/menu' },
   { name: 'Blog', path: '/blog-posts' },
+  { name: 'Near Caesars Palace', path: '/blog-posts/best-mediterranean-food-near-caesars-palace-las-vegas' },
   { name: 'Delivery', path: '/delivery' },
   { name: 'Contact', path: '/contact' },
 ];
@@ -78,9 +79,9 @@ export default function NavBar({ children }) {
               </div>
             )
           )}
-          <Link to="/order" className="bg-istanbulRed hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors">
+          <a href="https://orderdoner.com/" target="_blank" rel="noopener noreferrer" className="bg-istanbulRed hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors">
             Order Online
-          </Link>
+          </a>
           {/* Render children (for LanguageSwitcher) */}
           {children}
         </div>

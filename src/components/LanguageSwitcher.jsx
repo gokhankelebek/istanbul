@@ -40,17 +40,23 @@ const LanguageSwitcher = () => {
   
   // Handle language change
   const handleLanguageChange = (url) => {
-    // Extract path from URL
-    const urlObj = new URL(url);
-    const newPath = urlObj.pathname;
-    const newLangCode = getCurrentLanguage(newPath);
-    
-    // Update language in context
-    setLanguage(newLangCode);
-    
-    // Navigate to the new path
-    navigate(newPath);
-    setIsOpen(false);
+    try {
+      // Extract path from URL
+      const urlObj = new URL(url);
+      const newPath = urlObj.pathname;
+      const newLangCode = getCurrentLanguage(newPath);
+      
+      console.log('Switching to language:', newLangCode, 'Path:', newPath);
+      
+      // Update language in context
+      setLanguage(newLangCode);
+      
+      // Navigate to the new path
+      navigate(newPath);
+      setIsOpen(false);
+    } catch (error) {
+      console.error('Error changing language:', error);
+    }
   };
   
   // Flag emoji for language

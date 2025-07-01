@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import useTranslation from '../hooks/useTranslation';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -14,38 +15,64 @@ const TranslatedHero = () => {
   const t = useTranslation();
   const { language } = useLanguage();
   
+  // Log when translations are rendered
+  useEffect(() => {
+    console.log('Rendering hero with language:', language);
+  }, [language]);
+  
   return (
-    <div className="bg-gradient-to-r from-saffron to-pomegranate py-16 px-4 sm:px-6 lg:px-8 text-white">
-      <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+    <section className="relative h-[70vh] flex items-center justify-center bg-charcoal mb-12 overflow-hidden" style={{background:'#1F1F1F'}}>
+      <picture>
+        <source srcSet="/hero_chef_wide.webp" type="image/webp" />
+        <img
+          id="hero-bg"
+          src="/hero_chef_wide.webp"
+          srcSet="/hero_chef_wide.jpg 2x"
+          alt="Chef preparing doner"
+          className="absolute inset-0 w-full h-full object-cover animate-fadein"
+          style={{zIndex:0, objectPosition: 'center top'}}
+          loading="lazy"
+          width={1920}
+          height={800}
+          onError={e => e.target.style.display='none'}
+        />
+      </picture>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-charcoal/40 to-transparent" style={{zIndex:1}} />
+      <div className="relative z-10 text-center text-offwhite space-y-6 animate-fadein-slow">
+        <h1 className="font-poppins font-extrabold text-4xl md:text-6xl animate-text-pop">
           {t('home.hero.title')}
         </h1>
-        <p className="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl">
+        <p className="text-lg md:text-2xl">
           {t('home.hero.subtitle')}
         </p>
-        <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-          <div className="rounded-md shadow">
-            <a
-              href="https://orderdoner.com"
-              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-pomegranate bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
-            >
-              {t('common.orderNow')}
-            </a>
-          </div>
-          <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-            <a
-              href="/menu"
-              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pomegranate-dark hover:bg-pomegranate md:py-4 md:text-lg md:px-10"
-            >
-              {t('common.menu')}
-            </a>
-          </div>
-        </div>
-        <div className="mt-4 text-sm">
-          Current language: {language}
+        <div className="flex gap-4 justify-center">
+          <a 
+            href="https://orderdoner.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-primary" 
+            aria-label="Order Online"
+          >
+            {t('common.orderNow')}
+          </a>
+          <Link 
+            to={`/${language === 'en-us' ? '' : language}/menu`.replace('//', '/')} 
+            className="btn btn-secondary" 
+            aria-label="See Menu"
+          >
+            {t('common.menu')}
+          </Link>
         </div>
       </div>
-    </div>
+      <img 
+        src="/scooter.png" 
+        alt="Delivery scooter" 
+        className="hidden md:block absolute right-8 bottom-8 w-32 animate-float" 
+        style={{zIndex:2}} 
+        loading="lazy" 
+        onError={e => e.target.style.display='none'} 
+      />
+    </section>
   );
 };
 
