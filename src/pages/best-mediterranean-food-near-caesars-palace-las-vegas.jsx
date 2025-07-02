@@ -1,7 +1,6 @@
 import React from 'react';
-import BlogPostLayout from '../components/BlogPostLayout';
-import postContent from '../../content/blog/best-mediterranean-food-near-caesars-palace-las-vegas.md';
+import MarkdownPostPage from './MarkdownPostPage';
 
 export default function BestMediterraneanFoodNearCaesarsPalace() {
-  return <BlogPostLayout content={postContent} />;
+  return <MarkdownPostPage mdPath={"/content/blog/best-mediterranean-food-near-caesars-palace-las-vegas.md"} />;
 }
