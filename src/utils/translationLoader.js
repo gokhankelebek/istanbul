@@ -14,6 +14,11 @@ import { SUPPORTED_LANGUAGES } from './hreflangManager';
 const translations = {
   'en-us': {
     common: {
+      home: 'Home',
+      menu: 'Menu',
+      blog: 'Blog',
+      contact: 'Contact',
+      orderOnline: 'Order Online',
       orderNow: 'Order Now',
       menu: 'View Menu',
       contact: 'Contact Us',
@@ -211,6 +216,11 @@ const translations = {
   },
   'tr-tr': {
     common: {
+      home: 'Ana Sayfa',
+      menu: 'Menü',
+      blog: 'Blog',
+      contact: 'İletişim',
+      orderOnline: 'Online Sipariş',
       orderNow: 'Şimdi Sipariş Ver',
       menu: 'Menüyü Gör',
       contact: 'İletişim',
@@ -365,6 +375,11 @@ const translations = {
   },
   'ar': {
     common: {
+      home: 'الرئيسية',
+      menu: 'القائمة',
+      blog: 'مدونة',
+      contact: 'اتصل بنا',
+      orderOnline: 'اطلب عبر الإنترنت',
       orderNow: 'اطلب الآن',
       menu: 'عرض القائمة',
       contact: 'اتصل بنا',
@@ -519,6 +534,11 @@ const translations = {
   },
   'es': {
     common: {
+      home: 'Inicio',
+      menu: 'Menú',
+      blog: 'Blog',
+      contact: 'Contacto',
+      orderOnline: 'Ordenar en línea',
       orderNow: 'Ordenar Ahora',
       menu: 'Ver Menú',
       contact: 'Contáctenos',
@@ -681,10 +701,21 @@ const translations = {
  * @returns {string} - Translated text or fallback to English if not found
  */
 export const getTranslation = (key, language = 'en-us') => {
+  // Normalize language codes (e.g., treat 'tr' and 'tr-tr' as equivalent)
+  const languageMap = {
+    'tr': 'tr-tr',
+    'tr-tr': 'tr-tr',
+    'en': 'en-us',
+    'en-us': 'en-us',
+    'ar': 'ar',
+    'es': 'es',
+  };
+  const lang = languageMap[language] || language;
+
   // Default to English if language is not supported
-  if (!translations[language]) {
-    console.warn(`Language ${language} not supported, falling back to English`);
-    language = 'en-us';
+  if (!translations[lang]) {
+    console.warn(`Language ${lang} not supported, falling back to English`);
+    lang = 'en-us';
   }
   
   // Split the key by dots to navigate the translations object
@@ -692,7 +723,7 @@ export const getTranslation = (key, language = 'en-us') => {
   
   try {
     // Navigate through the translations object for the specified language
-    let result = translations[language];
+    let result = translations[lang];
     for (const k of keys) {
       if (result && result[k] !== undefined) {
         result = result[k];

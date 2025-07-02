@@ -15,6 +15,8 @@ export default function Footer() {
             <li><Link to="/catering" className="hover:text-saffron">Catering</Link></li>
             <li><Link to="/delivery" className="hover:text-saffron">Delivery</Link></li>
             <li><Link to="/contact" className="hover:text-saffron">Contact</Link></li>
+            <li><Link to="/best-mediterranean-food-near-caesars-palace-las-vegas" className="hover:text-saffron">Near Caesars Palace</Link></li>
+            <li><Link to="/where-to-eat-near-the-sphere-las-vegas" className="hover:text-saffron">Near the Sphere</Link></li>
           </ul>
         </div>
 

@@ -191,8 +191,7 @@ export default function Home() {
         ogImage="https://www.istanbullv.com/social-banner.jpg"
       />
       <StructuredDataManager type="aggregate" data={aggregateSchemaData} />
-      {/* Translated Hero Section */}
-      <TranslatedHero />
+
 
       {/* Halal Commitment Badge */}
       <div className="flex flex-col items-center mb-6">
