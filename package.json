@@ -32,8 +32,9 @@
     "tailwindcss": "^3.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "npm run build:posts && npm run build:static && npm run build:sitemap && npm run optimize:images && npm run optimize:performance && react-scripts build",
+    "sync:blog": "node scripts/sync_blog_to_public.js",
+    "start": "npm run sync:blog && react-scripts start",
+    "build": "npm run sync:blog && npm run build:posts && npm run build:static && npm run build:sitemap && npm run optimize:images && npm run optimize:performance && react-scripts build",
     "build:menu": "node scripts/build-menu.js",
     "build:posts": "node scripts/build-posts.js",
     "build:static": "node scripts/generate-static-pages.js",

@@ -29,6 +29,8 @@ import FAQSlug from './pages/FAQ/[slug]';
 import Delivery from './pages/Delivery';
 import TurkishFood from './pages/TurkishFood';
 import ShawarmaPage from './pages/Shawarma';
+import BestMediterraneanFoodNearCaesarsPalace from './pages/best-mediterranean-food-near-caesars-palace-las-vegas';
+import WhereToEatNearTheSphere from './pages/where-to-eat-near-the-sphere-las-vegas';
 import "./index.css";
 
 const categorizedMenu = {
@@ -187,6 +189,10 @@ export default function App() {
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/shawarma" element={<ShawarmaPage />} />
         <Route path="/turkish-food" element={<TurkishFood />} />
+        
+        {/* Root-level blog post pages */}
+        <Route path="/best-mediterranean-food-near-caesars-palace-las-vegas" element={<BestMediterraneanFoodNearCaesarsPalace />} />
+        <Route path="/where-to-eat-near-the-sphere-las-vegas" element={<WhereToEatNearTheSphere />} />
         
         {/* Turkish Routes */}
         <Route path="/tr" element={<Home />} />
