@@ -1,8 +1,11 @@
 ---
-title: "The Ultimate Guide to Savoring the Perfect Gyro"
-date: "2024-01-15"
-excerpt: "Discover the secrets to enjoying an authentic gyro experience, from traditional preparation to perfect accompaniments."
-cover: "/gyros.png"
+title: The Ultimate Guide to Savoring the Perfect Gyro
+date: '2024-01-15'
+excerpt: >-
+  Discover the secrets to enjoying an authentic gyro experience, from
+  traditional preparation to perfect accompaniments.
+cover: /gyros.png
+slug: the-ultimate-guide-to-savoring-the-perfect-gyro
 ---
 
 # The Ultimate Guide to Savoring the Perfect Gyro

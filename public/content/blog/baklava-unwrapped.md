@@ -1,8 +1,11 @@
 ---
-title: "Baklava Unwrapped"
-date: "2024-01-12"
-excerpt: "Dive deep into the layers of history, technique, and flavor that make baklava one of the world's most beloved desserts."
-cover: "/baklava.jpg"
+title: Baklava Unwrapped
+date: '2024-01-12'
+excerpt: >-
+  Dive deep into the layers of history, technique, and flavor that make baklava
+  one of the world's most beloved desserts.
+cover: /baklava.jpg
+slug: baklava-unwrapped
 ---
 
 # Baklava Unwrapped: The Sweet Layers of Tradition

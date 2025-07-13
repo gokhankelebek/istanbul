@@ -33,6 +33,7 @@ const TurkishFood = React.lazy(() => import('./pages/TurkishFood'));
 const ShawarmaPage = React.lazy(() => import('./pages/Shawarma'));
 const BestMediterraneanFoodNearCaesarsPalace = React.lazy(() => import('./pages/best-mediterranean-food-near-caesars-palace-las-vegas'));
 const WhereToEatNearTheSphere = React.lazy(() => import('./pages/where-to-eat-near-the-sphere-las-vegas'));
+const BlogEditor = React.lazy(() => import('./pages/BlogEditor'));
 import "./index.css";
 import { getMenuItemOrderUrl } from './utils/config';
 
@@ -185,6 +186,8 @@ export default function App() {
         <Route path="/menu/:slug" element={<MenuItem />} />
         <Route path="/blog-posts" element={<BlogPosts />} />
         <Route path="/blog-posts/:slug" element={<BlogPost />} />
+        <Route path="/admin/blog-editor" element={<BlogEditor />} />
+        <Route path="/test" element={<div>Test Route Works!</div>} />
         <Route path="/halal" element={<Halal />} />
         <Route path="/faq" element={<FAQIndex />} />
         <Route path="/faq/:slug" element={<FAQSlug />} />

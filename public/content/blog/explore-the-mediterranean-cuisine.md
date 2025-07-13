@@ -1,8 +1,12 @@
 ---
-title: "Explore the Mediterranean Cuisine"
-date: "2024-01-25"
-excerpt: "Journey through the diverse and healthy world of Mediterranean cuisine, discovering the flavors, traditions, and health benefits of this beloved culinary style."
-cover: "/istanbul-hero.png"
+title: Explore the Mediterranean Cuisine
+date: '2024-01-25'
+excerpt: >-
+  Journey through the diverse and healthy world of Mediterranean cuisine,
+  discovering the flavors, traditions, and health benefits of this beloved
+  culinary style.
+cover: /istanbul-hero.png
+slug: explore-the-mediterranean-cuisine
 ---
 
 # Explore the Mediterranean Cuisine: A Journey Through Flavor and Tradition

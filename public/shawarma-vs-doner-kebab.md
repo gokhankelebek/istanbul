@@ -1,8 +1,11 @@
 ---
-title: "Shawarma vs Döner Kebab"
-date: "2024-01-08"
-excerpt: "Discover the differences and similarities between shawarma and döner kebab, two beloved Middle Eastern dishes that often get confused."
-cover: "/shawarma-vs-doner.jpg"
+title: Shawarma vs Döner Kebab
+date: '2024-01-08'
+excerpt: >-
+  Discover the differences and similarities between shawarma and döner kebab,
+  two beloved Middle Eastern dishes that often get confused.
+cover: /shawarma-vs-doner.jpg
+slug: shawarma-vs-doner-kebab
 ---
 
 # Shawarma vs Döner Kebab: Understanding the Delicious Differences

@@ -1,8 +1,11 @@
 ---
-title: "What Makes Real Baklava: A Guide to Its Essential Components"
-date: "2024-01-18"
-excerpt: "Learn what distinguishes authentic baklava from imitations, exploring the essential ingredients and techniques that create this masterpiece."
-cover: "/baklava.jpg"
+title: 'What Makes Real Baklava: A Guide to Its Essential Components'
+date: '2024-01-18'
+excerpt: >-
+  Learn what distinguishes authentic baklava from imitations, exploring the
+  essential ingredients and techniques that create this masterpiece.
+cover: /baklava.jpg
+slug: what-makes-real-baklava-a-guide-to-its-essential-components
 ---
 
 # What Makes Real Baklava: A Guide to Its Essential Components

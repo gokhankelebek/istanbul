@@ -1,8 +1,11 @@
 ---
-title: "Halal: What Does It Mean?"
-date: "2024-01-05"
-excerpt: "A comprehensive guide to understanding halal food, its significance, and what it means for Mediterranean and Middle Eastern cuisine."
-cover: "/halal-vegan.png"
+title: 'Halal: What Does It Mean?'
+date: '2024-01-05'
+excerpt: >-
+  A comprehensive guide to understanding halal food, its significance, and what
+  it means for Mediterranean and Middle Eastern cuisine.
+cover: /halal-vegan.png
+slug: halal-what-does-it-mean
 ---
 
 # Halal: What Does It Mean?

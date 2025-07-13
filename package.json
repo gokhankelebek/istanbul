@@ -45,7 +45,8 @@
     "optimize:images": "node scripts/optimize-images-seo.js",
     "optimize:performance": "node scripts/optimize-performance.js",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "seo:report": "node scripts/generate-seo-report.js"
+    "seo:report": "node scripts/generate-seo-report.js",
+    "create:post": "node scripts/create-blog-post.js"
   },
   "browserslist": {
     "production": [
