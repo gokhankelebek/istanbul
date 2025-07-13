@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 
 // Dynamic MD-driven marketing pages (About, Catering, etc.)
 // Place your .md files under /public/pages, e.g. /public/pages/about.md
@@ -31,7 +32,7 @@ export default function MarkdownPage() {
           title: data.title || '',
           description: data.description || ''
         });
-        setHtml(marked(content));
+        setHtml(DOMPurify.sanitize(marked(content)));
       })
       .catch(() => setHtml('not-found'));
   }, [slug]);

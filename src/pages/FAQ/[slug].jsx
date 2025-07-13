@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import faq from '../../data/faq.json';
+import DOMPurify from 'dompurify';
 
 export default function FAQSlug() {
   const { slug } = useParams();
@@ -17,7 +18,7 @@ export default function FAQSlug() {
     <div className="container mx-auto py-16 max-w-2xl">
       <Link to="/faq" className="text-istanbulRed hover:underline mb-4 inline-block">← Back to FAQ</Link>
       <h1 className="text-3xl font-bold mb-6 text-primary">{entry.question}</h1>
-      <div className="prose prose-lg max-w-none text-charcoal mb-8" dangerouslySetInnerHTML={{ __html: entry.answer }} />
+      <div className="prose prose-lg max-w-none text-charcoal mb-8" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(entry.answer) }} />
     </div>
   );
 }

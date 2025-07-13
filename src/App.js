@@ -9,29 +9,32 @@ import HreflangTags from "./components/HreflangTags";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import SchemaMarkupTester from "./components/SchemaMarkupTester";
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import YelpLandingPage from './pages/yelp';
-import GoogleLanding from './pages/GoogleLanding';
-import { useEffect } from 'react';
-import BlogPosts from './pages/BlogPosts';
+import { useEffect, Suspense } from 'react';
 import NavBar from './components/NavBar';
-import Experience from './pages/Experience';
-import MediterraneanRestaurant from './pages/MediterraneanRestaurant';
-import NearMeHalalFood from './pages/NearMeHalalFood';
-import BlogPost from './pages/BlogPost';
-import Contact from './pages/Contact';
-import MenuItem from './pages/MenuItem';
-import Menu from './pages/Menu';
-import Home from './pages/Home';
-import Halal from './pages/Halal';
-import MarkdownPage from './pages/MarkdownPage';
-import FAQIndex from './pages/FAQ/index';
-import FAQSlug from './pages/FAQ/[slug]';
-import Delivery from './pages/Delivery';
-import TurkishFood from './pages/TurkishFood';
-import ShawarmaPage from './pages/Shawarma';
-import BestMediterraneanFoodNearCaesarsPalace from './pages/best-mediterranean-food-near-caesars-palace-las-vegas';
-import WhereToEatNearTheSphere from './pages/where-to-eat-near-the-sphere-las-vegas';
+
+// Lazy load all page components for better performance
+const YelpLandingPage = React.lazy(() => import('./pages/yelp'));
+const GoogleLanding = React.lazy(() => import('./pages/GoogleLanding'));
+const BlogPosts = React.lazy(() => import('./pages/BlogPosts'));
+const Experience = React.lazy(() => import('./pages/Experience'));
+const MediterraneanRestaurant = React.lazy(() => import('./pages/MediterraneanRestaurant'));
+const NearMeHalalFood = React.lazy(() => import('./pages/NearMeHalalFood'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const MenuItem = React.lazy(() => import('./pages/MenuItem'));
+const Menu = React.lazy(() => import('./pages/Menu'));
+const Home = React.lazy(() => import('./pages/Home'));
+const Halal = React.lazy(() => import('./pages/Halal'));
+const MarkdownPage = React.lazy(() => import('./pages/MarkdownPage'));
+const FAQIndex = React.lazy(() => import('./pages/FAQ/index'));
+const FAQSlug = React.lazy(() => import('./pages/FAQ/[slug]'));
+const Delivery = React.lazy(() => import('./pages/Delivery'));
+const TurkishFood = React.lazy(() => import('./pages/TurkishFood'));
+const ShawarmaPage = React.lazy(() => import('./pages/Shawarma'));
+const BestMediterraneanFoodNearCaesarsPalace = React.lazy(() => import('./pages/best-mediterranean-food-near-caesars-palace-las-vegas'));
+const WhereToEatNearTheSphere = React.lazy(() => import('./pages/where-to-eat-near-the-sphere-las-vegas'));
 import "./index.css";
+import { getMenuItemOrderUrl } from './utils/config';
 
 const categorizedMenu = {
   "Turkish Pita": [
@@ -168,7 +171,12 @@ export default function App() {
         </div>
       </NavBar>
       <ScrollRestoration />
-      <Routes>
+      <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+        </div>
+      }>
+        <Routes>
         {/* English Routes (Default) */}
         <Route path="/" element={<Home />} />
         <Route path="/yelp" element={<YelpLandingPage />} />
@@ -250,7 +258,8 @@ export default function App() {
         <Route path="/es/entrega" element={<Delivery />} />
         <Route path="/es/shawarma" element={<ShawarmaPage />} />
         <Route path="/es/comida-turca" element={<TurkishFood />} />
-      </Routes>
+        </Routes>
+      </Suspense>
       {/* Footer */}
       <Footer />
       

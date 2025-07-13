@@ -1,9 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const { parse } = require('csv-parse/sync');
 
 // Configuration
-const SITE_URL = 'https://www.istanbullv.com';
+const SITE_URL = process.env.REACT_APP_SITE_URL || 'https://www.istanbullv.com';
 const PUBLIC_DIR = path.join(__dirname, '../public');
 const CONTENT_DIR = path.join(__dirname, '../content');
 const DATA_DIR = path.join(__dirname, '../data');
@@ -27,52 +26,52 @@ const CHANGE_FREQ = {
   other: 'monthly'
 };
 
-// Main pages that should be included with high priority
-const MAIN_PAGES = [
-  'about',
-  'menu',
-  'turkishfood',
-  'halal',
-  'contact',
-  'catering',
-  'delivery',
-  'blog'
+// Static routes from App.js - English only (main language)
+const STATIC_ROUTES = [
+  // Main pages
+  { path: '', priority: PRIORITIES.home, changefreq: CHANGE_FREQ.home },
+  { path: 'menu', priority: PRIORITIES.mainPages, changefreq: CHANGE_FREQ.mainPages },
+  { path: 'blog-posts', priority: PRIORITIES.mainPages, changefreq: CHANGE_FREQ.mainPages },
+  { path: 'halal', priority: PRIORITIES.mainPages, changefreq: CHANGE_FREQ.mainPages },
+  { path: 'about', priority: PRIORITIES.mainPages, changefreq: CHANGE_FREQ.mainPages },
+  { path: 'catering', priority: PRIORITIES.mainPages, changefreq: CHANGE_FREQ.mainPages },
+  { path: 'contact', priority: PRIORITIES.mainPages, changefreq: CHANGE_FREQ.mainPages },
+  { path: 'delivery', priority: PRIORITIES.mainPages, changefreq: CHANGE_FREQ.mainPages },
+  
+  // Secondary pages
+  { path: 'faq', priority: PRIORITIES.other, changefreq: CHANGE_FREQ.other },
+  { path: 'experience', priority: PRIORITIES.other, changefreq: CHANGE_FREQ.other },
+  { path: 'mediterranean-restaurant', priority: PRIORITIES.other, changefreq: CHANGE_FREQ.other },
+  { path: 'near-me/halal-food', priority: PRIORITIES.other, changefreq: CHANGE_FREQ.other },
+  { path: 'shawarma', priority: PRIORITIES.other, changefreq: CHANGE_FREQ.other },
+  { path: 'turkish-food', priority: PRIORITIES.other, changefreq: CHANGE_FREQ.other },
+  
+  // Special landing pages
+  { path: 'best-mediterranean-food-near-caesars-palace-las-vegas', priority: PRIORITIES.blogPosts, changefreq: CHANGE_FREQ.blogPosts },
+  { path: 'where-to-eat-near-the-sphere-las-vegas', priority: PRIORITIES.blogPosts, changefreq: CHANGE_FREQ.blogPosts },
+  
+  // Landing pages
+  { path: 'yelp', priority: PRIORITIES.other, changefreq: CHANGE_FREQ.other },
+  { path: 'google', priority: PRIORITIES.other, changefreq: CHANGE_FREQ.other }
 ];
 
-// Get all static pages from the src/pages directory
-function getStaticPages() {
-  try {
-    // This would normally scan the pages directory, but for simplicity we'll use the existing sitemap
-    const existingSitemap = fs.readFileSync(OUTPUT_FILE, 'utf8');
-    const urlMatches = existingSitemap.match(/<loc>https:\/\/www\.istanbullv\.com\/(.*?)<\/loc>/g);
-    
-    if (!urlMatches) return [];
-    
-    return urlMatches
-      .map(match => {
-        const path = match.replace('<loc>https://www.istanbullv.com/', '').replace('</loc>', '');
-        return path === '' ? 'home' : path;
-      });
-  } catch (error) {
-    console.error('Error reading existing sitemap:', error);
-    return [];
-  }
-}
-
-// Get blog posts from the data file
+// Get blog posts from the content directory
 function getBlogPosts() {
   try {
-    // Read the blog posts data file content
-    const fileContent = fs.readFileSync(BLOG_POSTS_FILE, 'utf8');
+    const blogDir = path.join(CONTENT_DIR, 'blog');
+    if (!fs.existsSync(blogDir)) {
+      console.warn('Blog directory not found, skipping blog posts');
+      return [];
+    }
     
-    // Extract slugs using regex (simplified approach)
-    const slugMatches = fileContent.match(/slug:\s*['"]([^'"]+)['"]/g);
-    
-    if (!slugMatches) return [];
-    
-    return slugMatches.map(match => {
-      const slug = match.replace(/slug:\s*['"]/, '').replace(/['"]/, '');
-      return `blog/${slug}`;
+    const files = fs.readdirSync(blogDir).filter(file => file.endsWith('.md'));
+    return files.map(file => {
+      const slug = file.replace('.md', '');
+      return {
+        path: `blog-posts/${slug}`,
+        priority: PRIORITIES.blogPosts,
+        changefreq: CHANGE_FREQ.blogPosts
+      };
     });
   } catch (error) {
     console.error('Error reading blog posts:', error);
@@ -80,60 +79,83 @@ function getBlogPosts() {
   }
 }
 
-// Generate the sitemap XML
-function generateSitemap() {
-  const staticPages = getStaticPages();
-  const blogPosts = getBlogPosts();
-  
-  const today = new Date().toISOString().split('T')[0];
-  
-  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
-
-  // Add home page
-  sitemap += `
-  <url>
-    <loc>${SITE_URL}/</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${CHANGE_FREQ.home}</changefreq>
-    <priority>${PRIORITIES.home}</priority>
-  </url>`;
-
-  // Add static pages
-  staticPages.forEach(page => {
-    if (page === 'home') return; // Skip home page as it's already added
+// Get menu items (assuming they exist in menu.json)
+function getMenuItems() {
+  try {
+    const menuFile = path.join(DATA_DIR, 'menu.json');
+    if (!fs.existsSync(menuFile)) {
+      console.warn('Menu file not found, skipping menu items');
+      return [];
+    }
     
-    const isMainPage = MAIN_PAGES.includes(page);
-    const priority = isMainPage ? PRIORITIES.mainPages : PRIORITIES.other;
-    const changefreq = isMainPage ? CHANGE_FREQ.mainPages : CHANGE_FREQ.other;
-    
-    sitemap += `
-  <url>
-    <loc>${SITE_URL}/${page}</loc>
-    <lastmod>${today}</lastmod>
+    const menuData = JSON.parse(fs.readFileSync(menuFile, 'utf8'));
+    return menuData.map(item => ({
+      path: `menu/${item.slug}`,
+      priority: PRIORITIES.menuItems,
+      changefreq: CHANGE_FREQ.menuItems
+    }));
+  } catch (error) {
+    console.error('Error reading menu items:', error);
+    return [];
+  }
+}
+
+// Generate URL entry
+function generateUrlEntry(path, priority, changefreq, lastmod) {
+  const url = path === '' ? SITE_URL : `${SITE_URL}/${path}`;
+  return `  <url>
+    <loc>${url}</loc>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
-  });
+}
 
+// Generate the complete sitemap
+function generateSitemap() {
+  const today = new Date().toISOString().split('T')[0];
+  
+  // Collect all URLs
+  const allUrls = [];
+  
+  // Add static routes
+  STATIC_ROUTES.forEach(route => {
+    allUrls.push(generateUrlEntry(route.path, route.priority, route.changefreq, today));
+  });
+  
   // Add blog posts
+  const blogPosts = getBlogPosts();
   blogPosts.forEach(post => {
-    sitemap += `
-  <url>
-    <loc>${SITE_URL}/${post}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${CHANGE_FREQ.blogPosts}</changefreq>
-    <priority>${PRIORITIES.blogPosts}</priority>
-  </url>`;
+    allUrls.push(generateUrlEntry(post.path, post.priority, post.changefreq, today));
   });
-
-  sitemap += `
+  
+  // Add menu items
+  const menuItems = getMenuItems();
+  menuItems.forEach(item => {
+    allUrls.push(generateUrlEntry(item.path, item.priority, item.changefreq, today));
+  });
+  
+  // Create the sitemap XML
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${allUrls.join('\n')}
 </urlset>`;
 
-  // Write the sitemap to the public directory
+  // Write the sitemap
   fs.writeFileSync(OUTPUT_FILE, sitemap);
-  console.log(`Sitemap generated at ${OUTPUT_FILE}`);
+  
+  const totalUrls = allUrls.length;
+  console.log(`✅ Sitemap generated successfully!`);
+  console.log(`📄 ${totalUrls} URLs included`);
+  console.log(`📍 Location: ${OUTPUT_FILE}`);
+  console.log(`🌐 Static routes: ${STATIC_ROUTES.length}`);
+  console.log(`📝 Blog posts: ${blogPosts.length}`);
+  console.log(`🍽️  Menu items: ${menuItems.length}`);
 }
 
 // Run the generator
-generateSitemap();
+if (require.main === module) {
+  generateSitemap();
+}
+
+module.exports = { generateSitemap };

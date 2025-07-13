@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 
 export default function MarkdownPostPage({ mdPath }) {
   const [content, setContent] = useState('');
@@ -21,7 +22,7 @@ export default function MarkdownPostPage({ mdPath }) {
           excerpt: data.excerpt || '',
           cover: data.cover || ''
         });
-        setContent(marked(content));
+        setContent(DOMPurify.sanitize(marked(content)));
       })
       .catch(() => setNotFound(true));
   }, [mdPath]);

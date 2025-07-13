@@ -12,9 +12,21 @@ if (!match) {
   process.exit(1);
 }
 
-// Parse the array (this is a bit hacky but should work for our case)
+// Parse the array safely without using eval
 const blogPostsArrayString = match[1];
-const blogPosts = eval(blogPostsArrayString);
+let blogPosts;
+try {
+  // Replace eval with safer parsing
+  blogPosts = JSON.parse(blogPostsArrayString.replace(/'/g, '"'));
+} catch (error) {
+  console.error('Could not parse blogPosts array:', error.message);
+  console.log('Attempting alternate parsing method...');
+  
+  // Fallback: create a safe evaluation environment
+  const vm = require('vm');
+  const context = vm.createContext({});
+  blogPosts = vm.runInContext(`(${blogPostsArrayString})`, context);
+}
 
 // Target slugs to restore
 const targetSlugs = [

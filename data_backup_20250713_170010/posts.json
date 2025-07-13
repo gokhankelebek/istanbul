@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "mediterranean-delivery-food-las-vegas",
+    "title": "Mediterranean Delivery Food in Las Vegas",
+    "date": "2024-01-10",
+    "excerpt": "Discover the best Mediterranean delivery options in Las Vegas, including Turkish döner, shawarma, and more.",
+    "contentMarkdown": "## Mediterranean Delivery Food in Las Vegas\nLas Vegas offers a variety of Mediterranean food options for delivery. Try our signature döner, shawarma, and more!"
+  },
+  {
+    "slug": "halal-what-does-it-mean",
+    "title": "Halal: What Does It Mean?",
+    "date": "2024-01-05",
+    "excerpt": "A quick guide to what halal means for Mediterranean cuisine lovers.",
+    "contentMarkdown": "## Halal: What Does It Mean?\nHalal means permissible in Arabic. In Mediterranean cuisine, it refers to food prepared according to Islamic law."
+  }
+  // ... (add more posts as needed, matching your real blog)
+]
