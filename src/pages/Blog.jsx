@@ -20,7 +20,7 @@ export default function Blog() {
       <div className="w-full min-h-screen bg-gradient-to-br from-istanbulRed/5 via-offwhite to-primary/5 pb-16">
         {/* Blog Hero Section */}
         <div className="relative h-64 md:h-80 flex items-center justify-center mb-16">
-          <img src="/menu/blog-hero.webp" alt="Blog Hero" className="absolute inset-0 w-full h-full object-cover object-center opacity-70" onError={e => e.target.style.display='none'} />
+          <img src="/menu/blog-hero.webp" alt="Istanbul Mediterranean Turkish food blog featuring authentic recipes, halal cuisine, and Mediterranean cooking tips from Las Vegas" className="absolute inset-0 w-full h-full object-cover object-center opacity-70" onError={e => e.target.style.display='none'} />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-transparent" />
           <div className="relative z-10 text-center w-full">
             <h1 className="text-5xl md:text-6xl font-extrabold text-primary drop-shadow mb-4">Istanbul Blog</h1>

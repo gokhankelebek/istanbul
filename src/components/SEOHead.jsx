@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import SEOValidator from './SEOValidator';
 
 /**
  * SEOHead - A reusable component for consistent SEO implementation across pages
@@ -37,7 +38,7 @@ export default function SEOHead({
     ? ogImage 
     : `${baseUrl}${ogImage.startsWith('/') ? ogImage : `/${ogImage}`}`;
 
-  return (
+  return (<>
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -71,5 +72,13 @@ export default function SEOHead({
       {/* Additional head elements */}
       {children}
     </Helmet>
-  );
+    
+    {/* SEO Validation (dev mode only) */}
+    <SEOValidator 
+      title={title} 
+      description={description} 
+      keywords={keywords} 
+      showWarnings={process.env.NODE_ENV === 'development'} 
+    />
+  </>);
 }

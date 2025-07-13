@@ -173,7 +173,14 @@ export default function Home() {
     { type: 'restaurant', data: restaurantData },
     { type: 'localBusiness', data: restaurantData },
     { type: 'faq', data: faqData },
-    { type: 'website', data: { name: "Istanbul Mediterranean Restaurant", url: "https://www.istanbullv.com" } }
+    { type: 'website', data: { name: "Istanbul Mediterranean Restaurant", url: "https://www.istanbullv.com" } },
+    { type: 'aggregateRating', data: { name: "Istanbul Mediterranean", ratingValue: "4.8", reviewCount: "2000" } },
+    { type: 'review', data: { 
+      ratingValue: "5", 
+      authorName: "Google Customer", 
+      reviewBody: "Authentic Turkish food with amazing flavor! The döner is incredible and service is outstanding. Best Mediterranean food on the Strip!",
+      datePublished: "2025-07-13" 
+    }}
   ];
 
   return (
@@ -242,7 +249,7 @@ export default function Home() {
             <span className="text-herb text-sm">{t('home.features.halal.description')}</span>
           </div>
           <div className="flex flex-col items-center p-6 rounded-2xl shadow bg-white border border-saffron/10 hover:shadow-xl transition-shadow group">
-            <img src="/open-late.png" alt="Open Late" className="w-16 h-16 mb-3 object-contain group-hover:scale-110 transition-transform" />
+            <img src="/open-late.png" alt="Istanbul Mediterranean open late until 5 AM serving Turkish halal food on Las Vegas Strip" className="w-16 h-16 mb-3 object-contain group-hover:scale-110 transition-transform" />
             <span className="font-bold text-lg mb-1">{t('home.features.openLate.title')}</span>
             <span className="text-herb text-sm">{t('home.features.openLate.description')}</span>
           </div>

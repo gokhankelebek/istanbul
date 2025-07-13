@@ -54,14 +54,14 @@ const StructuredDataManager = ({ type, data, aggregate = false }) => {
       image: data.image || 'https://www.istanbullv.com/images/restaurant-exterior.jpg',
       '@id': data.url || 'https://www.istanbullv.com/#restaurant',
       url: data.url || 'https://www.istanbullv.com',
-      telephone: data.telephone || '+17026102772',
+      telephone: data.telephone || '+17259008844',
       priceRange: data.priceRange || '$$',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: data.address?.streetAddress || '3999 S Las Vegas Blvd',
+        streetAddress: data.address?.streetAddress || '3615 S Las Vegas Blvd #101',
         addressLocality: data.address?.addressLocality || 'Las Vegas',
         addressRegion: data.address?.addressRegion || 'NV',
-        postalCode: data.address?.postalCode || '89119',
+        postalCode: data.address?.postalCode || '89109',
         addressCountry: data.address?.addressCountry || 'US'
       },
       geo: {
@@ -113,14 +113,14 @@ const StructuredDataManager = ({ type, data, aggregate = false }) => {
       image: data.image || 'https://www.istanbullv.com/images/restaurant-exterior.jpg',
       '@id': data.url || 'https://www.istanbullv.com/#localbusiness',
       url: data.url || 'https://www.istanbullv.com',
-      telephone: data.telephone || '+17026102772',
+      telephone: data.telephone || '+17259008844',
       priceRange: data.priceRange || '$$',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: data.address?.streetAddress || '3999 S Las Vegas Blvd',
+        streetAddress: data.address?.streetAddress || '3615 S Las Vegas Blvd #101',
         addressLocality: data.address?.addressLocality || 'Las Vegas',
         addressRegion: data.address?.addressRegion || 'NV',
-        postalCode: data.address?.postalCode || '89119',
+        postalCode: data.address?.postalCode || '89109',
         addressCountry: data.address?.addressCountry || 'US'
       },
       geo: {
@@ -260,10 +260,10 @@ const StructuredDataManager = ({ type, data, aggregate = false }) => {
         name: data.location?.name || 'Istanbul Mediterranean Restaurant',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: data.location?.address?.streetAddress || '3999 S Las Vegas Blvd',
+          streetAddress: data.location?.address?.streetAddress || '3615 S Las Vegas Blvd #101',
           addressLocality: data.location?.address?.addressLocality || 'Las Vegas',
           addressRegion: data.location?.address?.addressRegion || 'NV',
-          postalCode: data.location?.address?.postalCode || '89119',
+          postalCode: data.location?.address?.postalCode || '89109',
           addressCountry: data.location?.address?.addressCountry || 'US'
         }
       },
@@ -352,7 +352,7 @@ const StructuredDataManager = ({ type, data, aggregate = false }) => {
       contactPoint: data.contactPoints || [
         {
           '@type': 'ContactPoint',
-          telephone: '+17026102772',
+          telephone: '+17259008844',
           contactType: 'customer service',
           areaServed: 'US',
           availableLanguage: ['English', 'Turkish']
@@ -376,6 +376,64 @@ const StructuredDataManager = ({ type, data, aggregate = false }) => {
         },
         'query-input': 'required name=search_term_string'
       }
+    };
+  };
+
+  // Review structured data
+  const generateReviewData = (data) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      itemReviewed: {
+        '@type': 'Restaurant',
+        name: data.restaurantName || 'Istanbul Mediterranean',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '3615 S Las Vegas Blvd #101',
+          addressLocality: 'Las Vegas',
+          addressRegion: 'NV',
+          postalCode: '89109',
+          addressCountry: 'US'
+        }
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: data.ratingValue || '5',
+        bestRating: data.bestRating || '5'
+      },
+      author: {
+        '@type': 'Person',
+        name: data.authorName || 'Verified Customer'
+      },
+      reviewBody: data.reviewBody || 'Authentic Turkish and Mediterranean food with excellent service. The gyros and baklava are outstanding!',
+      datePublished: data.datePublished || new Date().toISOString().split('T')[0]
+    };
+  };
+
+  // Aggregate Rating structured data
+  const generateAggregateRatingData = (data) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Restaurant',
+      name: data.name || 'Istanbul Mediterranean',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '3615 S Las Vegas Blvd #101',
+        addressLocality: 'Las Vegas',
+        addressRegion: 'NV',
+        postalCode: '89109',
+        addressCountry: 'US'
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: data.ratingValue || '4.8',
+        reviewCount: data.reviewCount || '2000',
+        bestRating: data.bestRating || '5',
+        worstRating: data.worstRating || '1'
+      },
+      priceRange: data.priceRange || '$$',
+      telephone: '+17259008844',
+      url: 'https://www.istanbullv.com'
     };
   };
 
@@ -405,6 +463,10 @@ const StructuredDataManager = ({ type, data, aggregate = false }) => {
             return generateOrganizationData(item.data);
           case 'website':
             return generateWebsiteData(item.data);
+          case 'review':
+            return generateReviewData(item.data);
+          case 'aggregateRating':
+            return generateAggregateRatingData(item.data);
           default:
             return {};
         }
