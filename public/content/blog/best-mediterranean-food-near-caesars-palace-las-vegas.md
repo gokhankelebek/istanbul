@@ -19,7 +19,6 @@ Looking for delicious, authentic Mediterranean food near Caesars Palace? Whether
 - **Late Night Eats:** Open until 4–5 AM, ideal for post-show cravings or late arrivals
 - **Tourist Favorite:** Over 2,000 reviews with an average 4.3-star rating on Google and TripAdvisor
 
-![Istanbul Mediterranean Exterior](https://istanbullv.com/hero_chef_wide.jpg)
 
 ## What to Order
 - **Beef & Lamb Gyro Pita:** Juicy, expertly seasoned, and generously portioned

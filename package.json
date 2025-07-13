@@ -34,8 +34,10 @@
   },
   "scripts": {
     "sync:blog": "node scripts/sync_blog_to_public.js",
+    "validate:blog": "node scripts/validate-blog-integrity.js",
     "start": "npm run sync:blog && react-scripts start",
-    "build": "npm run sync:blog && npm run build:posts && npm run build:static && npm run build:sitemap && npm run optimize:images && npm run optimize:performance && react-scripts build",
+    "build": "npm run validate:blog && npm run sync:blog && npm run build:posts && npm run build:static && npm run build:sitemap && npm run optimize:images && npm run optimize:performance && react-scripts build",
+    "build:safe": "npm run validate:blog && npm run sync:blog && npm run build:posts && npm run build:static && npm run build:sitemap && npm run optimize:images && npm run optimize:performance && react-scripts build",
     "build:menu": "node scripts/build-menu.js",
     "build:posts": "node scripts/build-posts.js",
     "build:static": "node scripts/generate-static-pages.js",
