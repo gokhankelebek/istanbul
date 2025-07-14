@@ -55,6 +55,11 @@ export default function BlogEditor() {
   const [githubToken, setGithubToken] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
+  const [imageFile, setImageFile] = useState(null);
+  const [uploadedImageUrl, setUploadedImageUrl] = useState('');
+  const [contentType, setContentType] = useState('markdown');
+  const [pdfFile, setPdfFile] = useState(null);
+  const [textContent, setTextContent] = useState('');
 
   // Auto-generate slug when title changes
   useEffect(() => {
@@ -100,14 +105,133 @@ export default function BlogEditor() {
     setSubmitStatus({ type: 'success', message: 'GitHub token saved securely in browser!' });
   };
 
-  const submitToGitHub = async () => {
+  const uploadImageToGitHub = async (file) => {
     if (!githubToken) {
-      setSubmitStatus({ type: 'error', message: 'Please enter your GitHub token first!' });
+      throw new Error('GitHub token is required for image upload');
+    }
+
+    const filename = `${Date.now()}-${file.name}`;
+    const reader = new FileReader();
+    
+    return new Promise((resolve, reject) => {
+      reader.onload = async (e) => {
+        try {
+          const content = e.target.result.split(',')[1]; // Remove data:image/... prefix
+          
+          const response = await fetch(`${GITHUB_API_BASE}/repos/gokhankelebek/istanbul/contents/public/blog-images/${filename}`, {
+            method: 'PUT',
+            headers: {
+              'Authorization': `token ${githubToken}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              message: `Upload blog image: ${filename}`,
+              content: content,
+              branch: 'main'
+            })
+          });
+
+          if (response.ok) {
+            const result = await response.json();
+            resolve(`/blog-images/${filename}`);
+          } else {
+            const error = await response.json();
+            reject(new Error(error.message || 'Failed to upload image'));
+          }
+        } catch (error) {
+          reject(error);
+        }
+      };
+      
+      reader.onerror = () => reject(new Error('Failed to read file'));
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const handleImageUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+      setSubmitStatus({ type: 'error', message: 'Please select an image file' });
       return;
     }
 
-    if (!formData.title || !formData.content) {
-      setSubmitStatus({ type: 'error', message: 'Title and content are required!' });
+    if (file.size > 5 * 1024 * 1024) { // 5MB limit
+      setSubmitStatus({ type: 'error', message: 'Image size must be less than 5MB' });
+      return;
+    }
+
+    setImageFile(file);
+    setSubmitStatus({ type: 'info', message: 'Uploading image...' });
+
+    try {
+      const imageUrl = await uploadImageToGitHub(file);
+      setUploadedImageUrl(imageUrl);
+      setSubmitStatus({ type: 'success', message: 'Image uploaded successfully! You can now use it in your post.' });
+    } catch (error) {
+      setSubmitStatus({ type: 'error', message: `Failed to upload image: ${error.message}` });
+    }
+  };
+
+  const convertPdfToText = async (file) => {
+    // For now, we'll ask the user to copy-paste the text content
+    // In a production environment, you'd want to use a PDF parsing library
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        // This is a simplified approach - in reality you'd need a PDF parser
+        resolve('Please copy and paste the text content from your PDF into the text content field.');
+      };
+      reader.readAsText(file);
+    });
+  };
+
+  const handlePdfUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    if (file.type !== 'application/pdf') {
+      setSubmitStatus({ type: 'error', message: 'Please select a PDF file' });
+      return;
+    }
+
+    setPdfFile(file);
+    setSubmitStatus({ type: 'info', message: 'PDF uploaded. Please copy and paste the text content into the text content field below.' });
+  };
+
+  const getContentForSubmission = () => {
+    switch (contentType) {
+      case 'text':
+        return textContent || 'No content provided';
+      case 'pdf':
+        return textContent || 'PDF content - please add text content manually';
+      case 'markdown':
+      default:
+        return formData.content;
+    }
+  };
+
+  const submitToGitHub = async () => {
+    if (!githubToken) {
+      setSubmitStatus({ type: 'error', message: 'Please enter your GitHub token first! You can create one at https://github.com/settings/tokens with "repo" permissions.' });
+      return;
+    }
+
+    if (!formData.title) {
+      setSubmitStatus({ type: 'error', message: 'Title is required!' });
+      return;
+    }
+
+    const content = getContentForSubmission();
+    if (!content || content.trim() === '') {
+      setSubmitStatus({ type: 'error', message: 'Content is required!' });
+      return;
+    }
+
+    // Validate GitHub token format
+    if (!githubToken.startsWith('ghp_') && !githubToken.startsWith('github_pat_')) {
+      setSubmitStatus({ type: 'error', message: 'Invalid GitHub token format. Token should start with "ghp_" or "github_pat_"' });
       return;
     }
 
@@ -115,8 +239,25 @@ export default function BlogEditor() {
     setSubmitStatus({ type: 'info', message: 'Creating blog post...' });
 
     try {
+      // First, test the GitHub token
+      const testResponse = await fetch(`${GITHUB_API_BASE}/user`, {
+        headers: {
+          'Authorization': `token ${githubToken}`,
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!testResponse.ok) {
+        const error = await testResponse.json();
+        throw new Error(`GitHub token validation failed: ${error.message || 'Invalid token'}`);
+      }
+
       const filename = `${formData.slug}.md`;
-      const markdownContent = createMarkdownContent(formData);
+      const contentForPost = {
+        ...formData,
+        content: getContentForSubmission()
+      };
+      const markdownContent = createMarkdownContent(contentForPost);
       
       // Encode content for GitHub API
       const encodedContent = btoa(unescape(encodeURIComponent(markdownContent)));
@@ -150,16 +291,31 @@ Co-Authored-By: Istanbul Mediterranean Team <noreply@istanbullv.com>`,
           slug: '',
           date: formatDate(),
           excerpt: '',
-          cover: '',
+          cover: uploadedImageUrl || '',
           author: 'Istanbul Mediterranean Team',
           tags: 'mediterranean, food, las vegas',
           content: '# Your Blog Post Title\n\nStart writing your content here...'
         });
+        setTextContent('');
+        setPdfFile(null);
+        setImageFile(null);
+        setUploadedImageUrl('');
+        setContentType('markdown');
       } else {
         const error = await response.json();
+        let errorMessage = error.message || 'Unknown error';
+        
+        if (response.status === 401) {
+          errorMessage = 'Bad credentials - please check your GitHub token';
+        } else if (response.status === 403) {
+          errorMessage = 'Insufficient permissions - please ensure your token has "repo" permissions';
+        } else if (response.status === 409) {
+          errorMessage = 'A blog post with this slug already exists';
+        }
+        
         setSubmitStatus({ 
           type: 'error', 
-          message: `Failed to create blog post: ${error.message}` 
+          message: `Failed to create blog post: ${errorMessage}` 
         });
       }
     } catch (error) {
@@ -321,13 +477,35 @@ Co-Authored-By: Istanbul Mediterranean Team <noreply@istanbullv.com>`,
 
               <div>
                 <label className="block text-sm font-medium text-charcoal mb-2">Cover Image</label>
-                <input
-                  type="text"
-                  value={formData.cover}
-                  onChange={(e) => handleInputChange('cover', e.target.value)}
-                  placeholder="/menu/gyros.png"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                />
+                <div className="space-y-2">
+                  <input
+                    type="text"
+                    value={formData.cover}
+                    onChange={(e) => handleInputChange('cover', e.target.value)}
+                    placeholder="/menu/gyros.png or use upload below"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                  <div className="flex items-center gap-2">
+                    <label className="block text-sm text-gray-600">Or upload new image:</label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                      className="text-sm text-gray-500 file:mr-4 file:py-1 file:px-2 file:rounded file:border-0 file:text-sm file:font-medium file:bg-primary file:text-white hover:file:bg-istanbulRed"
+                    />
+                  </div>
+                  {uploadedImageUrl && (
+                    <div className="text-sm text-green-600">
+                      ✓ Image uploaded: {uploadedImageUrl}
+                      <button
+                        onClick={() => handleInputChange('cover', uploadedImageUrl)}
+                        className="ml-2 text-primary hover:underline"
+                      >
+                        Use as cover
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div>
@@ -358,26 +536,91 @@ Co-Authored-By: Istanbul Mediterranean Team <noreply@istanbullv.com>`,
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold">Content</h2>
-              <button
-                onClick={() => setPreviewMode(!previewMode)}
-                className="px-3 py-1 text-sm bg-gray-100 text-charcoal rounded hover:bg-gray-200 transition-colors"
-              >
-                {previewMode ? 'Edit' : 'Preview'}
-              </button>
+              <div className="flex gap-2">
+                <select
+                  value={contentType}
+                  onChange={(e) => setContentType(e.target.value)}
+                  className="px-3 py-1 text-sm border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent"
+                >
+                  <option value="markdown">Markdown</option>
+                  <option value="text">Plain Text</option>
+                  <option value="pdf">PDF Upload</option>
+                </select>
+                <button
+                  onClick={() => setPreviewMode(!previewMode)}
+                  className="px-3 py-1 text-sm bg-gray-100 text-charcoal rounded hover:bg-gray-200 transition-colors"
+                >
+                  {previewMode ? 'Edit' : 'Preview'}
+                </button>
+              </div>
             </div>
 
-            {previewMode ? (
-              <div className="border border-gray-300 rounded-lg p-4 h-96 overflow-y-auto bg-gray-50">
-                <pre className="whitespace-pre-wrap text-sm">{previewContent()}</pre>
+            {/* Content Type Specific Inputs */}
+            {contentType === 'pdf' && (
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-charcoal mb-2">Upload PDF</label>
+                <input
+                  type="file"
+                  accept=".pdf"
+                  onChange={handlePdfUpload}
+                  className="text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-medium file:bg-primary file:text-white hover:file:bg-istanbulRed"
+                />
+                {pdfFile && (
+                  <div className="mt-2 text-sm text-green-600">
+                    ✓ PDF uploaded: {pdfFile.name}
+                  </div>
+                )}
               </div>
-            ) : (
-              <textarea
-                value={formData.content}
-                onChange={(e) => handleInputChange('content', e.target.value)}
-                placeholder="Write your blog post content using Markdown..."
-                rows={15}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent font-mono text-sm"
-              />
+            )}
+
+            {contentType === 'text' && (
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-charcoal mb-2">Text Content</label>
+                <textarea
+                  value={textContent}
+                  onChange={(e) => setTextContent(e.target.value)}
+                  placeholder="Write your blog post content as plain text..."
+                  rows={15}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+            )}
+
+            {contentType === 'pdf' && (
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-charcoal mb-2">PDF Text Content</label>
+                <textarea
+                  value={textContent}
+                  onChange={(e) => setTextContent(e.target.value)}
+                  placeholder="Copy and paste the text content from your PDF here..."
+                  rows={15}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+                <p className="text-xs text-gray-500 mt-1">Please manually copy the text content from your PDF file and paste it here.</p>
+              </div>
+            )}
+
+            {contentType === 'markdown' && (
+              previewMode ? (
+                <div className="border border-gray-300 rounded-lg p-4 h-96 overflow-y-auto bg-gray-50">
+                  <pre className="whitespace-pre-wrap text-sm">{previewContent()}</pre>
+                </div>
+              ) : (
+                <textarea
+                  value={formData.content}
+                  onChange={(e) => handleInputChange('content', e.target.value)}
+                  placeholder="Write your blog post content using Markdown..."
+                  rows={15}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent font-mono text-sm"
+                />
+              )
+            )}
+
+            {/* Preview for text and PDF content */}
+            {(contentType === 'text' || contentType === 'pdf') && previewMode && (
+              <div className="border border-gray-300 rounded-lg p-4 h-96 overflow-y-auto bg-gray-50">
+                <pre className="whitespace-pre-wrap text-sm">{textContent || 'No content yet...'}</pre>
+              </div>
             )}
           </div>
         </div>
@@ -408,11 +651,13 @@ Co-Authored-By: Istanbul Mediterranean Team <noreply@istanbullv.com>`,
         <div className="mt-8 bg-blue-50 rounded-lg p-6">
           <h3 className="text-lg font-semibold text-blue-900 mb-2">Quick Tips</h3>
           <ul className="text-blue-800 text-sm space-y-1">
-            <li>• Use Markdown syntax for formatting (# for headers, ** for bold, etc.)</li>
+            <li>• <strong>Markdown:</strong> Use # for headers, ** for bold, * for italic, etc.</li>
+            <li>• <strong>Text:</strong> Plain text will be formatted automatically</li>
+            <li>• <strong>PDF:</strong> Upload PDF and copy-paste text content manually</li>
+            <li>• <strong>Images:</strong> Upload new images or use existing ones like /menu/gyros.png</li>
             <li>• Keep excerpts under 160 characters for better SEO</li>
-            <li>• Common cover images: /menu/gyros.png, /menu/desserts/baklava.webp</li>
-            <li>• End posts with a call-to-action mentioning Istanbul Mediterranean</li>
             <li>• Your post will appear after the website is rebuilt (usually within minutes)</li>
+            <li>• <strong>GitHub Token:</strong> Create at <a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">github.com/settings/tokens</a> with "repo" permissions</li>
           </ul>
         </div>
       </div>
