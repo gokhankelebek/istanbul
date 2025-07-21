@@ -6,7 +6,7 @@
 // Site configuration
 export const SITE_CONFIG = {
   url: process.env.REACT_APP_SITE_URL || 'https://www.istanbullv.com',
-  orderUrl: process.env.REACT_APP_ORDER_URL || 'https://orderdoner.com',
+  orderUrl: process.env.REACT_APP_ORDER_URL || 'https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv',
   name: 'Istanbul Mediterranean',
   tagline: 'Authentic Turkish & Mediterranean Cuisine',
 };

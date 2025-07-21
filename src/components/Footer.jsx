@@ -49,7 +49,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>
               <a
-                href="https://orderdoner.com"
+                href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 rounded bg-saffron text-white font-semibold shadow hover:bg-primary transition"

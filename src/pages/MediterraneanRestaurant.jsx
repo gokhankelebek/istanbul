@@ -48,7 +48,7 @@ export default function MediterraneanRestaurant() {
           <p className="text-xl md:text-2xl font-medium mb-6 max-w-3xl mx-auto drop-shadow">Savor the vibrant flavors of Turkey and the Mediterranean, crafted with passion, tradition, and the freshest halal ingredients. Family-owned. Open late. Loved by locals & visitors alike.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="/menu" className="inline-block bg-primary hover:bg-istanbulRed text-white font-bold px-8 py-3 rounded-xl text-lg shadow-lg transition">View Menu</a>
-            <a href="https://orderdoner.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-istanbulRed hover:bg-red-700 text-white font-bold px-8 py-3 rounded-xl text-lg shadow-lg transition">Order Online</a>
+            <a href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv" target="_blank" rel="noopener noreferrer" className="inline-block bg-istanbulRed hover:bg-red-700 text-white font-bold px-8 py-3 rounded-xl text-lg shadow-lg transition">Order Online</a>
           </div>
         </div>
       </section>

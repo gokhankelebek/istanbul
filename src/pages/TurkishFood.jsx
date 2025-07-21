@@ -172,7 +172,7 @@ export default function TurkishFood() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="https://orderdoner.com"
+              href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv"
               className="px-8 py-4 bg-amber-500 hover:bg-amber-600 rounded-xl font-semibold shadow-lg transition"
             >
               Order Delivery (10 AM – 4 : 30 AM)
@@ -257,7 +257,7 @@ export default function TurkishFood() {
             Las Vegas, NV 89109 • <a href="tel:+17259008844" className="underline">(725)&nbsp;900-8844</a>
           </p>
           <p className="mt-4">
-            Planning ahead? <a href="https://orderdoner.com" className="underline">Order online</a> for pickup or delivery and
+            Planning ahead? <a href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv" className="underline">Order online</a> for pickup or delivery and
             skip the line.
           </p>
         </article>

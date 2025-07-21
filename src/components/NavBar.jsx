@@ -78,7 +78,7 @@ export default function NavBar({ children }) {
               </div>
             )
           )}
-          <a href="https://orderdoner.com/" target="_blank" rel="noopener noreferrer" className="bg-istanbulRed hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors">
+          <a href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv" target="_blank" rel="noopener noreferrer" className="bg-istanbulRed hover:bg-red-700 text-white px-4 py-2 rounded-md transition-colors">
             Order Online
           </a>
           {/* Render children (for LanguageSwitcher) */}
@@ -135,7 +135,7 @@ export default function NavBar({ children }) {
                 )
               )}
               <a
-                href="https://orderdoner.com/"
+                href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block mt-2 px-3 py-2 rounded bg-istanbulRed text-white font-bold shadow hover:bg-red-700"

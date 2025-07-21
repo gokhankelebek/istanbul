@@ -25,7 +25,7 @@ export default function FooterAwareOrderOnlineButton() {
   return show ? (
     <div className="fixed bottom-0 left-0 w-full z-50 flex justify-center md:hidden rounded-xl">
       <a
-        href="https://orderdoner.com"
+        href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Order Online Sticky CTA"

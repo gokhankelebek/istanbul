@@ -28,7 +28,7 @@ export default function Header() {
           <Link to="/menu" className="relative px-2 py-1 font-medium transition-colors duration-200 hover:text-istanbulRed-light after:block after:h-0.5 after:bg-offwhite after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left">{t('common.menu')}</Link>
           <Link to="/blog-posts" className="relative px-2 py-1 font-medium transition-colors duration-200 hover:text-istanbulRed-light after:block after:h-0.5 after:bg-offwhite after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left">{t('common.blog')}</Link>
           <Link to="/contact" className="relative px-2 py-1 font-medium transition-colors duration-200 hover:text-istanbulRed-light after:block after:h-0.5 after:bg-offwhite after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left">{t('common.contact')}</Link>
-          <a href="https://orderdoner.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary px-5 py-2 rounded shadow transition-transform duration-150 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-istanbulRed-light">{t('common.orderOnline')}</a>
+          <a href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv" target="_blank" rel="noopener noreferrer" className="btn btn-primary px-5 py-2 rounded shadow transition-transform duration-150 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-istanbulRed-light">{t('common.orderOnline')}</a>
         </div>
         {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center">
@@ -44,7 +44,7 @@ export default function Header() {
           <Link to="/menu" className="font-medium text-lg hover:text-istanbulRed-light" onClick={()=>setMenuOpen(false)}>{t('common.menu')}</Link>
           <Link to="/blog-posts" className="font-medium text-lg hover:text-istanbulRed-light" onClick={()=>setMenuOpen(false)}>{t('common.blog')}</Link>
           <Link to="/contact" className="font-medium text-lg hover:text-istanbulRed-light" onClick={()=>setMenuOpen(false)}>{t('common.contact')}</Link>
-          <a href="https://orderdoner.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary px-5 py-2 rounded shadow" onClick={()=>setMenuOpen(false)}>{t('common.orderOnline')}</a>
+          <a href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv" target="_blank" rel="noopener noreferrer" className="btn btn-primary px-5 py-2 rounded shadow" onClick={()=>setMenuOpen(false)}>{t('common.orderOnline')}</a>
         </div>
       )}
     </header>

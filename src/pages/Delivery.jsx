@@ -13,7 +13,7 @@ export default function Delivery() {
             Halal-certified Mediterranean wraps, bowls, and late-night platters. Secure checkout with Apple Pay, Google Pay, and all major cards.
           </p>
           <a
-            href="https://orderdoner.com"
+            href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-istanbulRed hover:bg-primary text-white px-8 py-4 rounded-full font-bold text-xl shadow-lg transition-colors duration-150"
@@ -103,7 +103,7 @@ export default function Delivery() {
       <section id="how-it-works" className="container mx-auto max-w-4xl px-4 py-12 bg-white/80 rounded-xl shadow">
         <h2 className="text-2xl font-bold mb-6 text-center text-primary">How Delivery Works</h2>
         <ol className="list-decimal list-inside space-y-4 text-lg max-w-2xl mx-auto">
-          <li>Choose “Delivery” at checkout on <a href="https://orderdoner.com" className="text-istanbulRed underline" target="_blank" rel="noopener noreferrer">orderdoner.com</a></li>
+          <li>Choose "Delivery" at checkout on <a href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv" className="text-istanbulRed underline" target="_blank" rel="noopener noreferrer">www.orderdoner.com</a></li>
           <li>Enter your address—Square confirms you’re within our 6-mile zone</li>
           <li>Pay with Apple Pay, Google Pay, or any major card (secure, PCI-compliant)</li>
           <li>Track in real time—SMS link as soon as the driver picks up</li>

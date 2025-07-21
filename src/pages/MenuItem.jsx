@@ -141,7 +141,7 @@ export default function MenuItem() {
           <div className="text-istanbulRed font-bold text-2xl mb-2">${item.price}</div>
           <div className="text-gray-700 mb-4 text-center">{itemDesc}</div>
           <a
-            href={item.url || `https://orderdoner.com`}
+            href={item.url || `https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary px-6 py-2 rounded text-lg mt-2"
@@ -176,7 +176,7 @@ export default function MenuItem() {
             </details>
             <details className="bg-herb/5 rounded-lg p-4 border border-herb/20">
               <summary className="font-semibold cursor-pointer text-primary">Do you offer delivery for {item.name.toLowerCase()} in Las Vegas?</summary>
-              <div>Absolutely! You can order {item.name.toLowerCase()} online for fast delivery anywhere in Las Vegas via <a href="https://orderdoner.com" className="text-istanbulRed underline hover:text-primary" target="_blank" rel="noopener noreferrer">orderdoner.com</a>.</div>
+              <div>Absolutely! You can order {item.name.toLowerCase()} online for fast delivery anywhere in Las Vegas via <a href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv" className="text-istanbulRed underline hover:text-primary" target="_blank" rel="noopener noreferrer">www.orderdoner.com</a>.</div>
             </details>
             <details className="bg-herb/5 rounded-lg p-4 border border-herb/20">
               <summary className="font-semibold cursor-pointer text-primary">What makes your {item.name.toLowerCase()} authentic?</summary>
@@ -203,7 +203,7 @@ export default function MenuItem() {
               {
                 "@type": "Question",
                 "name": `Do you offer delivery for ${item.name.toLowerCase()} in Las Vegas?`,
-                "acceptedAnswer": {"@type": "Answer", "text": `Absolutely! You can order ${item.name.toLowerCase()} online for fast delivery anywhere in Las Vegas via orderdoner.com.`}
+                "acceptedAnswer": {"@type": "Answer", "text": `Absolutely! You can order ${item.name.toLowerCase()} online for fast delivery anywhere in Las Vegas via www.orderdoner.com.`}
               },
               {
                 "@type": "Question",
