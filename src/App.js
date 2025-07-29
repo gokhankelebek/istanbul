@@ -34,6 +34,7 @@ const ShawarmaPage = React.lazy(() => import('./pages/Shawarma'));
 const BestMediterraneanFoodNearCaesarsPalace = React.lazy(() => import('./pages/best-mediterranean-food-near-caesars-palace-las-vegas'));
 const WhereToEatNearTheSphere = React.lazy(() => import('./pages/where-to-eat-near-the-sphere-las-vegas'));
 const BlogEditor = React.lazy(() => import('./pages/BlogEditor'));
+const Careers = React.lazy(() => import('./pages/Careers'));
 import "./index.css";
 import { getMenuItemOrderUrl } from './utils/config';
 
@@ -195,6 +196,7 @@ export default function App() {
         <Route path="/catering" element={<MarkdownPage />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/mediterranean-restaurant" element={<MediterraneanRestaurant />} />
         <Route path="/near-me/halal-food" element={<NearMeHalalFood />} />
         <Route path="/delivery" element={<Delivery />} />

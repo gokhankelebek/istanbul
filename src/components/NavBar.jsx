@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'Blog', path: '/blog-posts' },
   { name: 'Delivery', path: '/delivery' },
   { name: 'Contact', path: '/contact' },
+  { name: 'Careers', path: '/careers' },
 ];
 
 export default function NavBar({ children }) {
