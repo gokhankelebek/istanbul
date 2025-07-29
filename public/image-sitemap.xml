@@ -33,6 +33,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.istanbullv.com/careers</loc>
+    <image:image>
+      <image:loc>https://www.istanbullv.com/careers/kitchen-team.jpg</image:loc>
+      <image:title>Kitchen Team</image:title>
+      <image:caption>Kitchen Team - Istanbul Mediterranean Restaurant Las Vegas</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.istanbullv.com/catering</loc>
     <image:image>
       <image:loc>https://www.istanbullv.com/catering/catering_hero.jpg</image:loc>
