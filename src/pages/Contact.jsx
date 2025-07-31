@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaInstagram, FaFacebook } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   // Placeholder for form feedback
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   return (
     <>
@@ -46,10 +49,36 @@ export default function Contact() {
           {/* Contact Form */}
           <form
             className="bg-offwhite p-8 rounded-xl shadow-lg flex flex-col space-y-5 border border-saffron/10"
-            onSubmit={e => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              setSubmitted(true);
-              setTimeout(() => setSubmitted(false), 3000);
+              setIsSubmitting(true);
+              setError('');
+
+              try {
+                // EmailJS configuration - using same service as careers
+                const serviceId = 'service_goau3zi';
+                const templateId = 'template_contact'; // Contact form template
+                const publicKey = 'b7bFs-5rAi-9caqhn';
+
+                const formData = new FormData(e.target);
+                const templateParams = {
+                  from_name: formData.get('name'),
+                  from_email: formData.get('email'),
+                  message: formData.get('message'),
+                  to_email: 'istanbulinvegas@gmail.com'
+                };
+
+                await emailjs.send(serviceId, templateId, templateParams, publicKey);
+                
+                setSubmitted(true);
+                e.target.reset();
+                setTimeout(() => setSubmitted(false), 5000);
+              } catch (error) {
+                console.error('EmailJS Error:', error);
+                setError('Failed to send message. Please try again or contact us directly.');
+              } finally {
+                setIsSubmitting(false);
+              }
             }}
           >
             <h2 className="text-lg font-semibold mb-2 text-istanbulRed">Send Us a Message</h2>
@@ -65,7 +94,16 @@ export default function Contact() {
               <textarea name="message" id="contact-message" rows="4" className="peer border-b-2 border-gray-300 bg-transparent w-full px-1 py-3 focus:outline-none focus:border-istanbulRed transition-colors resize-none" required></textarea>
               <label htmlFor="contact-message" className="absolute left-1 top-0 text-gray-400 text-sm transition-all peer-focus:-top-5 peer-focus:text-xs peer-focus:text-istanbulRed peer-valid:-top-5 peer-valid:text-xs pointer-events-none">Your Message</label>
             </div>
-            <button type="submit" className="btn btn-primary w-full">Send</button>
+            <button 
+              type="submit" 
+              disabled={isSubmitting}
+              className="btn btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? 'Sending...' : 'Send'}
+            </button>
+            {error && (
+              <div className="text-red-600 text-center mt-2">{error}</div>
+            )}
             {submitted && (
               <div className="text-green-600 text-center mt-2">Thank you! Your message has been received.</div>
             )}

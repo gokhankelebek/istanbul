@@ -11,6 +11,7 @@ import SchemaMarkupTester from "./components/SchemaMarkupTester";
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { useEffect, Suspense } from 'react';
 import NavBar from './components/NavBar';
+import Chatbot from './components/Chatbot';
 
 // Lazy load all page components for better performance
 const YelpLandingPage = React.lazy(() => import('./pages/yelp'));
@@ -267,6 +268,8 @@ export default function App() {
       </Suspense>
       {/* Footer */}
       <Footer />
+      {/* Chatbot */}
+      <Chatbot />
       
       {/* Enhanced SEO Dashboard - only visible in development mode or for admin users */}
       <EnhancedSEODashboard />
