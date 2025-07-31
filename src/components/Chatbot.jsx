@@ -228,38 +228,38 @@ export default function Chatbot() {
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 bg-istanbulRed hover:bg-istanbulRed-dark text-white rounded-full p-4 shadow-lg transition-all duration-300 z-50"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-istanbulRed hover:bg-istanbulRed-dark text-white rounded-full p-3 md:p-4 shadow-lg transition-all duration-300 z-50 touch-manipulation"
         aria-label="Toggle chat"
       >
-        {isOpen ? <FaTimes size={24} /> : <FaComments size={24} />}
+        {isOpen ? <FaTimes size={20} className="md:w-6 md:h-6" /> : <FaComments size={20} className="md:w-6 md:h-6" />}
       </button>
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-[90vw] max-w-sm h-[70vh] max-h-[500px] bg-white rounded-lg shadow-2xl z-50 flex flex-col md:w-96">
+        <div className="fixed bottom-16 right-2 left-2 md:bottom-24 md:right-6 md:left-auto w-auto md:w-96 h-[75vh] md:h-[500px] bg-white rounded-lg shadow-2xl z-50 flex flex-col">
           {/* Header */}
-          <div className="bg-istanbulRed text-white p-4 rounded-t-lg flex items-center justify-between">
+          <div className="bg-istanbulRed text-white p-3 md:p-4 rounded-t-lg flex items-center justify-between">
             <div>
-              <h3 className="font-semibold text-lg">Istanbul Mediterranean</h3>
-              <p className="text-sm opacity-90">Ask us anything!</p>
+              <h3 className="font-semibold text-base md:text-lg">Istanbul Mediterranean</h3>
+              <p className="text-xs md:text-sm opacity-90">Ask us anything!</p>
             </div>
             <img 
               src="/favicon.ico" 
               alt="Istanbul Mediterranean" 
-              className="w-10 h-10 rounded-full bg-white p-1"
+              className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white p-1"
               onError={(e) => e.target.style.display = 'none'}
             />
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3">
+          <div className="flex-1 overflow-y-auto p-3 md:p-4 space-y-3">
             {messages.map((message, index) => (
               <div
                 key={index}
                 className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[80%] p-3 rounded-lg ${
+                  className={`max-w-[85%] md:max-w-[80%] p-2 md:p-3 rounded-lg text-sm md:text-base ${
                     message.type === 'user'
                       ? 'bg-primary text-white'
                       : 'bg-gray-100 text-gray-800'
@@ -284,7 +284,7 @@ export default function Chatbot() {
           </div>
 
           {/* Input */}
-          <div className="p-4 border-t">
+          <div className="p-3 md:p-4 border-t">
             <div className="flex space-x-2">
               <input
                 type="text"
@@ -292,14 +292,14 @@ export default function Chatbot() {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Type your message..."
-                className="flex-1 px-4 py-2 border rounded-full focus:outline-none focus:border-primary"
+                className="flex-1 px-3 md:px-4 py-2 border rounded-full focus:outline-none focus:border-primary text-sm md:text-base"
               />
               <button
                 onClick={handleSend}
-                className="bg-primary hover:bg-primary-dark text-white p-2 rounded-full transition-colors"
+                className="bg-primary hover:bg-primary-dark text-white p-2 rounded-full transition-colors touch-manipulation"
                 aria-label="Send message"
               >
-                <FaPaperPlane size={18} />
+                <FaPaperPlane size={16} className="md:w-[18px] md:h-[18px]" />
               </button>
             </div>
           </div>

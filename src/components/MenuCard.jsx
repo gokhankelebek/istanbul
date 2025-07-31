@@ -3,17 +3,41 @@ import { Link } from 'react-router-dom';
 
 export default function MenuCard({ slug, img, name, price, desc, categories, url }) {
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4 flex flex-col h-full hover:shadow-2xl transition-shadow duration-200">
-      <Link to={`/menu/${slug}`} className="block group">
-        <picture>
-          <source srcSet={img.replace(/\.(jpg|jpeg|png)$/i, '.webp')} type="image/webp" />
-          <img src={img} alt={name} className="w-full h-72 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform duration-200 shadow-lg" onError={e => e.target.style.display='none'} />
-        </picture>
-        <h2 className="text-xl font-bold mb-1 text-charcoal group-hover:text-primary">{name}</h2>
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow duration-200 group">
+      <Link to={`/menu/${slug}`} className="block">
+        <div className="aspect-w-4 aspect-h-3 overflow-hidden">
+          <picture>
+            <source srcSet={img.replace(/\.(jpg|jpeg|png)$/i, '.webp')} type="image/webp" />
+            <img 
+              src={img} 
+              alt={name} 
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" 
+              loading="lazy"
+              onError={e => {
+                e.target.src = '/menu/placeholder.jpg';
+                e.target.onerror = null;
+              }} 
+            />
+          </picture>
+        </div>
       </Link>
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-primary font-bold text-xl">${price}</span>
-        <a href={url || '#'} target="_blank" rel="noopener noreferrer" className="btn btn-primary px-4 py-2 rounded text-sm">Order Online</a>
+      <div className="p-5 flex flex-col flex-grow">
+        <Link to={`/menu/${slug}`} className="block flex-grow">
+          <h3 className="text-lg font-bold mb-2 text-charcoal group-hover:text-primary transition-colors line-clamp-2">{name}</h3>
+          {desc && <p className="text-sm text-gray-600 mb-3 line-clamp-2">{desc}</p>}
+        </Link>
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
+          <span className="text-primary font-bold text-xl">{price}</span>
+          <a 
+            href={url || `https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv`} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Order
+          </a>
+        </div>
       </div>
     </div>
   );

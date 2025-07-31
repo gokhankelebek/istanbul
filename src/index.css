@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply font-poppins px-6 py-3 rounded-full transition-transform duration-100 active:scale-95 shadow-md;
+    @apply font-poppins px-6 py-3 rounded-full transition-transform duration-100 active:scale-95 shadow-md touch-manipulation min-h-[44px];
   }
   .btn-primary {
     @apply bg-primary text-offwhite font-semibold hover:bg-primary/90 hover:text-offwhite;
@@ -17,6 +17,55 @@
   }
   .card {
     @apply bg-offwhite rounded-xl shadow hover:-translate-y-2 transition-transform aspect-square flex flex-col items-center justify-center;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Mobile touch optimizations */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  /* Mobile safe areas */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  /* Line clamp utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 }
 

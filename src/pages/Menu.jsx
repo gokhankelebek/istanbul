@@ -86,35 +86,45 @@ export default function Menu() {
       </Helmet>
 
       {/* Modern Category Selector - Scrollable Pills */}
-      <nav
-        className="flex overflow-x-auto gap-3 px-2 py-4 mb-8 bg-white/90 backdrop-blur border-b border-saffron/10 scrollbar-hide shadow-sm"
-        aria-label="Menu categories"
-      >
-        <button
-          onClick={() => handleCategoryClick('All')}
-          className={`px-5 py-2 rounded-full font-semibold whitespace-nowrap transition-all duration-150 border border-saffron/20 focus:outline-none focus:ring-2 focus:ring-istanbulRed/60 ${selectedCategory === 'All' ? 'bg-istanbulRed text-white shadow-lg scale-105' : 'bg-offwhite text-charcoal hover:bg-istanbulRed hover:text-white'}`}
-          tabIndex={0}
+      <div className="sticky top-0 z-10 bg-offwhite/95 backdrop-blur-sm border-b border-saffron/10 shadow-sm">
+        <nav
+          className="flex overflow-x-auto gap-3 px-4 py-4 scrollbar-hide"
+          aria-label="Menu categories"
         >
-          All
-        </button>
-        {filteredCategories.map(cat => (
           <button
-            key={cat}
-            onClick={() => handleCategoryClick(cat)}
-            className={`px-5 py-2 rounded-full font-semibold whitespace-nowrap transition-all duration-150 border border-saffron/20 focus:outline-none focus:ring-2 focus:ring-istanbulRed/60 ${selectedCategory === cat ? 'bg-istanbulRed text-white shadow-lg scale-105' : 'bg-offwhite text-charcoal hover:bg-istanbulRed hover:text-white'}`}
+            onClick={() => handleCategoryClick('All')}
+            className={`px-5 py-2 rounded-full font-semibold whitespace-nowrap transition-all duration-150 border ${
+              selectedCategory === 'All' 
+                ? 'bg-istanbulRed text-white shadow-lg scale-105 border-istanbulRed' 
+                : 'bg-white text-charcoal hover:bg-istanbulRed hover:text-white border-gray-200'
+            }`}
             tabIndex={0}
           >
-            {CATEGORY_DISPLAY[cat]}
+            All
           </button>
-        ))}
-      </nav>
+          {filteredCategories.map(cat => (
+            <button
+              key={cat}
+              onClick={() => handleCategoryClick(cat)}
+              className={`px-5 py-2 rounded-full font-semibold whitespace-nowrap transition-all duration-150 border ${
+                selectedCategory === cat 
+                  ? 'bg-istanbulRed text-white shadow-lg scale-105 border-istanbulRed' 
+                  : 'bg-white text-charcoal hover:bg-istanbulRed hover:text-white border-gray-200'
+              }`}
+              tabIndex={0}
+            >
+              {CATEGORY_DISPLAY[cat]}
+            </button>
+          ))}
+        </nav>
+      </div>
 
       {/* Filtered Menu Items - Sectioned by Category */}
-      <div className="container mx-auto py-12" id="full-menu">
+      <div className="container mx-auto px-4 py-8 md:py-12" id="full-menu">
         {(selectedCategory === 'All' ? filteredCategories : [selectedCategory]).map(cat => (
-          <section key={cat} id={`category-${cat.replace(/\s+/g, '-')}`} className="mb-16">
-            <h2 className="text-3xl font-bold text-istanbulRed mb-8 tracking-wide uppercase">{CATEGORY_DISPLAY[cat]}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <section key={cat} id={`category-${cat.replace(/\s+/g, '-')}`} className="mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-istanbulRed mb-6 md:mb-8 tracking-wide uppercase px-2">{CATEGORY_DISPLAY[cat]}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {groupedMenu[cat].map(item => (
                 <MenuCard
                   key={item.slug}

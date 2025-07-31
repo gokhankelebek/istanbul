@@ -133,54 +133,89 @@ export default function MenuItem() {
         <meta name="twitter:image" content={itemImg} />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
-      <div className="container mx-auto py-12 max-w-2xl">
-        <Link to="/menu" className="text-istanbulRed hover:underline mb-4 inline-block">← Back to Menu</Link>
-        <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
-          <img src={itemImg} alt={`Halal ${item.name} ${item.categories && item.categories[0] ? item.categories[0] : ''} Las Vegas`} className="w-full max-w-md h-64 object-cover rounded-xl mb-6" loading="lazy" />
-          <h1 className="text-3xl font-bold mb-2 text-center">{item.name}</h1>
-          <div className="text-istanbulRed font-bold text-2xl mb-2">${item.price}</div>
-          <div className="text-gray-700 mb-4 text-center">{itemDesc}</div>
-          <a
-            href={item.url || `https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary px-6 py-2 rounded text-lg mt-2"
-          >
-            Order {item.name} Online in Las Vegas
-          </a>
+      <div className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+        <Link to="/menu" className="text-istanbulRed hover:underline mb-6 inline-flex items-center gap-2 text-lg">
+          <span>←</span> Back to Menu
+        </Link>
+        
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="md:flex">
+            <div className="md:w-1/2">
+              <img 
+                src={itemImg} 
+                alt={`Halal ${item.name} ${item.categories && item.categories[0] ? item.categories[0] : ''} Las Vegas`} 
+                className="w-full h-full object-cover" 
+                loading="lazy"
+                onError={e => {
+                  e.target.src = '/menu/placeholder.jpg';
+                  e.target.onerror = null;
+                }}
+              />
+            </div>
+            <div className="md:w-1/2 p-6 md:p-8 flex flex-col">
+              <h1 className="text-2xl md:text-3xl font-bold mb-3">{item.name}</h1>
+              <div className="text-istanbulRed font-bold text-3xl mb-4">{item.price}</div>
+              <p className="text-gray-700 mb-6 flex-grow">{itemDesc}</p>
+              <a
+                href={item.url || `https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary w-full text-center text-lg"
+              >
+                Order Online
+              </a>
+            </div>
+          </div>
         </div>
+        
         {/* Why Our [Item Name]? */}
-        <section className="mt-10 mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-3">Why Our {item.name}?</h2>
+        <section className="mt-8 md:mt-10 mb-6 md:mb-8 px-4 md:px-0">
+          <h2 className="text-xl md:text-2xl font-bold text-primary mb-3">Why Our {item.name}?</h2>
           {item.slug.startsWith('chikofte') ? (
             <p className="text-gray-700 text-lg">
               Looking for the best vegan {item.name} in Las Vegas? Our {item.name.toLowerCase()} is 100% plant-based, made fresh daily with premium ingredients and authentic Mediterranean spices. Enjoy a delicious, healthy, and cruelty-free option—perfect for vegans, vegetarians, and anyone seeking a flavorful, nutritious meal!
             </p>
           ) : (
-            <p className="text-gray-700 text-lg">
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
               Looking for the best {item.name} in Las Vegas? Our {item.name.toLowerCase()} is made fresh daily with premium, halal-certified ingredients. Enjoy authentic Mediterranean flavors, generous portions, and a perfect blend of spices—served fast for dine-in, takeout, or delivery. Whether you crave a healthy meal or a hearty treat, our {item.name.toLowerCase()} is the top choice for Mediterranean food lovers in Las Vegas.
             </p>
           )}
         </section>
         {/* FAQ Section */}
-        <section className="mb-8">
-          <h2 className="text-xl font-bold text-primary mb-2">Frequently Asked Questions</h2>
+        <section className="mb-6 md:mb-8 px-4 md:px-0">
+          <h2 className="text-lg md:text-xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
           <div className="space-y-3">
-            <details className="bg-herb/5 rounded-lg p-4 border border-herb/20">
-              <summary className="font-semibold cursor-pointer text-primary">{item.slug.startsWith('chikofte') ? `Is your ${item.name.toLowerCase()} vegan?` : `Is your ${item.name.toLowerCase()} halal?`}</summary>
-              <div>
+            <details className="bg-herb/5 rounded-lg p-4 border border-herb/20 group">
+              <summary className="font-semibold cursor-pointer text-primary text-sm md:text-base group-open:mb-3">
+                {item.slug.startsWith('chikofte') ? `Is your ${item.name.toLowerCase()} vegan?` : `Is your ${item.name.toLowerCase()} halal?`}
+              </summary>
+              <div className="text-sm md:text-base text-gray-700 leading-relaxed">
                 {item.slug.startsWith('chikofte')
                   ? `Yes! Our ${item.name.toLowerCase()} is 100% vegan and made entirely from plant-based ingredients.`
                   : `Yes! All our menu items, including ${item.name.toLowerCase()}, are 100% halal and prepared according to Islamic dietary laws.`}
               </div>
             </details>
-            <details className="bg-herb/5 rounded-lg p-4 border border-herb/20">
-              <summary className="font-semibold cursor-pointer text-primary">Do you offer delivery for {item.name.toLowerCase()} in Las Vegas?</summary>
-              <div>Absolutely! You can order {item.name.toLowerCase()} online for fast delivery anywhere in Las Vegas via <a href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv" className="text-istanbulRed underline hover:text-primary" target="_blank" rel="noopener noreferrer">www.orderdoner.com</a>.</div>
+            <details className="bg-herb/5 rounded-lg p-4 border border-herb/20 group">
+              <summary className="font-semibold cursor-pointer text-primary text-sm md:text-base group-open:mb-3">
+                Do you offer delivery for {item.name.toLowerCase()} in Las Vegas?
+              </summary>
+              <div className="text-sm md:text-base text-gray-700 leading-relaxed">
+                Absolutely! You can order {item.name.toLowerCase()} online for fast delivery anywhere in Las Vegas via{' '}
+                <a 
+                  href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv" 
+                  className="text-istanbulRed underline hover:text-primary" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  www.orderdoner.com
+                </a>.
+              </div>
             </details>
-            <details className="bg-herb/5 rounded-lg p-4 border border-herb/20">
-              <summary className="font-semibold cursor-pointer text-primary">What makes your {item.name.toLowerCase()} authentic?</summary>
-              <div>
+            <details className="bg-herb/5 rounded-lg p-4 border border-herb/20 group">
+              <summary className="font-semibold cursor-pointer text-primary text-sm md:text-base group-open:mb-3">
+                What makes your {item.name.toLowerCase()} authentic?
+              </summary>
+              <div className="text-sm md:text-base text-gray-700 leading-relaxed">
                 {item.slug.startsWith('chikofte')
                   ? `Our ${item.name.toLowerCase()} is crafted using traditional Mediterranean recipes, fresh herbs, and high-quality plant-based ingredients for a truly authentic and delicious vegan experience.`
                   : `Our ${item.name.toLowerCase()} uses traditional Mediterranean recipes, fresh herbs, and halal meats—prepared by experienced chefs for true flavor.`}
