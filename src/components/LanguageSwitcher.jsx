@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { generateLanguageSwitcher, getCurrentLanguage } from '../utils/hreflangManager';
+import { generateLanguageSwitcher, getCurrentLanguage, SUPPORTED_LANGUAGES } from '../utils/hreflangManager';
 import { useLanguage } from '../contexts/LanguageContext';
 
 /**
@@ -59,34 +59,24 @@ const LanguageSwitcher = () => {
     }
   };
   
-  // Flag emoji for language
+  // Get flag emoji from supported languages
   const getFlagEmoji = (langCode) => {
-    switch (langCode) {
-      case 'en-us':
-        return '🇺🇸';
-      case 'tr':
-        return '🇹🇷';
-      case 'ar':
-        return '🇸🇦';
-      case 'es':
-        return '🇪🇸';
-      default:
-        return '🌐';
-    }
+    return SUPPORTED_LANGUAGES[langCode]?.flag || '🌐';
   };
   
   return (
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         type="button"
-        className="inline-flex justify-center items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-saffron"
+        className="inline-flex justify-center items-center w-full rounded-md border border-gray-300 shadow-sm px-2 md:px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-saffron touch-manipulation"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
-        <span className="mr-2">{getFlagEmoji(currentLanguage.code)}</span>
-        <span>{currentLanguage.name}</span>
-        <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <span className="text-lg mr-1 md:mr-2">{getFlagEmoji(currentLanguage.code)}</span>
+        <span className="hidden md:inline">{currentLanguage.name}</span>
+        <span className="md:hidden">{currentLanguage.code.toUpperCase()}</span>
+        <svg className="-mr-1 ml-1 md:ml-2 h-4 w-4 md:h-5 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
         </svg>
       </button>

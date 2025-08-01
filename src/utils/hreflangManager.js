@@ -13,19 +13,34 @@
 export const SUPPORTED_LANGUAGES = {
   'en-us': {
     name: 'English (US)',
-    defaultPath: '/'
+    defaultPath: '/',
+    flag: '🇺🇸'
   },
   'tr': {
     name: 'Turkish',
-    defaultPath: '/tr'
+    defaultPath: '/tr',
+    flag: '🇹🇷'
   },
   'ar': {
     name: 'Arabic',
-    defaultPath: '/ar'
+    defaultPath: '/ar',
+    flag: '🇸🇦',
+    rtl: true
   },
   'es': {
     name: 'Spanish',
-    defaultPath: '/es'
+    defaultPath: '/es',
+    flag: '🇪🇸'
+  },
+  'ja': {
+    name: '日本語',
+    defaultPath: '/ja',
+    flag: '🇯🇵'
+  },
+  'fr': {
+    name: 'Français',
+    defaultPath: '/fr',
+    flag: '🇫🇷'
   }
 };
 
@@ -39,14 +54,18 @@ export const PAGE_TRANSLATIONS = {
     'en-us': '/',
     'tr': '/tr',
     'ar': '/ar',
-    'es': '/es'
+    'es': '/es',
+    'ja': '/ja',
+    'fr': '/fr'
   },
   // Menu page
   '/menu': {
     'en-us': '/menu',
     'tr': '/tr/menu',
     'ar': '/ar/menu',
-    'es': '/es/menu'
+    'es': '/es/menu',
+    'ja': '/ja/menu',
+    'fr': '/fr/menu'
   },
   // Turkish Food page
   '/turkishfood': {

@@ -1,0 +1,33 @@
+{
+  "date": "2024-08-01",
+  "title": "Discover Authentic Turkish Döner at Istanbul Mediterranean",
+  "subtitle": "Start your Vegas adventure with the best halal Turkish food on the Strip",
+  "type": "featured-dish",
+  "category": "food-spotlight",
+  "content": {
+    "main": "Welcome to August at Istanbul Mediterranean! Start the month right with our signature Beef & Lamb Döner, slow-cooked on a vertical rotisserie for 12+ hours until perfectly tender and flavorful.",
+    "highlights": [
+      "100% halal certified beef and lamb blend",
+      "Hand-carved fresh to order",
+      "Served with warm Turkish pita and fresh vegetables",
+      "Available as wrap ($15.95), pita ($16.95), or bowl ($20.95)"
+    ],
+    "tip": "Try it with our homemade garlic sauce and spicy red pepper sauce for the authentic Istanbul experience!",
+    "cta": "Order now at orderdoner.com or visit us at 3615 S Las Vegas Blvd #101"
+  },
+  "media": {
+    "featured_image": "/daily-content/aug-01-doner.jpg",
+    "alt_text": "Fresh sliced beef and lamb doner kebab with Turkish pita bread and vegetables"
+  },
+  "tags": ["doner", "halal", "turkish-food", "las-vegas", "strip", "authentic"],
+  "social": {
+    "instagram": "Nothing beats authentic Turkish döner! 🥙 Our beef & lamb blend is slow-cooked for 12+ hours for maximum flavor. #TurkishFood #HalalFood #LasVegas #Doner #IstanbulMediterranean",
+    "facebook": "Start August with authentic taste! Our signature Beef & Lamb Döner is crafted using traditional Turkish methods - slow-cooked on a vertical rotisserie until perfectly tender. Available as wraps, pitas, or bowls. Visit us on the Strip!",
+    "twitter": "🥙 Fresh döner carved to order! Our halal beef & lamb blend is slow-cooked for 12+ hours. Try it today! #TurkishFood #LasVegas"
+  },
+  "seo": {
+    "meta_title": "Authentic Turkish Döner Las Vegas | Istanbul Mediterranean",
+    "meta_description": "Experience authentic Turkish döner kebab on the Las Vegas Strip. 100% halal beef & lamb, slow-cooked 12+ hours. Order online or visit us today!",
+    "keywords": ["turkish doner las vegas", "halal kebab strip", "authentic turkish food", "doner kebab near me"]
+  }
+}

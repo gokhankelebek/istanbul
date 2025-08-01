@@ -7,6 +7,9 @@
 
 import { SUPPORTED_LANGUAGES } from './hreflangManager';
 
+// Cache for loaded translations
+const translationCache = {};
+
 /**
  * Default translations object
  * Contains translations for all supported languages
@@ -188,6 +191,7 @@ const translations = {
         sides: 'Sides',
         desserts: 'Desserts',
         drinks: 'Drinks',
+        all: 'All',
       },
       items: {
         doner_beef: 'Beef Döner',
@@ -212,6 +216,14 @@ const translations = {
         drink_soda: 'Soft Drinks',
         drink_water: 'Water'
       },
+    },
+    nav: {
+      home: 'Home',
+      menu: 'Menu', 
+      blog: 'Blog',
+      delivery: 'Delivery',
+      contact: 'Contact',
+      careers: 'Careers',
     },
   },
   'tr-tr': {
@@ -347,6 +359,7 @@ const translations = {
         sides: 'Yan Ürünler',
         desserts: 'Tatlılar',
         drinks: 'İçecekler',
+        all: 'Tümü',
       },
       items: {
         doner_beef: 'Dana Döner',
@@ -371,6 +384,14 @@ const translations = {
         drink_soda: 'Gazlı İçecek',
         drink_water: 'Su'
       }
+    },
+    nav: {
+      home: 'Ana Sayfa',
+      menu: 'Menü',
+      blog: 'Blog',
+      delivery: 'Teslimat',
+      contact: 'İletişim',
+      careers: 'Kariyer',
     },
   },
   'ar': {
@@ -506,6 +527,7 @@ const translations = {
         sides: 'أطباق جانبية',
         desserts: 'حلويات',
         drinks: 'مشروبات',
+        all: 'الكل',
       },
       items: {
         doner_beef: 'شاورما لحم',
@@ -531,6 +553,474 @@ const translations = {
         drink_water: 'ماء'
       }
     },
+    nav: {
+      home: 'الرئيسية',
+      menu: 'القائمة',
+      blog: 'مدونة',
+      delivery: 'التوصيل',
+      contact: 'اتصل بنا',
+      careers: 'الوظائف',
+    },
+  },
+  'fr': {
+    common: {
+      home: 'Accueil',
+      menu: 'Menu',
+      blog: 'Blog',
+      contact: 'Contact',
+      orderOnline: 'Commander en ligne',
+      orderNow: 'Commander maintenant',
+      about: 'À propos',
+      faq: 'FAQ',
+      language: 'Langue',
+      hours: 'Heures d\'ouverture',
+      address: 'Adresse',
+      phone: 'Téléphone',
+      email: 'E-mail',
+      copyright: '© 2025 Istanbul Mediterranean. Tous droits réservés.',
+      delivery: 'Livraison',
+      pickup: 'À emporter',
+      reservations: 'Réservations',
+      catering: 'Traiteur',
+      viewFullMenu: 'Voir le menu complet',
+      viewOnGoogleMaps: 'Voir sur Google Maps',
+      review: 'Avis',
+      backToMenu: 'Retour au menu',
+      price: 'Prix',
+      addToCart: 'Ajouter au panier',
+      calories: 'Calories',
+      loading: 'Chargement...',
+      error: 'Erreur',
+      notFound: 'Non trouvé'
+    },
+    home: {
+      hero: {
+        title: 'Döner Turc Authentique à Las Vegas',
+        subtitle: 'Recette familiale, racines d\'Istanbul—préparé frais quotidiennement',
+      },
+      featuredDishes: 'Plats Vedettes',
+      testimonials: {
+        title: 'Ce Que Disent Les Gens',
+        person1: {
+          name: 'Sarah L.',
+          text: 'Absolument le meilleur döner à Vegas! La viande était juteuse et savoureuse. Je reviendrai!',
+          source: 'Yelp'
+        },
+        person2: {
+          name: 'Mike D.',
+          text: 'Ouvert tard, super pratique après une soirée. Le pain turc est incroyable.',
+          source: 'Google'
+        },
+        person3: {
+          name: 'Jessica P.',
+          text: 'Le wrap falafel était frais et délicieux. Personnel amical et service rapide.',
+          source: 'Yelp'
+        },
+        person4: {
+          name: 'Alex K.',
+          text: 'Excellentes options végétariennes et tout est halal. Je recommande vivement le baklava!',
+          source: 'Google'
+        },
+        person5: {
+          name: 'David S.',
+          text: 'Les portions sont généreuses et les prix sont raisonnables pour le Strip. Je reviendrai!',
+          source: 'Yelp'
+        },
+        person6: {
+          name: 'Maria G.',
+          text: 'Impeccablement propre, amical, et la nourriture est toujours fraîche. J\'adore cet endroit!',
+          source: 'Google'
+        }
+      },
+      story: 'Notre Histoire',
+      storyText: 'Des rues animées d\'Istanbul au cœur de Las Vegas, nous apportons des saveurs turques authentiques préparées avec passion et tradition.',
+      halal: {
+        title: '100% Certifié Halal',
+        description: 'Toutes les viandes sont d\'origine éthique et préparées selon les normes halal.'
+      },
+      whyChooseUs: 'Pourquoi Nous Choisir?',
+      aboutUs: 'À Propos de Nous',
+      aboutText: {
+        paragraph1: 'Chez Istanbul Mediterranean, notre histoire commence au cœur de la Turquie, où la nourriture est plus qu\'un repas—c\'est une célébration de la famille, de la tradition et du vivre ensemble. Nos recettes sont ancrées dans la riche histoire de l\'Empire ottoman et façonnées par les cultures vibrantes le long de la Route de la Soie et des côtes méditerranéennes. Chaque plat que nous servons est le reflet de l\'héritage de notre famille et des traditions culinaires séculaires transmises de génération en génération.',
+        quote: 'La cuisine est la passion de notre famille. Des rues animées d\'Istanbul à notre cuisine à Las Vegas, nous vous apportons les saveurs authentiques de la cuisine turque et méditerranéenne.',
+        paragraph2: 'Nous sommes fiers de servir des viandes certifiées 100% halal et d\'honorer les valeurs de l\'approvisionnement éthique et de la préparation traditionnelle. Chez Istanbul Mediterranean, nous vous invitons à rejoindre notre table familiale et à découvrir le vrai goût de la Turquie—où chaque repas est un voyage à travers l\'histoire, et chaque invité est traité comme un membre de la famille.',
+        signature: 'Famille Istanbul'
+      },
+      findUs: {
+        title: 'Nous Trouver',
+        address: '3615 S Las Vegas Blvd #101, Las Vegas, NV 89109',
+        hours: 'Ouvert: 10h00 - 5h00 du matin tous les jours',
+        viewMap: 'Voir sur Google Maps'
+      },
+      features: {
+        doner: {
+          title: 'Döner Turc Authentique',
+          description: 'Juteux, savoureux et tranché frais quotidiennement—comme à Istanbul.'
+        },
+        halal: {
+          title: '100% Halal et Options Véganes',
+          description: 'Viandes certifiées halal et nombreuses options végétariennes/véganes pour tous.'
+        },
+        openLate: {
+          title: 'Ouvert Tard, Tous Les Jours',
+          description: 'Envie de döner à 4h du matin? Nous sommes là—ouvert jusqu\'à 5h du matin tous les jours.'
+        },
+        family: {
+          title: 'Hospitalité Familiale',
+          description: 'Service chaleureux et amical qui vous fait sentir comme chez vous.'
+        },
+        location: {
+          title: 'Sur le Strip de Vegas',
+          description: 'Idéalement situé au cœur de Las Vegas pour les locaux et les visiteurs.'
+        }
+      },
+      socialShare: {
+        title: 'Meilleure Cuisine Turque à Las Vegas - Istanbul Mediterranean',
+        description: 'Döner turc authentique, shawarma et plus. Recette familiale, racines d\'Istanbul—préparé frais à Las Vegas.'
+      },
+      faq: {
+        title: 'Questions Fréquemment Posées',
+        questions: [
+          {
+            question: 'Quelles sont vos heures d\'ouverture?',
+            answer: 'Nous sommes ouverts tous les jours de 10h00 à 5h00 du matin, servant de la cuisine turque fraîche jusque tard dans la nuit.'
+          },
+          {
+            question: 'Toute votre nourriture est-elle halal?',
+            answer: 'Oui, toute notre viande est certifiée 100% halal. Nous sommes fiers de servir une cuisine turque halal authentique.'
+          },
+          {
+            question: 'Offrez-vous des options végétariennes?',
+            answer: 'Absolument! Nous avons une variété d\'options végétariennes et véganes, y compris falafel, houmous, feuilles de vigne farcies et plus.'
+          },
+          {
+            question: 'Où êtes-vous situé sur le Strip de Las Vegas?',
+            answer: 'Nous sommes situés au 3615 S Las Vegas Blvd #101, Las Vegas, NV 89109, idéalement situé sur le Strip.'
+          },
+          {
+            question: 'Offrez-vous la livraison?',
+            answer: 'Oui, nous offrons la livraison via notre site web et les principales plateformes de livraison comme Uber Eats, DoorDash et Grubhub.'
+          }
+        ]
+      }
+    },
+    menu: {
+      title: 'Notre Menu',
+      subtitle: 'Saveurs turques traditionnelles avec une touche moderne',
+      categories: {
+        doner: 'Döner Kebab',
+        wraps: 'Wraps',
+        plates: 'Assiettes',
+        sides: 'Accompagnements',
+        desserts: 'Desserts',
+        drinks: 'Boissons',
+        all: 'Tout',
+        lavashWraps: 'Wraps Lavash',
+        pitaSandwiches: 'Sandwichs Pita',
+        turkishPita: 'Pita Turc',
+        riceBowls: 'Bols de Riz',
+        saladBowls: 'Bols de Salade',
+        frenchFriesBowls: 'Bols de Frites'
+      },
+      items: {
+        doner_beef: 'Döner de Bœuf',
+        doner_chicken: 'Döner de Poulet',
+        doner_mixed: 'Döner Mixte',
+        wrap_beef: 'Wrap de Bœuf',
+        wrap_chicken: 'Wrap de Poulet',
+        wrap_falafel: 'Wrap de Falafel',
+        plate_beef: 'Assiette de Döner de Bœuf',
+        plate_chicken: 'Assiette de Döner de Poulet',
+        plate_mixed: 'Assiette de Döner Mixte',
+        plate_falafel: 'Assiette de Falafel',
+        side_fries: 'Frites',
+        side_rice: 'Riz',
+        side_hummus: 'Houmous',
+        side_salad: 'Salade',
+        dessert_baklava: 'Baklava',
+        dessert_kunefe: 'Künefe',
+        dessert_sutlac: 'Riz au Lait',
+        drink_ayran: 'Ayran',
+        drink_tea: 'Thé Turc',
+        drink_soda: 'Boissons Gazeuses',
+        drink_water: 'Eau',
+        beefLambDoner: 'Döner Bœuf et Agneau',
+        chickenDoner: 'Döner Poulet',
+        mixedDoner: 'Döner Mixte',
+        falafel: 'Falafel',
+        chikofte: 'Chiköfte',
+        veggieBowl: 'Bol Végétarien',
+        hummus: 'Houmous',
+        baklava: 'Baklava',
+        ricePudding: 'Riz au Lait',
+        ayran: 'Ayran (Boisson au Yaourt)'
+      },
+      descriptions: {
+        doner: 'Viande marinée authentique à la turque, cuite lentement sur rôtisserie verticale pendant plus de 12 heures',
+        falafel: 'Falafel maison fraîchement frit avec pois chiches et épices méditerranéennes',
+        served: 'Servi avec légumes frais, sauces et pain chaud'
+      }
+    },
+    nav: {
+      home: 'Accueil',
+      menu: 'Menu',
+      aboutUs: 'À propos',
+      contactUs: 'Contact',
+      blog: 'Blog',
+      turkishFood: 'Cuisine turque',
+      halal: 'Halal',
+      mediterraneanRestaurant: 'Restaurant méditerranéen',
+      nearMe: 'Halal près de moi',
+      shawarma: 'Shawarma',
+      delivery: 'Livraison',
+      catering: 'Traiteur',
+      experience: 'Expérience',
+      faq: 'FAQ',
+      careers: 'Carrières',
+      blogPosts: 'Articles de blog'
+    },
+    footer: {
+      quickLinks: 'Liens rapides',
+      contactInfo: 'Informations de contact',
+      hours: 'Heures d\'ouverture',
+      location: 'Emplacement',
+      phone: 'Téléphone',
+      followUs: 'Suivez-nous',
+      allRightsReserved: 'Tous droits réservés',
+      privacyPolicy: 'Politique de confidentialité',
+      termsOfService: 'Conditions d\'utilisation',
+      hoursText: 'Tous les jours: 10h - 5h du matin'
+    }
+  },
+  'ja': {
+    common: {
+      home: 'ホーム',
+      menu: 'メニュー',
+      blog: 'ブログ',
+      contact: 'お問い合わせ',
+      orderOnline: 'オンライン注文',
+      orderNow: '今すぐ注文',
+      about: '私たちについて',
+      faq: 'よくある質問',
+      language: '言語',
+      hours: '営業時間',
+      address: '住所',
+      phone: '電話',
+      email: 'メール',
+      copyright: '© 2025 イスタンブール・メディテラニアン。全著作権所有。',
+      delivery: 'デリバリー',
+      pickup: 'お持ち帰り',
+      reservations: '予約',
+      catering: 'ケータリング',
+      viewFullMenu: 'フルメニューを見る',
+      viewOnGoogleMaps: 'Googleマップで見る',
+      review: 'レビュー',
+      backToMenu: 'メニューに戻る',
+      price: '価格',
+      addToCart: 'カートに追加',
+      calories: 'カロリー',
+      loading: '読み込み中...',
+      error: 'エラー',
+      notFound: '見つかりません'
+    },
+    home: {
+      hero: {
+        title: 'ラスベガスで本格的なトルコのドネル',
+        subtitle: '家族のレシピ、イスタンブールのルーツ—毎日新鮮に作られています',
+      },
+      featuredDishes: 'おすすめ料理',
+      testimonials: {
+        title: 'お客様の声',
+        person1: {
+          name: 'サラ L.',
+          text: '間違いなくベガスで最高のドネル！肉はジューシーで風味豊かでした。また来ます！',
+          source: 'Yelp'
+        },
+        person2: {
+          name: 'マイク D.',
+          text: '遅くまで営業していて、夜遊びの後に超便利。トルコのパンは素晴らしい。',
+          source: 'Google'
+        },
+        person3: {
+          name: 'ジェシカ P.',
+          text: 'ファラフェルラップは新鮮で美味しかった。フレンドリーなスタッフと迅速なサービス。',
+          source: 'Yelp'
+        },
+        person4: {
+          name: 'アレックス K.',
+          text: '素晴らしいベジタリアンオプションがあり、すべてハラールです。バクラヴァを強くお勧めします！',
+          source: 'Google'
+        },
+        person5: {
+          name: 'デビッド S.',
+          text: 'ポーションは寛大で、ストリップにしては価格が妥当です。また訪れます！',
+          source: 'Yelp'
+        },
+        person6: {
+          name: 'マリア G.',
+          text: '非常に清潔で、フレンドリーで、食べ物はいつも新鮮です。この場所が大好き！',
+          source: 'Google'
+        }
+      },
+      story: '私たちのストーリー',
+      storyText: 'イスタンブールの賑やかな通りからラスベガスの中心部まで、情熱と伝統で作られた本格的なトルコの味をお届けします。',
+      halal: {
+        title: '100%ハラール認証',
+        description: 'すべての肉は倫理的に調達され、ハラール基準に従って準備されています。'
+      },
+      whyChooseUs: 'なぜ私たちを選ぶのか？',
+      aboutUs: '私たちについて',
+      aboutText: {
+        paragraph1: 'イスタンブール・メディテラニアンでは、私たちの物語はトルコの中心から始まります。そこでは食事は単なる食事以上のものです—それは家族、伝統、そして一体感の祝祭です。私たちのレシピは、オスマン帝国の豊かな歴史に根ざし、シルクロードと地中海沿岸の活気ある文化によって形作られています。私たちが提供する各料理は、私たちの家族の遺産と世代から世代へと受け継がれてきた何世紀もの料理の伝統の反映です。',
+        quote: '料理は私たちの家族の情熱です。イスタンブールの賑やかな通りから、ラスベガスの私たちのキッチンまで、トルコと地中海料理の本格的な味をお届けします。',
+        paragraph2: '私たちは100%ハラール認証の肉を提供することを誇りに思い、倫理的な調達と伝統的な準備の価値を尊重しています。イスタンブール・メディテラニアンでは、私たちの家族のテーブルに参加し、トルコの本当の味を体験することをお勧めします—すべての食事が歴史を通じた旅であり、すべてのゲストが家族のように扱われる場所です。',
+        signature: 'イスタンブール・ファミリー'
+      },
+      findUs: {
+        title: '場所を見つける',
+        address: '3615 S Las Vegas Blvd #101, Las Vegas, NV 89109',
+        hours: '営業時間：毎日午前10時〜午前5時',
+        viewMap: 'Googleマップで見る'
+      },
+      features: {
+        doner: {
+          title: '本格的なトルコのドネル',
+          description: 'ジューシーで風味豊かで、毎日新鮮にカット—まるでイスタンブールのよう。'
+        },
+        halal: {
+          title: '100%ハラール＆ビーガンオプション',
+          description: 'ハラール認証の肉と、すべての人のための豊富なベジタリアン/ビーガンの選択肢。'
+        },
+        openLate: {
+          title: '毎日遅くまで営業',
+          description: '午前4時にドネルが食べたい？私たちはここにいます—毎日午前5時まで営業。'
+        },
+        family: {
+          title: '家族経営のおもてなし',
+          description: 'あなたを家にいるように感じさせる温かくフレンドリーなサービス。'
+        },
+        location: {
+          title: 'ベガスストリップに位置',
+          description: '地元の人と訪問者のためにラスベガスの中心部に便利に位置しています。'
+        }
+      },
+      socialShare: {
+        title: 'ラスベガスで最高のトルコ料理 - イスタンブール・メディテラニアン',
+        description: '本格的なトルコのドネル、シャワルマなど。家族のレシピ、イスタンブールのルーツ—ラスベガスで新鮮に作られています。'
+      },
+      faq: {
+        title: 'よくある質問',
+        questions: [
+          {
+            question: '営業時間は何時ですか？',
+            answer: '毎日午前10時から午前5時まで営業し、深夜まで新鮮なトルコ料理を提供しています。'
+          },
+          {
+            question: 'すべての食べ物はハラールですか？',
+            answer: 'はい、すべての肉は100%ハラール認証されています。本格的なハラールトルコ料理を提供することを誇りに思っています。'
+          },
+          {
+            question: 'ベジタリアンオプションはありますか？',
+            answer: 'もちろん！ファラフェル、フムス、ぶどうの葉の詰め物など、さまざまなベジタリアンとビーガンのオプションがあります。'
+          },
+          {
+            question: 'ラスベガスストリップのどこにありますか？',
+            answer: '私たちは3615 S Las Vegas Blvd #101, Las Vegas, NV 89109に位置し、ストリップに便利に位置しています。'
+          },
+          {
+            question: 'デリバリーサービスを提供していますか？',
+            answer: 'はい、私たちのウェブサイトとUber Eats、DoorDash、Grubhubなどの主要なデリバリープラットフォームを通じてデリバリーを提供しています。'
+          }
+        ]
+      }
+    },
+    menu: {
+      title: '私たちのメニュー',
+      subtitle: 'モダンなタッチを加えた伝統的なトルコの味',
+      categories: {
+        doner: 'ドネルケバブ',
+        wraps: 'ラップ',
+        plates: 'プレート',
+        sides: 'サイド',
+        desserts: 'デザート',
+        drinks: '飲み物',
+        all: 'すべて',
+        lavashWraps: 'ラバッシュラップ',
+        pitaSandwiches: 'ピタサンドイッチ',
+        turkishPita: 'トルコピタ',
+        riceBowls: 'ライスボウル',
+        saladBowls: 'サラダボウル',
+        frenchFriesBowls: 'フライドポテトボウル'
+      },
+      items: {
+        doner_beef: 'ビーフドネル',
+        doner_chicken: 'チキンドネル',
+        doner_mixed: 'ミックスドネル',
+        wrap_beef: 'ビーフラップ',
+        wrap_chicken: 'チキンラップ',
+        wrap_falafel: 'ファラフェルラップ',
+        plate_beef: 'ビーフドネルプレート',
+        plate_chicken: 'チキンドネルプレート',
+        plate_mixed: 'ミックスドネルプレート',
+        plate_falafel: 'ファラフェルプレート',
+        side_fries: 'フライドポテト',
+        side_rice: 'ライス',
+        side_hummus: 'フムス',
+        side_salad: 'サラダ',
+        dessert_baklava: 'バクラヴァ',
+        dessert_kunefe: 'キュネフェ',
+        dessert_sutlac: 'ライスプディング',
+        drink_ayran: 'アイラン',
+        drink_tea: 'トルコ茶',
+        drink_soda: 'ソフトドリンク',
+        drink_water: '水',
+        beefLambDoner: 'ビーフ＆ラムドネル',
+        chickenDoner: 'チキンドネル',
+        mixedDoner: 'ミックスドネル',
+        falafel: 'ファラフェル',
+        chikofte: 'チーキョフテ',
+        veggieBowl: 'ベジボウル',
+        hummus: 'フムス',
+        baklava: 'バクラヴァ',
+        ricePudding: 'ライスプディング',
+        ayran: 'アイラン（ヨーグルトドリンク）'
+      },
+      descriptions: {
+        doner: '垂直ロティサリーで12時間以上スローコークした本格的なトルコ風味の肉',
+        falafel: 'ひよこ豆と地中海のスパイスで作った揚げたての自家製ファラフェル',
+        served: '新鮮な野菜、ソース、温かいパンと一緒に提供'
+      }
+    },
+    nav: {
+      home: 'ホーム',
+      menu: 'メニュー',
+      aboutUs: '私たちについて',
+      contactUs: 'お問い合わせ',
+      blog: 'ブログ',
+      turkishFood: 'トルコ料理',
+      halal: 'ハラール',
+      mediterraneanRestaurant: '地中海レストラン',
+      nearMe: '近くのハラール料理',
+      shawarma: 'シャワルマ',
+      delivery: 'デリバリー',
+      catering: 'ケータリング',
+      experience: '体験',
+      faq: 'よくある質問',
+      careers: '採用情報',
+      blogPosts: 'ブログ記事'
+    },
+    footer: {
+      quickLinks: 'クイックリンク',
+      contactInfo: '連絡先情報',
+      hours: '営業時間',
+      location: '場所',
+      phone: '電話',
+      followUs: 'フォローする',
+      allRightsReserved: '全著作権所有',
+      privacyPolicy: 'プライバシーポリシー',
+      termsOfService: '利用規約',
+      hoursText: '毎日：午前10時〜午前5時'
+    }
   },
   'es': {
     common: {
@@ -665,6 +1155,7 @@ const translations = {
         sides: 'Acompañamientos',
         desserts: 'Postres',
         drinks: 'Bebidas',
+        all: 'Todo',
       },
       items: {
         doner_beef: 'Döner de Ternera',
@@ -690,6 +1181,14 @@ const translations = {
         drink_water: 'Agua'
       }
     },
+    nav: {
+      home: 'Inicio',
+      menu: 'Menú',
+      blog: 'Blog',
+      delivery: 'Entrega',
+      contact: 'Contacto',
+      careers: 'Carreras',
+    },
   },
 };
 
@@ -709,6 +1208,8 @@ export const getTranslation = (key, language = 'en-us') => {
     'en-us': 'en-us',
     'ar': 'ar',
     'es': 'es',
+    'fr': 'fr',
+    'ja': 'ja',
   };
   const lang = languageMap[language] || language;
 

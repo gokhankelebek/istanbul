@@ -19,7 +19,39 @@ const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const location = useLocation();
   const [language, setLanguage] = useState(() => {
-    // Initialize with the current path's language
+    // Check localStorage first
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang && SUPPORTED_LANGUAGES[savedLang]) {
+      return savedLang;
+    }
+    
+    // Then check browser language
+    const browserLang = navigator.language || navigator.userLanguage;
+    
+    // Map browser languages to our supported languages
+    const langMap = {
+      'ja': 'ja',
+      'ja-JP': 'ja',
+      'fr': 'fr',
+      'fr-FR': 'fr',
+      'fr-CA': 'fr',
+      'es': 'es',
+      'es-ES': 'es',
+      'es-MX': 'es',
+      'ar': 'ar',
+      'ar-SA': 'ar',
+      'tr': 'tr',
+      'tr-TR': 'tr'
+    };
+    
+    // Check if browser language matches our supported languages
+    for (const [browserCode, ourCode] of Object.entries(langMap)) {
+      if (browserLang.startsWith(browserCode)) {
+        return ourCode;
+      }
+    }
+    
+    // Finally, check URL path
     return getCurrentLanguage(window.location.pathname);
   });
   
@@ -28,6 +60,11 @@ export const LanguageProvider = ({ children }) => {
     const currentLang = getCurrentLanguage(location.pathname);
     setLanguage(currentLang);
   }, [location.pathname]);
+  
+  // Save language preference
+  useEffect(() => {
+    localStorage.setItem('preferredLanguage', language);
+  }, [language]);
   
   // Debug log
   useEffect(() => {

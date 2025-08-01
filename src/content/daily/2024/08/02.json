@@ -1,0 +1,33 @@
+{
+  "date": "2024-08-02",
+  "title": "Fresh Falafel Friday: Mediterranean Plant-Based Perfection",
+  "subtitle": "Crispy, flavorful, and completely vegan - our falafel is made fresh daily",
+  "type": "vegan-spotlight",
+  "category": "healthy-options",
+  "content": {
+    "main": "Every Friday calls for fresh falafel! Our homemade falafel is crafted from scratch daily using traditional Mediterranean recipes with chickpeas, fresh herbs, and aromatic spices.",
+    "highlights": [
+      "100% vegan and naturally gluten-free",
+      "Made fresh daily with premium chickpeas",
+      "Perfectly seasoned with parsley, cilantro, and Middle Eastern spices",
+      "Available as wrap ($15.95), pita ($16.95), or bowl ($20.95)"
+    ],
+    "tip": "Pair with our creamy tahini sauce and fresh Mediterranean salad for a complete plant-based meal!",
+    "cta": "Perfect for Meatless Friday! Order at orderdoner.com"
+  },
+  "media": {
+    "featured_image": "/daily-content/aug-02-falafel.jpg",
+    "alt_text": "Fresh crispy falafel balls with tahini sauce and Mediterranean vegetables"
+  },
+  "tags": ["falafel", "vegan", "mediterranean", "healthy", "fresh", "plant-based"],
+  "social": {
+    "instagram": "Fresh Falafel Friday! 🧆 Made daily with love, chickpeas, and Mediterranean spices. 100% vegan perfection! #FalafelFriday #Vegan #Mediterranean #Fresh #HealthyEating #LasVegas",
+    "facebook": "Celebrate Falafel Friday with our homemade crispy falafel! Made fresh daily using traditional Mediterranean recipes. Perfect for vegans and anyone craving healthy, flavorful food. Available as wraps, pitas, or bowls!",
+    "twitter": "🧆 Fresh Falafel Friday! Crispy, vegan, and made daily. Try our Mediterranean plant-based perfection! #FalafelFriday #Vegan #Mediterranean"
+  },
+  "seo": {
+    "meta_title": "Fresh Falafel Las Vegas | Vegan Mediterranean Food",
+    "meta_description": "Enjoy fresh, homemade falafel at Istanbul Mediterranean. 100% vegan, made daily with premium chickpeas and Mediterranean spices. Order online!",
+    "keywords": ["fresh falafel las vegas", "vegan mediterranean food", "plant based las vegas", "homemade falafel strip"]
+  }
+}

@@ -1,14 +1,17 @@
 import React, { useState, useRef } from 'react';
 import useClickOutside from './useClickOutside';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+import useTranslation from '../hooks/useTranslation';
+import { getCanonicalPath } from '../utils/hreflangManager';
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Menu', path: '/menu' },
-  { name: 'Blog', path: '/blog-posts' },
-  { name: 'Delivery', path: '/delivery' },
-  { name: 'Contact', path: '/contact' },
-  { name: 'Careers', path: '/careers' },
+  { name: 'common.home', path: '/', key: 'home' },
+  { name: 'common.menu', path: '/menu', key: 'menu' },
+  { name: 'common.blog', path: '/blog-posts', key: 'blog' },
+  { name: 'nav.delivery', path: '/delivery', key: 'delivery' },
+  { name: 'common.contact', path: '/contact', key: 'contact' },
+  { name: 'nav.careers', path: '/careers', key: 'careers' },
 ];
 
 export default function NavBar({ children }) {
@@ -16,6 +19,8 @@ export default function NavBar({ children }) {
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const specialtiesRef = useRef(null);
   const mobileMenuRef = useRef(null);
+  const { language } = useLanguage();
+  const t = useTranslation();
   useClickOutside(specialtiesRef, () => setDropdownOpen(null));
   useClickOutside(mobileMenuRef, () => {
     if (mobileOpen) setMobileOpen(false);
@@ -33,8 +38,8 @@ export default function NavBar({ children }) {
         <div className="hidden md:flex gap-6 items-center">
           {navLinks.map(link =>
             !link.dropdown ? (
-              <Link key={link.name} to={link.path} className="hover:text-istanbulRed transition-colors font-medium">
-                {link.name}
+              <Link key={link.key} to={getCanonicalPath(link.path, language)} className="hover:text-istanbulRed transition-colors font-medium">
+                {t(link.name)}
               </Link>
             ) : (
               <div
@@ -117,15 +122,20 @@ export default function NavBar({ children }) {
             className="fixed top-16 left-0 right-0 md:hidden bg-white shadow-lg z-50 border-t border-gray-200"
           >
             <div className="px-4 py-3 space-y-1 max-h-[calc(100vh-4rem)] overflow-y-auto">
+              {/* Language Switcher at top of mobile menu */}
+              <div className="flex justify-between items-center border-b border-gray-200 pb-3 mb-3">
+                <span className="text-sm font-medium text-gray-600">Language:</span>
+                {children}
+              </div>
               {navLinks.map(link =>
                 !link.dropdown ? (
                   <Link 
-                    key={link.name} 
-                    to={link.path} 
+                    key={link.key} 
+                    to={getCanonicalPath(link.path, language)} 
                     className="block px-4 py-3 text-lg font-medium text-gray-700 hover:bg-istanbulRed hover:text-white rounded-lg transition-colors" 
                     onClick={() => setMobileOpen(false)}
                   >
-                    {link.name}
+                    {t(link.name)}
                   </Link>
                 ) : (
                   <div key={link.name}>

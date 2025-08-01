@@ -5,6 +5,9 @@ import { Helmet } from 'react-helmet';
 import menu from '../data/menu.json';
 import MenuCard from '../components/MenuCard';
 import './menu-smooth-scroll.css';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getCategoryTranslation } from '../utils/menuTranslations';
+import useTranslation from '../hooks/useTranslation';
 
 // Hardcoded display order and names to match user's screenshots
 const CATEGORY_ORDER = [
@@ -55,6 +58,8 @@ const groupedMenu = groupByCategoryStrict(menu);
 
 export default function Menu() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const { language } = useLanguage();
+  const t = useTranslation();
 
   // Only show categories with items
   const filteredCategories = CATEGORY_ORDER.filter(cat => groupedMenu[cat] && groupedMenu[cat].length > 0);
@@ -100,7 +105,7 @@ export default function Menu() {
             }`}
             tabIndex={0}
           >
-            All
+            {t('menu.categories.all')}
           </button>
           {filteredCategories.map(cat => (
             <button
@@ -113,7 +118,7 @@ export default function Menu() {
               }`}
               tabIndex={0}
             >
-              {CATEGORY_DISPLAY[cat]}
+              {getCategoryTranslation(cat.toLowerCase().replace(/\s+/g, '-'), language)}
             </button>
           ))}
         </nav>
@@ -123,7 +128,7 @@ export default function Menu() {
       <div className="container mx-auto px-4 py-8 md:py-12" id="full-menu">
         {(selectedCategory === 'All' ? filteredCategories : [selectedCategory]).map(cat => (
           <section key={cat} id={`category-${cat.replace(/\s+/g, '-')}`} className="mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-istanbulRed mb-6 md:mb-8 tracking-wide uppercase px-2">{CATEGORY_DISPLAY[cat]}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-istanbulRed mb-6 md:mb-8 tracking-wide uppercase px-2">{getCategoryTranslation(cat.toLowerCase().replace(/\s+/g, '-'), language)}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {groupedMenu[cat].map(item => (
                 <MenuCard
