@@ -259,6 +259,7 @@ const translations = {
         subtitle: 'Aile tarifi, İstanbul kökleri—her gün taze hazırlanır',
       },
       featured: 'Öne Çıkan Yemekler',
+      featuredDishes: 'Öne Çıkan Yemekler',
       testimonials: {
         title: 'İnsanlar Ne Diyor',
         person1: {
@@ -427,6 +428,7 @@ const translations = {
         subtitle: 'وصفة عائلية، جذور إسطنبول—يتم تحضيرها طازجة يوميًا',
       },
       featured: 'الأطباق المميزة',
+      featuredDishes: 'الأطباق المميزة',
       testimonials: {
         title: 'ماذا يقول الناس',
         person1: {
@@ -764,19 +766,20 @@ const translations = {
     nav: {
       home: 'Accueil',
       menu: 'Menu',
+      blog: 'Blog',
+      delivery: 'Livraison',
+      contact: 'Contact',
+      careers: 'Carrières',
       aboutUs: 'À propos',
       contactUs: 'Contact',
-      blog: 'Blog',
       turkishFood: 'Cuisine turque',
       halal: 'Halal',
       mediterraneanRestaurant: 'Restaurant méditerranéen',
       nearMe: 'Halal près de moi',
       shawarma: 'Shawarma',
-      delivery: 'Livraison',
       catering: 'Traiteur',
       experience: 'Expérience',
       faq: 'FAQ',
-      careers: 'Carrières',
       blogPosts: 'Articles de blog'
     },
     footer: {
@@ -994,19 +997,20 @@ const translations = {
     nav: {
       home: 'ホーム',
       menu: 'メニュー',
+      blog: 'ブログ',
+      delivery: 'デリバリー',
+      contact: 'お問い合わせ',
+      careers: '採用情報',
       aboutUs: '私たちについて',
       contactUs: 'お問い合わせ',
-      blog: 'ブログ',
       turkishFood: 'トルコ料理',
       halal: 'ハラール',
       mediterraneanRestaurant: '地中海レストラン',
       nearMe: '近くのハラール料理',
       shawarma: 'シャワルマ',
-      delivery: 'デリバリー',
       catering: 'ケータリング',
       experience: '体験',
       faq: 'よくある質問',
-      careers: '採用情報',
       blogPosts: 'ブログ記事'
     },
     footer: {
@@ -1055,6 +1059,7 @@ const translations = {
         subtitle: 'Receta familiar, raíces de Estambul—preparado fresco diariamente',
       },
       featured: 'Platos Destacados',
+      featuredDishes: 'Platos Destacados',
       testimonials: {
         title: 'Lo Que Dice La Gente',
         person1: {
@@ -1211,7 +1216,7 @@ export const getTranslation = (key, language = 'en-us') => {
     'fr': 'fr',
     'ja': 'ja',
   };
-  const lang = languageMap[language] || language;
+  let lang = languageMap[language] || language;
 
   // Default to English if language is not supported
   if (!translations[lang]) {

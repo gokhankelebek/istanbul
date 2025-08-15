@@ -15,10 +15,41 @@ const TranslatedHero = () => {
   const t = useTranslation();
   const { language } = useLanguage();
   
-  // Log when translations are rendered
-  useEffect(() => {
-    console.log('Rendering hero with language:', language);
-  }, [language]);
+  // Add error boundary protection
+  try {
+  
+  // Force translations for French and Japanese
+  const getTitle = () => {
+    if (language === 'fr') return 'Döner Turc Authentique à Las Vegas';
+    if (language === 'ja') return 'ラスベガスで本格的なトルコのドネル';
+    
+    const title = t('home.hero.title');
+    if (!title || title === 'home.hero.title') {
+      const fallbacks = {
+        'tr': 'Las Vegas\'da Otantik Türk Döneri',
+        'ar': 'شاورما تركية أصلية في لاس فيغاس',
+        'es': 'Auténtico Döner Turco en Las Vegas'
+      };
+      return fallbacks[language] || 'Authentic Turkish Döner in Las Vegas';
+    }
+    return title;
+  };
+  
+  const getSubtitle = () => {
+    if (language === 'fr') return 'Recette familiale, racines d\'Istanbul—préparé frais quotidiennement';
+    if (language === 'ja') return '家族のレシピ、イスタンブールのルーツ—毎日新鮮に作られています';
+    
+    const subtitle = t('home.hero.subtitle');
+    if (!subtitle || subtitle === 'home.hero.subtitle') {
+      const fallbacks = {
+        'tr': 'Aile tarifi, İstanbul kökleri—her gün taze hazırlanır',
+        'ar': 'وصفة عائلية، جذور إسطنبول—يتم تحضيرها طازجة يوميًا',
+        'es': 'Receta familiar, raíces de Estambul—preparado fresco diariamente'
+      };
+      return fallbacks[language] || 'Family recipe, Istanbul roots—crafted fresh daily';
+    }
+    return subtitle;
+  };
   
   return (
     <section className="relative h-[70vh] flex items-center justify-center bg-charcoal mb-12 overflow-hidden" style={{background:'#1F1F1F'}}>
@@ -40,10 +71,10 @@ const TranslatedHero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-charcoal/40 to-transparent" style={{zIndex:1}} />
       <div className="relative z-10 text-center text-offwhite space-y-6 animate-fadein-slow">
         <h1 className="font-poppins font-extrabold text-4xl md:text-6xl animate-text-pop">
-          {t('home.hero.title')}
+          {getTitle()}
         </h1>
         <p className="text-lg md:text-2xl">
-          {t('home.hero.subtitle')}
+          {getSubtitle()}
         </p>
         <div className="flex gap-4 justify-center">
           <a 
@@ -74,6 +105,23 @@ const TranslatedHero = () => {
       />
     </section>
   );
+  
+  } catch (error) {
+    console.error('TranslatedHero render error:', error);
+    // Fallback render with hardcoded content
+    return (
+      <section className="relative h-[70vh] flex items-center justify-center bg-charcoal mb-12 overflow-hidden" style={{background:'#1F1F1F'}}>
+        <div className="relative z-10 text-center text-offwhite space-y-6">
+          <h1 className="font-poppins font-extrabold text-4xl md:text-6xl">
+            Authentic Turkish Döner in Las Vegas
+          </h1>
+          <p className="text-lg md:text-2xl">
+            Family recipe, Istanbul roots—crafted fresh daily
+          </p>
+        </div>
+      </section>
+    );
+  }
 };
 
 export default TranslatedHero;
