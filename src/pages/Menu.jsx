@@ -134,7 +134,7 @@ export default function Menu() {
                 <MenuCard
                   key={item.slug}
                   slug={item.slug}
-                  img={item.img}
+                  img={item.image}
                   name={item.name}
                   desc={item.description}
                   categories={item.categories}
