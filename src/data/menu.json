@@ -378,5 +378,135 @@
     "categories": [
       "Drinks"
     ]
+  },
+  {
+    "slug": "chikofte-wrap",
+    "name": "Chikofte Wrap",
+    "description": "Vegan lavash wrap with chikofte, fresh vegetables, and tahini sauce.",
+    "image": "/menu/lavash-wraps/chikofte-wrap.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#6",
+    "categories": [
+      "Lavash Wraps"
+    ]
+  },
+  {
+    "slug": "chikofte-pita",
+    "name": "Chikofte Pita",
+    "description": "Vegan pita sandwich with chikofte, fresh greens, and tahini.",
+    "image": "/menu/pita-sandwiches/chikofte-pita.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#7",
+    "categories": [
+      "Pita Sandwiches"
+    ]
+  },
+  {
+    "slug": "chikofte-salad-bowl",
+    "name": "Chikofte Salad Bowl",
+    "description": "Fresh salad bowl with vegan chikofte, mixed greens, and tahini dressing.",
+    "image": "/menu/salad-bowls/chikofte-salad-bowl.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#4",
+    "categories": [
+      "Salad Bowls"
+    ]
+  },
+  {
+    "slug": "chikofte-side-(4-pieces)",
+    "name": "Chikofte Side (4 Pieces)",
+    "description": "Four pieces of vegan chikofte served as a side.",
+    "image": "/menu/sides/chikofte-side.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#11",
+    "categories": [
+      "Sides"
+    ]
+  },
+  {
+    "slug": "chicken-doner-(shawarma)-salad-bowl",
+    "name": "Chicken Döner (Shawarma) Salad Bowl",
+    "description": "Fresh salad bowl with chicken döner shawarma, mixed greens, and dressing.",
+    "image": "/menu/salad-bowls/chicken-doner-shawarma-salad-bowl.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#4",
+    "categories": [
+      "Salad Bowls"
+    ]
+  },
+  {
+    "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-salad-bowl",
+    "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Salad Bowl",
+    "description": "Fresh salad bowl with mixed döner shawarma, greens, and house dressing.",
+    "image": "/menu/salad-bowls/mixed-doner-salad-bowl.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#4",
+    "categories": [
+      "Salad Bowls"
+    ]
+  },
+  {
+    "slug": "rice-pudding",
+    "name": "Rice Pudding",
+    "description": "Traditional Turkish rice pudding with cinnamon.",
+    "image": "/menu/desserts/rice-pudding.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#10",
+    "categories": [
+      "Dessert"
+    ]
+  },
+  {
+    "slug": "diet-coke",
+    "name": "Diet Coke",
+    "description": "Refreshing diet cola drink.",
+    "image": "/menu/drinks/diet-coke.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#12",
+    "categories": [
+      "Drinks"
+    ]
+  },
+  {
+    "slug": "coke-zero",
+    "name": "Coke Zero",
+    "description": "Zero calorie cola with great taste.",
+    "image": "/menu/drinks/coke-zero.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#12",
+    "categories": [
+      "Drinks"
+    ]
+  },
+  {
+    "slug": "sprite",
+    "name": "Sprite",
+    "description": "Crisp lemon-lime soda.",
+    "image": "/menu/drinks/sprite.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#12",
+    "categories": [
+      "Drinks"
+    ]
+  },
+  {
+    "slug": "dr-pepper",
+    "name": "Dr Pepper",
+    "description": "Unique blend of 23 flavors.",
+    "image": "/menu/drinks/dr-pepper.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#12",
+    "categories": [
+      "Drinks"
+    ]
+  },
+  {
+    "slug": "water",
+    "name": "Water",
+    "description": "Pure bottled water.",
+    "image": "/menu/drinks/water.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#12",
+    "categories": [
+      "Drinks"
+    ]
+  },
+  {
+    "slug": "yogurt-drink-(ayran)",
+    "name": "Yogurt Drink (Ayran)",
+    "description": "Traditional Turkish yogurt drink, refreshing and healthy.",
+    "image": "/menu/drinks/yogurt-drink-ayran.png",
+    "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#12",
+    "categories": [
+      "Drinks"
+    ]
   }
 ]
