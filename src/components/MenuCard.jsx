@@ -31,16 +31,17 @@ export default function MenuCard({ slug, img, name, desc, categories, url }) {
               transform: isHovered ? 'scale(1.1)' : 'scale(1)',
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-            <h3 className="text-lg font-bold mb-1">{name}</h3>
-            {desc && <p className="text-sm opacity-90">{desc}</p>}
-          </div>
         </div>
         
         <div className="p-4">
+          <h3 className="text-xl font-bold text-charcoal mb-2 line-clamp-2">{name}</h3>
+          
+          {desc && (
+            <p className="text-gray-600 text-sm mb-3 line-clamp-2 leading-relaxed">{desc}</p>
+          )}
+          
           {categories && (
-            <div className="flex flex-wrap gap-2 mb-3">
+            <div className="flex flex-wrap gap-2 mb-4">
               {categories.map((category, index) => (
                 <span
                   key={index}
@@ -53,9 +54,9 @@ export default function MenuCard({ slug, img, name, desc, categories, url }) {
           )}
           
           <div className="flex justify-between items-center">
-            <span className="text-primary font-bold text-xl">View Details</span>
+            <span className="text-istanbulRed font-semibold text-base hover:text-primary transition-colors">View Details</span>
             <motion.div
-              className="text-istanbulRed text-2xl"
+              className="text-istanbulRed text-xl"
               animate={{ x: isHovered ? 5 : 0 }}
             >
               →

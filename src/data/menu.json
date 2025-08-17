@@ -3,304 +3,380 @@
     "slug": "beefandlamb-doner-(shawarma)-turkish-pita",
     "name": "Beef&Lamb Döner (Shawarma) Turkish Pita",
     "description": "Classic Turkish pita filled with beef and lamb döner shawarma, fresh veggies, and house sauce.",
-    "image": "/menu/Turkish Pita/Beef&Lamb-Döner (Shawarma-Turkish-Pita.png",
+    "image": "/menu/turkish-pita/beefandlamb-doner-shawarma-turkish-pita.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#9",
-    "categories": ["Turkish Pita"]
+    "categories": [
+      "Turkish Pita"
+    ]
   },
   {
     "slug": "chicken-doner-(shawarma)-turkish-pita",
     "name": "Chicken Döner (Shawarma) Turkish Pita",
     "description": "Turkish pita with chicken döner shawarma, crisp vegetables, and signature sauce.",
-    "image": "/menu/Turkish Pita/Chicken-Döner (Shawarma)-Turkish-Pita.png",
+    "image": "/menu/turkish-pita/chicken-doner-shawarma-turkish-pita.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#9",
-    "categories": ["Turkish Pita"]
+    "categories": [
+      "Turkish Pita"
+    ]
   },
   {
     "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-turkish-pita",
     "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Turkish Pita",
     "description": "Best of both worlds with mixed döner shawarma in Turkish pita.",
-    "image": "/menu/Turkish Pita/Mixed-Döner-(Beef&Lamb and-Chicken-Shawarma) Turkish-Pita.png",
+    "image": "/menu/turkish-pita/mixed-doner-beefandlamb-and-chicken-shawarma-turkish-pita.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#9",
-    "categories": ["Turkish Pita"]
+    "categories": [
+      "Turkish Pita"
+    ]
   },
   {
     "slug": "falafel-turkish-pita",
     "name": "Falafel Turkish Pita",
     "description": "Vegetarian pita with house-made falafel, fresh greens, and tahini.",
-    "image": "/menu/Turkish Pita/Falafel-Turkish-Pita.png",
+    "image": "/menu/turkish-pita/falafel-turkish-pita.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#9",
-    "categories": ["Turkish Pita"]
+    "categories": [
+      "Turkish Pita"
+    ]
   },
   {
     "slug": "beefandlamb-doner-(shawarma)-lavash-wrap",
     "name": "Beef&Lamb Döner (Shawarma) Lavash Wrap",
     "description": "Fresh lavash wrap with beef and lamb döner shawarma and crisp vegetables.",
-    "image": "/menu/Wrap/Beef&Lamb-Döner-(Shawarma-Lavash-Wrap.png",
+    "image": "/menu/lavash-wraps/beefandlamb-doner-shawarma-lavash-wrap.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#6",
-    "categories": ["Lavash Wraps"]
+    "categories": [
+      "Lavash Wraps"
+    ]
   },
   {
     "slug": "chicken-doner-(shawarma)-lavash-wrap",
     "name": "Chicken Döner (Shawarma) Lavash Wrap",
     "description": "Lavash wrap filled with chicken döner shawarma and fresh vegetables.",
-    "image": "/menu/Wrap/Chicken-Döner-(Shawarma)-Lavash-Wrap.png",
+    "image": "/menu/lavash-wraps/chicken-doner-shawarma-lavash-wrap.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#6",
-    "categories": ["Lavash Wraps"]
+    "categories": [
+      "Lavash Wraps"
+    ]
   },
   {
     "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-lavash-wrap",
     "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Lavash Wrap",
     "description": "Mixed döner shawarma in a fresh lavash wrap with all the fixings.",
-    "image": "/menu/Wrap/Mixed-Döner-(Beef&Lamb-and-Chicken-Shawarma)-Lavash-Wrap.png",
+    "image": "/menu/lavash-wraps/mixed-doner-lavash-wrap.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#6",
-    "categories": ["Lavash Wraps"]
+    "categories": [
+      "Lavash Wraps"
+    ]
   },
   {
     "slug": "falafel-lavash-wrap",
     "name": "Falafel Lavash Wrap",
     "description": "Vegetarian lavash wrap with house-made falafel and fresh vegetables.",
-    "image": "/menu/Wrap/Falafel-Lavash-Wrap.png",
+    "image": "/menu/lavash-wraps/falafel-lavash-wrap.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#6",
-    "categories": ["Lavash Wraps"]
+    "categories": [
+      "Lavash Wraps"
+    ]
   },
   {
     "slug": "beefandlamb-doner-(shawarma)-pita",
     "name": "Beef&Lamb Döner (Shawarma) Pita",
     "description": "Classic pita sandwich with beef and lamb döner shawarma.",
-    "image": "/menu/Pita/Beef&Lamb-Döner-(Shawarma)-Pita.png",
+    "image": "/menu/pita-sandwiches/beefandlamb-doner-shawarma-pita.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#2",
-    "categories": ["Pita Sandwiches"]
+    "categories": [
+      "Pita Sandwiches"
+    ]
   },
   {
     "slug": "chicken-doner-(shawarma)-pita",
     "name": "Chicken Döner (Shawarma) Pita",
     "description": "Pita sandwich filled with chicken döner shawarma and fresh vegetables.",
-    "image": "/menu/Pita/Chicken-Döner-(Shawarma)-Pita.png",
+    "image": "/menu/pita-sandwiches/chicken-doner-shawarma-pita.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#2",
-    "categories": ["Pita Sandwiches"]
+    "categories": [
+      "Pita Sandwiches"
+    ]
   },
   {
     "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-pita",
     "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Pita",
     "description": "Mixed döner shawarma in a classic pita sandwich.",
-    "image": "/menu/Pita/Mixed-Döner-(Beef&Lamb-and-Chicken-Shawarma)-Pita.png",
+    "image": "/menu/pita-sandwiches/mixed-doner-pita.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#2",
-    "categories": ["Pita Sandwiches"]
+    "categories": [
+      "Pita Sandwiches"
+    ]
   },
   {
     "slug": "falafel-pita",
     "name": "Falafel Pita",
     "description": "Vegetarian pita sandwich with house-made falafel and fresh vegetables.",
-    "image": "/menu/Pita/Falafel-Pita.png",
+    "image": "/menu/pita-sandwiches/falafel-pita.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#2",
-    "categories": ["Pita Sandwiches"]
+    "categories": [
+      "Pita Sandwiches"
+    ]
   },
   {
     "slug": "beefandlamb-doner-(shawarma)-rice-bowl",
     "name": "Beef&Lamb Döner (Shawarma) Rice Bowl",
     "description": "Beef and lamb döner shawarma served over seasoned basmati rice.",
-    "image": "/menu/Rice Bowl/Beef&Lamb-Döner-(Shawarma)-Rice-Bowl.png",
+    "image": "/menu/rice-bowls/beefandlamb-doner-shawarma-rice-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#5",
-    "categories": ["Rice Bowls"]
+    "categories": [
+      "Rice Bowls"
+    ]
   },
   {
     "slug": "chicken-doner-(shawarma)-rice-bowl",
     "name": "Chicken Döner (Shawarma) Rice Bowl",
     "description": "Chicken döner shawarma served over seasoned basmati rice.",
-    "image": "/menu/Rice Bowl/Chicken-Döner-(Shawarma)-Rice-Bowl.png",
+    "image": "/menu/rice-bowls/chicken-doner-shawarma-rice-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#5",
-    "categories": ["Rice Bowls"]
+    "categories": [
+      "Rice Bowls"
+    ]
   },
   {
     "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-rice-bowl",
     "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) Rice Bowl",
     "description": "Mixed döner shawarma served over seasoned basmati rice.",
-    "image": "/menu/Rice Bowl/Mixed-Döner-(Beef&Lamb-and-Chicken-Shawarma)-Rice-Bowl.png",
+    "image": "/menu/rice-bowls/mixed-doner-rice-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#5",
-    "categories": ["Rice Bowls"]
+    "categories": [
+      "Rice Bowls"
+    ]
   },
   {
     "slug": "falafel-rice-bowl",
     "name": "Falafel Rice Bowl",
     "description": "House-made falafel served over seasoned basmati rice.",
-    "image": "/menu/Rice Bowl/Falafel-Rice-Bowl.png",
+    "image": "/menu/rice-bowls/falafel-rice-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#5",
-    "categories": ["Rice Bowls"]
+    "categories": [
+      "Rice Bowls"
+    ]
   },
   {
     "slug": "beefandlamb-doner-(shawarma)-french-fries-bowl",
     "name": "Beef&Lamb Döner (Shawarma) French Fries Bowl",
     "description": "Beef and lamb döner shawarma served over crispy french fries.",
-    "image": "/menu/Fries Bowl/Beef&Lamb-Döner-(Shawarma)-French-Fries-Bowl.png",
+    "image": "/menu/french-fries-bowls/beefandlamb-doner-shawarma-french-fries-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#7",
-    "categories": ["French Fries Bowls"]
+    "categories": [
+      "French Fries Bowls"
+    ]
   },
   {
     "slug": "chicken-doner-(shawarma)-french-fries-bowl",
     "name": "Chicken Döner (Shawarma) French Fries Bowl",
     "description": "Chicken döner shawarma served over crispy french fries.",
-    "image": "/menu/Fries Bowl/Chicken-Döner-Shawarma)-French-Fries-Bowl.png",
+    "image": "/menu/french-fries-bowls/chicken-doner-shawarma-french-fries-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#7",
-    "categories": ["French Fries Bowls"]
+    "categories": [
+      "French Fries Bowls"
+    ]
   },
   {
     "slug": "mixed-doner-(beefandlamb-and-chicken-shawarma)-french-fries-bowl",
     "name": "Mixed Döner (Beef&Lamb and Chicken Shawarma) French Fries Bowl",
     "description": "Mixed döner shawarma served over crispy french fries.",
-    "image": "/menu/Fries Bowl/Mixed-Döner-(Beef&Lamb-and-Chicken-Shawarma)-French-Fries-Bowl.png",
+    "image": "/menu/french-fries-bowls/mixed-doner-french-fries-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#7",
-    "categories": ["French Fries Bowls"]
+    "categories": [
+      "French Fries Bowls"
+    ]
   },
   {
     "slug": "falafel-french-fries-bowl",
     "name": "Falafel French Fries Bowl",
     "description": "House-made falafel served over crispy french fries.",
-    "image": "/menu/Fries Bowl/Falafel-French-Fries-Bowl.png",
+    "image": "/menu/french-fries-bowls/falafel-french-fries-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#7",
-    "categories": ["French Fries Bowls"]
+    "categories": [
+      "French Fries Bowls"
+    ]
   },
   {
     "slug": "beefandlamb-doner-(shawarma)-salad-bowl",
     "name": "Beef&Lamb Döner (Shawarma) Salad Bowl",
     "description": "Beef and lamb döner shawarma served over fresh mixed greens.",
-    "image": "/menu/Salad Bowl/Beef&Lamb-Döner-(Shawarma)-Salad-Bowl.png",
+    "image": "/menu/salad-bowls/beefandlamb-doner-shawarma-salad-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#BVBECEXIUUB7HE2S7NSD8Q6O",
-    "categories": ["Salad Bowls"]
+    "categories": [
+      "Salad Bowls"
+    ]
   },
   {
     "slug": "falafel-salad-bowl",
     "name": "Falafel Salad Bowl",
     "description": "House-made falafel served over fresh mixed greens.",
-    "image": "/menu/Salad Bowl/Falafel-Salad-Bowl.png",
+    "image": "/menu/salad-bowls/falafel-salad-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#BVBECEXIUUB7HE2S7NSD8Q6O",
-    "categories": ["Salad Bowls"]
+    "categories": [
+      "Salad Bowls"
+    ]
   },
   {
     "slug": "veggie-bowl",
     "name": "Veggie Bowl",
     "description": "Fresh mixed greens with seasonal vegetables and house dressing.",
-    "image": "/menu/Salad Bowl/Veggie-Bowl.png",
+    "image": "/menu/salad-bowls/veggie-bowl.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#BVBECEXIUUB7HE2S7NSD8Q6O",
-    "categories": ["Salad Bowls"]
+    "categories": [
+      "Salad Bowls"
+    ]
   },
   {
     "slug": "side-rice",
     "name": "Side Rice",
     "description": "Seasoned basmati rice as a perfect side dish.",
-    "image": "/menu/Sides/Side-Rice.png",
+    "image": "/menu/sides/side-rice.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "french-fries",
     "name": "French Fries",
     "description": "Crispy golden french fries, perfect as a side.",
-    "image": "/menu/Sides/French-Fries.png",
+    "image": "/menu/sides/french-fries.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "mozzarella-sticks-(5-pieces)",
     "name": "Mozzarella Sticks (5 Pieces)",
     "description": "Crispy breaded mozzarella sticks served with marinara sauce.",
-    "image": "/menu/Sides/Mozzarella-Sticks.png",
+    "image": "/menu/sides/mozzarella-sticks.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "onion-rings",
     "name": "Onion Rings",
     "description": "Crispy breaded onion rings, perfect as a side dish.",
-    "image": "/menu/Sides/Onion-Rings.png",
+    "image": "/menu/sides/onion-rings.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "tzatziki-dip",
     "name": "Tzatziki Dip",
     "description": "Creamy yogurt and cucumber dip with garlic and herbs.",
-    "image": "/menu/Sides/Tzatziki-Dip.png",
+    "image": "/menu/sides/tzatziki-dip.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "stuffed-grape-leaves-(4-pieces)",
     "name": "Stuffed Grape Leaves (4 Pieces)",
     "description": "Traditional stuffed grape leaves with rice and herbs.",
-    "image": "/menu/Sides/Stuffed-Grape-Leaves.png",
+    "image": "/menu/sides/stuffed-grape-leaves.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "falafel-side-(4-pieces)",
     "name": "Falafel Side (4 Pieces)",
     "description": "House-made falafel balls, perfect as a side dish.",
-    "image": "/menu/Sides/Falafel-Side.png",
+    "image": "/menu/sides/falafel-side.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "hummus",
     "name": "Hummus",
     "description": "Creamy chickpea dip with tahini and olive oil.",
-    "image": "/menu/Sides/Hummus.png",
+    "image": "/menu/sides/hummus.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "extra-pita",
     "name": "Extra Pita",
     "description": "Additional fresh pita bread for your meal.",
-    "image": "/menu/Sides/Extra-Pita.png",
+    "image": "/menu/sides/extra-pita.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "side-beefandlamb-doner-(shawarma)",
     "name": "Side Beef&Lamb Döner (Shawarma)",
     "description": "Additional beef and lamb döner shawarma as a side.",
-    "image": "/menu/Sides/Side-Beef&Lamb-Döner-(Shawarma).png",
+    "image": "/menu/sides/side-beefandlamb-doner-shawarma.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "side-chicken-doner-(shawarma)",
     "name": "Side Chicken Döner (Shawarma)",
     "description": "Additional chicken döner shawarma as a side.",
-    "image": "/menu/Sides/Side-Chicken-Döner-(Shawarma).png",
+    "image": "/menu/sides/side-chicken-doner-shawarma.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "side-mixed-(beefandlamb-and-chicken)-doner-(shawarma)",
     "name": "Side Mixed (Beef&Lamb and Chicken) Döner (Shawarma)",
     "description": "Additional mixed döner shawarma as a side.",
-    "image": "/menu/Sides/Side-Mixed-(Beef&Lamb-and-Chicken) Döner-(Shawarma).png",
+    "image": "/menu/sides/side-mixed-beefandlamb-and-chicken-doner-shawarma.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "side-sauce",
     "name": "Side Sauce",
     "description": "Additional house-made sauce for your meal.",
-    "image": "/menu/Sides/Side-Sauce.png",
+    "image": "/menu/sides/side-sauce.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#3",
-    "categories": ["Sides"]
+    "categories": [
+      "Sides"
+    ]
   },
   {
     "slug": "baklava",
     "name": "Baklava",
     "description": "Traditional Turkish dessert with layers of phyllo dough, nuts, and honey.",
-    "image": "/menu/Desserts/baklava.png",
+    "image": "/menu/desserts/baklava.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#desserts",
-    "categories": ["Dessert"]
+    "categories": [
+      "Dessert"
+    ]
   },
   {
     "slug": "coke",
     "name": "Coke",
     "description": "Refreshing Coca-Cola soft drink.",
-    "image": "/menu/Drinks/coke.png",
+    "image": "/menu/drinks/coke.png",
     "url": "https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv#drinks",
-    "categories": ["Drinks"]
+    "categories": [
+      "Drinks"
+    ]
   }
 ]
