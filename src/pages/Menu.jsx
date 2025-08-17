@@ -62,6 +62,8 @@ export default function Menu() {
   const { language } = useLanguage();
   const t = useTranslation();
 
+
+
   // Only show categories with items (and matching search if any)
   function itemsForCategory(cat) {
     const items = groupedMenu[cat] || [];
@@ -77,6 +79,8 @@ export default function Menu() {
   const visibleCategories = CATEGORY_ORDER.filter(
     (cat) => itemsForCategory(cat).length > 0
   );
+
+
 
   // Scroll to section on filter select
   function handleCategoryClick(cat) {
