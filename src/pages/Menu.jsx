@@ -11,28 +11,28 @@ import useTranslation from '../hooks/useTranslation';
 
 // Hardcoded display order and names to match user's screenshots
 const CATEGORY_ORDER = [
-  'TURKISH PITA',
-  'LAVASH WRAPS',
-  'PITA SANDWICHES',
-  'RICE BOWLS',
-  'FRENCH FRIES BOWLS',
-  'SALAD BOWLS',
-  'SIDES',
-  'DESSERT',
-  'DRINKS',
+  'Turkish Pita',
+  'Lavash Wraps',
+  'Pita Sandwiches',
+  'Rice Bowls',
+  'French Fries Bowls',
+  'Salad Bowls',
+  'Sides',
+  'Dessert',
+  'Drinks',
 ];
 
 // Map normalized categories to display names (if needed)
 const CATEGORY_DISPLAY = {
-  'TURKISH PITA': 'TURKISH PITA',
-  'LAVASH WRAPS': 'LAVASH WRAPS',
-  'PITA SANDWICHES': 'PITA SANDWICHES',
-  'RICE BOWLS': 'RICE BOWLS',
-  'FRENCH FRIES BOWLS': 'FRENCH FRIES BOWLS',
-  'SALAD BOWLS': 'SALAD BOWLS',
-  'SIDES': 'SIDES',
-  'DESSERT': 'DESSERT',
-  'DRINKS': 'DRINKS',
+  'Turkish Pita': 'Turkish Pita',
+  'Lavash Wraps': 'Lavash Wraps',
+  'Pita Sandwiches': 'Pita Sandwiches',
+  'Rice Bowls': 'Rice Bowls',
+  'French Fries Bowls': 'French Fries Bowls',
+  'Salad Bowls': 'Salad Bowls',
+  'Sides': 'Sides',
+  'Dessert': 'Dessert',
+  'Drinks': 'Drinks',
 };
 
 // Group items by normalized category
@@ -40,10 +40,9 @@ function groupByCategoryStrict(items) {
   const grouped = {};
   items.forEach(item => {
     if (item.categories && item.categories.length > 0) {
-      // Normalize categories by stripping parentheses and trimming
-      const normalizedCategories = item.categories.map(cat => cat.replace(/-/g, ' ').replace(/\s*\(.*?\)/g, '').replace(/>.*$/, '').trim().toUpperCase());
+      // Check if any of the item's categories match our category order
       for (const cat of CATEGORY_ORDER) {
-        if (normalizedCategories.some(nc => nc === cat)) {
+        if (item.categories.includes(cat)) {
           if (!grouped[cat]) grouped[cat] = [];
           grouped[cat].push(item);
           return;
@@ -63,7 +62,7 @@ export default function Menu() {
 
   // Only show categories with items
   const filteredCategories = CATEGORY_ORDER.filter(cat => groupedMenu[cat] && groupedMenu[cat].length > 0);
-
+  
   // Scroll to section on filter select
   function handleCategoryClick(cat) {
     setSelectedCategory(cat);
