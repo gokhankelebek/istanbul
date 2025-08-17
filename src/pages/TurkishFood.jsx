@@ -1,160 +1,65 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import RelatedPages from '../components/RelatedPages';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ResourceHints from '../components/ResourceHints';
+import SEOHead from '../components/SEOHead';
+import StructuredDataManager from '../components/StructuredDataManager';
 
 export default function TurkishFood() {
+  // Generate Article structured data
+  const articleData = {
+    headline: "Authentic Turkish Food in Las Vegas | Best Döner Kebab | Istanbul Mediterranean",
+    description: "Discover authentic Turkish food in Las Vegas at Istanbul Mediterranean. From succulent döner kebab to flaky baklava, we serve the Strip's top-rated, 100% halal Turkish cuisine until 5 AM daily. #1 on TripAdvisor!",
+    image: "https://www.istanbullv.com/istanbul-hero.png",
+    datePublished: "2025-01-01T00:00:00+00:00",
+    dateModified: "2025-01-01T00:00:00+00:00",
+    author: {
+      name: "Istanbul Mediterranean Team",
+      url: "https://www.istanbullv.com/about"
+    },
+    publisher: {
+      name: "Istanbul Mediterranean Restaurant",
+      logo: "https://www.istanbullv.com/logo.png"
+    },
+    url: "https://www.istanbullv.com/turkishfood"
+  };
+
+  // Generate BreadcrumbList data
+  const breadcrumbData = {
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.istanbullv.com"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Turkish Food",
+        item: "https://www.istanbullv.com/turkishfood"
+      }
+    ]
+  };
+
+  // Aggregate all schema types for the Turkish Food page
+  const aggregateSchemaData = [
+    { type: 'article', data: articleData },
+    { type: 'breadcrumb', data: breadcrumbData }
+  ];
+
   return (
     <>
       <ResourceHints />
-      <Helmet>
-        <title>Authentic Turkish Food in Las Vegas | Best Döner Kebab | Istanbul Mediterranean</title>
-        <meta
-          name="description"
-          content="Discover authentic Turkish food in Las Vegas at Istanbul Mediterranean. From succulent döner kebab to flaky baklava, we serve the Strip's top-rated, 100% halal Turkish cuisine until 5 AM daily. #1 on TripAdvisor!"
-        />
-        <meta name="keywords" content="turkish food las vegas, döner kebab, turkish restaurant, halal food, baklava, turkish cuisine, las vegas strip restaurant" />
-        
-        {/* Canonical URL - prevents duplicate content issues */}
-        <link rel="canonical" href="https://www.istanbullv.com/turkishfood" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.istanbullv.com/turkishfood" />
-        <meta property="og:title" content="Authentic Turkish Food in Las Vegas | Best Döner Kebab | Istanbul Mediterranean" />
-        <meta property="og:description" content="Discover authentic Turkish food in Las Vegas at Istanbul Mediterranean. From succulent döner kebab to flaky baklava, we serve the Strip's top-rated, 100% halal Turkish cuisine." />
-        <meta property="og:image" content="https://www.istanbullv.com/istanbul-hero.png" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.istanbullv.com/turkishfood" />
-        <meta name="twitter:title" content="Authentic Turkish Food in Las Vegas | Best Döner Kebab | Istanbul Mediterranean" />
-        <meta name="twitter:description" content="Discover authentic Turkish food in Las Vegas at Istanbul Mediterranean. From succulent döner kebab to flaky baklava, we serve the Strip's top-rated, 100% halal Turkish cuisine." />
-        <meta name="twitter:image" content="https://www.istanbullv.com/istanbul-hero.png" />
-        
-        {/* Enhanced Structured Data with FAQ */}
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "Restaurant",
-            "name": "Istanbul Mediterranean Halal",
-            "image": "https://www.istanbullv.com/istanbul-hero.png",
-            "@id": "https://www.istanbullv.com/turkishfood",
-            "url": "https://www.istanbullv.com/turkishfood",
-            "servesCuisine": ["Turkish", "Mediterranean", "Halal"],
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "3615 S Las Vegas Blvd #101",
-              "addressLocality": "Las Vegas",
-              "addressRegion": "NV",
-              "postalCode": "89109",
-              "addressCountry": "US"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 36.1230858,
-              "longitude": -115.1724256
-            },
-            "telephone": "+1-725-900-8844",
-            "openingHours": "Mo-Su 10:00-05:00",
-            "priceRange": "$$",
-            "menu": "https://www.istanbullv.com/menu",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.2",
-              "reviewCount": "896"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://www.istanbullv.com/turkishfood"
-            },
-            "hasMenu": {
-              "@type": "Menu",
-              "name": "Turkish Food Menu",
-              "description": "Authentic Turkish cuisine including döner kebab, shawarma, and baklava",
-              "hasMenuSection": [
-                {
-                  "@type": "MenuSection",
-                  "name": "Signature Dishes",
-                  "hasMenuItem": [
-                    {
-                      "@type": "MenuItem",
-                      "name": "Döner Kebab Bowl / Wrap",
-                      "description": "Slow-spit lamb-and-beef carved to order, nestled on Turkish rice or wrapped in house-baked pide."
-                    },
-                    {
-                      "@type": "MenuItem",
-                      "name": "Chicken Shawarma Plate",
-                      "description": "Citrus-marinated chicken, charred and shaved thin, served with garlic sauce and pickled veggies."
-                    },
-                    {
-                      "@type": "MenuItem",
-                      "name": "Veggie Falafel Wrap",
-                      "description": "Crispy-outside, herb-packed falafel with tahini and fresh salad (fan favorite on Yelp)."
-                    },
-                    {
-                      "@type": "MenuItem",
-                      "name": "Baklava",
-                      "description": "40 flaky layers, pistachio-rich, baked daily for that just-out-of-the-oven crunch."
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        `}</script>
-        
-        {/* FAQ Schema for Rich Results */}
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Is everything really halal?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes—every ingredient, from meat to sauces, is sourced from certified halal suppliers and prepared in a dedicated kitchen."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you have vegetarian or vegan options?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Absolutely. Try our falafel wrap, hummus mezze box, or fresh Greek salad—each can be made vegan upon request."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How spicy is Turkish food?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Most dishes are aromatic rather than fiery. For heat lovers, ask for our house-made acı pepper sauce on the side."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What makes Turkish cuisine different from other Mediterranean food?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Turkish cuisine uniquely blends Middle Eastern, Central Asian, and Balkan influences. It features distinctive cooking methods like vertical rotisserie (döner), specialized bread types like pide, and a greater emphasis on yogurt-based sauces and meat preparations compared to other Mediterranean cuisines."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What are the most popular Turkish dishes?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Beyond döner kebab, Turkish cuisine is known for dishes like iskender kebab (thinly sliced meat over bread with tomato sauce and yogurt), manti (Turkish dumplings), pide (boat-shaped flatbread with toppings), lahmacun (thin meat-topped flatbread), and a variety of mezze including hummus, baba ganoush, and dolma (stuffed vegetables)."
-                }
-              }
-            ]
-          }
-        `}</script>
-      </Helmet>
+      <SEOHead 
+        title="Authentic Turkish Food in Las Vegas | Best Döner Kebab | Istanbul Mediterranean"
+        description="Discover authentic Turkish food in Las Vegas at Istanbul Mediterranean. From succulent döner kebab to flaky baklava, we serve the Strip's top-rated, 100% halal Turkish cuisine until 5 AM daily. #1 on TripAdvisor!"
+        keywords="turkish food las vegas, döner kebab, turkish restaurant, halal food, baklava, turkish cuisine, las vegas strip restaurant"
+        canonicalUrl="https://www.istanbullv.com/turkishfood"
+        ogType="article"
+        ogImage="https://www.istanbullv.com/istanbul-hero.png"
+      />
+      <StructuredDataManager type="aggregate" data={aggregateSchemaData} />
 
       {/* Breadcrumb Navigation */}
       <div className="container mx-auto px-4 pt-4">
@@ -168,7 +73,7 @@ export default function TurkishFood() {
             Authentic&nbsp;Turkish&nbsp;Food, <br className="hidden md:inline" />Right on&nbsp;the&nbsp;Strip
           </h1>
           <p className="mt-6 text-lg md:text-xl">
-            Ranked #1 Turkish restaurant in Las Vegas on TripAdvisor and loved by 800+ Yelp reviewers, we bring Istanbul’s streets to your plate—late into the night.
+            Ranked #1 Turkish restaurant in Las Vegas on TripAdvisor and loved by 800+ Yelp reviewers, we bring Istanbul's streets to your plate—late into the night.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
             <a
@@ -194,7 +99,7 @@ export default function TurkishFood() {
           <p>
             Turkish food is the crossroads of the ancient Silk Road: bold Mediterranean herbs, sizzling Middle-Eastern spices,
             and the slow-roasted techniques of Anatolia. Staples like <em>döner kebab</em>, <em>pide</em>, and
-            honey-soaked <em>baklava</em> are more than dishes—they’re centuries-old celebrations of hospitality.
+            honey-soaked <em>baklava</em> are more than dishes—they're centuries-old celebrations of hospitality.
           </p>
         </article>
 
