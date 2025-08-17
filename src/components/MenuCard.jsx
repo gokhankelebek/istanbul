@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getMenuItemTranslation, getDescriptionTranslation } from '../utils/menuTranslations';
 import useTranslation from '../hooks/useTranslation';
@@ -8,18 +8,24 @@ import { motion } from 'framer-motion';
 export default function MenuCard({ slug, img, name, desc, categories, url }) {
   const { language } = useLanguage();
   const t = useTranslation();
+  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   
   // Translate menu item name and description
   const translatedName = getMenuItemTranslation(name, language);
   const translatedDesc = desc ? getDescriptionTranslation(desc, language, slug.includes('doner') ? 'doner' : slug.includes('falafel') ? 'falafel' : '') : '';
+  
+  const handleCardClick = () => {
+    navigate(`/menu/${slug}`);
+  };
+  
   return (
     <motion.div
       className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ y: -5 }}
-      onClick={() => window.open(url, '_blank')}
+      onClick={handleCardClick}
     >
       <div className="relative overflow-hidden">
         <img
@@ -52,7 +58,7 @@ export default function MenuCard({ slug, img, name, desc, categories, url }) {
         )}
         
         <div className="flex justify-between items-center">
-          <span className="text-primary font-bold text-xl">Order Now</span>
+          <span className="text-primary font-bold text-xl">View Details</span>
           <motion.div
             className="text-istanbulRed text-2xl"
             animate={{ x: isHovered ? 5 : 0 }}
