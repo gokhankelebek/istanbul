@@ -111,9 +111,9 @@ Shawarma's flavor profile is more complex:
 - **Choice of sides** - Turkish rice, bulgur pilaf, or fresh salad
 
 #### Popular Döner Styles We Offer
-- **Turkish Pita Döner** - traditional presentation ($16.68)
-- **Lavash Wrap** - perfect for on-the-go ($15.95)
-- **Rice Bowl** - döner over seasoned basmati rice ($20.95)
+- **Turkish Pita Döner** - traditional presentation
+- **Lavash Wrap** - perfect for on-the-go
+- **Rice Bowl** - döner over seasoned basmati rice
 - **Iskender Style** - döner over bread with tomato sauce and yogurt
 
 ### 🫓 Shawarma: Levantine Presentation

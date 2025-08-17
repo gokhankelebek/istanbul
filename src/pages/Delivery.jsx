@@ -183,7 +183,6 @@ export default function Delivery() {
               <div className="text-sm text-charcoal text-center mb-1">
                 "Stacked. Enough for two 'smedium' humans."
               </div>
-              <div className="text-saffron font-bold">$15.95</div>
             </div>
             <div className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-4 w-60 min-w-[220px] hover:scale-105 transition-transform cursor-pointer">
               <img
@@ -197,7 +196,6 @@ export default function Delivery() {
               <div className="text-sm text-charcoal text-center mb-1">
                 Juicy thigh meat spun daily on our vertical rotisserie.
               </div>
-              <div className="text-saffron font-bold">$15.95</div>
             </div>
             <div className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-4 w-60 min-w-[220px] hover:scale-105 transition-transform cursor-pointer">
               <img
@@ -211,7 +209,6 @@ export default function Delivery() {
               <div className="text-sm text-charcoal text-center mb-1">
                 Crispy outside, herb-green inside—late-night vegan hero.
               </div>
-              <div className="text-saffron font-bold">$14.95</div>
             </div>
 
             <div className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-4 w-60 min-w-[220px] hover:scale-105 transition-transform cursor-pointer">
@@ -226,7 +223,6 @@ export default function Delivery() {
               <div className="text-sm text-charcoal text-center mb-1">
                 Flaky pistachio layers, local honey drizzle.
               </div>
-              <div className="text-saffron font-bold">$5.95</div>
             </div>
           </div>
         </div>
@@ -241,7 +237,7 @@ export default function Delivery() {
           <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
             <span className="text-istanbulRed text-3xl mb-2">★ ★ ★ ★ ★</span>
             <p className="text-gray-700 italic mb-2">
-              "Portions large, fast service, and prices are reasonable."
+              Portions large, fast service, and great value.
             </p>
             <span className="font-bold text-primary">— Vikram R.</span>
           </div>

@@ -70,7 +70,7 @@ export default function Chatbot() {
     },
     popular: {
       keywords: ['popular', 'best', 'recommend', 'favorite', 'must try', 'suggestion'],
-      response: 'Our popular items include the Mixed Döner options (Beef&Lamb and Chicken), available as wraps, pitas, bowls, and more! Prices range from $15.95 for wraps to $21.95 for bowls. Don\'t forget to try our famous Baklava for dessert! 🌟'
+      response: 'Our popular items include the Mixed Döner options (Beef&Lamb and Chicken), available as wraps, pitas, bowls, and more! Don\'t forget to try our famous Baklava for dessert! 🌟'
     },
     spicy: {
       keywords: ['spicy', 'hot', 'mild', 'heat level'],
@@ -83,10 +83,6 @@ export default function Chatbot() {
     drinks: {
       keywords: ['drink', 'beverage', 'tea', 'coffee', 'ayran'],
       response: 'We serve a variety of beverages! 🥤 Soft drinks, juices, and traditional options available. No alcohol served - we\'re 100% halal!'
-    },
-    price: {
-      keywords: ['price', 'cost', 'expensive', 'cheap', 'how much', 'budget'],
-      response: 'Our prices are very reasonable! 💵\n• Wraps & Pitas: $15.95-$17.68\n• Rice/Salad/Fries Bowls: $20.95-$21.95\n• Sides: $1.00-$10.00\n• Veggie Bowl: $9.95\n\nMost main dishes range from $15-22. Great value for the Las Vegas Strip!'
     },
     special: {
       keywords: ['special', 'deal', 'discount', 'promotion', 'happy hour'],
@@ -126,7 +122,7 @@ export default function Chatbot() {
     },
     portion: {
       keywords: ['portion', 'size', 'hungry', 'filling', 'enough'],
-      response: 'Our portions are generous! 🍽️ All bowls come with your choice of protein plus rice, salad, or fries. Wraps and pitas are filling meals. Great value for the price!'
+      response: 'Our portions are generous and filling. Great value for the quality and taste you get!'
     },
     fresh: {
       keywords: ['fresh', 'frozen', 'quality', 'ingredients'],

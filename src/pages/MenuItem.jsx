@@ -153,9 +153,12 @@ export default function MenuItem() {
               />
             </div>
             <div className="md:w-1/2 p-6 md:p-8 flex flex-col">
-              <h1 className="text-2xl md:text-3xl font-bold mb-3">{item.name}</h1>
-              <div className="text-istanbulRed font-bold text-3xl mb-4">{item.price}</div>
-              <p className="text-gray-700 mb-6 flex-grow">{itemDesc}</p>
+              <div className="text-center mb-8">
+                <h1 className="text-4xl font-bold text-primary mb-4">{item.name}</h1>
+                {item.description && (
+                  <p className="text-lg text-charcoal max-w-2xl mx-auto">{item.description}</p>
+                )}
+              </div>
               <a
                 href={item.url || `https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=from_istanbullv`}
                 target="_blank"
@@ -270,9 +273,10 @@ export default function MenuItem() {
           {relatedItems.map((rel) => (
             <Link key={rel.slug} to={`/menu/${rel.slug}`} className="block group bg-white rounded-xl shadow-md hover:shadow-lg transition p-4 text-center">
               <img src={rel.img || rel.image || '/default-cover.jpg'} alt={rel.name} className="w-full h-40 object-cover rounded mb-4 transition-transform group-hover:scale-105" />
-              <div className="text-lg font-semibold mb-1 group-hover:text-primary">{rel.name}</div>
-              <div className="text-istanbulRed font-bold text-md mb-2">${rel.price}</div>
-              <div className="text-sm text-gray-600 line-clamp-2">{rel.desc || rel.description}</div>
+              <div className="text-center">
+                <h3 className="font-semibold text-lg mb-2">{rel.name}</h3>
+                <p className="text-gray-600 text-sm mb-3">{rel.description}</p>
+              </div>
             </Link>
           ))}
         </div>

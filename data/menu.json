@@ -2,21 +2,18 @@
   {
     "slug": "beef-n-lamb-doner-shawarma-turkish-pita",
     "name": "Beef & Lamb Döner (Shawarma) Turkish Pita",
-    "price": "$16.68",
     "description": "Classic Turkish pita filled with beef and lamb döner shawarma, fresh veggies, and house sauce.",
-    "image": "/menu/Turkish Pita/Beef&Lamb-Döner (Shawarma-Turkish-Pita.png"
+    "image": "/menu/Turkish Pita/Beef&Lamb-Döner (Shawarma-Turkish-Pita.png"
   },
   {
     "slug": "chicken-doner-shawarma-turkish-pita",
     "name": "Chicken Döner (Shawarma) Turkish Pita",
-    "price": "$16.68",
     "description": "Turkish pita with chicken döner shawarma, crisp vegetables, and signature sauce.",
-    "image": "/menu/Turkish Pita/Chicken-Döner (Shawarma)-Turkish-Pita.png"
+    "image": "/menu/Turkish Pita/Chicken-Döner (Shawarma)-Turkish-Pita.png"
   },
   {
     "slug": "falafel-turkish-pita",
     "name": "Falafel Turkish Pita",
-    "price": "$16.68",
     "description": "Vegetarian pita with house-made falafel, fresh greens, and tahini.",
     "image": "/menu/Turkish Pita/Falafel-Turkish-Pita.png"
   }

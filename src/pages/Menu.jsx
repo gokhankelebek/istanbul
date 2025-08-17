@@ -133,11 +133,11 @@ export default function Menu() {
               {groupedMenu[cat].map(item => (
                 <MenuCard
                   key={item.slug}
-                  slug={item.slug === 'falafel-lavash-wrap' || item.slug === 'falafel-pita' || item.slug === 'falafel-rice-bowl' || item.slug === 'falafel-salad-bowl' || item.slug === 'falafel-side-(4-pieces)' || item.slug === 'falafel-turkish-pita' ? 'what-is-falafel-what-is-it-made-from-which-cuisine' : item.slug}
+                  slug={item.slug}
                   img={item.img}
                   name={item.name}
-                  price={item.price}
-                  desc={item.desc}
+                  desc={item.description}
+                  categories={item.categories}
                   url={item.url}
                 />
               ))}
