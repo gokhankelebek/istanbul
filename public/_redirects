@@ -1,12 +1,7 @@
 # Redirects for SEO and legacy URLs
 /near-me/halal-food    /halal    301
-/mediterranean-cuisine    /mediterranean-food-las-vegas    301
-/experience    /experience    301
-/blog-posts/what-is-falafel    /what-is-falafel    301
-/blog-posts/shawarma-vs-doner-kebab    /shawarma-vs-doner-kebab    301
-/blog-posts/what-makes-real-baklava    /what-makes-real-baklava    301
-/faq/what-is-halal    /faq/what-is-halal    301
-/istanbul-grill    /istanbul-grill    301
-/menu    /menu    301
-/contact    /contact    301
+/mediterranean-cuisine    /mediterranean-restaurant    301
+/blog-posts/what-is-falafel    /blog-posts/what-is-falafel-what-is-it-made-from-which-cuisine    301
+/blog-posts/shawarma-vs-doner-kebab    /blog-posts/shawarma-vs-doner-kebab    301
+/blog-posts/what-makes-real-baklava    /blog-posts/what-makes-real-baklava-a-guide-to-its-essential-components    301
 /about    /experience    301
