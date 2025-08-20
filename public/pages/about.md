@@ -14,6 +14,7 @@ Founded with a passion for bringing the rich flavors of the Mediterranean to Las
 ## Our Mission
 
 We are committed to:
+
 - Serving 100% halal, fresh, and authentic Mediterranean cuisine
 - Providing exceptional customer service in a family-friendly environment
 - Supporting our local Las Vegas community
@@ -22,15 +23,19 @@ We are committed to:
 ## What Makes Us Special
 
 ### Authentic Recipes
+
 Our dishes are prepared using traditional recipes passed down through generations, ensuring an authentic taste of the Mediterranean.
 
 ### Fresh Ingredients
+
 We use only the freshest ingredients, sourced locally when possible, to create our delicious meals.
 
 ### Halal Certified
+
 All our meat is 100% halal certified, meeting the highest religious and quality standards.
 
 ### Family Atmosphere
+
 Our restaurant provides a warm, welcoming environment perfect for families, friends, and business meetings.
 
 ## Our Commitment to Quality
