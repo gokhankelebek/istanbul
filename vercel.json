@@ -1,11 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/menu-items/:slug",
-      "destination": "/menu/:slug",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]

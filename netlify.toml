@@ -5,11 +5,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
-[[redirects]]
-  from = "/blog-posts/*"
-  to = "/blog-posts/:splat/index.html"
-  status = 200
-
+# SPA fallback - only catch unmatched routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
