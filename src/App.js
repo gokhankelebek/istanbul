@@ -32,10 +32,11 @@ const FAQSlug = React.lazy(() => import('./pages/FAQ/[slug]'));
 const Delivery = React.lazy(() => import('./pages/Delivery'));
 const TurkishFood = React.lazy(() => import('./pages/TurkishFood'));
 const ShawarmaPage = React.lazy(() => import('./pages/Shawarma'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 const BestMediterraneanFoodNearCaesarsPalace = React.lazy(() => import('./pages/best-mediterranean-food-near-caesars-palace-las-vegas'));
 const WhereToEatNearTheSphere = React.lazy(() => import('./pages/where-to-eat-near-the-sphere-las-vegas'));
 const BlogEditor = React.lazy(() => import('./pages/BlogEditor'));
-const Careers = React.lazy(() => import('./pages/Careers'));
 import "./index.css";
 import { getMenuItemOrderUrl } from './utils/config';
 
@@ -264,6 +265,10 @@ export default function App() {
         <Route path="/es/entrega" element={<Delivery />} />
         <Route path="/es/shawarma" element={<ShawarmaPage />} />
         <Route path="/es/comida-turca" element={<TurkishFood />} />
+        
+        {/* 404 and catch-all routes */}
+        <Route path="/not-found" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       {/* Footer */}
