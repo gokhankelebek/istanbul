@@ -215,7 +215,14 @@ export default function Home() {
         <div className="flex overflow-x-auto gap-6 px-2 pb-4 scrollbar-hide">
           {highlights.map(i => (
             <div key={i.slug} className="min-w-[250px] max-w-xs bg-white rounded-2xl shadow-lg border border-saffron/20 flex-shrink-0 hover:scale-105 transition-transform duration-200">
-              <MenuCard {...i} />
+              <MenuCard 
+                slug={i.slug}
+                img={i.image}
+                name={i.name}
+                desc={i.description}
+                categories={i.categories}
+                url={i.url}
+              />
             </div>
           ))}
         </div>

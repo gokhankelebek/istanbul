@@ -30,6 +30,9 @@ export default function MenuCard({ slug, img, name, desc, categories, url }) {
             style={{
               transform: isHovered ? 'scale(1.1)' : 'scale(1)',
             }}
+            onError={(e) => {
+              e.target.src = '/menu/placeholder.jpg';
+            }}
           />
         </div>
         
