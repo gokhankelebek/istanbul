@@ -214,7 +214,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-4 text-primary text-center">{t('home.featuredDishes')}</h2>
         <div className="flex overflow-x-auto gap-6 px-2 pb-4 scrollbar-hide">
           {highlights.map(i => (
-            <div key={i.slug} className="min-w-[250px] max-w-xs bg-white rounded-2xl shadow-lg border border-saffron/20 flex-shrink-0 hover:scale-105 transition-transform duration-200">
+            <div key={i.slug} className="min-w-[280px] max-w-[320px] flex-shrink-0">
               <MenuCard 
                 slug={i.slug}
                 img={i.image}

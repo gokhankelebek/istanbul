@@ -17,7 +17,7 @@ export default function MenuCard({ slug, img, name, desc, categories, url }) {
   return (
     <Link to={`/menu/${slug}`} className="block">
       <motion.div
-        className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105"
+        className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col h-full"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         whileHover={{ y: -5 }}
@@ -36,11 +36,11 @@ export default function MenuCard({ slug, img, name, desc, categories, url }) {
           />
         </div>
         
-        <div className="p-4">
-          <h3 className="text-xl font-bold text-charcoal mb-2 line-clamp-2">{name}</h3>
+        <div className="p-4 flex flex-col h-full">
+          <h3 className="text-lg font-bold text-charcoal mb-2 line-clamp-2">{name}</h3>
           
           {desc && (
-            <p className="text-gray-600 text-sm mb-3 line-clamp-2 leading-relaxed">{desc}</p>
+            <p className="text-gray-600 text-sm mb-3 line-clamp-3 leading-relaxed flex-grow">{desc}</p>
           )}
           
           {categories && (
@@ -56,7 +56,7 @@ export default function MenuCard({ slug, img, name, desc, categories, url }) {
             </div>
           )}
           
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mt-auto">
             <span className="text-istanbulRed font-semibold text-base hover:text-primary transition-colors">View Details</span>
             <motion.div
               className="text-istanbulRed text-xl"
