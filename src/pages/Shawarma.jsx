@@ -60,7 +60,7 @@ export default function ShawarmaPage() {
                 "name": "How can I make shawarma at home?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Marinate thinly sliced meat in spices, lemon, and oil. Grill, bake, or use a rotisserie until cooked, then slice thinly. Serve wrapped in flatbread with tahini, yogurt sauce, and fresh vegetables."
+                  "text": "Marinate thinly sliced meat in spices, lemon, and oil. Roast, bake, or use a rotisserie until cooked, then slice thinly. Serve wrapped in flatbread with tahini, yogurt sauce, and fresh vegetables."
                 }
               },
               {
@@ -380,7 +380,7 @@ export default function ShawarmaPage() {
           <details className="p-4 border rounded-lg">
             <summary className="font-semibold cursor-pointer">How do I make shawarma at home?</summary>
             <p className="mt-2">
-              Marinate sliced meat in Middle Eastern spices and roast or grill. Serve thinly sliced meat in pita with toppings.
+              Marinate sliced meat in Middle Eastern spices and roast or bake. Serve thinly sliced meat in pita with toppings.
             </p>
           </details>
 

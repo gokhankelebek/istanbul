@@ -6,7 +6,7 @@ export default function HalalWhatDoesItMean() {
     <>
       <Helmet>
         <title>Halal: What Does it Mean? | Istanbul Mediterranean Restaurant Las Vegas</title>
-        <meta name="description" content="Understand what halal means in the context of food and lifestyle. Istanbul Mediterranean Grill in Las Vegas offers halal-certified Mediterranean cuisine." />
+        <meta name="description" content="Understand what halal means in the context of food and lifestyle. Istanbul Mediterranean in Las Vegas offers halal-certified Mediterranean cuisine." />
         <link rel="canonical" href="https://www.istanbullv.com/blog-posts/halal-what-does-it-mean" />
       </Helmet>
       <div className="bg-offwhite min-h-screen py-16 px-4">

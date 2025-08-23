@@ -7,7 +7,7 @@ export default function FaqWhatIsHalal() {
     <>
       <Helmet>
         <title>What is Halal? | Istanbul Mediterranean Halal Restaurant Las Vegas FAQ</title>
-        <meta name="description" content="Learn what halal means and why Istanbul Mediterranean Grill is the top halal-certified Mediterranean restaurant in Las Vegas. See our halal meat certificate and commitment to authentic Turkish cuisine." />
+        <meta name="description" content="Learn what halal means and why Istanbul Mediterranean is the top halal-certified Mediterranean restaurant in Las Vegas. See our halal meat certificate and commitment to authentic Turkish cuisine." />
         <link rel="canonical" href="https://www.istanbullv.com/faq/what-is-halal" />
         {/* FAQPage Schema for SEO */}
         <script type="application/ld+json">{`
@@ -25,7 +25,7 @@ export default function FaqWhatIsHalal() {
               },
               {
                 "@type": "Question",
-                "name": "Is Istanbul Mediterranean Grill halal certified?",
+                "name": "Is Istanbul Mediterranean halal certified?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Yes, we serve 100% halal-certified meats and proudly display our halal meat certificate at our restaurant in Las Vegas."
@@ -33,7 +33,7 @@ export default function FaqWhatIsHalal() {
               },
               {
                 "@type": "Question",
-                "name": "Where is Istanbul Mediterranean Grill located?",
+                "name": "Where is Istanbul Mediterranean located?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "3615 S Las Vegas Blvd #101, Las Vegas, NV 89109. Open daily 10am-5am."

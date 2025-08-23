@@ -124,12 +124,12 @@ export default function Menu() {
     <>
       <Helmet>
         <title>
-          Menu | Istanbul Mediterranean Grill Las Vegas | Order Halal
+          Menu | Istanbul Mediterranean Las Vegas | Order Halal
           Mediterranean Food
         </title>
         <meta
           name="description"
-          content="Explore the Istanbul Mediterranean Grill menu—Las Vegas’s best halal-certified Mediterranean restaurant. Order online for authentic Turkish food, doner, shawarma, falafel, and more!"
+          content="Explore the Istanbul Mediterranean menu—Las Vegas's best halal-certified Mediterranean restaurant. Order online for authentic Turkish food, doner, shawarma, falafel, and more!"
         />
         <link rel="canonical" href="https://www.istanbullv.com/menu" />
       </Helmet>

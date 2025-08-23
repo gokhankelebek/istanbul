@@ -7,7 +7,7 @@ export default function MediterraneanFoodLasVegas() {
     <>
       <Helmet>
         <title>Best Mediterranean Restaurant Las Vegas | Istanbul Mediterranean Halal</title>
-        <meta name="description" content="Discover Istanbul Mediterranean Grill, the top Mediterranean restaurant in Las Vegas. Enjoy authentic Turkish cuisine, halal-certified meats, and a menu crafted for flavor and tradition. Order online or visit us on the Strip!" />
+        <meta name="description" content="Discover Istanbul Mediterranean, the top Mediterranean restaurant in Las Vegas. Enjoy authentic Turkish cuisine, halal-certified meats, and a menu crafted for flavor and tradition. Order online or visit us on the Strip!" />
         <link rel="canonical" href="https://www.istanbullv.com/mediterranean-food-las-vegas" />
       </Helmet>
     <div className="bg-offwhite min-h-screen py-16 px-4">
