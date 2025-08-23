@@ -1,19 +1,46 @@
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import OptimizedImage from "../components/OptimizedImage";
 
 export default function ShawarmaPage() {
   return (
     <div className="px-6 py-12 max-w-5xl mx-auto space-y-14">
       <Helmet>
-        <title>Shawarma: Authentic Middle Eastern Street Food</title>
+        <title>Best Shawarma in Las Vegas | Authentic Turkish Döner | Istanbul Mediterranean</title>
         <meta
           name="description"
-          content="Discover everything about shawarma: origins, preparation, variations, and health facts. Learn why shawarma is loved worldwide."
+          content="Experience authentic shawarma & döner kebab in Las Vegas at Istanbul Mediterranean. 100% halal, traditional Turkish preparation, fresh ingredients. Order online now!"
         />
+        <meta name="keywords" content="shawarma las vegas, doner kebab, halal food las vegas, turkish food, mediterranean restaurant, authentic shawarma, best shawarma las vegas" />
+        <meta property="og:title" content="Best Shawarma in Las Vegas | Istanbul Mediterranean" />
+        <meta property="og:description" content="Authentic Turkish shawarma & döner kebab in Las Vegas. 100% halal, traditional preparation, fresh daily. Order now!" />
+        <meta property="og:image" content="https://www.istanbullv.com/shawarma-vs-doner.webp" />
+        <meta property="og:url" content="https://www.istanbullv.com/shawarma" />
+        <link rel="canonical" href="https://www.istanbullv.com/shawarma" />
         <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
+          [
+            {
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              "name": "Istanbul Mediterranean",
+              "description": "Authentic Turkish Mediterranean restaurant serving halal shawarma and döner kebab in Las Vegas",
+              "url": "https://www.istanbullv.com",
+              "telephone": "+17028473300",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Las Vegas",
+                "@region": "Nevada",
+                "addressCountry": "US"
+              },
+              "servesCuisine": ["Turkish", "Mediterranean", "Middle Eastern"],
+              "acceptsReservations": true,
+              "hasMenu": "https://www.istanbullv.com/menu",
+              "image": "https://www.istanbullv.com/istanbul-exterior.webp"
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
               {
                 "@type": "Question",
                 "name": "What is shawarma and where does it come from?",
@@ -55,26 +82,79 @@ export default function ShawarmaPage() {
                 }
               }
             ]
-          }
+            }
+          ]
         `}</script>
       </Helmet>
 
-      {/* Page Title */}
-      <header className="text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Shawarma: Authentic Middle Eastern Street Food</h1>
-        <p className="text-lg md:text-xl text-gray-600">
-          Everything you need to know about one of the world's most beloved street foods.
-        </p>
+      {/* Hero Section with Image */}
+      <header className="text-center relative">
+        <div className="mb-8">
+          <OptimizedImage
+            src="/shawarma-vs-doner.webp"
+            alt="Authentic shawarma and döner kebab preparation at Istanbul Mediterranean Restaurant"
+            className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-2xl"
+            priority={true}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40 rounded-2xl flex items-center justify-center">
+            <div className="text-white text-center px-4">
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+                Shawarma: Authentic Middle Eastern Street Food
+              </h1>
+              <p className="text-lg md:text-xl drop-shadow-md">
+                Everything you need to know about one of the world's most beloved street foods.
+              </p>
+            </div>
+          </div>
+        </div>
       </header>
+
+      {/* Order CTA */}
+      <section className="bg-gradient-to-r from-red-600 to-orange-600 text-white p-8 rounded-2xl text-center shadow-2xl">
+        <h2 className="text-3xl font-bold mb-4">🔥 Try Our Authentic Shawarma Today!</h2>
+        <p className="text-xl mb-6">Experience the same traditional flavors described below at Istanbul Mediterranean</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=shawarma_page" 
+            className="bg-white text-red-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🥙 Order Shawarma Now
+          </a>
+          <a 
+            href="/menu" 
+            className="border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-red-600 transition-colors"
+          >
+            View Full Menu
+          </a>
+        </div>
+      </section>
 
       {/* What is Shawarma */}
       <section className="space-y-6">
         <h2 className="text-3xl font-bold">What Is Shawarma?</h2>
-        <p>
-          Shawarma is thinly sliced, spiced meat—lamb, beef, or chicken—cooked slowly on a vertical rotisserie. 
-          The meat self-bastes in its own juices, resulting in tender, flavorful slices served in flatbreads 
-          with tahini, garlic sauce, and pickled vegetables.
-        </p>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <p className="text-lg leading-relaxed">
+              Shawarma is thinly sliced, spiced meat—lamb, beef, or chicken—cooked slowly on a vertical rotisserie. 
+              The meat self-bastes in its own juices, resulting in tender, flavorful slices served in flatbreads 
+              with tahini, garlic sauce, and pickled vegetables.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <OptimizedImage
+              src="/menu/pita-sandwiches/beefandlamb-doner-shawarma-pita.webp"
+              alt="Beef and lamb shawarma pita sandwich"
+              className="w-full h-32 object-cover rounded-lg shadow-md"
+            />
+            <OptimizedImage
+              src="/menu/pita-sandwiches/chicken-doner-shawarma-pita.webp"
+              alt="Chicken shawarma pita sandwich"
+              className="w-full h-32 object-cover rounded-lg shadow-md"
+            />
+          </div>
+        </div>
       </section>
 
       {/* History */}
@@ -97,15 +177,82 @@ export default function ShawarmaPage() {
         </ol>
       </section>
 
-      {/* Variations */}
-      <section className="space-y-6">
-        <h2 className="text-3xl font-bold">Popular Shawarma Variations</h2>
-        <ul className="list-disc list-inside space-y-3">
-          <li><strong>Chicken Shawarma:</strong> Yogurt-lemon marinated for extra tenderness.</li>
-          <li><strong>Beef/Lamb Shawarma:</strong> Traditional with rich spice blends.</li>
-          <li><strong>Turkey Shawarma:</strong> Especially popular in Israel for kosher dining.</li>
-          <li><strong>Veggie Shawarma:</strong> Using grilled vegetables or falafel for plant-based versions.</li>
-        </ul>
+      {/* Interactive Shawarma Varieties */}
+      <section className="space-y-8">
+        <h2 className="text-3xl font-bold text-center">Our Authentic Shawarma Varieties</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Beef & Lamb Shawarma */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <OptimizedImage
+              src="/menu/lavash-wraps/beefandlamb-doner-shawarma-lavash-wrap.webp"
+              alt="Beef and lamb shawarma lavash wrap"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-3">🥩 Beef & Lamb Shawarma</h3>
+              <p className="text-gray-600 mb-4">Traditional blend with rich Middle Eastern spices. The original and most authentic flavor profile.</p>
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-500">Classic • Authentic</span>
+                <a 
+                  href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=shawarma_page#beef_lamb" 
+                  className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Order Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Chicken Shawarma */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <OptimizedImage
+              src="/menu/lavash-wraps/chicken-doner-shawarma-lavash-wrap.webp"
+              alt="Chicken shawarma lavash wrap"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-3">🐔 Chicken Shawarma</h3>
+              <p className="text-gray-600 mb-4">Yogurt-lemon marinated for extra tenderness. Light yet flavorful, perfect for health-conscious diners.</p>
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-500">Light • Healthy</span>
+                <a 
+                  href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=shawarma_page#chicken" 
+                  className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Order Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Mixed Shawarma */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <OptimizedImage
+              src="/menu/turkish-pita/mixed-doner-beefandlamb-and-chicken-shawarma-turkish-pita.webp"
+              alt="Mixed shawarma with beef, lamb, and chicken"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-3">🔥 Mixed Shawarma</h3>
+              <p className="text-gray-600 mb-4">Best of both worlds! Combination of beef, lamb, and chicken for the ultimate flavor experience.</p>
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-500">Popular • Bold</span>
+                <a 
+                  href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=shawarma_page#mixed" 
+                  className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Order Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Global Adaptations */}
@@ -126,14 +273,84 @@ export default function ShawarmaPage() {
         </p>
       </section>
 
-      {/* Health */}
-      <section className="space-y-6">
-        <h2 className="text-3xl font-bold">Is Shawarma Healthy?</h2>
-        <p>
-          Shawarma can be a protein-rich, satisfying meal when paired with fresh vegetables and light sauces.
-          A typical chicken shawarma wrap contains about 230 calories and 32g of protein. Watch portion sizes 
-          and sides for the healthiest experience.
-        </p>
+      {/* Las Vegas Local Section */}
+      <section className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-2xl space-y-6">
+        <h2 className="text-3xl font-bold text-center">🎰 Best Shawarma in Las Vegas</h2>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Why Istanbul Mediterranean?</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2">✓</span>
+                <strong>Authentic Turkish preparation</strong> - Traditional vertical rotisserie method
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2">✓</span>
+                <strong>100% Halal certified</strong> - Meeting the highest dietary standards
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2">✓</span>
+                <strong>Fresh daily preparation</strong> - Never frozen, always made to order
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2">✓</span>
+                <strong>Family recipes</strong> - Passed down through generations
+              </li>
+            </ul>
+          </div>
+          <div className="text-center">
+            <OptimizedImage
+              src="/istanbul-exterior.webp"
+              alt="Istanbul Mediterranean Restaurant exterior in Las Vegas"
+              className="w-full h-48 object-cover rounded-lg shadow-lg mb-4"
+            />
+            <p className="text-gray-600">📍 Located in the heart of Las Vegas</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Health & Nutrition */}
+      <section className="space-y-8">
+        <h2 className="text-3xl font-bold text-center">🥗 Health & Nutrition Benefits</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-green-50 p-6 rounded-xl">
+            <h3 className="text-xl font-semibold mb-4 text-green-800">💪 Nutritional Highlights</h3>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span>Protein (Chicken Shawarma)</span>
+                <span className="font-semibold">32g</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Calories (Wrap)</span>
+                <span className="font-semibold">230-350</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Healthy Fats</span>
+                <span className="font-semibold">Moderate</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Fiber (with veggies)</span>
+                <span className="font-semibold">8-12g</span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-blue-50 p-6 rounded-xl">
+            <h3 className="text-xl font-semibold mb-4 text-blue-800">🌟 Health Benefits</h3>
+            <ul className="space-y-2">
+              <li>• <strong>High protein</strong> supports muscle growth</li>
+              <li>• <strong>Mediterranean spices</strong> have anti-inflammatory properties</li>
+              <li>• <strong>Fresh vegetables</strong> provide essential vitamins</li>
+              <li>• <strong>Tahini sauce</strong> contains healthy fats and calcium</li>
+              <li>• <strong>No processed additives</strong> in traditional preparation</li>
+            </ul>
+          </div>
+        </div>
+        <div className="text-center bg-yellow-50 p-6 rounded-xl">
+          <h4 className="font-semibold text-yellow-800 mb-2">💡 Pro Tip for Healthier Shawarma:</h4>
+          <p className="text-yellow-700">
+            Choose lavash wrap instead of pita, extra vegetables, and request light sauce for a lower-calorie, nutrient-dense meal.
+          </p>
+        </div>
       </section>
 
       {/* FAQ */}
@@ -167,9 +384,68 @@ export default function ShawarmaPage() {
             <summary className="font-semibold cursor-pointer">Is shawarma healthy?</summary>
             <p className="mt-2">
               Yes, especially when made with lean meats, fresh vegetables, and lighter sauces. 
-              It’s a great source of protein with moderate fat.
+              It's a great source of protein with moderate fat and provides essential nutrients.
             </p>
           </details>
+
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold cursor-pointer">What's the difference between shawarma and döner kebab?</summary>
+            <p className="mt-2">
+              While both use the rotating spit method, döner kebab is Turkish with specific spice blends, 
+              while shawarma is Arab/Levantine with different seasonings and sauces. At Istanbul Mediterranean, 
+              we serve authentic Turkish döner kebab using traditional methods.
+            </p>
+          </details>
+
+          <details className="p-4 border rounded-lg">
+            <summary className="font-semibold cursor-pointer">Is your shawarma halal certified?</summary>
+            <p className="mt-2">
+              Yes! All our meats are 100% halal certified, ensuring they meet the highest Islamic dietary standards. 
+              We source from certified suppliers and maintain strict halal preparation methods.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-12 rounded-2xl text-center">
+        <h2 className="text-4xl font-bold mb-4">🥙 Ready to Experience Authentic Shawarma?</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Don't just read about it - taste the difference that authentic Turkish preparation makes. 
+          Order from Istanbul Mediterranean and discover why we're Las Vegas's premier destination for halal Mediterranean cuisine.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <a 
+            href="https://www.orderdoner.com/?utm_source=istanbullv&utm_medium=referral&utm_campaign=shawarma_page_bottom" 
+            className="bg-white text-red-600 px-10 py-4 rounded-full font-bold text-xl hover:bg-gray-100 transition-colors shadow-2xl transform hover:scale-105"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🚀 Order Shawarma Now
+          </a>
+          
+          <div className="flex gap-4">
+            <a 
+              href="/menu" 
+              className="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-red-600 transition-colors"
+            >
+              View Menu
+            </a>
+            <a 
+              href="/contact" 
+              className="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-red-600 transition-colors"
+            >
+              Visit Us
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-white border-opacity-20">
+          <p className="text-lg opacity-90">
+            📞 Call us: <a href="tel:+17028473300" className="underline hover:no-underline">(702) 847-3300</a> |
+            📍 Las Vegas, Nevada
+          </p>
         </div>
       </section>
     </div>
