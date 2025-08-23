@@ -229,6 +229,44 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.istanbullv.com/shawarma</loc>
+    <image:image>
+      <image:loc>https://www.istanbullv.com/shawarma-vs-doner.webp</image:loc>
+      <image:title>Shawarma Vs Doner</image:title>
+      <image:caption>Shawarma Vs Doner - Istanbul Mediterranean Restaurant Las Vegas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.istanbullv.com/menu/pita-sandwiches/beefandlamb-doner-shawarma-pita.webp</image:loc>
+      <image:title>Beefandlamb Doner Shawarma Pita</image:title>
+      <image:caption>Beefandlamb Doner Shawarma Pita - Istanbul Mediterranean Restaurant Las Vegas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.istanbullv.com/menu/pita-sandwiches/chicken-doner-shawarma-pita.webp</image:loc>
+      <image:title>Chicken Doner Shawarma Pita</image:title>
+      <image:caption>Chicken Doner Shawarma Pita - Istanbul Mediterranean Restaurant Las Vegas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.istanbullv.com/menu/lavash-wraps/beefandlamb-doner-shawarma-lavash-wrap.webp</image:loc>
+      <image:title>Beefandlamb Doner Shawarma Lavash Wrap</image:title>
+      <image:caption>Beefandlamb Doner Shawarma Lavash Wrap - Istanbul Mediterranean Restaurant Las Vegas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.istanbullv.com/menu/lavash-wraps/chicken-doner-shawarma-lavash-wrap.webp</image:loc>
+      <image:title>Chicken Doner Shawarma Lavash Wrap</image:title>
+      <image:caption>Chicken Doner Shawarma Lavash Wrap - Istanbul Mediterranean Restaurant Las Vegas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.istanbullv.com/menu/turkish-pita/mixed-doner-beefandlamb-and-chicken-shawarma-turkish-pita.webp</image:loc>
+      <image:title>Mixed Doner Beefandlamb And Chicken Shawarma Turkish Pita</image:title>
+      <image:caption>Mixed Doner Beefandlamb And Chicken Shawarma Turkish Pita - Istanbul Mediterranean Restaurant Las Vegas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.istanbullv.com/istanbul-exterior.webp</image:loc>
+      <image:title>Istanbul Exterior</image:title>
+      <image:caption>Istanbul Exterior - Istanbul Mediterranean Restaurant Las Vegas</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.istanbullv.com/top5halalfoodlasvegas</loc>
     <image:image>
       <image:loc>https://www.istanbullv.com/hero_chef_wide.jpg</image:loc>

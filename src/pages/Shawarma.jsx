@@ -1,6 +1,4 @@
 import { Helmet } from "react-helmet";
-import { useState } from "react";
-import OptimizedImage from "../components/OptimizedImage";
 
 export default function ShawarmaPage() {
   return (
@@ -88,20 +86,20 @@ export default function ShawarmaPage() {
       </Helmet>
 
       {/* Hero Section with Image */}
-      <header className="text-center relative">
-        <div className="mb-8">
-          <OptimizedImage
+      <header className="text-center relative mb-8">
+        <div className="relative">
+          <img
             src="/shawarma-vs-doner.webp"
             alt="Authentic shawarma and döner kebab preparation at Istanbul Mediterranean Restaurant"
             className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-2xl"
-            priority={true}
+            loading="eager"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 rounded-2xl flex items-center justify-center">
             <div className="text-white text-center px-4">
-              <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 drop-shadow-lg">
                 Shawarma: Authentic Middle Eastern Street Food
               </h1>
-              <p className="text-lg md:text-xl drop-shadow-md">
+              <p className="text-lg md:text-xl drop-shadow-md max-w-3xl mx-auto">
                 Everything you need to know about one of the world's most beloved street foods.
               </p>
             </div>
@@ -143,15 +141,17 @@ export default function ShawarmaPage() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <OptimizedImage
+            <img
               src="/menu/pita-sandwiches/beefandlamb-doner-shawarma-pita.webp"
               alt="Beef and lamb shawarma pita sandwich"
               className="w-full h-32 object-cover rounded-lg shadow-md"
+              loading="lazy"
             />
-            <OptimizedImage
+            <img
               src="/menu/pita-sandwiches/chicken-doner-shawarma-pita.webp"
               alt="Chicken shawarma pita sandwich"
               className="w-full h-32 object-cover rounded-lg shadow-md"
+              loading="lazy"
             />
           </div>
         </div>
@@ -183,10 +183,11 @@ export default function ShawarmaPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Beef & Lamb Shawarma */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-            <OptimizedImage
+            <img
               src="/menu/lavash-wraps/beefandlamb-doner-shawarma-lavash-wrap.webp"
               alt="Beef and lamb shawarma lavash wrap"
               className="w-full h-48 object-cover"
+              loading="lazy"
             />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-3">🥩 Beef & Lamb Shawarma</h3>
@@ -207,10 +208,11 @@ export default function ShawarmaPage() {
 
           {/* Chicken Shawarma */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-            <OptimizedImage
+            <img
               src="/menu/lavash-wraps/chicken-doner-shawarma-lavash-wrap.webp"
               alt="Chicken shawarma lavash wrap"
               className="w-full h-48 object-cover"
+              loading="lazy"
             />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-3">🐔 Chicken Shawarma</h3>
@@ -231,10 +233,11 @@ export default function ShawarmaPage() {
 
           {/* Mixed Shawarma */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-            <OptimizedImage
+            <img
               src="/menu/turkish-pita/mixed-doner-beefandlamb-and-chicken-shawarma-turkish-pita.webp"
               alt="Mixed shawarma with beef, lamb, and chicken"
               className="w-full h-48 object-cover"
+              loading="lazy"
             />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-3">🔥 Mixed Shawarma</h3>
@@ -299,10 +302,11 @@ export default function ShawarmaPage() {
             </ul>
           </div>
           <div className="text-center">
-            <OptimizedImage
+            <img
               src="/istanbul-exterior.webp"
               alt="Istanbul Mediterranean Restaurant exterior in Las Vegas"
               className="w-full h-48 object-cover rounded-lg shadow-lg mb-4"
+              loading="lazy"
             />
             <p className="text-gray-600">📍 Located in the heart of Las Vegas</p>
           </div>
