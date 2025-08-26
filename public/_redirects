@@ -1,6 +1,12 @@
 # Redirects for SEO and legacy URLs - Fixed circular redirects
-/near-me/halal-food    /halal    301
+# Canonical domain: force www
+http://istanbullv.com/*    https://www.istanbullv.com/:splat    301
+https://istanbullv.com/*   https://www.istanbullv.com/:splat    301
+
+# Only redirect URLs that don't have direct routes
 /mediterranean-cuisine    /mediterranean-restaurant    301
 /blog-posts/what-is-falafel    /blog-posts/what-is-falafel-what-is-it-made-from-which-cuisine    301
 /blog-posts/what-makes-real-baklava    /blog-posts/what-makes-real-baklava-a-guide-to-its-essential-components    301
-/about    /experience    301
+
+# SPA fallback for React Router - must be last
+/*    /index.html    200

@@ -89,6 +89,11 @@ const STATIC_ROUTES = [
     changefreq: CHANGE_FREQ.other,
   },
   {
+    path: "best-shawarma-wraps-on-las-vegas-strip",
+    priority: PRIORITIES.blogPosts,
+    changefreq: CHANGE_FREQ.blogPosts,
+  },
+  {
     path: "turkish-food",
     priority: PRIORITIES.other,
     changefreq: CHANGE_FREQ.other,

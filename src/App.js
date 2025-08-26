@@ -35,6 +35,10 @@ const Delivery = React.lazy(() => import("./pages/Delivery"));
 const TurkishFood = React.lazy(() => import("./pages/TurkishFood"));
 const ShawarmaPage = React.lazy(() => import("./pages/Shawarma"));
 const Careers = React.lazy(() => import("./pages/Careers"));
+const About = React.lazy(() => import("./pages/About"));
+const BestShawarmaWrapsLasVegasStrip = React.lazy(() =>
+  import("./pages/BestShawarmaWrapsLasVegasStrip")
+);
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 const BestMediterraneanFoodNearCaesarsPalace = React.lazy(() =>
   import("./pages/best-mediterranean-food-near-caesars-palace-las-vegas")
@@ -394,8 +398,11 @@ export default function App() {
           <Route path="/halal" element={<Halal />} />
           <Route path="/faq" element={<FAQIndex />} />
           <Route path="/faq/:slug" element={<FAQSlug />} />
-          <Route path="/about" element={<MarkdownPage />} />
-          <Route path="/catering" element={<MarkdownPage />} />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/catering"
+            element={<MarkdownPage fixedSlug="catering" />}
+          />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
@@ -406,6 +413,10 @@ export default function App() {
           <Route path="/near-me/halal-food" element={<NearMeHalalFood />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/shawarma" element={<ShawarmaPage />} />
+          <Route
+            path="/best-shawarma-wraps-on-las-vegas-strip"
+            element={<BestShawarmaWrapsLasVegasStrip />}
+          />
           <Route path="/turkish-food" element={<TurkishFood />} />
 
           {/* Root-level blog post pages */}

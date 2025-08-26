@@ -36,6 +36,7 @@
   "scripts": {
     "sync:blog": "node scripts/sync_blog_to_public.js",
     "validate:blog": "node scripts/validate-blog-integrity.js",
+    "dev": "npm run sync:blog && react-scripts start",
     "start": "npm run sync:blog && react-scripts start",
     "build": "npm run validate:blog && npm run sync:blog && npm run build:posts && npm run build:static && npm run build:sitemap && npm run optimize:images && npm run optimize:performance && react-scripts build",
     "build:safe": "npm run validate:blog && npm run sync:blog && npm run build:posts && npm run build:static && npm run build:sitemap && npm run optimize:images && npm run optimize:performance && react-scripts build",
@@ -47,6 +48,7 @@
     "optimize:performance": "node scripts/optimize-performance.js",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "seo:report": "node scripts/generate-seo-report.js",
+    "seo:ping": "node scripts/ping-search-engines.js",
     "seo:audit": "node scripts/audit-image-seo.js",
     "seo:optimize": "node scripts/optimize-core-web-vitals.js",
     "create:post": "node scripts/create-blog-post.js"

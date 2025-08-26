@@ -10,3 +10,17 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Security and indexing headers
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    X-Robots-Tag = "all"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
