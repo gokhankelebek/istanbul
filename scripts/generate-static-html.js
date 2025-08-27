@@ -213,46 +213,46 @@ function generateHTML(route) {
     }
     </script>
     
-    <!-- Bot detection and content injection -->
-    <script>
-        // Detect if visitor is a bot
-        const userAgent = navigator.userAgent.toLowerCase();
-        const isCrawler = /bot|crawler|spider|crawling/i.test(userAgent);
+    <!-- Load React scripts for all users -->
+    <script defer src="/static/js/main.4d74bec8.js"></script>
+    <link href="/static/css/main.e1e1553e.css" rel="stylesheet">
+    
+    <!-- Fallback content visibility control -->
+    <style>
+        .seo-fallback {
+            display: none;
+        }
         
-        if (isCrawler) {
-            // Inject content for crawlers
-            document.addEventListener('DOMContentLoaded', function() {
-                const root = document.getElementById('root');
-                if (root && !root.innerHTML.trim()) {
-                    root.innerHTML = \`
-                        <main>
-                            <h1>${title.replace(/'/g, "\\'")}</h1>
-                            <p>${description.replace(/'/g, "\\'")}</p>
-                            <nav>
-                                <a href="/">Home</a>
-                                <a href="/menu">Menu</a>
-                                <a href="/blog-posts">Blog</a>
-                                <a href="/contact">Contact</a>
-                            </nav>
-                            <section>
-                                <h2>Istanbul Mediterranean Restaurant</h2>
-                                <p>Authentic Turkish doner and Mediterranean cuisine in Las Vegas. Fresh, halal-certified ingredients prepared with traditional family recipes.</p>
-                                <address>
-                                    3615 S Las Vegas Blvd #101<br>
-                                    Las Vegas, NV 89109<br>
-                                    Phone: (702) 847-3300
-                                </address>
-                            </section>
-                        </main>
-                    \`;
-                }
-            });
+        /* Show fallback only for known bots or if JS fails to load */
+        .no-js .seo-fallback {
+            display: block;
+        }
+    </style>
+    
+    <!-- Bot detection script -->
+    <script>
+        // Remove no-js class immediately for regular browsers
+        document.documentElement.className = document.documentElement.className.replace('no-js', '');
+        
+        // Detect bots and show appropriate content
+        const userAgent = navigator.userAgent.toLowerCase();
+        const knownBots = ['googlebot', 'bingbot', 'yandexbot', 'duckduckbot', 'slurp', 'baiduspider', 
+                          'facebookexternalhit', 'twitterbot', 'linkedinbot', 'embedly', 'whatsapp'];
+        const isBot = knownBots.some(bot => userAgent.includes(bot));
+        
+        if (isBot) {
+            document.documentElement.classList.add('bot-user');
+            const style = document.createElement('style');
+            style.textContent = '.seo-fallback { display: block !important; } #root { display: none; }';
+            document.head.appendChild(style);
         }
     </script>
 </head>
-<body>
-    <div id="root">
-        <!-- SEO-friendly content for crawlers -->
+<body class="no-js">
+    <div id="root"></div>
+    
+    <!-- SEO fallback content for crawlers and no-JS users -->
+    <div class="seo-fallback">
         <main style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
             <header>
                 <h1>${title}</h1>
@@ -310,38 +310,6 @@ function generateHTML(route) {
             </footer>
         </main>
     </div>
-    
-    <!-- React App (loads for regular users, ignored by crawlers) -->
-    <script>
-        // Only load React app for non-bot users
-        const userAgent = navigator.userAgent.toLowerCase();
-        const isCrawler = /bot|crawler|spider|crawling/i.test(userAgent);
-        
-        if (!isCrawler) {
-            // Clear static content and load React app
-            document.addEventListener('DOMContentLoaded', function() {
-                const root = document.getElementById('root');
-                if (root) {
-                    root.innerHTML = '';
-                }
-            });
-        }
-    </script>
-    
-    <!-- Load React scripts only for non-bots -->
-    <script>
-        if (!/bot|crawler|spider|crawling/i.test(navigator.userAgent.toLowerCase())) {
-            const script1 = document.createElement('script');
-            script1.src = '/static/js/main.229f018a.js';
-            script1.defer = true;
-            document.head.appendChild(script1);
-            
-            const link1 = document.createElement('link');
-            link1.href = '/static/css/main.306c485a.css';
-            link1.rel = 'stylesheet';
-            document.head.appendChild(link1);
-        }
-    </script>
 </body>
 </html>`;
 }
