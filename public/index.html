@@ -26,64 +26,6 @@
       rel="stylesheet"
     />
     
-    <!-- Bot detection and SEO fallback styles -->
-    <style>
-      .seo-fallback {
-        display: none;
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-      }
-      
-      .no-js .seo-fallback {
-        display: block;
-      }
-      
-      .bot-user .seo-fallback {
-        display: block !important;
-      }
-      
-      .bot-user #root {
-        display: none !important;
-      }
-      
-      .seo-fallback h1 {
-        color: #d4654a;
-        font-size: 2.5em;
-        margin-bottom: 0.5em;
-      }
-      
-      .seo-fallback h2 {
-        color: #d4654a;
-        font-size: 2em;
-        margin: 1.5em 0 0.5em 0;
-      }
-      
-      .seo-fallback h3 {
-        color: #d4654a;
-        font-size: 1.5em;
-        margin: 1.2em 0 0.5em 0;
-      }
-      
-      .seo-fallback a {
-        color: #d4654a;
-        text-decoration: none;
-      }
-      
-      .seo-fallback a:hover {
-        text-decoration: underline;
-      }
-      
-      .seo-fallback ul {
-        margin: 1em 0;
-        padding-left: 2em;
-      }
-      
-      .seo-fallback li {
-        margin: 0.5em 0;
-      }
-    </style>
-    
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -96,26 +38,6 @@
       }
       gtag("js", new Date());
       gtag("config", "G-FFY0FW17ZM");
-    </script>
-    
-    <!-- Bot detection script -->
-    <script>
-      // Remove no-js class immediately for regular browsers
-      document.documentElement.className = document.documentElement.className.replace('no-js', '');
-      
-      // Detect bots and show appropriate content
-      const userAgent = navigator.userAgent.toLowerCase();
-      const knownBots = ['googlebot', 'bingbot', 'yandexbot', 'duckduckbot', 'slurp', 'baiduspider', 
-                        'facebookexternalhit', 'twitterbot', 'linkedinbot', 'embedly', 'whatsapp',
-                        'rogerbot', 'applebot', 'flipboard', 'tumblr', 'discordbot', 'telegrambot'];
-      const isBot = knownBots.some(bot => userAgent.includes(bot));
-      
-      if (isBot) {
-        document.documentElement.classList.add('bot-user');
-        const style = document.createElement('style');
-        style.textContent = '.seo-fallback { display: block !important; } #root { display: none !important; }';
-        document.head.appendChild(style);
-      }
     </script>
     
     <script type="application/ld+json">
@@ -150,67 +72,7 @@
       }
     </script>
   </head>
-  <body class="no-js">
+  <body>
     <div id="root"></div>
-    
-    <!-- SEO fallback content for crawlers and no-JS users -->
-    <div class="seo-fallback">
-      <main style="max-width: 1200px; margin: 0 auto; padding: 20px;">
-        <header>
-          <h1>Best Doner in Vegas | Istanbul Mediterranean</h1>
-          <p>Authentic Turkish doner wraps, plates, and more. Family recipe, Istanbul roots—crafted fresh in Las Vegas. Order online or visit us!</p>
-        </header>
-        
-        <nav style="margin: 20px 0;">
-          <a href="/" style="margin-right: 20px;">Home</a>
-          <a href="/menu" style="margin-right: 20px;">Menu</a>
-          <a href="/blog-posts" style="margin-right: 20px;">Blog</a>
-          <a href="/about" style="margin-right: 20px;">About</a>
-          <a href="/contact" style="margin-right: 20px;">Contact</a>
-        </nav>
-        
-        <section style="margin: 30px 0;">
-          <h2>Istanbul Mediterranean Restaurant - Las Vegas</h2>
-          <p>Experience authentic Turkish and Mediterranean cuisine at Istanbul Mediterranean, located in the heart of Las Vegas. Our family-owned restaurant serves traditional doner kebab, fresh wraps, bowls, and classic Middle Eastern dishes prepared with halal-certified ingredients.</p>
-          
-          <h3>Our Specialties:</h3>
-          <ul>
-            <li>Authentic Turkish Doner (Shawarma)</li>
-            <li>Fresh Mediterranean Wraps</li>
-            <li>Traditional Rice and Fries Bowls</li>
-            <li>Homemade Falafel</li>
-            <li>Turkish Baklava</li>
-            <li>Fresh Salads and Sides</li>
-          </ul>
-          
-          <h3>Why Choose Istanbul Mediterranean?</h3>
-          <ul>
-            <li>100% Halal Certified</li>
-            <li>Family Recipes from Istanbul</li>
-            <li>Fresh Ingredients Daily</li>
-            <li>Open Late Night</li>
-            <li>Dine-in, Takeout & Delivery</li>
-          </ul>
-        </section>
-        
-        <section style="margin: 30px 0;">
-          <h3>Location & Hours</h3>
-          <address style="font-style: normal;">
-            <strong>Istanbul Mediterranean</strong><br>
-            3615 S Las Vegas Blvd #101<br>
-            Las Vegas, Nevada 89109<br>
-            Phone: <a href="tel:+17028473300">(702) 847-3300</a><br>
-            Hours: Monday-Sunday 10:00 AM - 5:00 AM
-          </address>
-        </section>
-        
-        <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
-          <p>Follow us on social media:</p>
-          <a href="https://www.instagram.com/istanbulmedlv" style="margin-right: 15px;">Instagram</a>
-          <a href="https://www.facebook.com/istanbulmedlv" style="margin-right: 15px;">Facebook</a>
-          <a href="https://www.yelp.com/biz/istanbul-mediterranean-las-vegas">Yelp</a>
-        </footer>
-      </main>
-    </div>
   </body>
 </html>
