@@ -38,6 +38,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link to="/experience" className="hover:text-saffron">Our Experience</Link></li>
             <li><Link to="/about" className="hover:text-saffron">About Us</Link></li>
+            <li><Link to="/careers" className="hover:text-saffron">Careers</Link></li>
             <li><Link to="/faq" className="hover:text-saffron">FAQ</Link></li>
             <li><Link to="/blog-posts" className="hover:text-saffron">Blog</Link></li>
           </ul>

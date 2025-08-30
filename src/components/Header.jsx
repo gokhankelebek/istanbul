@@ -40,7 +40,7 @@ export default function Header() {
             to="/menu"
             className="relative px-2 py-1 font-medium text-white transition-colors duration-200 hover:text-istanbulRed-light after:block after:h-0.5 after:bg-offwhite after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
           >
-            {t("common.menu")}
+            Menu
           </Link>
           <Link
             to="/about"
@@ -110,7 +110,7 @@ export default function Header() {
             className="font-medium text-lg text-white hover:text-istanbulRed-light"
             onClick={() => setMenuOpen(false)}
           >
-            {t("common.menu")}
+            Menu
           </Link>
           <Link
             to="/about"
