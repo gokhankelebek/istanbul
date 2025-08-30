@@ -202,7 +202,27 @@ function generateHTML(route) {
         "priceRange": "$$",
         "acceptsReservations": false,
         "hasMenu": "https://www.istanbullv.com/menu",
-        "openingHours": ["Mo-Su 10:00-05:00"],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday", 
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "10:00",
+            "closes": "05:00"
+          }
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.0944,
+          "longitude": -115.1745
+        },
         "paymentAccepted": "Cash, Credit Card, Debit Card",
         "currenciesAccepted": "USD",
         "sameAs": [
