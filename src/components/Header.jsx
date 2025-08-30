@@ -15,21 +15,21 @@ export default function Header() {
   const t = useTranslation();
   return (
     <header className="sticky top-0 z-50 w-full bg-istanbulRed/90 backdrop-blur shadow-lg rounded-b-xl">
-      <nav className="flex items-center justify-between px-4 lg:px-6 py-3 max-w-7xl mx-auto">
+      <nav className="flex items-center px-4 lg:px-6 py-3 max-w-7xl mx-auto">
         {/* Logo and Brand */}
-        <div className="flex items-center space-x-3 lg:space-x-4 min-w-0">
+        <div className="flex items-center space-x-3 lg:space-x-4 flex-shrink-0">
           <img
             src="/logo.png"
             alt="Istanbul Mediterranean Logo"
             className="h-10 lg:h-12 w-auto drop-shadow flex-shrink-0"
           />
-          <span className="font-poppins text-lg lg:text-2xl font-bold tracking-wide text-white truncate">
+          <span className="font-poppins text-lg lg:text-2xl font-bold tracking-wide text-white whitespace-nowrap flex-shrink-0">
             Istanbul Mediterranean
           </span>
         </div>
         
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+        <div className="hidden lg:flex items-center space-x-4 xl:space-x-6 flex-shrink-0 ml-auto">
           <Link
             to="/"
             className="relative px-2 py-1 font-medium text-white transition-colors duration-200 hover:text-istanbulRed-light after:block after:h-0.5 after:bg-offwhite after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:origin-left"
