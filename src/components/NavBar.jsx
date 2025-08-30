@@ -12,7 +12,6 @@ const navLinks = [
   { name: "common.blog", path: "/blog-posts", key: "blog" },
   { name: "nav.delivery", path: "/delivery", key: "delivery" },
   { name: "common.contact", path: "/contact", key: "contact" },
-  { name: "nav.careers", path: "/careers", key: "careers" },
 ];
 
 export default function NavBar({ children }) {
