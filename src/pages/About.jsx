@@ -217,7 +217,7 @@ export default function About() {
           />
           <div className="flex-1 text-lg text-charcoal">
             <p className="mb-4">
-              Chef Ahmet brings decades of culinary experience from Istanbul's
+              Chef Adem brings decades of culinary experience from Istanbul's
               vibrant food scene to Las Vegas. His passion for Turkish cuisine
               and commitment to quality shine through in every dish.
             </p>
@@ -236,7 +236,7 @@ export default function About() {
                   display: "inline-block",
                 }}
               >
-                Chef Ahmet
+                Chef Adem
               </span>
             </div>
           </div>
