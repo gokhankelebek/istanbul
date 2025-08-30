@@ -19,7 +19,7 @@ const routes = [
     path: "/",
     title: "Istanbul Mediterranean | Best Turkish Food Las Vegas",
     description:
-      "Authentic Turkish doner kebab, shawarma & halal food on the Las Vegas Strip. Family recipes, open until 5 AM.",
+      "Authentic Turkish doner kebab, shawarma & halal food on the Las Vegas Strip. Family recipes, open until 5 AM. Order online or visit us!",
   },
   {
     path: "/menu",

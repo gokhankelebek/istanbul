@@ -359,7 +359,7 @@ export default function App() {
         {/* End Google Tag Manager */}
         <meta
           name="description"
-          content="Authentic Turkish doner wraps, plates, and more. Family recipe, Istanbul roots—crafted fresh in Las Vegas."
+          content="Authentic Turkish doner kebab, shawarma & halal food on the Las Vegas Strip. Family recipes, open until 5 AM. Order online or visit us!"
         />
         <link rel="icon" href="/favicon-32x32.png" />
         <link rel="canonical" href="https://www.istanbullv.com/" />
