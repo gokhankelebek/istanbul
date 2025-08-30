@@ -190,8 +190,8 @@ export default function Home() {
 
       <ResourceHints />
       <SEOHead 
-        title="Istanbul Mediterranean | Best Turkish Food & Halal Restaurant Las Vegas Strip"
-        description="Authentic Turkish food & halal restaurant on the Las Vegas Strip. Serving fresh döner kebab, shawarma & baklava until 5 AM. #1 rated on TripAdvisor. Order online!"
+        title="Istanbul Mediterranean | Best Turkish Food Las Vegas"
+        description="Authentic Turkish doner kebab, shawarma & halal food on the Las Vegas Strip. Family recipes, open until 5 AM."
         keywords="turkish food las vegas, halal restaurant las vegas strip, doner kebab, shawarma, baklava, mediterranean food, late night food las vegas"
         canonicalUrl="https://www.istanbullv.com/"
         ogType="website"

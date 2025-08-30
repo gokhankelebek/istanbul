@@ -17,9 +17,9 @@ const ReactDOMServer = require("react-dom/server");
 const routes = [
   {
     path: "/",
-    title: "Best Doner in Vegas | Istanbul Mediterranean",
+    title: "Istanbul Mediterranean | Best Turkish Food Las Vegas",
     description:
-      "Authentic Turkish doner wraps, plates, and more. Family recipe, Istanbul roots—crafted fresh in Las Vegas. Order online or visit us!",
+      "Authentic Turkish doner kebab, shawarma & halal food on the Las Vegas Strip. Family recipes, open until 5 AM.",
   },
   {
     path: "/menu",

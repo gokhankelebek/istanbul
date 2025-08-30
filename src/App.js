@@ -347,7 +347,7 @@ export default function App() {
       </noscript>
       {/* End Google Tag Manager (noscript) */}
       <Helmet>
-        <title>Best Doner in Vegas | Istanbul Mediterranean Halal</title>
+        <title>Istanbul Mediterranean | Best Turkish Food Las Vegas</title>
         {/* Google Tag Manager */}
         <script>
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
