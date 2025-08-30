@@ -9,7 +9,6 @@
     "chalk": "^5.4.1",
     "csv-parse": "^5.6.0",
     "dompurify": "^3.2.6",
-    "framer-motion": "^11.0.0",
     "gray-matter": "^4.0.3",
     "marked": "^15.0.8",
     "prop-types": "^15.8.1",
@@ -20,7 +19,6 @@
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.5.1",
     "react-scripts": "^5.0.1",
-    "react-syntax-highlighter": "^15.6.1",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "slugify": "^1.6.6",
@@ -52,7 +50,9 @@
     "seo:ping": "node scripts/ping-search-engines.js",
     "seo:audit": "node scripts/audit-image-seo.js",
     "seo:optimize": "node scripts/optimize-core-web-vitals.js",
-    "create:post": "node scripts/create-blog-post.js"
+    "seo:monitor": "node scripts/seo-indexing-monitor.js",
+    "create:post": "node scripts/create-blog-post.js",
+    "audit:performance": "node scripts/performance-audit.js"
   },
   "browserslist": {
     "production": [

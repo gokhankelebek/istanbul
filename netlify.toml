@@ -5,6 +5,25 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Domain canonicalization - redirect bare domain to www
+[[redirects]]
+  from = "https://istanbullv.com/*"
+  to = "https://www.istanbullv.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://istanbullv.com/*"
+  to = "https://www.istanbullv.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.istanbullv.com/*"
+  to = "https://www.istanbullv.com/:splat"
+  status = 301
+  force = true
+
 # SPA fallback - only catch unmatched routes
 [[redirects]]
   from = "/*"

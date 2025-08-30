@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getMenuItemTranslation, getDescriptionTranslation } from '../utils/menuTranslations';
 import useTranslation from '../hooks/useTranslation';
-import { motion } from 'framer-motion';
 
 export default function MenuCard({ slug, img, name, desc, categories, url }) {
   const { language } = useLanguage();
@@ -16,11 +15,10 @@ export default function MenuCard({ slug, img, name, desc, categories, url }) {
   
   return (
     <Link to={`/menu/${slug}`} className="block">
-      <motion.div
+      <div
         className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col h-full"
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
-        whileHover={{ y: -5 }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <div className="relative overflow-hidden">
           <img
@@ -58,15 +56,17 @@ export default function MenuCard({ slug, img, name, desc, categories, url }) {
           
           <div className="flex justify-between items-center mt-auto">
             <span className="text-istanbulRed font-semibold text-base hover:text-primary transition-colors">View Details</span>
-            <motion.div
-              className="text-istanbulRed text-xl"
-              animate={{ x: isHovered ? 5 : 0 }}
+            <div
+              className="text-istanbulRed text-xl transition-transform duration-300"
+              style={{
+                transform: isHovered ? 'translateX(5px)' : 'translateX(0)',
+              }}
             >
               →
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </Link>
   );
 }

@@ -176,7 +176,7 @@ function generateUrlEntry(path, priority, changefreq, lastmod) {
 
 // Generate the complete sitemap
 function generateSitemap() {
-  const today = "2025-08-19"; // Current date - August 19, 2025
+  const today = new Date().toISOString().split('T')[0]; // Current date in YYYY-MM-DD format
 
   // Collect all URLs
   const allUrls = [];

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
 import { Helmet } from "react-helmet";
+import { useScrollAnimation } from "./utils/lightAnimations";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FooterAwareOrderOnlineButton from "./FooterAwareOrderOnlineButton";
@@ -300,19 +300,15 @@ const reviews = [
   "Family-run, super friendly, and delicious.",
 ];
 function Section({ id, children }) {
-  const ref = useRef();
-  const inView = useInView(ref, { once: true });
+  const ref = useScrollAnimation();
   return (
-    <motion.section
+    <section
       id={id}
       ref={ref}
-      className="section"
-      initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
+      className="section opacity-0 translate-y-10 transition-all duration-600 ease-out animate-in:opacity-100 animate-in:translate-y-0"
     >
       {children}
-    </motion.section>
+    </section>
   );
 }
 function ScrollRestoration() {
