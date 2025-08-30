@@ -24,6 +24,20 @@
   status = 301
   force = true
 
+# Handle trailing slashes consistently - redirect URLs with trailing slashes to without
+[[redirects]]
+  from = "https://www.istanbullv.com/*/"
+  to = "https://www.istanbullv.com/:splat"
+  status = 301
+  force = true
+
+# Redirect old non-www URLs with trailing slashes
+[[redirects]]
+  from = "https://istanbullv.com/*/"
+  to = "https://www.istanbullv.com/:splat"
+  status = 301
+  force = true
+
 # SPA fallback - only catch unmatched routes
 [[redirects]]
   from = "/*"
@@ -43,3 +57,29 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# SEO and indexing headers for all pages
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
+    Cache-Control = "public, max-age=3600"
+
+# Ensure proper canonical URLs for React routes
+[[headers]]
+  for = "/shawarma"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
+    Link = "</shawarma>; rel=canonical"
+
+[[headers]]
+  for = "/menu"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
+    Link = "</menu>; rel=canonical"
+
+[[headers]]
+  for = "/about"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
+    Link = "</about>; rel=canonical"
