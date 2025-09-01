@@ -7,11 +7,6 @@
       "source": "/:path*/",
       "destination": "/:path*",
       "permanent": true
-    },
-    {
-      "source": "https://istanbullv.com/:path*",
-      "destination": "https://www.istanbullv.com/:path*",
-      "permanent": true
     }
   ],
   "headers": [
