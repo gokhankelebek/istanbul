@@ -346,27 +346,28 @@ console.log("🚀 Generating static HTML files for SEO...");
 allRoutes.forEach((route) => {
   const html = generateHTML(route);
 
-  // Create directory structure
-  const routePath = route.path === "/" ? "/index" : route.path;
-  const filePath = path.join(buildDir, routePath + ".html");
-  const dir = path.dirname(filePath);
+  // Create clean-URL directory structure, e.g. /menu/index.html
+  const isHome = route.path === "/";
+  const routeDir = isHome ? buildDir : path.join(buildDir, route.path);
+  const filePath = path.join(routeDir, "index.html");
 
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(routeDir)) {
+    fs.mkdirSync(routeDir, { recursive: true });
   }
 
-  // Write HTML file
   fs.writeFileSync(filePath, html);
-  console.log(`✅ Generated: ${route.path}`);
+  console.log(
+    `✅ Generated: ${isHome ? "/index.html" : `${route.path}/index.html`}`
+  );
 });
 
-// Update main index.html with bot detection
+// Ensure main index.html exists and contains SEO content
 const mainIndexPath = path.join(buildDir, "index.html");
-if (fs.existsSync(mainIndexPath)) {
+if (!fs.existsSync(mainIndexPath)) {
   const homeRoute = routes.find((r) => r.path === "/");
   const html = generateHTML(homeRoute);
   fs.writeFileSync(mainIndexPath, html);
-  console.log("✅ Updated main index.html with SEO content");
+  console.log("✅ Created main index.html with SEO content");
 }
 
 console.log(`\n🎉 Generated ${allRoutes.length} static HTML pages for SEO!`);
