@@ -164,6 +164,10 @@ function generateHTML(route) {
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.istanbullv.com${routePath}" />
     
+    <!-- Additional SEO meta tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

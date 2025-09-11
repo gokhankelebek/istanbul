@@ -6,12 +6,26 @@ import menu from "../data/menu.json";
 export default function MenuItem() {
   const { slug } = useParams();
   const item = menu.find((i) => i.slug === slug);
+  
   if (!item) {
+    // Set 404 status for invalid menu items
+    useEffect(() => {
+      // This will be handled by the server-side 404 handling
+      window.history.replaceState(null, '', '/not-found');
+    }, []);
+    
     return (
       <div className="container mx-auto py-16 text-center">
+        <Helmet>
+          <title>Menu Item Not Found | Istanbul Mediterranean</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <h1 className="text-3xl font-bold mb-4 text-istanbulRed">
           Menu Item Not Found
         </h1>
+        <p className="text-gray-600 mb-6">
+          The menu item you're looking for doesn't exist.
+        </p>
         <Link to="/menu" className="btn btn-primary">
           ← Back to Menu
         </Link>

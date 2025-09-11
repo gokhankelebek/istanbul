@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    { "source": "/menu/", "destination": "/menu", "permanent": true },
+    { "source": "/blog-posts/", "destination": "/blog-posts", "permanent": true },
+    { "source": "/halal/", "destination": "/halal", "permanent": true },
+    { "source": "/about/", "destination": "/about", "permanent": true },
+    { "source": "/contact/", "destination": "/contact", "permanent": true },
+    { "source": "/delivery/", "destination": "/delivery", "permanent": true },
+    { "source": "/catering/", "destination": "/catering", "permanent": true },
+    { "source": "/experience/", "destination": "/experience", "permanent": true },
+    { "source": "/careers/", "destination": "/careers", "permanent": true },
+    { "source": "/shawarma/", "destination": "/shawarma", "permanent": true },
+    { "source": "/turkish-food/", "destination": "/turkish-food", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/((?!.*\\.).*)", "destination": "/$1/index.html" }
