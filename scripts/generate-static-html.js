@@ -237,35 +237,29 @@ function generateHTML(route) {
     <script defer src="/static/js/main.4d74bec8.js"></script>
     <link href="/static/css/main.e1e1553e.css" rel="stylesheet">
     
-    <!-- Fallback content visibility control -->
+    <!-- Progressive enhancement - show content to all users and bots -->
     <style>
         .seo-fallback {
-            display: none;
+            display: block;
         }
         
-        /* Show fallback only for known bots or if JS fails to load */
-        .no-js .seo-fallback {
-            display: block;
+        /* Hide fallback when React loads */
+        .react-loaded .seo-fallback {
+            display: none;
         }
     </style>
     
-    <!-- Bot detection script -->
+    <!-- Progressive enhancement script -->
     <script>
-        // Remove no-js class immediately for regular browsers
+        // Remove no-js class and mark React as loaded
         document.documentElement.className = document.documentElement.className.replace('no-js', '');
         
-        // Detect bots and show appropriate content
-        const userAgent = navigator.userAgent.toLowerCase();
-        const knownBots = ['googlebot', 'bingbot', 'yandexbot', 'duckduckbot', 'slurp', 'baiduspider', 
-                          'facebookexternalhit', 'twitterbot', 'linkedinbot', 'embedly', 'whatsapp'];
-        const isBot = knownBots.some(bot => userAgent.includes(bot));
-        
-        if (isBot) {
-            document.documentElement.classList.add('bot-user');
-            const style = document.createElement('style');
-            style.textContent = '.seo-fallback { display: block !important; } #root { display: none; }';
-            document.head.appendChild(style);
-        }
+        // Mark React as loaded when the main script loads
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.documentElement.classList.add('react-loaded');
+            }, 1000);
+        });
     </script>
 </head>
 <body class="no-js">
