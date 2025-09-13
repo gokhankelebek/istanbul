@@ -1,9 +1,9 @@
 User-agent: *
 Allow: /
 
-# Allow all bots to access all content
-Disallow: /api/
-Disallow: /admin/
+# Block Vercel preview domain to prevent duplicate content
+User-agent: *
+Disallow: https://istanbul-neon.vercel.app/
 
-# Sitemaps
+# Sitemap
 Sitemap: https://www.istanbullv.com/sitemap.xml
