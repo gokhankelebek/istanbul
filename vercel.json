@@ -1,5 +1,4 @@
 {
-  "_comment": "Hardened CSP with security improvements - deployment timestamp 2025-01-13",
   "redirects": [
     {
       "source": "https://istanbul-neon.vercel.app/:path*",
