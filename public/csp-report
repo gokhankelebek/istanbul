@@ -1,0 +1,62 @@
+#!/usr/bin/env node
+
+/**
+ * CSP Report Endpoint
+ * 
+ * This endpoint receives Content Security Policy violation reports
+ * and logs them for monitoring and debugging purposes.
+ */
+
+const express = require('express');
+const app = express();
+
+// Middleware to parse JSON
+app.use(express.json());
+
+// CSP Report endpoint
+app.post('/csp-report', (req, res) => {
+  const report = req.body;
+  
+  // Log the CSP violation report
+  console.log('CSP Violation Report:', JSON.stringify(report, null, 2));
+  
+  // You can also send to external monitoring services here
+  // Example: Send to logging service, email alerts, etc.
+  
+  // Respond with 204 No Content
+  res.status(204).send();
+});
+
+// For static hosting, create a simple HTML page that handles CSP reports
+const cspReportHandler = `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSP Report Handler</title>
+</head>
+<body>
+    <h1>CSP Report Handler</h1>
+    <p>This endpoint receives Content Security Policy violation reports.</p>
+    
+    <script>
+        // Handle CSP reports via JavaScript if needed
+        document.addEventListener('securitypolicyviolation', function(e) {
+            console.log('CSP Violation:', e);
+            
+            // Send to your analytics or logging service
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'csp_violation', {
+                    'violated_directive': e.violatedDirective,
+                    'blocked_uri': e.blockedURI,
+                    'source_file': e.sourceFile,
+                    'line_number': e.lineNumber
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+`;
+
+// Export for static hosting
+module.exports = { cspReportHandler };
