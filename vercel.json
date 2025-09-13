@@ -1,5 +1,5 @@
 {
-  "_comment": "Updated CSP to fix analytics tracking - deployment timestamp",
+  "_comment": "Hardened CSP with security improvements - deployment timestamp 2025-01-13",
   "redirects": [
     {
       "source": "https://istanbul-neon.vercel.app/:path*",
@@ -107,7 +107,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'none'; object-src 'none'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; frame-src 'self' https://www.googletagmanager.com; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests; report-uri https://www.istanbullv.com/csp-report;"
+          "value": "default-src 'self'; base-uri 'none'; object-src 'none'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; frame-src 'self' https://www.googletagmanager.com; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests;"
         },
         {
           "key": "Permissions-Policy",
